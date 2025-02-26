@@ -1,0 +1,1130 @@
+[
+  {
+    "question": "What is the primary purpose of Salesforce Data Cloud?",
+    "type": "single",
+    "options": [
+      "To manage customer relationships",
+      "To unify data from multiple sources",
+      "To automate sales processes",
+      "To provide AI-driven insights"
+    ],
+    "correct": ["To unify data from multiple sources"],
+    "explanation": "Salesforce Data Cloud is designed to unify data from various sources into a single, coherent view, enabling better decision-making and customer insights."
+  },
+  {
+    "question": "Which of the following are key features of Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Data unification",
+      "Real-time data synchronization",
+      "AI-powered analytics",
+      "User management"
+    ],
+    "correct": ["Data unification", "Real-time data synchronization", "AI-powered analytics"],
+    "explanation": "Data Cloud provides data unification, real-time synchronization, and AI-powered analytics. User management is typically handled by Salesforce's core platform, not a primary feature of Data Cloud."
+  },
+  {
+    "question": "How does Data Cloud integrate with other Salesforce products?",
+    "type": "single",
+    "options": [
+      "Through custom APIs only",
+      "Via Salesforce's native integration framework",
+      "By requiring third-party tools",
+      "It does not integrate with other products"
+    ],
+    "correct": ["Via Salesforce's native integration framework"],
+    "explanation": "Data Cloud leverages Salesforce's native integration framework for seamless connectivity with other Salesforce products, enhancing platform-wide functionality."
+  },
+  {
+    "question": "What is a key benefit of using Data Cloud over traditional data management tools?",
+    "type": "single",
+    "options": [
+      "It requires less technical expertise",
+      "It provides real-time data processing",
+      "It is cheaper than other solutions",
+      "It offers more storage capacity"
+    ],
+    "correct": ["It provides real-time data processing"],
+    "explanation": "Unlike many traditional tools, Data Cloud supports real-time data processing, enabling immediate insights and actions."
+  },
+  {
+    "question": "Which of the following is a common use case for Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Customer segmentation for marketing",
+      "Real-time inventory management",
+      "Employee performance tracking",
+      "Personalized customer experiences"
+    ],
+    "correct": ["Customer segmentation for marketing", "Real-time inventory management", "Personalized customer experiences"],
+    "explanation": "Data Cloud excels in customer segmentation, real-time inventory management, and personalization. Employee performance tracking is typically managed by HR tools."
+  },
+  {
+    "question": "How can Data Cloud enhance customer 360-degree views?",
+    "type": "single",
+    "options": [
+      "By automating sales workflows",
+      "By unifying customer data from multiple sources",
+      "By generating financial reports",
+      "By archiving old customer data"
+    ],
+    "correct": ["By unifying customer data from multiple sources"],
+    "explanation": "Data Cloud enhances customer 360-degree views by unifying data from various sources into a single profile, improving visibility and insights."
+  },
+  {
+    "question": "Which Salesforce product benefits most directly from Data Cloud's data unification?",
+    "type": "single",
+    "options": [
+      "Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "All of the above"
+    ],
+    "correct": ["All of the above"],
+    "explanation": "Sales Cloud, Service Cloud, and Marketing Cloud all benefit from Data Cloud's unified data, enabling better customer interactions across the platform."
+  },
+  {
+    "question": "What distinguishes Data Cloud from a traditional data warehouse?",
+    "type": "single",
+    "options": [
+      "It stores more data",
+      "It processes data in real-time",
+      "It requires more maintenance",
+      "It is only cloud-based"
+    ],
+    "correct": ["It processes data in real-time"],
+    "explanation": "Data Cloud's real-time data processing sets it apart from traditional data warehouses, which typically handle batch processing."
+  },
+  {
+    "question": "Which industries commonly use Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Retail",
+      "Healthcare",
+      "Financial Services",
+      "Manufacturing"
+    ],
+    "correct": ["Retail", "Healthcare", "Financial Services", "Manufacturing"],
+    "explanation": "Data Cloud is versatile and used across industries like Retail, Healthcare, Financial Services, and Manufacturing for data-driven insights."
+  },
+  {
+    "question": "What role does Data Cloud play in personalization?",
+    "type": "single",
+    "options": [
+      "It automates email campaigns",
+      "It unifies data for tailored experiences",
+      "It tracks employee performance",
+      "It manages billing processes"
+    ],
+    "correct": ["It unifies data for tailored experiences"],
+    "explanation": "Data Cloud unifies customer data, enabling tailored experiences across marketing, sales, and service channels."
+  },
+  {
+    "question": "Which feature allows Data Cloud to process streaming data?",
+    "type": "single",
+    "options": [
+      "Data Models",
+      "Data Streams",
+      "Identity Resolution",
+      "Segmentation"
+    ],
+    "correct": ["Data Streams"],
+    "explanation": "Data Streams enable Data Cloud to ingest and process streaming data in real-time."
+  },
+  {
+    "question": "What is a real-world application of Data Cloud?",
+    "type": "single",
+    "options": [
+      "Tracking shipping logistics",
+      "Creating customer segments for campaigns",
+      "Managing payroll",
+      "Monitoring server uptime"
+    ],
+    "correct": ["Creating customer segments for campaigns"],
+    "explanation": "A common application is creating customer segments for targeted marketing campaigns using unified data."
+  },
+  {
+    "question": "Which components are essential for Data Cloud functionality? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Data Ingestion",
+      "Identity Resolution",
+      "Segmentation",
+      "Hardware Maintenance"
+    ],
+    "correct": ["Data Ingestion", "Identity Resolution", "Segmentation"],
+    "explanation": "Data Ingestion, Identity Resolution, and Segmentation are core components of Data Cloud. Hardware maintenance is not a software feature."
+  },
+  {
+    "question": "How does Data Cloud support real-time decision-making?",
+    "type": "single",
+    "options": [
+      "By syncing data instantly",
+      "By storing historical data",
+      "By automating billing",
+      "By generating static reports"
+    ],
+    "correct": ["By syncing data instantly"],
+    "explanation": "Real-time data synchronization allows Data Cloud to support immediate, data-driven decisions."
+  },
+  {
+    "question": "What differentiates Data Cloud from Salesforce CRM?",
+    "type": "single",
+    "options": [
+      "Data Cloud focuses on sales automation",
+      "Data Cloud unifies data across sources",
+      "CRM provides real-time analytics",
+      "CRM handles data modeling"
+    ],
+    "correct": ["Data Cloud unifies data across sources"],
+    "explanation": "Data Cloud focuses on unifying data, while Salesforce CRM is geared toward managing customer relationships."
+  },
+  {
+    "question": "Which of the following is a benefit of Data Cloud's integration capabilities? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Unified customer profiles",
+      "Faster data processing",
+      "Reduced data silos",
+      "Lower hardware costs"
+    ],
+    "correct": ["Unified customer profiles", "Faster data processing", "Reduced data silos"],
+    "explanation": "Integration reduces silos, unifies profiles, and speeds up data processing. Hardware costs are unrelated to integration."
+  },
+  {
+    "question": "What is the purpose of Data Cloud's AI-powered analytics?",
+    "type": "single",
+    "options": [
+      "To automate user permissions",
+      "To derive insights from unified data",
+      "To clean duplicate records",
+      "To manage data storage"
+    ],
+    "correct": ["To derive insights from unified data"],
+    "explanation": "AI-powered analytics in Data Cloud analyzes unified data to provide actionable insights."
+  },
+  {
+    "question": "How does Data Cloud improve data accessibility?",
+    "type": "single",
+    "options": [
+      "By centralizing data in one platform",
+      "By limiting user access",
+      "By requiring external tools",
+      "By archiving old data"
+    ],
+    "correct": ["By centralizing data in one platform"],
+    "explanation": "Centralizing data in Data Cloud makes it more accessible to authorized users across the organization."
+  },
+  {
+    "question": "What is the first step in setting up Data Cloud?",
+    "type": "single",
+    "options": [
+      "Defining data models",
+      "Connecting data sources",
+      "Configuring identity resolution",
+      "Creating segments"
+    ],
+    "correct": ["Connecting data sources"],
+    "explanation": "Connecting data sources is the initial step to bring data into Data Cloud for processing."
+  },
+  {
+    "question": "How can you expand the capabilities of Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using AppExchange solutions",
+      "Creating custom components",
+      "Hiring more administrators",
+      "Upgrading to a higher edition"
+    ],
+    "correct": ["Using AppExchange solutions", "Creating custom components"],
+    "explanation": "AppExchange solutions and custom components extend Data Cloud's functionality. Hiring administrators or upgrading editions don’t directly enhance capabilities."
+  },
+  {
+    "question": "Which role is responsible for managing Data Cloud permissions?",
+    "type": "single",
+    "options": [
+      "Data Architect",
+      "System Administrator",
+      "Marketing Manager",
+      "Sales Representative"
+    ],
+    "correct": ["System Administrator"],
+    "explanation": "System Administrators manage user roles and permissions in Data Cloud, ensuring proper access control."
+  },
+  {
+    "question": "What is the purpose of data spaces in Data Cloud?",
+    "type": "single",
+    "options": [
+      "To store historical data",
+      "To segment data for specific use cases",
+      "To automate data ingestion",
+      "To resolve identity conflicts"
+    ],
+    "correct": ["To segment data for specific use cases"],
+    "explanation": "Data spaces organize data for specific business purposes, such as marketing or analytics."
+  },
+  {
+    "question": "How can you monitor Data Cloud performance? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using built-in dashboards",
+      "Reviewing system logs",
+      "Checking data quality reports",
+      "Manually inspecting each record"
+    ],
+    "correct": ["Using built-in dashboards", "Reviewing system logs", "Checking data quality reports"],
+    "explanation": "Dashboards, logs, and data quality reports help monitor performance. Manual inspection is impractical for large datasets."
+  },
+  {
+    "question": "What is a key step in connecting external data sources?",
+    "type": "single",
+    "options": [
+      "Creating segments",
+      "Configuring connectors",
+      "Archiving old data",
+      "Generating insights"
+    ],
+    "correct": ["Configuring connectors"],
+    "explanation": "Configuring connectors enables Data Cloud to ingest data from external systems."
+  },
+  {
+    "question": "Which setting ensures data retention compliance?",
+    "type": "single",
+    "options": [
+      "Data transformation rules",
+      "Retention policies",
+      "Identity resolution rules",
+      "Segmentation filters"
+    ],
+    "correct": ["Retention policies"],
+    "explanation": "Retention policies define how long data is stored, ensuring compliance with regulations."
+  },
+  {
+    "question": "What is a common troubleshooting step in Data Cloud?",
+    "type": "single",
+    "options": [
+      "Deleting all data",
+      "Checking ingestion logs",
+      "Rebooting the server",
+      "Recreating all segments"
+    ],
+    "correct": ["Checking ingestion logs"],
+    "explanation": "Ingestion logs help identify and resolve issues with data processing in Data Cloud."
+  },
+  {
+    "question": "How do you assign user access in Data Cloud?",
+    "type": "single",
+    "options": [
+      "Through permission sets",
+      "By editing data models",
+      "Via segmentation rules",
+      "Using data streams"
+    ],
+    "correct": ["Through permission sets"],
+    "explanation": "Permission sets in Salesforce control user access to Data Cloud features and data."
+  },
+  {
+    "question": "What is required to activate a data source in Data Cloud?",
+    "type": "single",
+    "options": [
+      "A configured connector",
+      "A completed segment",
+      "A resolved identity",
+      "A dashboard report"
+    ],
+    "correct": ["A configured connector"],
+    "explanation": "A configured connector is necessary to activate and pull data from an external source."
+  },
+  {
+    "question": "Which feature helps manage data access across teams?",
+    "type": "single",
+    "options": [
+      "Data Streams",
+      "Data Spaces",
+      "Identity Resolution",
+      "Calculated Insights"
+    ],
+    "correct": ["Data Spaces"],
+    "explanation": "Data Spaces segregate data for different teams or use cases, controlling access effectively."
+  },
+  {
+    "question": "What should you verify after setting up a new data source? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Data is flowing correctly",
+      "Permissions are assigned",
+      "Data quality is acceptable",
+      "All users are trained"
+    ],
+    "correct": ["Data is flowing correctly", "Permissions are assigned", "Data quality is acceptable"],
+    "explanation": "Verify data flow, permissions, and quality post-setup. User training is beneficial but not a technical verification step."
+  },
+  {
+    "question": "What is the purpose of data model objects in Data Cloud?",
+    "type": "single",
+    "options": [
+      "To store raw data from sources",
+      "To define the structure of data",
+      "To perform identity resolution",
+      "To create segments"
+    ],
+    "correct": ["To define the structure of data"],
+    "explanation": "Data model objects structure data in Data Cloud, ensuring consistency and usability."
+  },
+  {
+    "question": "Which types of data ingestion does Data Cloud support? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Batch ingestion",
+      "Real-time ingestion",
+      "Manual ingestion",
+      "API-based ingestion"
+    ],
+    "correct": ["Batch ingestion", "Real-time ingestion", "API-based ingestion"],
+    "explanation": "Data Cloud supports batch, real-time, and API-based ingestion. Manual ingestion isn’t a standard feature."
+  },
+  {
+    "question": "What is the difference between batch and real-time data transforms?",
+    "type": "single",
+    "options": [
+      "Batch transforms are real-time, real-time transforms are scheduled",
+      "Batch transforms are scheduled, real-time transforms process instantly",
+      "Both are identical",
+      "Batch transforms use APIs, real-time do not"
+    ],
+    "correct": ["Batch transforms are scheduled, real-time transforms process instantly"],
+    "explanation": "Batch transforms run on a schedule, while real-time transforms process data as it arrives."
+  },
+  {
+    "question": "What is a data stream in Data Cloud?",
+    "type": "single",
+    "options": [
+      "A tool for segmenting customers",
+      "A method for real-time data ingestion",
+      "A report generator",
+      "A permission management feature"
+    ],
+    "correct": ["A method for real-time data ingestion"],
+    "explanation": "Data streams enable real-time ingestion of data into Data Cloud from various sources."
+  },
+  {
+    "question": "How does Data Cloud handle data quality? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Data cleansing",
+      "Data transformation",
+      "Duplicate detection",
+      "Manual entry"
+    ],
+    "correct": ["Data cleansing", "Data transformation", "Duplicate detection"],
+    "explanation": "Data Cloud improves quality through cleansing, transformation, and duplicate detection. Manual entry isn’t a quality feature."
+  },
+  {
+    "question": "What is the role of data mapping in ingestion?",
+    "type": "single",
+    "options": [
+      "To assign user permissions",
+      "To align source data with Data Cloud objects",
+      "To create customer segments",
+      "To generate insights"
+    ],
+    "correct": ["To align source data with Data Cloud objects"],
+    "explanation": "Data mapping aligns incoming data with Data Cloud’s data model for proper storage and use."
+  },
+  {
+    "question": "Which connector type supports real-time data?",
+    "type": "single",
+    "options": [
+      "Batch Connector",
+      "Streaming Connector",
+      "API Connector",
+      "Manual Connector"
+    ],
+    "correct": ["Streaming Connector"],
+    "explanation": "Streaming Connectors enable real-time data ingestion into Data Cloud."
+  },
+  {
+    "question": "What happens if data mapping is incorrect?",
+    "type": "single",
+    "options": [
+      "Data is still processed correctly",
+      "Data may be misaligned or lost",
+      "Users lose access",
+      "Segments are automatically created"
+    ],
+    "correct": ["Data may be misaligned or lost"],
+    "explanation": "Incorrect mapping can cause data to be stored improperly or lost, affecting downstream processes."
+  },
+  {
+    "question": "Which object stores customer profile data?",
+    "type": "single",
+    "options": [
+      "Unified Individual",
+      "Data Stream",
+      "Segment",
+      "Insight"
+    ],
+    "correct": ["Unified Individual"],
+    "explanation": "The Unified Individual object stores consolidated customer profile data after identity resolution."
+  },
+  {
+    "question": "What is a benefit of real-time ingestion?",
+    "type": "single",
+    "options": [
+      "Lower storage costs",
+      "Immediate data availability",
+      "Simpler setup",
+      "Reduced data quality"
+    ],
+    "correct": ["Immediate data availability"],
+    "explanation": "Real-time ingestion makes data available instantly for analysis and action."
+  },
+  {
+    "question": "How can you transform data in Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using formulas",
+      "Applying filters",
+      "Running batch jobs",
+      "Manually editing records"
+    ],
+    "correct": ["Using formulas", "Applying filters", "Running batch jobs"],
+    "explanation": "Data transformation uses formulas, filters, and batch jobs. Manual editing isn’t scalable in Data Cloud."
+  },
+  {
+    "question": "What is the purpose of the Data Lake in Data Cloud?",
+    "type": "single",
+    "options": [
+      "To store unified profiles",
+      "To hold raw ingested data",
+      "To generate reports",
+      "To manage permissions"
+    ],
+    "correct": ["To hold raw ingested data"],
+    "explanation": "The Data Lake stores raw data before it’s processed or unified."
+  },
+  {
+    "question": "Which feature ensures data consistency across sources?",
+    "type": "single",
+    "options": [
+      "Data Streams",
+      "Data Models",
+      "Segmentation",
+      "Insights Builder"
+    ],
+    "correct": ["Data Models"],
+    "explanation": "Data Models enforce a consistent structure for data across all sources."
+  },
+  {
+    "question": "What is a challenge of batch ingestion?",
+    "type": "single",
+    "options": [
+      "High cost",
+      "Delayed data availability",
+      "Complex setup",
+      "Limited scalability"
+    ],
+    "correct": ["Delayed data availability"],
+    "explanation": "Batch ingestion processes data periodically, delaying its availability compared to real-time ingestion."
+  },
+  {
+    "question": "How do you validate data ingestion?",
+    "type": "single",
+    "options": [
+      "Check segment sizes",
+      "Review ingestion logs",
+      "Run identity resolution",
+      "Create a dashboard"
+    ],
+    "correct": ["Review ingestion logs"],
+    "explanation": "Ingestion logs provide details on the success or failure of data ingestion processes."
+  },
+  {
+    "question": "What is a key step in modeling customer data?",
+    "type": "single",
+    "options": [
+      "Creating segments",
+      "Defining relationships between objects",
+      "Sharing data externally",
+      "Generating insights"
+    ],
+    "correct": ["Defining relationships between objects"],
+    "explanation": "Modeling involves defining how data objects relate to each other for accurate representation."
+  },
+  {
+    "question": "Which ingestion method is best for historical data?",
+    "type": "single",
+    "options": [
+      "Real-time ingestion",
+      "Batch ingestion",
+      "API ingestion",
+      "Streaming ingestion"
+    ],
+    "correct": ["Batch ingestion"],
+    "explanation": "Batch ingestion is ideal for processing large volumes of historical data efficiently."
+  },
+  {
+    "question": "What does data cleansing improve? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Data accuracy",
+      "Processing speed",
+      "Data consistency",
+      "Storage capacity"
+    ],
+    "correct": ["Data accuracy", "Data consistency"],
+    "explanation": "Data cleansing enhances accuracy and consistency by removing errors and duplicates."
+  },
+  {
+    "question": "How are data streams configured?",
+    "type": "single",
+    "options": [
+      "Through permission sets",
+      "Using connectors",
+      "Via segmentation rules",
+      "With identity resolution"
+    ],
+    "correct": ["Using connectors"],
+    "explanation": "Connectors configure data streams to ingest data from specific sources."
+  },
+  {
+    "question": "What is identity resolution in Data Cloud?",
+    "type": "single",
+    "options": [
+      "The process of matching customer identities from different sources",
+      "The process of securing customer data",
+      "The process of deleting customer data",
+      "The process of creating customer segments"
+    ],
+    "correct": ["The process of matching customer identities from different sources"],
+    "explanation": "Identity resolution matches and merges customer data from multiple sources into a unified profile."
+  },
+  {
+    "question": "Which methods are used for identity resolution? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Rules-based matching",
+      "Machine learning-based matching",
+      "Manual matching",
+      "Random matching"
+    ],
+    "correct": ["Rules-based matching", "Machine learning-based matching"],
+    "explanation": "Data Cloud uses rules-based and machine learning-based matching. Manual matching is possible but not standard, and random matching isn’t used."
+  },
+  {
+    "question": "What is a confidence score in identity resolution?",
+    "type": "single",
+    "options": [
+      "A measure of match likelihood",
+      "A data quality rating",
+      "A processing speed metric",
+      "A user confidence rating"
+    ],
+    "correct": ["A measure of match likelihood"],
+    "explanation": "The confidence score indicates how likely two records represent the same individual."
+  },
+  {
+    "question": "What is the Unified Individual object?",
+    "type": "single",
+    "options": [
+      "A raw data storage unit",
+      "A consolidated customer profile",
+      "A segmentation tool",
+      "An insight generator"
+    ],
+    "correct": ["A consolidated customer profile"],
+    "explanation": "The Unified Individual object holds the consolidated profile created by identity resolution."
+  },
+  {
+    "question": "Why is identity resolution important? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Reduces duplicate records",
+      "Improves customer insights",
+      "Enhances personalization",
+      "Increases storage needs"
+    ],
+    "correct": ["Reduces duplicate records", "Improves customer insights", "Enhances personalization"],
+    "explanation": "Identity resolution eliminates duplicates, improves insights, and enhances personalization by unifying customer data."
+  },
+  {
+    "question": "How do you configure resolution rules?",
+    "type": "single",
+    "options": [
+      "Using SQL queries",
+      "Defining match criteria",
+      "Creating segments",
+      "Running batch jobs"
+    ],
+    "correct": ["Defining match criteria"],
+    "explanation": "Resolution rules are configured by defining criteria (e.g., email, phone) for matching records."
+  },
+  {
+    "question": "What happens if identity conflicts occur?",
+    "type": "single",
+    "options": [
+      "Data is deleted",
+      "Conflicts are flagged for review",
+      "Records are automatically merged",
+      "Insights are generated"
+    ],
+    "correct": ["Conflicts are flagged for review"],
+    "explanation": "Identity conflicts are flagged, allowing manual or automated resolution based on rules."
+  },
+  {
+    "question": "Which factor affects confidence scores?",
+    "type": "single",
+    "options": [
+      "Data volume",
+      "Match rule specificity",
+      "Processing speed",
+      "User permissions"
+    ],
+    "correct": ["Match rule specificity"],
+    "explanation": "Specific match rules (e.g., exact email match) increase confidence scores."
+  },
+  {
+    "question": "What is a benefit of machine learning in identity resolution?",
+    "type": "single",
+    "options": [
+      "Faster manual reviews",
+      "Improved match accuracy",
+      "Reduced data ingestion",
+      "Simpler rule setup"
+    ],
+    "correct": ["Improved match accuracy"],
+    "explanation": "Machine learning enhances match accuracy by identifying patterns beyond static rules."
+  },
+  {
+    "question": "How does identity resolution support segmentation?",
+    "type": "single",
+    "options": [
+      "By creating filters",
+      "By unifying customer profiles",
+      "By generating reports",
+      "By transforming data"
+    ],
+    "correct": ["By unifying customer profiles"],
+    "explanation": "Unified profiles from identity resolution provide accurate data for segmentation."
+  },
+  {
+    "question": "What is a common identity resolution challenge?",
+    "type": "single",
+    "options": [
+      "Too much data storage",
+      "Inconsistent data formats",
+      "Slow dashboards",
+      "Limited connectors"
+    ],
+    "correct": ["Inconsistent data formats"],
+    "explanation": "Inconsistent formats (e.g., name variations) complicate matching records."
+  },
+  {
+    "question": "Which data type is critical for identity resolution?",
+    "type": "single",
+    "options": [
+      "Transactional data",
+      "Profile identifiers",
+      "Aggregate metrics",
+      "Historical logs"
+    ],
+    "correct": ["Profile identifiers"],
+    "explanation": "Profile identifiers (e.g., email, phone) are key for matching and resolving identities."
+  },
+  {
+    "question": "How can you test identity resolution rules?",
+    "type": "single",
+    "options": [
+      "Run a sample dataset",
+      "Create a segment",
+      "Generate an insight",
+      "Share the data"
+    ],
+    "correct": ["Run a sample dataset"],
+    "explanation": "Testing with a sample dataset validates the effectiveness of resolution rules."
+  },
+  {
+    "question": "What improves identity resolution accuracy? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "High-quality data",
+      "Multiple identifiers",
+      "Fewer data sources",
+      "Advanced algorithms"
+    ],
+    "correct": ["High-quality data", "Multiple identifiers", "Advanced algorithms"],
+    "explanation": "Quality data, multiple identifiers, and advanced algorithms enhance accuracy. More sources can improve resolution, not fewer."
+  },
+  {
+    "question": "What is the purpose of segmentation in Data Cloud?",
+    "type": "single",
+    "options": [
+      "To divide data into smaller parts",
+      "To create targeted groups for actions",
+      "To resolve identity conflicts",
+      "To model data structures"
+    ],
+    "correct": ["To create targeted groups for actions"],
+    "explanation": "Segmentation creates customer groups for targeted marketing or other actions."
+  },
+  {
+    "question": "How can you create insights in Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using SQL queries",
+      "Using Insights Builder",
+      "Using external tools",
+      "Using manual calculations"
+    ],
+    "correct": ["Using SQL queries", "Using Insights Builder"],
+    "explanation": "SQL queries and Insights Builder create insights in Data Cloud. External tools and manual calculations aren’t integrated methods."
+  },
+  {
+    "question": "How do calculated insights differ from streaming insights?",
+    "type": "single",
+    "options": [
+      "Calculated are real-time, streaming are batch",
+      "Calculated use formulas, streaming use real-time data",
+      "Both are identical",
+      "Calculated are historical, streaming are predictive"
+    ],
+    "correct": ["Calculated use formulas, streaming use real-time data"],
+    "explanation": "Calculated insights derive data via formulas, while streaming insights update with real-time data."
+  },
+  {
+    "question": "What is a segment in Data Cloud?",
+    "type": "single",
+    "options": [
+      "A unified customer profile",
+      "A group of records meeting criteria",
+      "A data transformation rule",
+      "An ingestion log"
+    ],
+    "correct": ["A group of records meeting criteria"],
+    "explanation": "Segments group records (e.g., customers) based on defined filters or criteria."
+  },
+  {
+    "question": "Which tool visualizes Data Cloud insights?",
+    "type": "single",
+    "options": [
+      "Data Streams",
+      "Dashboards",
+      "Data Models",
+      "Connectors"
+    ],
+    "correct": ["Dashboards"],
+    "explanation": "Dashboards visualize insights and data trends in Data Cloud."
+  },
+  {
+    "question": "How do you create a segment? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Define filters",
+      "Use SQL queries",
+      "Apply identity resolution",
+      "Select a data source"
+    ],
+    "correct": ["Define filters", "Select a data source"],
+    "explanation": "Segments are created by defining filters and selecting a data source. SQL and identity resolution support but aren’t direct steps."
+  },
+  {
+    "question": "What is a benefit of segmentation?",
+    "type": "single",
+    "options": [
+      "Faster data ingestion",
+      "Targeted marketing campaigns",
+      "Improved data storage",
+      "Simplified permissions"
+    ],
+    "correct": ["Targeted marketing campaigns"],
+    "explanation": "Segmentation enables precise targeting for marketing or other actions."
+  },
+  {
+    "question": "What is Insights Builder used for?",
+    "type": "single",
+    "options": [
+      "Creating data models",
+      "Generating calculated insights",
+      "Resolving identities",
+      "Configuring connectors"
+    ],
+    "correct": ["Generating calculated insights"],
+    "explanation": "Insights Builder creates calculated insights using a user-friendly interface."
+  },
+  {
+    "question": "Which insight type updates dynamically?",
+    "type": "single",
+    "options": [
+      "Calculated Insights",
+      "Streaming Insights",
+      "Batch Insights",
+      "Static Insights"
+    ],
+    "correct": ["Streaming Insights"],
+    "explanation": "Streaming Insights update dynamically with real-time data."
+  },
+  {
+    "question": "How can segments improve customer service?",
+    "type": "single",
+    "options": [
+      "By unifying profiles",
+      "By identifying high-value customers",
+      "By transforming data",
+      "By sharing data externally"
+    ],
+    "correct": ["By identifying high-value customers"],
+    "explanation": "Segments can identify priority customers for enhanced service."
+  },
+  {
+    "question": "What is a filter in segmentation?",
+    "type": "single",
+    "options": [
+      "A data cleansing tool",
+      "A criterion for grouping records",
+      "A permission setting",
+      "An insight formula"
+    ],
+    "correct": ["A criterion for grouping records"],
+    "explanation": "Filters define the criteria (e.g., age, location) for including records in a segment."
+  },
+  {
+    "question": "What does a dashboard display? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Real-time insights",
+      "Segment sizes",
+      "Data quality metrics",
+      "User permissions"
+    ],
+    "correct": ["Real-time insights", "Segment sizes", "Data quality metrics"],
+    "explanation": "Dashboards show insights, segment sizes, and quality metrics. Permissions are managed elsewhere."
+  },
+  {
+    "question": "How are streaming insights generated?",
+    "type": "single",
+    "options": [
+      "Using batch jobs",
+      "From real-time data streams",
+      "With historical data",
+      "Via manual input"
+    ],
+    "correct": ["From real-time data streams"],
+    "explanation": "Streaming insights are derived from real-time data streams for up-to-date analysis."
+  },
+  {
+    "question": "What is a common segmentation use case?",
+    "type": "single",
+    "options": [
+      "Data cleansing",
+      "Personalized email campaigns",
+      "Identity resolution",
+      "Data modeling"
+    ],
+    "correct": ["Personalized email campaigns"],
+    "explanation": "Segmentation is often used to target customers for personalized email campaigns."
+  },
+  {
+    "question": "Which feature supports real-time segmentation?",
+    "type": "single",
+    "options": [
+      "Data Models",
+      "Data Streams",
+      "Calculated Insights",
+      "Permission Sets"
+    ],
+    "correct": ["Data Streams"],
+    "explanation": "Data Streams provide real-time data for dynamic segmentation."
+  },
+  {
+    "question": "How do insights enhance decision-making?",
+    "type": "single",
+    "options": [
+      "By unifying profiles",
+      "By providing actionable data",
+      "By cleansing data",
+      "By setting permissions"
+    ],
+    "correct": ["By providing actionable data"],
+    "explanation": "Insights deliver actionable data for informed business decisions."
+  },
+  {
+    "question": "What does \"Act on Data\" mean in Data Cloud?",
+    "type": "single",
+    "options": [
+      "Using unified data for business actions",
+      "Deleting unnecessary data",
+      "Archiving historical data",
+      "Sharing data externally"
+    ],
+    "correct": ["Using unified data for business actions"],
+    "explanation": "Act on Data refers to leveraging unified data for actions like marketing or automation."
+  },
+  {
+    "question": "How can you share data in Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using BYOL data shares",
+      "Through APIs",
+      "Via email attachments",
+      "Using FTP transfers"
+    ],
+    "correct": ["Using BYOL data shares", "Through APIs"],
+    "explanation": "BYOL data shares and APIs are standard methods for sharing data. Email and FTP aren’t supported."
+  },
+  {
+    "question": "What is a key consideration when sharing data with BYOL?",
+    "type": "single",
+    "options": [
+      "Ensuring data encryption",
+      "Complying with privacy laws",
+      "Limiting data scope",
+      "All of the above"
+    ],
+    "correct": ["All of the above"],
+    "explanation": "Encryption, compliance, and scope are critical when sharing data via BYOL."
+  },
+  {
+    "question": "How does Data Cloud integrate with Marketing Cloud?",
+    "type": "single",
+    "options": [
+      "Through segment sharing",
+      "By duplicating data",
+      "Via manual exports",
+      "With static reports"
+    ],
+    "correct": ["Through segment sharing"],
+    "explanation": "Data Cloud shares segments with Marketing Cloud for targeted campaigns."
+  },
+  {
+    "question": "What is a benefit of acting on data?",
+    "type": "single",
+    "options": [
+      "Reduced storage needs",
+      "Enhanced customer experiences",
+      "Faster data ingestion",
+      "Simplified modeling"
+    ],
+    "correct": ["Enhanced customer experiences"],
+    "explanation": "Acting on data enables personalized and improved customer experiences."
+  },
+  {
+    "question": "Which Salesforce app uses Data Cloud for automation?",
+    "type": "single",
+    "options": [
+      "Sales Cloud",
+      "Service Cloud",
+      "Marketing Cloud",
+      "All of the above"
+    ],
+    "correct": ["All of the above"],
+    "explanation": "Sales, Service, and Marketing Clouds can all use Data Cloud data for automation."
+  },
+  {
+    "question": "How can Data Cloud personalize customer interactions? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using unified profiles",
+      "Leveraging segments",
+      "Applying insights",
+      "Manually editing records"
+    ],
+    "correct": ["Using unified profiles", "Leveraging segments", "Applying insights"],
+    "explanation": "Unified profiles, segments, and insights enable personalization. Manual edits aren’t practical."
+  },
+  {
+    "question": "What is an ethical consideration when acting on data?",
+    "type": "single",
+    "options": [
+      "Data storage limits",
+      "Customer privacy",
+      "Processing speed",
+      "User training"
+    ],
+    "correct": ["Customer privacy"],
+    "explanation": "Respecting customer privacy is a key ethical concern when using data."
+  },
+  {
+    "question": "How does Data Cloud support Sales Cloud?",
+    "type": "single",
+    "options": [
+      "By providing real-time customer insights",
+      "By managing employee schedules",
+      "By archiving sales data",
+      "By creating static reports"
+    ],
+    "correct": ["By providing real-time customer insights"],
+    "explanation": "Data Cloud delivers real-time insights to Sales Cloud for better sales strategies."
+  },
+  {
+    "question": "What is BYOL data sharing?",
+    "type": "single",
+    "options": [
+      "Sharing data via email",
+      "Using external licenses for data access",
+      "Manually transferring files",
+      "Archiving data"
+    ],
+    "correct": ["Using external licenses for data access"],
+    "explanation": "BYOL (Bring Your Own License) allows sharing data using external licenses."
+  },
+  {
+    "question": "How can automation be triggered in Data Cloud?",
+    "type": "single",
+    "options": [
+      "Using insights and segments",
+      "By editing data models",
+      "Through permission sets",
+      "Via static dashboards"
+    ],
+    "correct": ["Using insights and segments"],
+    "explanation": "Insights and segments can trigger automated actions in integrated apps."
+  },
+  {
+    "question": "What improves service response times with Data Cloud?",
+    "type": "single",
+    "options": [
+      "Unified customer profiles",
+      "Batch ingestion",
+      "Data cleansing",
+      "Static reports"
+    ],
+    "correct": ["Unified customer profiles"],
+    "explanation": "Unified profiles provide agents with instant access to customer data, speeding up responses."
+  },
+  {
+    "question": "Which action leverages Data Cloud in Marketing Cloud?",
+    "type": "single",
+    "options": [
+      "Creating static reports",
+      "Sending personalized emails",
+      "Managing user permissions",
+      "Archiving data"
+    ],
+    "correct": ["Sending personalized emails"],
+    "explanation": "Data Cloud segments enable personalized email campaigns in Marketing Cloud."
+  },
+  {
+    "question": "What is a best practice for acting on data?",
+    "type": "single",
+    "options": [
+      "Share all data publicly",
+      "Ensure data accuracy",
+      "Limit user access",
+      "Delete data after use"
+    ],
+    "correct": ["Ensure data accuracy"],
+    "explanation": "Accurate data ensures effective and reliable actions."
+  },
+  {
+    "question": "How does Data Cloud enhance partner collaboration? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Sharing segments",
+      "Using BYOL data shares",
+      "Providing real-time insights",
+      "Manually exporting data"
+    ],
+    "correct": ["Sharing segments", "Using BYOL data shares", "Providing real-time insights"],
+    "explanation": "Segments, BYOL shares, and real-time insights facilitate collaboration. Manual exports are inefficient."
+  }
+]
