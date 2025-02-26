@@ -1,146 +1,146 @@
 [
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of using an interface in Apex?",
+    "question": "What is the primary purpose of using an interface in Apex?",
     "type": "single",
     "options": [
       "To define a contract for classes to implement",
-      "To create abstract classes",
+      "To manage state in batch Apex",
       "To handle exceptions",
-      "To manage state in batch Apex"
+      "To create abstract methods only"
     ],
     "correct": ["To define a contract for classes to implement"],
-    "explanation": "Interfaces in Apex define a contract that implementing classes must follow, promoting polymorphism and modularity."
+    "explanation": "Interfaces in Apex define a contract that implementing classes must follow, enabling polymorphism and modularity in code design."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "You need to process a large number of records in batches without blocking the main thread. Which Apex feature should you use?",
+    "question": "Which Apex feature is best suited for processing large datasets asynchronously in chunks?",
     "type": "single",
     "options": [
       "Future methods",
       "Batch Apex",
-      "Scheduled Apex",
-      "Queueable Apex"
+      "Queueable Apex",
+      "Scheduled Apex"
     ],
     "correct": ["Batch Apex"],
-    "explanation": "Batch Apex is designed for processing large datasets in manageable chunks, making it ideal for non-blocking, large-scale data operations."
+    "explanation": "Batch Apex is designed to process large datasets in manageable chunks asynchronously, making it ideal for bulk operations without blocking the main thread."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the difference between a future method and a batch job in Apex?",
+    "question": "What distinguishes a future method from a Batch Apex job?",
     "type": "single",
     "options": [
-      "Future methods are synchronous, batch jobs are asynchronous",
-      "Future methods handle small tasks, batch jobs handle large data sets",
-      "Future methods are for CPU-intensive tasks, batch jobs for data processing",
-      "Both are asynchronous, but batch jobs are for large data processing"
+      "Future methods run synchronously, Batch Apex runs asynchronously",
+      "Future methods process small tasks, Batch Apex handles large datasets",
+      "Future methods are for CPU-intensive tasks, Batch Apex for UI tasks",
+      "Future methods handle bulk data, Batch Apex for single records"
     ],
-    "correct": ["Both are asynchronous, but batch jobs are for large data processing"],
-    "explanation": "Both future methods and batch jobs are asynchronous, but batch jobs are specifically designed for processing large data sets in batches."
+    "correct": ["Future methods process small tasks, Batch Apex handles large datasets"],
+    "explanation": "Future methods are lightweight asynchronous processes for small tasks, while Batch Apex is built for processing large datasets in batches."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "How do you handle exceptions in Apex to ensure that your code doesn't fail silently?",
+    "question": "How should you handle exceptions in Apex to prevent silent failures?",
     "type": "single",
     "options": [
       "Using try-catch blocks",
-      "Using the @isTest annotation",
-      "Using the System.Assert statement",
-      "Using the debug log"
+      "Using System.debug statements",
+      "Using assert statements",
+      "Ignoring exceptions"
     ],
     "correct": ["Using try-catch blocks"],
-    "explanation": "Try-catch blocks are used to handle exceptions in Apex, allowing the code to manage errors gracefully without failing silently."
+    "explanation": "Try-catch blocks allow Apex code to catch and handle exceptions explicitly, preventing silent failures and enabling graceful error management."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the @isTest annotation in Apex?",
+    "question": "What does the @isTest annotation signify in Apex?",
     "type": "single",
     "options": [
-      "To mark a class or method as a test",
-      "To run the method asynchronously",
-      "To ignore governor limits",
-      "To handle large data sets"
+      "Marks a method as a test method",
+      "Runs a method asynchronously",
+      "Increases governor limits",
+      "Handles exceptions"
     ],
-    "correct": ["To mark a class or method as a test"],
-    "explanation": "The @isTest annotation is used to identify test classes and methods, which are used to test Apex code."
+    "correct": ["Marks a method as a test method"],
+    "explanation": "The @isTest annotation identifies methods or classes as test code, used for validating Apex logic without affecting production data."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "Which of the following are best practices for writing efficient SOQL queries in Apex? (Select all that apply)",
+    "question": "Which practices improve SOQL query efficiency in Apex? (Select all that apply)",
     "type": "multiple",
     "options": [
-      "Using the LIMIT clause",
+      "Using LIMIT clauses",
       "Avoiding SELECT * queries",
-      "Using indexes",
-      "Querying in loops"
+      "Querying inside loops",
+      "Using indexed fields"
     ],
-    "correct": ["Using the LIMIT clause", "Avoiding SELECT * queries", "Using indexes"],
-    "explanation": "Using LIMIT reduces the number of records fetched, avoiding SELECT * improves performance by fetching only necessary fields, and using indexes speeds up query execution. Querying in loops is generally inefficient and should be avoided."
+    "correct": ["Using LIMIT clauses", "Avoiding SELECT * queries", "Using indexed fields"],
+    "explanation": "LIMIT reduces record counts, avoiding SELECT * fetches only needed fields, and indexed fields speed up queries. Querying in loops is inefficient."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the role of the with sharing keyword in Apex?",
+    "question": "What does the 'with sharing' keyword enforce in Apex?",
     "type": "single",
     "options": [
-      "To enforce sharing rules",
-      "To ignore sharing rules",
-      "To manage field-level security",
-      "To handle record ownership"
+      "User sharing rules",
+      "Field-level security",
+      "Record ownership",
+      "System mode execution"
     ],
-    "correct": ["To enforce sharing rules"],
-    "explanation": "The with sharing keyword ensures that the Apex code respects the sharing rules and access levels of the user running the code."
+    "correct": ["User sharing rules"],
+    "explanation": "The 'with sharing' keyword ensures Apex respects the current user’s sharing rules, restricting access based on their permissions."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "How can you optimize the performance of your Apex code when dealing with large data sets?",
+    "question": "Which techniques optimize Apex performance for large datasets? (Select all that apply)",
     "type": "multiple",
     "options": [
-      "Using bulkified operations",
-      "Minimizing the number of SOQL queries",
+      "Bulkifying operations",
+      "Minimizing SOQL queries",
       "Using transient variables",
-      "Avoiding the use of lists and maps"
+      "Avoiding collections"
     ],
-    "correct": ["Using bulkified operations", "Minimizing the number of SOQL queries"],
-    "explanation": "Bulkified operations and minimizing SOQL queries are key to optimizing performance with large data sets. Transient variables can be useful, but avoiding lists and maps isn't generally recommended."
+    "correct": ["Bulkifying operations", "Minimizing SOQL queries"],
+    "explanation": "Bulkifying operations and reducing SOQL queries enhance performance. Transient variables help with view state, but avoiding collections is not a best practice."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the Database.insert() method in Apex?",
+    "question": "What is the purpose of Database.insert() in Apex?",
     "type": "single",
     "options": [
-      "To insert a single record",
-      "To insert multiple records",
-      "To insert records with specific settings",
-      "All of the above"
+      "Inserts a single record",
+      "Inserts multiple records with options",
+      "Updates existing records",
+      "Deletes records"
     ],
-    "correct": ["All of the above"],
-    "explanation": "Database.insert() can be used to insert a single record or a list of records, and it allows specifying additional settings like allOrNone."
+    "correct": ["Inserts multiple records with options"],
+    "explanation": "Database.insert() can insert single or multiple records and offers options like allOrNone for partial success handling."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "In Apex, what is the difference between a static and an instance method?",
+    "question": "What differentiates static methods from instance methods in Apex?",
     "type": "single",
     "options": [
-      "Static methods belong to the class, instance methods belong to the object",
-      "Static methods can be called without creating an object, instance methods require an object",
-      "Both a and b",
-      "There is no difference"
+      "Static methods belong to the class, instance methods to objects",
+      "Static methods require instantiation, instance methods do not",
+      "Static methods are asynchronous, instance methods are synchronous",
+      "There’s no difference"
     ],
-    "correct": ["Both a and b"],
-    "explanation": "Static methods are associated with the class and can be called without creating an instance of the class, while instance methods are associated with objects and require an instance to be called."
+    "correct": ["Static methods belong to the class, instance methods to objects"],
+    "explanation": "Static methods are class-level and callable without instantiation, while instance methods require an object instance."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the Database.Stateful interface in Batch Apex?",
+    "question": "Why use the Database.Stateful interface in Batch Apex?",
     "type": "single",
     "options": [
       "To maintain state across batch executions",
       "To increase batch size",
-      "To reduce CPU usage",
-      "To skip error records"
+      "To optimize CPU usage",
+      "To skip errors"
     ],
     "correct": ["To maintain state across batch executions"],
-    "explanation": "The Database.Stateful interface allows Batch Apex to maintain variable state between batch executions, useful for aggregations."
+    "explanation": "Database.Stateful preserves variable states across batch executions, useful for aggregations or cumulative calculations."
   },
   {
     "topic": "Advanced Apex Programming",
@@ -153,24 +153,24 @@
       "assert"
     ],
     "correct": ["try-catch", "throw", "finally"],
-    "explanation": "Apex uses try-catch, throw, and finally for exception handling; assert is for testing, not handling."
+    "explanation": "try-catch catches exceptions, throw generates them, and finally executes cleanup code. Assert is for testing, not exception handling."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "How can you test Apex code that involves external callouts?",
+    "question": "How can external callouts be tested in Apex?",
     "type": "single",
     "options": [
       "Using mock callouts",
-      "By actually making the callout",
-      "By skipping the test",
-      "Using the @isTest annotation"
+      "Making real callouts",
+      "Skipping tests",
+      "Using @future methods"
     ],
     "correct": ["Using mock callouts"],
-    "explanation": "Mock callouts simulate external service responses, allowing testing without actual network calls."
+    "explanation": "Mock callouts with HttpCalloutMock simulate external responses, allowing testing without real network calls."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the maximum number of batch executions in a single transaction?",
+    "question": "What is the maximum number of Batch Apex executions in a single transaction?",
     "type": "single",
     "options": [
       "1",
@@ -179,11 +179,11 @@
       "Unlimited"
     ],
     "correct": ["1"],
-    "explanation": "Batch Apex executes in a single transaction per batch, with a limit of one execution at a time."
+    "explanation": "Only one Batch Apex job executes per transaction, per Salesforce governor limits."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "Which are valid ways to handle large data sets in Apex? (Select all that apply)",
+    "question": "Which methods handle large datasets effectively in Apex? (Select all that apply)",
     "type": "multiple",
     "options": [
       "Batch Apex",
@@ -192,63 +192,63 @@
       "SOQL for loops"
     ],
     "correct": ["Batch Apex", "Queueable Apex", "SOQL for loops"],
-    "explanation": "Batch Apex, Queueable Apex, and SOQL for loops handle large data sets efficiently; future methods are for smaller, asynchronous tasks."
+    "explanation": "Batch Apex and Queueable Apex process large datasets asynchronously, and SOQL for loops iterate efficiently. Future methods are for smaller tasks."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What does the @RemoteAction annotation do?",
+    "question": "What does the @RemoteAction annotation enable?",
     "type": "single",
     "options": [
       "Exposes Apex methods to JavaScript",
       "Runs methods asynchronously",
-      "Handles exceptions",
-      "Optimizes queries"
+      "Caches method results",
+      "Handles exceptions"
     ],
     "correct": ["Exposes Apex methods to JavaScript"],
-    "explanation": "@RemoteAction exposes Apex methods for JavaScript calls, typically in Visualforce."
+    "explanation": "@RemoteAction allows Apex methods to be called from JavaScript, typically in Visualforce pages."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "How can you ensure Apex code is bulkified?",
+    "question": "How do you ensure Apex code is bulkified?",
     "type": "single",
     "options": [
-      "Process records in loops",
+      "Use individual DML statements",
       "Use collections for DML operations",
-      "Avoid using lists",
-      "Query inside loops"
+      "Query inside loops",
+      "Avoid lists"
     ],
     "correct": ["Use collections for DML operations"],
-    "explanation": "Bulkification involves using collections (e.g., lists) for DML to handle multiple records efficiently."
+    "explanation": "Bulkification uses collections (e.g., lists) to perform DML on multiple records efficiently, avoiding governor limit issues."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the @TestSetup annotation?",
+    "question": "What does the @TestSetup annotation do in Apex?",
     "type": "single",
     "options": [
-      "To set up test data once for all test methods",
-      "To run tests asynchronously",
-      "To increase test coverage",
-      "To debug test results"
+      "Sets up test data for all test methods",
+      "Runs tests asynchronously",
+      "Increases code coverage",
+      "Logs test results"
     ],
-    "correct": ["To set up test data once for all test methods"],
-    "explanation": "@TestSetup sets up common test data once, reducing redundancy in test classes."
+    "correct": ["Sets up test data for all test methods"],
+    "explanation": "@TestSetup creates test data once for all test methods in a class, reducing redundancy."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "Which Apex method is used to query records dynamically?",
+    "question": "Which method executes dynamic SOQL queries in Apex?",
     "type": "single",
     "options": [
       "Database.query()",
-      "SOQL.query()",
+      "SOQL.execute()",
       "Database.getQueryLocator()",
-      "SOSL.query()"
+      "SOSL.search()"
     ],
     "correct": ["Database.query()"],
-    "explanation": "Database.query() executes dynamic SOQL queries at runtime."
+    "explanation": "Database.query() runs dynamic SOQL queries constructed at runtime."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the maximum heap size limit in Apex?",
+    "question": "What is the synchronous heap size limit in Apex?",
     "type": "single",
     "options": [
       "6 MB",
@@ -256,51 +256,51 @@
       "24 MB",
       "Unlimited"
     ],
-    "correct": ["12 MB"],
-    "explanation": "The heap size limit in Apex is 12 MB for synchronous transactions, per governor limits."
+    "correct": ["6 MB"],
+    "explanation": "The heap size limit in synchronous Apex transactions is 6 MB, doubling to 12 MB for asynchronous contexts."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "How can you handle governor limits in Apex? (Select all that apply)",
+    "question": "How can governor limits be managed in Apex? (Select all that apply)",
     "type": "multiple",
     "options": [
-      "Bulkify code",
-      "Use asynchronous processing",
-      "Increase limits via settings",
-      "Monitor with Limits class"
+      "Bulkifying code",
+      "Using asynchronous processing",
+      "Monitoring with Limits class",
+      "Increasing limits manually"
     ],
-    "correct": ["Bulkify code", "Use asynchronous processing", "Monitor with Limits class"],
-    "explanation": "Bulkifying, asynchronous processing, and monitoring with Limits class help manage governor limits; limits can't be increased."
+    "correct": ["Bulkifying code", "Using asynchronous processing", "Monitoring with Limits class"],
+    "explanation": "Bulkifying, asynchronous processing, and the Limits class help manage governor limits. Limits cannot be increased manually."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the @Cacheable annotation in LWC?",
+    "question": "What does the @AuraEnabled(cacheable=true) annotation do?",
     "type": "single",
     "options": [
-      "To cache Apex method results",
-      "To run methods asynchronously",
-      "To handle exceptions",
-      "To optimize queries"
+      "Caches Apex method results for LWC",
+      "Runs methods asynchronously",
+      "Handles exceptions",
+      "Optimizes SOQL queries"
     ],
-    "correct": ["To cache Apex method results"],
-    "explanation": "@Cacheable caches Apex method results to improve performance in LWC."
+    "correct": ["Caches Apex method results for LWC"],
+    "explanation": "@AuraEnabled(cacheable=true) caches Apex method results to improve performance in Lightning Web Components."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "Which Apex collection type is unordered and unique?",
+    "question": "Which Apex collection ensures uniqueness and is unordered?",
     "type": "single",
     "options": [
       "List",
       "Set",
       "Map",
-      "Queue"
+      "Array"
     ],
     "correct": ["Set"],
-    "explanation": "A Set in Apex is unordered, unique, and stores distinct values."
+    "explanation": "A Set in Apex is an unordered collection that ensures all elements are unique."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "How do you implement polymorphism in Apex?",
+    "question": "How is polymorphism implemented in Apex?",
     "type": "single",
     "options": [
       "Using interfaces",
@@ -309,37 +309,37 @@
       "Using static methods"
     ],
     "correct": ["Both a and b"],
-    "explanation": "Polymorphism in Apex is achieved via interfaces and abstract classes, allowing different implementations."
+    "explanation": "Polymorphism in Apex is achieved through interfaces and abstract classes, allowing multiple implementations of a method."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the System.runAs() method in Apex tests?",
+    "question": "What is the purpose of System.runAs() in Apex tests?",
     "type": "single",
     "options": [
-      "To run code as a specific user",
-      "To increase test coverage",
-      "To handle exceptions",
-      "To optimize performance"
+      "Runs code as a specific user",
+      "Increases test coverage",
+      "Handles exceptions",
+      "Optimizes performance"
     ],
-    "correct": ["To run code as a specific user"],
-    "explanation": "System.runAs() executes code in the context of a specific user, testing sharing and security."
+    "correct": ["Runs code as a specific user"],
+    "explanation": "System.runAs() executes test code under a specific user’s context, testing security and sharing rules."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "Which are valid ways to share records programmatically? (Select all that apply)",
+    "question": "Which methods allow programmatic record sharing in Apex? (Select all that apply)",
     "type": "multiple",
     "options": [
-      "Apex managed sharing",
-      "Sharing rules",
-      "Manual sharing",
-      "Role hierarchy"
+      "Apex Managed Sharing",
+      "Manual Sharing",
+      "Sharing Rules",
+      "Role Hierarchy"
     ],
-    "correct": ["Apex managed sharing", "Manual sharing"],
-    "explanation": "Apex managed sharing and manual sharing are programmatic; sharing rules and role hierarchy are declarative."
+    "correct": ["Apex Managed Sharing", "Manual Sharing"],
+    "explanation": "Apex Managed Sharing and Manual Sharing enable programmatic sharing; Sharing Rules and Role Hierarchy are declarative."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the maximum number of future method calls in a transaction?",
+    "question": "What is the maximum number of future method invocations per transaction?",
     "type": "single",
     "options": [
       "10",
@@ -348,37 +348,37 @@
       "Unlimited"
     ],
     "correct": ["50"],
-    "explanation": "The governor limit for future method calls is 50 per transaction."
+    "explanation": "Salesforce limits future method calls to 50 per transaction to manage asynchronous processing."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "How can you test Batch Apex classes?",
+    "question": "How do you test Batch Apex effectively?",
     "type": "single",
     "options": [
       "Using Test.startTest() and Test.stopTest()",
-      "By running them in production",
+      "Running in production",
       "Using mock callouts",
-      "By skipping governor limits"
+      "Skipping governor limits"
     ],
     "correct": ["Using Test.startTest() and Test.stopTest()"],
-    "explanation": "Test.startTest() and Test.stopTest() reset governor limits, enabling Batch Apex testing."
+    "explanation": "Test.startTest() and Test.stopTest() provide a fresh governor limit context, forcing batch execution during testing."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the @TestVisible annotation?",
+    "question": "What does the @TestVisible annotation allow?",
     "type": "single",
     "options": [
-      "To make private methods testable",
-      "To run tests asynchronously",
-      "To increase test coverage",
-      "To debug test results"
+      "Access to private members in tests",
+      "Asynchronous test execution",
+      "Increased coverage",
+      "Debugging enhancements"
     ],
-    "correct": ["To make private methods testable"],
-    "explanation": "@TestVisible allows test classes to access private methods and variables."
+    "correct": ["Access to private members in tests"],
+    "explanation": "@TestVisible grants test classes access to private methods and variables for validation."
   },
   {
     "topic": "Advanced Apex Programming",
-    "question": "Which Apex feature allows chaining of jobs?",
+    "question": "Which Apex feature supports job chaining?",
     "type": "single",
     "options": [
       "Future methods",
@@ -387,154 +387,89 @@
       "Scheduled Apex"
     ],
     "correct": ["Queueable Apex"],
-    "explanation": "Queueable Apex supports chaining, allowing one job to enqueue another."
-  },
-  {
-    "topic": "Advanced Apex Programming",
-    "question": "How do you handle DML operations in bulkified Apex code?",
-    "type": "single",
-    "options": [
-      "Using individual DML statements",
-      "Using collections for DML",
-      "Querying in loops",
-      "Avoiding lists"
-    ],
-    "correct": ["Using collections for DML"],
-    "explanation": "Bulkified DML uses collections (e.g., lists) to process multiple records efficiently."
-  },
-  {
-    "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the Limits class in Apex?",
-    "type": "single",
-    "options": [
-      "To track governor limit usage",
-      "To increase limits",
-      "To log errors",
-      "To schedule jobs"
-    ],
-    "correct": ["To track governor limit usage"],
-    "explanation": "The Limits class monitors Apex execution against governor limits for optimization."
-  },
-  {
-    "topic": "Advanced Apex Programming",
-    "question": "Which are valid Apex data types for collections? (Select all that apply)",
-    "type": "multiple",
-    "options": [
-      "List",
-      "Set",
-      "Map",
-      "Queue"
-    ],
-    "correct": ["List", "Set", "Map"],
-    "explanation": "Apex collections include List, Set, and Map; Queue isn’t a collection type."
-  },
-  {
-    "topic": "Advanced Apex Programming",
-    "question": "How can you implement custom settings in Apex?",
-    "type": "single",
-    "options": [
-      "Using Custom Metadata Types",
-      "Using Custom Settings",
-      "Both a and b",
-      "Using Apex classes"
-    ],
-    "correct": ["Both a and b"],
-    "explanation": "Custom Settings and Custom Metadata Types store configuration data in Apex."
-  },
-  {
-    "topic": "Advanced Apex Programming",
-    "question": "What is the purpose of the @AuraEnabled(cacheable=true) annotation?",
-    "type": "single",
-    "options": [
-      "To cache Apex method results for LWC",
-      "To run methods asynchronously",
-      "To handle exceptions",
-      "To optimize queries"
-    ],
-    "correct": ["To cache Apex method results for LWC"],
-    "explanation": "@AuraEnabled(cacheable=true) caches results to improve LWC performance."
+    "explanation": "Queueable Apex allows chaining by enqueuing another job from within a job, supporting complex workflows."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "What is the difference between LWC and Aura components?",
+    "question": "What is a key difference between LWC and Aura components?",
     "type": "single",
     "options": [
-      "LWC uses JavaScript, Aura uses Apex",
-      "LWC is more performant, Aura is more feature-rich",
-      "LWC uses web standards, Aura uses proprietary framework",
-      "LWC is for Lightning Experience, Aura is for Classic"
+      "LWC uses web standards, Aura uses a proprietary framework",
+      "LWC is for Classic, Aura for Lightning",
+      "LWC uses Apex, Aura uses JavaScript",
+      "LWC is slower, Aura is faster"
     ],
-    "correct": ["LWC uses web standards, Aura uses proprietary framework"],
-    "explanation": "LWC leverages modern web standards like ES6 and Shadow DOM, while Aura uses a proprietary framework. Both can be used in Lightning Experience."
+    "correct": ["LWC uses web standards, Aura uses a proprietary framework"],
+    "explanation": "LWC leverages modern web standards (e.g., ES6, Shadow DOM), while Aura relies on Salesforce’s proprietary framework."
   },
   {
     "topic": "Lightning Component Framework",
     "question": "How do you make a property reactive in LWC?",
     "type": "single",
     "options": [
-      "By using the @track decorator",
-      "By using the @api decorator",
-      "By using the @wire decorator",
-      "By defining it as a public property"
+      "Using @track",
+      "Using @api",
+      "Using @wire",
+      "Using public properties"
     ],
-    "correct": ["By using the @track decorator"],
-    "explanation": "The @track decorator in LWC makes a property reactive, triggering re-renders on changes."
+    "correct": ["Using @track"],
+    "explanation": "@track makes properties reactive, causing the component to re-render when their values change."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "To handle real-time events in a Lightning Web Component, you would use the Lightning Message Service to subscribe to:",
+    "question": "Which service enables real-time event handling in LWC?",
     "type": "single",
     "options": [
+      "Lightning Message Service",
       "Apex Events",
-      "Platform Events",
       "Custom Events",
       "UI Events"
     ],
-    "correct": ["Platform Events"],
-    "explanation": "Platform Events are used for real-time data streaming, and LWC can subscribe to these events via the Lightning Message Service."
+    "correct": ["Lightning Message Service"],
+    "explanation": "Lightning Message Service enables real-time event communication across LWC using channels like Platform Events."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "Which are LWC benefits over Aura? (Select all that apply)",
+    "question": "What are advantages of LWC over Aura? (Select all that apply)",
     "type": "multiple",
     "options": [
       "Better performance",
       "Easier to learn",
       "More features",
-      "Backward compatibility"
+      "Full backward compatibility"
     ],
     "correct": ["Better performance", "Easier to learn"],
-    "explanation": "LWC offers superior performance and simplicity via web standards, but not more features or full Aura compatibility."
+    "explanation": "LWC offers improved performance and simplicity due to web standards, but it lacks some Aura features and isn’t fully backward compatible."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "What is the purpose of the @wire decorator in LWC?",
+    "question": "What is the role of the @wire decorator in LWC?",
     "type": "single",
     "options": [
-      "To fetch data from Apex",
-      "To handle component events",
-      "To manage state",
-      "To optimize performance"
+      "Fetches data from Apex or Salesforce",
+      "Handles component events",
+      "Manages state",
+      "Optimizes rendering"
     ],
-    "correct": ["To fetch data from Apex"],
-    "explanation": "The @wire decorator in LWC fetches data from Apex or Salesforce data services."
+    "correct": ["Fetches data from Apex or Salesforce"],
+    "explanation": "@wire connects LWC to Apex methods or Salesforce data services, providing reactive data binding."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "How do you handle component communication in LWC? (Select all that apply)",
+    "question": "Which methods facilitate component communication in LWC? (Select all that apply)",
     "type": "multiple",
     "options": [
-      "Using custom events",
-      "Using Lightning Message Service",
-      "Using Apex callouts",
-      "Using pub-sub model"
+      "Custom Events",
+      "Lightning Message Service",
+      "Apex callouts",
+      "Pub-sub model"
     ],
-    "correct": ["Using custom events", "Using Lightning Message Service", "Using pub-sub model"],
-    "explanation": "LWC uses custom events, Lightning Message Service, and pub-sub for component communication; Apex callouts are for server-side."
+    "correct": ["Custom Events", "Lightning Message Service", "Pub-sub model"],
+    "explanation": "Custom Events, Lightning Message Service, and pub-sub enable communication; Apex callouts are for server-side data."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "What is the lifecycle hook for initialization in LWC?",
+    "question": "Which lifecycle hook runs when an LWC is inserted into the DOM?",
     "type": "single",
     "options": [
       "connectedCallback",
@@ -543,11 +478,11 @@
       "errorCallback"
     ],
     "correct": ["connectedCallback"],
-    "explanation": "connectedCallback is called when the component is inserted into the DOM, ideal for initialization."
+    "explanation": "connectedCallback executes when an LWC is added to the DOM, ideal for initialization tasks."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "Which are valid ways to pass data to an LWC? (Select all that apply)",
+    "question": "How can data be passed into an LWC? (Select all that apply)",
     "type": "multiple",
     "options": [
       "Using @api properties",
@@ -556,63 +491,50 @@
       "Using Lightning Data Service"
     ],
     "correct": ["Using @api properties", "Using Apex methods", "Using Lightning Data Service"],
-    "explanation": "@api exposes public properties, Apex methods fetch data, and LDS provides data access; @track is for reactivity, not passing data."
+    "explanation": "@api passes data from parents, Apex fetches server-side data, and LDS provides record data; @track is for reactivity."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "How do you optimize LWC performance? (Select all that apply)",
-    "type": "multiple",
-    "options": [
-      "Caching data with @wire",
-      "Minimizing DOM operations",
-      "Using synchronous Apex calls",
-      "Leveraging lazy loading"
-    ],
-    "correct": ["Caching data with @wire", "Minimizing DOM operations", "Leveraging lazy loading"],
-    "explanation": "Caching with @wire, minimizing DOM operations, and lazy loading improve LWC performance; synchronous Apex calls can block UI."
-  },
-  {
-    "topic": "Lightning Component Framework",
-    "question": "What is the purpose of the Lightning Data Service in LWC?",
+    "question": "What does the Lightning Data Service provide in LWC?",
     "type": "single",
     "options": [
-      "To handle component events",
-      "To manage record data",
-      "To optimize performance",
-      "To secure data"
+      "Record management without Apex",
+      "Event handling",
+      "State management",
+      "Performance optimization"
     ],
-    "correct": ["To manage record data"],
-    "explanation": "Lightning Data Service provides a way to load, create, update, and delete records in LWC."
+    "correct": ["Record management without Apex"],
+    "explanation": "Lightning Data Service enables CRUD operations on records in LWC without requiring Apex code."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "How do you handle errors in LWC? (Select all that apply)",
+    "question": "How are errors managed in LWC? (Select all that apply)",
     "type": "multiple",
     "options": [
-      "Using try-catch in JavaScript",
+      "Using try-catch",
       "Using errorCallback",
       "Using Apex exceptions",
       "Using console.log"
     ],
-    "correct": ["Using try-catch in JavaScript", "Using errorCallback", "Using Apex exceptions"],
-    "explanation": "LWC handles errors with try-catch, errorCallback for lifecycle errors, and Apex exceptions; console.log is for debugging, not error handling."
+    "correct": ["Using try-catch", "Using errorCallback", "Using Apex exceptions"],
+    "explanation": "Try-catch handles JavaScript errors, errorCallback manages lifecycle errors, and Apex exceptions handle server-side issues; console.log is for debugging."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "What is the role of the @api decorator in LWC?",
+    "question": "What is the purpose of the @api decorator in LWC?",
     "type": "single",
     "options": [
-      "To make properties reactive",
-      "To expose properties to parent components",
-      "To fetch data from Apex",
-      "To handle events"
+      "Exposes properties to parent components",
+      "Makes properties reactive",
+      "Fetches Apex data",
+      "Handles events"
     ],
-    "correct": ["To expose properties to parent components"],
-    "explanation": "@api exposes properties for parent components to access, enabling component communication."
+    "correct": ["Exposes properties to parent components"],
+    "explanation": "@api marks properties as public, allowing parent components to set or access them."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "Which are valid lifecycle hooks in LWC? (Select all that apply)",
+    "question": "Which are valid LWC lifecycle hooks? (Select all that apply)",
     "type": "multiple",
     "options": [
       "connectedCallback",
@@ -621,43 +543,760 @@
       "initCallback"
     ],
     "correct": ["connectedCallback", "renderedCallback", "disconnectedCallback"],
-    "explanation": "LWC lifecycle hooks include connectedCallback, renderedCallback, and disconnectedCallback; initCallback isn’t standard."
+    "explanation": "LWC lifecycle hooks include connectedCallback, renderedCallback, and disconnectedCallback; initCallback is not a standard hook."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "How do you implement custom events in LWC?",
+    "question": "How are custom events implemented in LWC?",
     "type": "single",
     "options": [
-      "Using the CustomEvent constructor",
+      "Using CustomEvent constructor",
       "Using Apex events",
       "Using Lightning Message Service",
       "Using platform events"
     ],
-    "correct": ["Using the CustomEvent constructor"],
-    "explanation": "LWC uses the CustomEvent constructor to dispatch custom events for parent-child communication."
+    "correct": ["Using CustomEvent constructor"],
+    "explanation": "The CustomEvent constructor creates and dispatches custom events for parent-child communication in LWC."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "What is the purpose of the Shadow DOM in LWC?",
+    "question": "What does the Shadow DOM do in LWC?",
     "type": "single",
     "options": [
-      "To encapsulate styles and markup",
-      "To handle server-side logic",
-      "To optimize performance",
-      "To manage state"
+      "Encapsulates styles and markup",
+      "Handles server logic",
+      "Optimizes performance",
+      "Manages state"
     ],
-    "correct": ["To encapsulate styles and markup"],
-    "explanation": "Shadow DOM in LWC encapsulates styles and markup, preventing style leaks and ensuring component isolation."
+    "correct": ["Encapsulates styles and markup"],
+    "explanation": "Shadow DOM isolates styles and markup, preventing style leaks and ensuring component encapsulation."
   },
   {
     "topic": "Lightning Component Framework",
-    "question": "How do you fetch record data in LWC without Apex?",
+    "question": "How can record data be fetched in LWC without Apex?",
     "type": "single",
     "options": [
       "Using Lightning Data Service",
-      "Using @wire decorator",
+      "Using @wire with LDS",
       "Both a and b",
-      "Using Apex callouts"
+      "Using custom events"
     ],
     "correct": ["Both a and b"],
-    "ex
+    "explanation": "Lightning Data Service (LDS) and @wire with LDS fetch record data directly, bypassing Apex."
+  },
+  {
+    "topic": "Lightning Component Framework",
+    "question": "Which techniques optimize LWC performance? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Caching with @wire",
+      "Minimizing DOM operations",
+      "Using synchronous Apex calls",
+      "Lazy loading"
+    ],
+    "correct": ["Caching with @wire", "Minimizing DOM operations", "Lazy loading"],
+    "explanation": "Caching, reducing DOM updates, and lazy loading boost performance; synchronous Apex calls can slow down UI."
+  },
+  {
+    "topic": "Lightning Component Framework",
+    "question": "When does the renderedCallback lifecycle hook execute in LWC?",
+    "type": "single",
+    "options": [
+      "After every render",
+      "On initialization",
+      "On removal",
+      "On error"
+    ],
+    "correct": ["After every render"],
+    "explanation": "renderedCallback runs after each render, suitable for post-render DOM manipulations."
+  },
+  {
+    "topic": "Lightning Component Framework",
+    "question": "How is navigation handled in LWC? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using NavigationMixin",
+      "Using Lightning Navigation Service",
+      "Using window.location",
+      "Using Apex navigation"
+    ],
+    "correct": ["Using NavigationMixin", "Using Lightning Navigation Service"],
+    "explanation": "NavigationMixin and Lightning Navigation Service provide navigation in LWC; window.location and Apex aren’t standard."
+  },
+  {
+    "topic": "Lightning Component Framework",
+    "question": "What is the purpose of the @track decorator in modern LWC?",
+    "type": "single",
+    "options": [
+      "Tracks complex objects for reactivity",
+      "Exposes properties to parents",
+      "Fetches data",
+      "Handles events"
+    ],
+    "correct": ["Tracks complex objects for reactivity"],
+    "explanation": "While primitive reactivity is automatic in modern LWC, @track is still used for complex objects like arrays or objects."
+  },
+  {
+    "topic": "Lightning Component Framework",
+    "question": "How do you optimize LWC rendering performance?",
+    "type": "single",
+    "options": [
+      "Minimize DOM manipulations",
+      "Use inline styles",
+      "Increase synchronous calls",
+      "Avoid caching"
+    ],
+    "correct": ["Minimize DOM manipulations"],
+    "explanation": "Minimizing DOM manipulations reduces rendering overhead, improving LWC performance."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What distinguishes SOQL from SOSL in Salesforce?",
+    "type": "single",
+    "options": [
+      "SOQL queries records, SOSL searches text",
+      "SOQL searches text, SOSL queries records",
+      "SOQL is asynchronous, SOSL is synchronous",
+      "SOQL uses SOSL internally"
+    ],
+    "correct": ["SOQL queries records, SOSL searches text"],
+    "explanation": "SOQL retrieves specific records based on conditions, while SOSL performs text searches across multiple objects."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "Which practices optimize SOQL for large datasets? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using indexed fields",
+      "Adding LIMIT clauses",
+      "Querying in loops",
+      "Specifying fields explicitly"
+    ],
+    "correct": ["Using indexed fields", "Adding LIMIT clauses", "Specifying fields explicitly"],
+    "explanation": "Indexed fields speed up queries, LIMIT reduces record volume, and explicit fields avoid overhead; querying in loops is inefficient."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What is the Bulk API designed for in Salesforce?",
+    "type": "single",
+    "options": [
+      "Real-time data processing",
+      "Large-scale data operations",
+      "User authentication",
+      "UI optimization"
+    ],
+    "correct": ["Large-scale data operations"],
+    "explanation": "The Bulk API handles large data volumes asynchronously, ideal for batch imports or exports."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "Which integration method supports real-time data sync?",
+    "type": "single",
+    "options": [
+      "Batch Apex",
+      "Change Data Capture",
+      "Scheduled Apex",
+      "Future methods"
+    ],
+    "correct": ["Change Data Capture"],
+    "explanation": "Change Data Capture delivers real-time change notifications, perfect for synchronizing data with external systems."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "How are external callouts managed in Apex? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using HttpRequest",
+      "Using @future",
+      "Using Queueable Apex",
+      "Using synchronous DML"
+    ],
+    "correct": ["Using HttpRequest", "Using @future", "Using Queueable Apex"],
+    "explanation": "HttpRequest makes callouts, while @future and Queueable Apex handle them asynchronously; synchronous DML is unrelated."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What does the Streaming API provide?",
+    "type": "single",
+    "options": [
+      "Bulk data imports",
+      "Real-time event notifications",
+      "User management",
+      "Query optimization"
+    ],
+    "correct": ["Real-time event notifications"],
+    "explanation": "The Streaming API pushes real-time event notifications to subscribers using push technology."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What are benefits of Salesforce Connect? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Access external data without storage",
+      "Real-time integration",
+      "Reduced storage costs",
+      "Simplified Apex coding"
+    ],
+    "correct": ["Access external data without storage", "Real-time integration", "Reduced storage costs"],
+    "explanation": "Salesforce Connect integrates external data in real-time without storing it locally, lowering storage needs."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "Which methods integrate Salesforce with external systems? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "REST API",
+      "SOAP API",
+      "Bulk API",
+      "Platform Events"
+    ],
+    "correct": ["REST API", "SOAP API", "Bulk API", "Platform Events"],
+    "explanation": "REST, SOAP, Bulk APIs, and Platform Events all enable integration with external systems."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What does the @InvocableMethod annotation do?",
+    "type": "single",
+    "options": [
+      "Exposes Apex methods to flows",
+      "Runs methods asynchronously",
+      "Caches method results",
+      "Optimizes queries"
+    ],
+    "correct": ["Exposes Apex methods to flows"],
+    "explanation": "@InvocableMethod makes Apex methods accessible to Flow and Process Builder for automation."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "Which tool exports large datasets from Salesforce?",
+    "type": "single",
+    "options": [
+      "Data Loader",
+      "Import Wizard",
+      "Workbench",
+      "Reports"
+    ],
+    "correct": ["Data Loader"],
+    "explanation": "Data Loader supports bulk data exports, making it suitable for large datasets."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "How is data archiving handled in Salesforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using Big Objects",
+      "Using External Objects",
+      "Using Data Loader",
+      "Using Apex"
+    ],
+    "correct": ["Using Big Objects", "Using Data Loader", "Using Apex"],
+    "explanation": "Big Objects store archived data, Data Loader exports it, and Apex automates the process; External Objects are for integration."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What does the Metadata API manage?",
+    "type": "single",
+    "options": [
+      "Data records",
+      "Application metadata",
+      "User authentication",
+      "Performance metrics"
+    ],
+    "correct": ["Application metadata"],
+    "explanation": "The Metadata API manages customizations like objects, fields, and layouts, not data records."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "Which options integrate Salesforce with external databases? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Salesforce Connect",
+      "Heroku Connect",
+      "Custom Apex callouts",
+      "Lightning Components"
+    ],
+    "correct": ["Salesforce Connect", "Heroku Connect", "Custom Apex callouts"],
+    "explanation": "Salesforce Connect, Heroku Connect, and Apex callouts integrate with external databases; Lightning Components are UI-focused."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What is the Composite API used for?",
+    "type": "single",
+    "options": [
+      "Multiple operations in one call",
+      "Bulk data processing",
+      "User session management",
+      "Query optimization"
+    ],
+    "correct": ["Multiple operations in one call"],
+    "explanation": "The Composite API combines multiple REST requests into a single call, improving efficiency."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "How can data sync be achieved between Salesforce and external systems? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Change Data Capture",
+      "Platform Events",
+      "Outbound Messages",
+      "Apex triggers"
+    ],
+    "correct": ["Change Data Capture", "Platform Events", "Outbound Messages", "Apex triggers"],
+    "explanation": "All these methods—Change Data Capture, Platform Events, Outbound Messages, and Apex triggers—support data synchronization."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What does the SOAP API provide?",
+    "type": "single",
+    "options": [
+      "Structured data exchange",
+      "Real-time streaming",
+      "Bulk data handling",
+      "UI enhancements"
+    ],
+    "correct": ["Structured data exchange"],
+    "explanation": "SOAP API uses XML for structured, enterprise-level data exchange with Salesforce."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "Which API is optimal for asynchronous large data processing?",
+    "type": "single",
+    "options": [
+      "REST API",
+      "SOAP API",
+      "Bulk API",
+      "Streaming API"
+    ],
+    "correct": ["Bulk API"],
+    "explanation": "The Bulk API processes large data volumes asynchronously, ideal for batch operations."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "How are external callouts authenticated in Apex? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Named Credentials",
+      "OAuth",
+      "Basic Authentication",
+      "Hardcoded credentials"
+    ],
+    "correct": ["Named Credentials", "OAuth", "Basic Authentication"],
+    "explanation": "Named Credentials, OAuth, and Basic Authentication securely authenticate callouts; hardcoding credentials is insecure."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "What does the @InvocableVariable annotation define?",
+    "type": "single",
+    "options": [
+      "Variables for flows",
+      "Asynchronous variables",
+      "Cached variables",
+      "Query variables"
+    ],
+    "correct": ["Variables for flows"],
+    "explanation": "@InvocableVariable defines variables usable in flows when paired with @InvocableMethod."
+  },
+  {
+    "topic": "Data Management and Integration",
+    "question": "Which API supports event-driven integration?",
+    "type": "single",
+    "options": [
+      "REST API",
+      "Streaming API",
+      "Bulk API",
+      "SOAP API"
+    ],
+    "correct": ["Streaming API"],
+    "explanation": "The Streaming API supports event-driven integration by pushing real-time updates."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What does 'with sharing' enforce in Apex?",
+    "type": "single",
+    "options": [
+      "User sharing rules",
+      "System mode",
+      "Field-level security",
+      "Record ownership"
+    ],
+    "correct": ["User sharing rules"],
+    "explanation": "'with sharing' ensures Apex respects the running user’s sharing rules for record access."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "How do you test Apex code with governor limits? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using Test.startTest() and Test.stopTest()",
+      "Using mock callouts",
+      "Using System.runAs()",
+      "Ignoring limits"
+    ],
+    "correct": ["Using Test.startTest() and Test.stopTest()"],
+    "explanation": "Test.startTest() and Test.stopTest() reset governor limits, allowing controlled testing of limit-bound code."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What is Apex Managed Sharing used for?",
+    "type": "single",
+    "options": [
+      "Programmatic record sharing",
+      "User permission management",
+      "Field security",
+      "Performance optimization"
+    ],
+    "correct": ["Programmatic record sharing"],
+    "explanation": "Apex Managed Sharing enables developers to share records programmatically via code."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which are best practices for Apex testing? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Achieving 75% coverage",
+      "Testing all scenarios",
+      "Using mock data",
+      "Using production data"
+    ],
+    "correct": ["Achieving 75% coverage", "Testing all scenarios", "Using mock data"],
+    "explanation": "Tests require 75% coverage, comprehensive scenario testing, and mock data; production data should be avoided."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "How are mock callouts implemented in Apex tests?",
+    "type": "single",
+    "options": [
+      "Using HttpCalloutMock",
+      "Making real callouts",
+      "Using Test.startTest()",
+      "Using @future"
+    ],
+    "correct": ["Using HttpCalloutMock"],
+    "explanation": "HttpCalloutMock simulates callout responses, enabling testing without external dependencies."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What does the @TestVisible annotation enable?",
+    "type": "single",
+    "options": [
+      "Testing private members",
+      "Asynchronous testing",
+      "Coverage increase",
+      "Debugging"
+    ],
+    "correct": ["Testing private members"],
+    "explanation": "@TestVisible allows test classes to access private methods and variables."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which technique prevents SOQL injection?",
+    "type": "single",
+    "options": [
+      "Using bind variables",
+      "Using static queries",
+      "Using dynamic SOQL",
+      "Using sharing rules"
+    ],
+    "correct": ["Using bind variables"],
+    "explanation": "Bind variables treat inputs as data, not executable code, preventing SOQL injection."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "How are Apex triggers tested? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Inserting records",
+      "Updating records",
+      "Deleting records",
+      "Using Test.startTest()"
+    ],
+    "correct": ["Inserting records", "Updating records", "Deleting records", "Using Test.startTest()"],
+    "explanation": "Trigger testing involves simulating DML operations and using Test.startTest() to manage limits."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What does System.runAs() do in tests?",
+    "type": "single",
+    "options": [
+      "Runs code as a specific user",
+      "Increases coverage",
+      "Handles exceptions",
+      "Optimizes tests"
+    ],
+    "correct": ["Runs code as a specific user"],
+    "explanation": "System.runAs() tests code under a specific user’s permissions and sharing context."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which methods manage test data? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using @TestSetup",
+      "Creating data per method",
+      "Using mock data",
+      "Using production data"
+    ],
+    "correct": ["Using @TestSetup", "Creating data per method", "Using mock data"],
+    "explanation": "@TestSetup, per-method data creation, and mock data are valid; production data risks consistency issues."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What does Test.isRunningTest() check?",
+    "type": "single",
+    "options": [
+      "If code is in a test context",
+      "If tests are complete",
+      "If coverage is met",
+      "If limits are exceeded"
+    ],
+    "correct": ["If code is in a test context"],
+    "explanation": "Test.isRunningTest() determines if Apex is running in a test environment, useful for conditional logic."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "How is asynchronous Apex tested?",
+    "type": "single",
+    "options": [
+      "Using Test.startTest() and Test.stopTest()",
+      "Using real execution",
+      "Using mock callouts",
+      "Using @isTest"
+    ],
+    "correct": ["Using Test.startTest() and Test.stopTest()"],
+    "explanation": "Test.startTest() and Test.stopTest() force asynchronous code to execute synchronously in tests."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which security measures combat XSS in Salesforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Encoding user input",
+      "Using Content Security Policy",
+      "Using bind variables",
+      "Using Apex sharing"
+    ],
+    "correct": ["Encoding user input", "Using Content Security Policy"],
+    "explanation": "Encoding input and CSP prevent XSS; bind variables address SOQL injection, and sharing is unrelated."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "How do you ensure Apex respects user permissions? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using with sharing",
+      "Using System.runAs()",
+      "Using permission sets",
+      "Using role hierarchy"
+    ],
+    "correct": ["Using with sharing", "Using System.runAs()"],
+    "explanation": "with sharing enforces permissions, and System.runAs() tests them; permission sets and roles are declarative."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What is the minimum code coverage required for Apex deployment?",
+    "type": "single",
+    "options": [
+      "50%",
+      "75%",
+      "90%",
+      "100%"
+    ],
+    "correct": ["75%"],
+    "explanation": "Salesforce requires at least 75% code coverage for Apex to be deployed to production."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What are Change Sets used for in Salesforce?",
+    "type": "single",
+    "options": [
+      "Deploying metadata between orgs",
+      "Managing user permissions",
+      "Migrating data",
+      "Optimizing performance"
+    ],
+    "correct": ["Deploying metadata between orgs"],
+    "explanation": "Change Sets deploy metadata components between connected Salesforce orgs."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "Which tools deploy metadata in Salesforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Salesforce CLI",
+      "Change Sets",
+      "Metadata API",
+      "Data Loader"
+    ],
+    "correct": ["Salesforce CLI", "Change Sets", "Metadata API"],
+    "explanation": "Salesforce CLI, Change Sets, and Metadata API deploy metadata; Data Loader is for data."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What role does the Salesforce CLI play in deployment?",
+    "type": "single",
+    "options": [
+      "Automates deployment tasks",
+      "Manages user sessions",
+      "Handles data migration",
+      "Optimizes Apex"
+    ],
+    "correct": ["Automates deployment tasks"],
+    "explanation": "The Salesforce CLI automates deployment, testing, and environment management."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "How is version control implemented in Salesforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using Git",
+      "Using Salesforce DX",
+      "Using Change Sets",
+      "Using scratch orgs"
+    ],
+    "correct": ["Using Git", "Using Salesforce DX", "Using scratch orgs"],
+    "explanation": "Git, Salesforce DX, and scratch orgs support version control; Change Sets are for deployment."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What is a scratch org in Salesforce DX?",
+    "type": "single",
+    "options": [
+      "Temporary development environment",
+      "Permanent production org",
+      "Full sandbox",
+      "Data storage unit"
+    ],
+    "correct": ["Temporary development environment"],
+    "explanation": "Scratch orgs are disposable, source-driven environments for development and testing in Salesforce DX."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "Which are best practices for Apex deployment? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Ensuring 75% coverage",
+      "Running all tests",
+      "Using version control",
+      "Deploying during peak hours"
+    ],
+    "correct": ["Ensuring 75% coverage", "Running all tests", "Using version control"],
+    "explanation": "Apex deployment requires 75% coverage, all tests passing, and version control; off-peak deployment is preferable."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What does the Metadata API do in deployment?",
+    "type": "single",
+    "options": [
+      "Deploys metadata programmatically",
+      "Manages user permissions",
+      "Migrates data",
+      "Optimizes performance"
+    ],
+    "correct": ["Deploys metadata programmatically"],
+    "explanation": "The Metadata API enables programmatic deployment of metadata components."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "How is data migration performed in Salesforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using Data Loader",
+      "Using Import Wizard",
+      "Using Bulk API",
+      "Using Apex"
+    ],
+    "correct": ["Using Data Loader", "Using Import Wizard", "Using Bulk API", "Using Apex"],
+    "explanation": "Data Loader, Import Wizard, Bulk API, and Apex all support data migration tasks."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What is the Ant Migration Tool used for?",
+    "type": "single",
+    "options": [
+      "Scripted metadata deployment",
+      "User session management",
+      "Data migration",
+      "Apex optimization"
+    ],
+    "correct": ["Scripted metadata deployment"],
+    "explanation": "The Ant Migration Tool deploys metadata using XML and scripts, offering automation."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "Which deployment strategies are valid? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Blue-green deployment",
+      "Canary deployment",
+      "Rolling deployment",
+      "Big bang deployment"
+    ],
+    "correct": ["Blue-green deployment", "Canary deployment", "Rolling deployment"],
+    "explanation": "Blue-green, canary, and rolling deployments reduce risk; big bang is less controlled."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What does the Salesforce DX CLI enable?",
+    "type": "single",
+    "options": [
+      "Automation of development and deployment",
+      "User permission management",
+      "Data migration",
+      "Apex optimization"
+    ],
+    "correct": ["Automation of development and deployment"],
+    "explanation": "The Salesforce DX CLI automates development, testing, and deployment workflows."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "How are deployment conflicts resolved? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using version control",
+      "Merging changes",
+      "Using Change Sets",
+      "Ignoring conflicts"
+    ],
+    "correct": ["Using version control", "Merging changes"],
+    "explanation": "Version control and merging resolve conflicts; Change Sets don’t address conflicts directly."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What is the purpose of package.xml in deployment?",
+    "type": "single",
+    "options": [
+      "Defines metadata for deployment",
+      "Manages permissions",
+      "Migrates data",
+      "Optimizes Apex"
+    ],
+    "correct": ["Defines metadata for deployment"],
+    "explanation": "package.xml specifies which metadata components to include in a deployment."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "What are benefits of Salesforce DX for deployment? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Source-driven development",
+      "Scratch orgs",
+      "Automated deployments",
+      "Simplified permissions"
+    ],
+    "correct": ["Source-driven development", "Scratch orgs", "Automated deployments"],
+    "explanation": "Salesforce DX offers source-driven workflows, scratch orgs, and automation; permissions are managed separately."
+  },
+  {
+    "topic": "Deployment and Migration",
+    "question": "How do you ensure a successful deployment? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Running all tests",
+      "Checking dependencies",
+      "Using version control",
+      "Deploying during peak hours"
+    ],
+    "correct": ["Running all tests", "Checking dependencies", "Using version control"],
+    "explanation": "Tests, dependency checks, and version control ensure success; off-peak deployment is better."
+  }
+]
