@@ -1,0 +1,818 @@
+[
+  {
+    "topic": "Platform Basics",
+    "question": "What is the term for Salesforce's ability to host multiple customers on the same instance?",
+    "type": "single",
+    "options": ["Multi-User", "Multi-Client", "Multi-Tenant", "Multi-Instance"],
+    "correct": ["Multi-Tenant"],
+    "explanation": "Salesforce uses a multi-tenant architecture, allowing multiple customers to share a single instance while keeping data isolated, as described in Salesforce documentation."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which benefits apply to Salesforce’s multi-tenant architecture? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Cost savings from shared resources", "Dedicated instance per customer", "Easier platform updates", "Data isolation"],
+    "correct": ["Cost savings from shared resources", "Easier platform updates", "Data isolation"],
+    "explanation": "Multi-tenancy reduces costs via shared resources, simplifies updates, and ensures data isolation between tenants, per Salesforce’s architecture principles."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "What enforces resource usage limits in Salesforce?",
+    "type": "single",
+    "options": ["Sandbox Limits", "Governor Limits", "User Limits", "API Limits"],
+    "correct": ["Governor Limits"],
+    "explanation": "Governor Limits prevent any single tenant from monopolizing resources, ensuring equitable performance in a multi-tenant environment."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which are types of governor limits? (Select all that apply)",
+    "type": "multiple",
+    "options": ["SOQL queries", "DML operations", "CPU time", "User sessions"],
+    "correct": ["SOQL queries", "DML operations", "CPU time"],
+    "explanation": "Governor Limits include restrictions on SOQL queries, DML operations, and CPU time to maintain platform stability."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "What is the Metadata API used for in Salesforce?",
+    "type": "single",
+    "options": ["Querying records", "Managing application structure", "User authentication", "Asynchronous processing"],
+    "correct": ["Managing application structure"],
+    "explanation": "The Metadata API manages customizations like object definitions and layouts, per Salesforce documentation."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which are considered platform events? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Record creation", "Custom event", "User login", "Batch job"],
+    "correct": ["Record creation", "Custom event"],
+    "explanation": "Platform events include standard events (e.g., record creation) and developer-defined custom events for real-time integration."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "How do sandbox and production environments differ?",
+    "type": "single",
+    "options": ["Sandbox for testing, production for live use", "Sandbox has more features", "Production for testing, sandbox for live use", "No difference"],
+    "correct": ["Sandbox for testing, production for live use"],
+    "explanation": "Sandboxes are isolated environments for testing, while production is for live operations, per Salesforce guidelines."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which are types of Salesforce sandboxes? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Developer", "Partial Copy", "Full", "Production"],
+    "correct": ["Developer", "Partial Copy", "Full"],
+    "explanation": "Salesforce provides Developer, Partial Copy, and Full sandboxes for various testing needs."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "What does the Salesforce CLI primarily do?",
+    "type": "single",
+    "options": ["Manage permissions", "Execute Apex", "Automate development", "Create objects"],
+    "correct": ["Automate development"],
+    "explanation": "The Salesforce CLI automates tasks like deployment and environment management, enhancing developer productivity."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which features belong to Salesforce DX? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Source-driven development", "Scratch orgs", "Continuous integration", "Permission sets"],
+    "correct": ["Source-driven development", "Scratch orgs", "Continuous integration"],
+    "explanation": "Salesforce DX includes source-driven development, scratch orgs, and CI support for modern workflows."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "What is a scratch org in Salesforce DX?",
+    "type": "single",
+    "options": ["Temporary testing environment", "Permanent development environment", "Production instance", "Full sandbox"],
+    "correct": ["Temporary testing environment"],
+    "explanation": "Scratch orgs are disposable environments for testing and development in Salesforce DX."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which are benefits of Salesforce DX? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Faster development", "Team collaboration", "Simplified deployment", "Code generation"],
+    "correct": ["Faster development", "Team collaboration", "Simplified deployment"],
+    "explanation": "Salesforce DX speeds up development, enhances collaboration via version control, and simplifies deployment."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "What is the Developer Console used for?",
+    "type": "single",
+    "options": ["Permission management", "Apex execution", "Object creation", "UI design"],
+    "correct": ["Apex execution"],
+    "explanation": "The Developer Console enables writing, debugging, and executing Apex code."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which tools help debug Apex code? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Developer Console", "Debug Logs", "Salesforce CLI", "Visual Studio Code"],
+    "correct": ["Developer Console", "Debug Logs", "Salesforce CLI", "Visual Studio Code"],
+    "explanation": "Apex debugging tools include the Developer Console, Debug Logs, CLI, and VS Code with extensions."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "How do managed and unmanaged packages differ?",
+    "type": "single",
+    "options": ["Managed can be upgraded, unmanaged cannot", "Unmanaged can be upgraded, managed cannot", "Managed are free, unmanaged are paid", "No difference"],
+    "correct": ["Managed can be upgraded, unmanaged cannot"],
+    "explanation": "Managed packages support upgrades by developers, while unmanaged packages are static post-installation."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which features define managed packages? (Select all that apply)",
+    "type": "multiple",
+    "options": ["IP protection", "Upgradeable", "Customer customizable", "Open source"],
+    "correct": ["IP protection", "Upgradeable"],
+    "explanation": "Managed packages protect intellectual property and allow upgrades, but limit customer customization."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "What is the AppExchange’s purpose?",
+    "type": "single",
+    "options": ["Permission management", "App sharing and installation", "Object creation", "UI design"],
+    "correct": ["App sharing and installation"],
+    "explanation": "The AppExchange is Salesforce’s marketplace for sharing and installing apps and components."
+  },
+  {
+    "topic": "Platform Basics",
+    "question": "Which offerings are available on AppExchange? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Apps", "Components", "Consulting services", "Training"],
+    "correct": ["Apps", "Components", "Consulting services", "Training"],
+    "explanation": "AppExchange provides apps, components, consulting, and training to extend Salesforce functionality."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which relationship allows a child object to exist without a parent?",
+    "type": "single",
+    "options": ["Lookup", "Master-Detail", "Many-to-Many", "Hierarchical"],
+    "correct": ["Lookup"],
+    "explanation": "Lookup relationships allow child records to exist independently, unlike Master-Detail."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "What purposes do junction objects serve? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Resolve many-to-many relationships", "Store relationship data", "Create hierarchies", "Manage permissions"],
+    "correct": ["Resolve many-to-many relationships", "Store relationship data"],
+    "explanation": "Junction objects enable many-to-many relationships and store additional data about them."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which are standard Salesforce objects? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Account", "Contact", "Opportunity", "CustomObject__c"],
+    "correct": ["Account", "Contact", "Opportunity"],
+    "explanation": "Account, Contact, and Opportunity are standard objects; CustomObject__c is custom."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "How do custom and standard objects differ?",
+    "type": "single",
+    "options": ["Custom are developer-created, standard are pre-built", "Standard are developer-created, custom are pre-built", "Custom have more features", "No difference"],
+    "correct": ["Custom are developer-created, standard are pre-built"],
+    "explanation": "Custom objects are built by developers; standard objects are provided by Salesforce."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which field type stores currency values?",
+    "type": "single",
+    "options": ["Currency", "Number", "Percent", "Formula"],
+    "correct": ["Currency"],
+    "explanation": "The Currency field type is designed for currency values, with built-in formatting."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "What do roll-up summary fields do? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Calculate values from related records", "Display parent data", "Store calculated values", "Manage permissions"],
+    "correct": ["Calculate values from related records", "Store calculated values"],
+    "explanation": "Roll-up summary fields aggregate data from child records in Master-Detail relationships."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which are types of custom metadata? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Custom Settings", "Custom Metadata Types", "Custom Labels", "Custom Permissions"],
+    "correct": ["Custom Settings", "Custom Metadata Types"],
+    "explanation": "Custom Settings and Custom Metadata Types store configuration data; Labels and Permissions serve other roles."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "How do Custom Settings and Custom Metadata Types differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Custom Settings deployable, Metadata not", "Metadata deployable, Settings not", "Settings editable by users, Metadata not", "Metadata editable by users, Settings not"],
+    "correct": ["Metadata deployable, Settings not", "Settings editable by users, Metadata not"],
+    "explanation": "Custom Metadata Types are deployable and read-only; Custom Settings are editable but not deployable."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which are relationship field types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Lookup", "Master-Detail", "Hierarchy", "External Lookup"],
+    "correct": ["Lookup", "Master-Detail", "Hierarchy", "External Lookup"],
+    "explanation": "Salesforce supports Lookup, Master-Detail, Hierarchy, and External Lookup relationships."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "What is an external object’s purpose? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Store external data", "Integrate with external systems", "Create relationships", "Manage permissions"],
+    "correct": ["Store external data", "Integrate with external systems"],
+    "explanation": "External objects map to external system data for integration within Salesforce."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which validation rule types exist? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Field-level", "Record-level", "Page layout", "Object-level"],
+    "correct": ["Field-level", "Record-level"],
+    "explanation": "Validation rules enforce data integrity at field or record levels."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "How do workflow rules and Process Builder differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Workflow triggered by record changes, Process Builder by events", "Process Builder updates related records, Workflow cannot", "Workflow sends emails, Process Builder cannot", "Process Builder more flexible"],
+    "correct": ["Workflow triggered by record changes, Process Builder by events", "Process Builder updates related records, Workflow cannot", "Process Builder more flexible"],
+    "explanation": "Workflow rules are limited to record triggers, while Process Builder is more versatile, updating related records."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which are formula field types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Text", "Number", "Date", "Checkbox"],
+    "correct": ["Text", "Number", "Date", "Checkbox"],
+    "explanation": "Formula fields can return text, numbers, dates, or checkboxes based on calculations."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "What does Schema Builder do? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Visualize relationships", "Create objects and fields", "Design layouts", "Manage permissions"],
+    "correct": ["Visualize relationships", "Create objects and fields"],
+    "explanation": "Schema Builder visualizes and manages object relationships and definitions."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which are data import tools? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Data Loader", "Import Wizard", "Bulk API", "Work.com"],
+    "correct": ["Data Loader", "Import Wizard", "Bulk API"],
+    "explanation": "Data Loader, Import Wizard, and Bulk API facilitate data imports; Work.com is unrelated."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "How do data import and export differ?",
+    "type": "single",
+    "options": ["Import brings data in, export takes it out", "Import for backups, export for migrations", "Export schedulable, import not", "Import supports relationships, export does not"],
+    "correct": ["Import brings data in, export takes it out"],
+    "explanation": "Import adds data to Salesforce; export extracts it."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "Which tools export data? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Data Loader", "Export Wizard", "Bulk API", "Reports"],
+    "correct": ["Data Loader", "Bulk API", "Reports"],
+    "explanation": "Data Loader, Bulk API, and Reports export data; Export Wizard is not standard."
+  },
+  {
+    "topic": "Data Modeling and Management",
+    "question": "What are data archiving benefits? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Store historical data", "Reduce costs", "Regulatory compliance", "Improve performance"],
+    "correct": ["Store historical data", "Reduce costs", "Regulatory compliance", "Improve performance"],
+    "explanation": "Archiving preserves data, cuts costs, ensures compliance, and boosts performance."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What differentiates Visualforce pages from Lightning components?",
+    "type": "single",
+    "options": ["Visualforce is server-side, Lightning is client-side", "Lightning is server-side, Visualforce is client-side", "Both are server-side", "Both are client-side"],
+    "correct": ["Visualforce is server-side, Lightning is client-side"],
+    "explanation": "Visualforce processes on the server, while Lightning components leverage client-side execution."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "Which handle business logic in Visualforce? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Apex controller", "JavaScript", "CSS", "HTML"],
+    "correct": ["Apex controller"],
+    "explanation": "Apex controllers manage Visualforce logic; JavaScript, CSS, and HTML handle presentation."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What is a Lightning Web Component’s purpose?",
+    "type": "single",
+    "options": ["Reusable UI elements", "Server-side logic", "External integration", "Permission management"],
+    "correct": ["Reusable UI elements"],
+    "explanation": "Lightning Web Components (LWC) create reusable UI elements using modern web standards."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "Which are Lightning component types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Aura", "Lightning Web Component", "Visualforce", "Lightning Page"],
+    "correct": ["Aura", "Lightning Web Component"],
+    "explanation": "Aura and LWC are Lightning components; Visualforce and Lightning Pages are distinct."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "How do Lightning Pages and Visualforce pages differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Lightning for Lightning Experience, Visualforce for Classic", "Lightning uses components, Visualforce uses tags", "Lightning more performant", "Both usable in Lightning"],
+    "correct": ["Lightning for Lightning Experience, Visualforce for Classic", "Lightning uses components, Visualforce uses tags", "Lightning more performant", "Both usable in Lightning"],
+    "explanation": "Lightning Pages target Lightning Experience with components, Visualforce uses tags for Classic, though both work in Lightning with caveats."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What are LWC benefits over Aura? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Better performance", "Easier to learn", "More features", "Backward compatibility"],
+    "correct": ["Better performance", "Easier to learn"],
+    "explanation": "LWC offers superior performance and simplicity via web standards, but not more features or full Aura compatibility."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What does Lightning App Builder do?",
+    "type": "single",
+    "options": ["Create custom pages", "Manage permissions", "Design workflows", "Build reports"],
+    "correct": ["Create custom pages"],
+    "explanation": "Lightning App Builder enables drag-and-drop page creation for Lightning Experience."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "Which are Lightning page types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["App Page", "Home Page", "Record Page", "Detail Page"],
+    "correct": ["App Page", "Home Page", "Record Page"],
+    "explanation": "Lightning pages include App, Home, and Record types; Detail Page isn’t standard."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "How do Lightning and Visualforce components differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Lightning client-side, Visualforce server-side", "Lightning uses JavaScript, Visualforce Apex", "Lightning more modern", "Both usable in Lightning"],
+    "correct": ["Lightning client-side, Visualforce server-side", "Lightning uses JavaScript, Visualforce Apex", "Lightning more modern", "Both usable in Lightning"],
+    "explanation": "Lightning components are client-side with JavaScript, Visualforce is server-side with Apex; Lightning is newer, but both work in Lightning."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What are LWC benefits? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Faster development", "Better performance", "External integration", "Code generation"],
+    "correct": ["Faster development", "Better performance"],
+    "explanation": "LWC speeds development and improves performance with web standards."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What does an Aura component do?",
+    "type": "single",
+    "options": ["Reusable UI elements", "Server-side logic", "External integration", "Permission management"],
+    "correct": ["Reusable UI elements"],
+    "explanation": "Aura components build reusable UI elements for Lightning applications."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "Which are Visualforce tags? (Select all that apply)",
+    "type": "multiple",
+    "options": ["<apex:page>", "<apex:component>", "<apex:controller>", "<apex:outputText>"],
+    "correct": ["<apex:page>", "<apex:component>", "<apex:outputText>"],
+    "explanation": "<apex:page>, <apex:component>, and <apex:outputText> are Visualforce tags; <apex:controller> isn’t standard."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "How do Visualforce and Lightning pages differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Visualforce for Classic, Lightning for Lightning Experience", "Lightning more flexible", "Visualforce uses Apex, Lightning JavaScript", "Both usable in Lightning"],
+    "correct": ["Visualforce for Classic, Lightning for Lightning Experience", "Lightning more flexible", "Visualforce uses Apex, Lightning JavaScript", "Both usable in Lightning"],
+    "explanation": "Visualforce targets Classic with Apex, Lightning uses JavaScript for flexibility; both work in Lightning."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What are Lightning component benefits? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Better performance", "Easier maintenance", "More features", "Backward compatibility"],
+    "correct": ["Better performance", "Easier maintenance"],
+    "explanation": "Lightning components improve performance and maintenance via modularity."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What is a Lightning App’s purpose?",
+    "type": "single",
+    "options": ["Group components", "Manage permissions", "Design workflows", "Build reports"],
+    "correct": ["Group components"],
+    "explanation": "Lightning Apps bundle components into custom applications."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "Which are Lightning event types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Component event", "Application event", "System event", "Custom event"],
+    "correct": ["Component event", "Application event", "Custom event"],
+    "explanation": "Lightning events include component, application, and custom types; system events aren’t standard."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "How do component and application events differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Component local, application global", "Application local, component global", "Component handled by component, application by app", "Both handled by component"],
+    "correct": ["Component local, application global", "Component handled by component, application by app"],
+    "explanation": "Component events are local to their hierarchy; application events are global and app-handled."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What are LWC benefits over Visualforce? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Faster development", "Better performance", "External integration", "Code generation"],
+    "correct": ["Faster development", "Better performance"],
+    "explanation": "LWC enhances development speed and performance over Visualforce."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What does a Lightning Page Template do?",
+    "type": "single",
+    "options": ["Define page layout", "Manage permissions", "Design workflows", "Build reports"],
+    "correct": ["Define page layout"],
+    "explanation": "Lightning Page Templates structure the layout of Lightning pages."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "Which are Lightning Page Template types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Record Page", "Home Page", "App Page", "Detail Page"],
+    "correct": ["Record Page", "Home Page", "App Page"],
+    "explanation": "Templates include Record, Home, and App Page types; Detail Page isn’t standard."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "How do LWC and Aura differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["LWC uses web standards, Aura proprietary", "Aura faster than LWC", "LWC easier to learn", "Both usable in Lightning"],
+    "correct": ["LWC uses web standards, Aura proprietary", "LWC easier to learn", "Both usable in Lightning"],
+    "explanation": "LWC leverages web standards for ease, unlike Aura’s proprietary framework; both work in Lightning."
+  },
+  {
+    "topic": "User Interface Development",
+    "question": "What are LWC benefits? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Better performance", "Easier maintenance", "More features", "Backward compatibility"],
+    "correct": ["Better performance", "Easier maintenance"],
+    "explanation": "LWC improves performance and maintenance with web standards."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What does an Apex trigger do?",
+    "type": "single",
+    "options": ["Execute code for database operations", "Handle UI events", "Schedule jobs", "Create reports"],
+    "correct": ["Execute code for database operations"],
+    "explanation": "Apex triggers run code before or after database events like insert or update."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which are Apex class types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Controller", "Extension", "Helper", "Model"],
+    "correct": ["Controller", "Extension", "Helper"],
+    "explanation": "Controller, Extension, and Helper are common Apex class types; Model isn’t standard."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "How do triggers and workflow rules differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Triggers programmatic, workflow declarative", "Workflow updates related records, triggers cannot", "Triggers handle complex logic, workflow limited", "Both automate processes"],
+    "correct": ["Triggers programmatic, workflow declarative", "Triggers handle complex logic, workflow limited", "Both automate processes"],
+    "explanation": "Triggers use Apex for complex logic, workflows are declarative and simpler; both automate tasks."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which are Apex trigger best practices? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Bulkification", "Avoid SOQL in loops", "Use static variables", "Multiple triggers per object"],
+    "correct": ["Bulkification", "Avoid SOQL in loops"],
+    "explanation": "Bulkification and avoiding SOQL in loops prevent governor limit issues in triggers."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What is Batch Apex used for?",
+    "type": "single",
+    "options": ["Process large data sets", "Handle UI events", "Schedule tasks", "Manage permissions"],
+    "correct": ["Process large data sets"],
+    "explanation": "Batch Apex processes large data volumes asynchronously, bypassing governor limits."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which are asynchronous Apex types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Batch Apex", "Queueable Apex", "Scheduled Apex", "Future methods"],
+    "correct": ["Batch Apex", "Queueable Apex", "Scheduled Apex", "Future methods"],
+    "explanation": "Asynchronous Apex includes Batch, Queueable, Scheduled, and Future methods."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "How do future methods and Queueable Apex differ? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Future simpler, Queueable more flexible", "Queueable chains jobs, Future cannot", "Future supports complex objects, Queueable does not", "Both asynchronous"],
+    "correct": ["Future simpler, Queueable more flexible", "Queueable chains jobs, Future cannot", "Both asynchronous"],
+    "explanation": "Future methods are simpler but limited; Queueable offers chaining and flexibility; both run asynchronously."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What does the @AuraEnabled annotation do?",
+    "type": "single",
+    "options": ["Expose Apex to Lightning", "Schedule Apex jobs", "Debug Apex code", "Secure Apex classes"],
+    "correct": ["Expose Apex to Lightning"],
+    "explanation": "@AuraEnabled makes Apex methods accessible to Lightning components."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which are Apex governor limits? (Select all that apply)",
+    "type": "multiple",
+    "options": ["100 SOQL queries", "150 DML statements", "10,000 CPU milliseconds", "50 API calls"],
+    "correct": ["100 SOQL queries", "150 DML statements", "10,000 CPU milliseconds"],
+    "explanation": "Apex limits include 100 SOQL queries, 150 DML statements, and 10,000 ms CPU time per transaction."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What is a benefit of using SOQL for loops?",
+    "type": "single",
+    "options": ["Efficient record processing", "Faster execution", "Avoids DML limits", "Simplifies debugging"],
+    "correct": ["Efficient record processing"],
+    "explanation": "SOQL for loops process records in chunks, reducing heap size usage."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which Apex features improve performance? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Bulkification", "Caching", "Asynchronous processing", "Trigger.old"],
+    "correct": ["Bulkification", "Caching", "Asynchronous processing"],
+    "explanation": "Bulkification, caching, and asynchronous processing optimize Apex performance."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What does the Database.Stateful interface do in Batch Apex?",
+    "type": "single",
+    "options": ["Maintains state across batches", "Increases batch size", "Reduces CPU usage", "Skips error records"],
+    "correct": ["Maintains state across batches"],
+    "explanation": "Database.Stateful preserves variable state between Batch Apex executions."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which are valid Apex data types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Id", "String", "Blob", "Array"],
+    "correct": ["Id", "String", "Blob"],
+    "explanation": "Apex supports Id, String, and Blob; Array isn’t a native type (use List instead)."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What does the @future annotation indicate?",
+    "type": "single",
+    "options": ["Asynchronous execution", "Scheduled execution", "Batch processing", "UI integration"],
+    "correct": ["Asynchronous execution"],
+    "explanation": "@future marks a method for asynchronous execution to avoid blocking."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which Apex methods query records? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Database.query()", "SOQL inline", "SOSL", "Database.getQueryLocator()"],
+    "correct": ["Database.query()", "SOQL inline", "SOSL", "Database.getQueryLocator()"],
+    "explanation": "Apex supports dynamic (Database.query), inline SOQL, SOSL, and getQueryLocator for queries."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What is a trigger context variable?",
+    "type": "single",
+    "options": ["Trigger.old", "Trigger.user", "Trigger.time", "Trigger.event"],
+    "correct": ["Trigger.old"],
+    "explanation": "Trigger.old provides old record values in update or delete triggers."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which are trigger events? (Select all that apply)",
+    "type": "multiple",
+    "options": ["before insert", "after update", "before delete", "after login"],
+    "correct": ["before insert", "after update", "before delete"],
+    "explanation": "Trigger events include before/after insert, update, delete, and undelete."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What does the Limits class do?",
+    "type": "single",
+    "options": ["Tracks governor limit usage", "Increases limits", "Logs errors", "Schedules jobs"],
+    "correct": ["Tracks governor limit usage"],
+    "explanation": "The Limits class monitors Apex execution against governor limits."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which Apex features support exception handling? (Select all that apply)",
+    "type": "multiple",
+    "options": ["try-catch", "throw", "finally", "assert"],
+    "correct": ["try-catch", "throw", "finally"],
+    "explanation": "Apex uses try-catch, throw, and finally for exception handling; assert is for testing."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What is the purpose of Apex sharing?",
+    "type": "single",
+    "options": ["Programmatic record sharing", "UI customization", "Data export", "Batch processing"],
+    "correct": ["Programmatic record sharing"],
+    "explanation": "Apex sharing programmatically grants record access beyond standard rules."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which are Apex collection types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["List", "Set", "Map", "Queue"],
+    "correct": ["List", "Set", "Map"],
+    "explanation": "Apex collections include List, Set, and Map; Queue isn’t a collection type."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "What does the @isTest annotation do?",
+    "type": "single",
+    "options": ["Marks a test method", "Runs code asynchronously", "Increases test coverage", "Logs test results"],
+    "correct": ["Marks a test method"],
+    "explanation": "@isTest identifies methods for unit testing in Apex."
+  },
+  {
+    "topic": "Business Logic Development",
+    "question": "Which Apex methods perform DML? (Select all that apply)",
+    "type": "multiple",
+    "options": ["insert", "update", "delete", "query"],
+    "correct": ["insert", "update", "delete"],
+    "explanation": "DML operations include insert, update, and delete; query retrieves data."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "What is the REST API used for in Salesforce?",
+    "type": "single",
+    "options": ["Access Salesforce data via HTTP", "Schedule Apex jobs", "Debug Apex", "Secure data"],
+    "correct": ["Access Salesforce data via HTTP"],
+    "explanation": "The REST API enables HTTP-based access to Salesforce data and operations."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "Which are Salesforce API types? (Select all that apply)",
+    "type": "multiple",
+    "options": ["REST", "SOAP", "Bulk", "Streaming"],
+    "correct": ["REST", "SOAP", "Bulk", "Streaming"],
+    "explanation": "Salesforce offers REST, SOAP, Bulk, and Streaming APIs for integration."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "What does the SOAP API provide?",
+    "type": "single",
+    "options": ["Structured data exchange", "Real-time streaming", "Bulk data processing", "UI rendering"],
+    "correct": ["Structured data exchange"],
+    "explanation": "SOAP API uses XML for structured, enterprise-level data exchange."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "Which are benefits of the Bulk API? (Select all that apply)",
+    "type": "multiple",
+    "options": ["High-volume data processing", "Asynchronous operations", "Real-time updates", "Simple queries"],
+    "correct": ["High-volume data processing", "Asynchronous operations"],
+    "explanation": "Bulk API handles large data volumes asynchronously."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "What is the Streaming API’s purpose?",
+    "type": "single",
+    "options": ["Real-time event notifications", "Bulk data imports", "SOAP integration", "UI updates"],
+    "correct": ["Real-time event notifications"],
+    "explanation": "Streaming API delivers real-time notifications via push technology."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "Which tools import data into Salesforce? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Data Loader", "Import Wizard", "Workbench", "Flow"],
+    "correct": ["Data Loader", "Import Wizard", "Workbench"],
+    "explanation": "Data Loader, Import Wizard, and Workbench support data imports; Flow automates processes."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "What does an External Service do?",
+    "type": "single",
+    "options": ["Integrates external APIs", "Exports data", "Runs Apex tests", "Manages permissions"],
+    "correct": ["Integrates external APIs"],
+    "explanation": "External Services connect Salesforce to external REST APIs declaratively."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "Which authentication methods does Salesforce support? (Select all that apply)",
+    "type": "multiple",
+    "options": ["OAuth", "SAML", "Username-Password", "JWT"],
+    "correct": ["OAuth", "SAML", "Username-Password", "JWT"],
+    "explanation": "Salesforce supports OAuth, SAML, Username-Password, and JWT for API authentication."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "What is the purpose of a named credential?",
+    "type": "single",
+    "options": ["Simplify authentication", "Store Apex code", "Schedule jobs", "Debug integrations"],
+    "correct": ["Simplify authentication"],
+    "explanation": "Named credentials manage authentication details for external callouts."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "Which are features of Platform Events? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Publish-subscribe model", "Real-time delivery", "Bulk processing", "External integration"],
+    "correct": ["Publish-subscribe model", "Real-time delivery", "External integration"],
+    "explanation": "Platform Events use a pub-sub model for real-time, external integration."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "What does the Outbound Message feature do?",
+    "type": "single",
+    "options": ["Sends SOAP notifications", "Imports data", "Runs Apex", "Streams events"],
+    "correct": ["Sends SOAP notifications"],
+    "explanation": "Outbound Messages send SOAP notifications to external systems from workflows."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "Which are data synchronization options? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Salesforce Connect", "Heroku Connect", "Data Loader", "Change Data Capture"],
+    "correct": ["Salesforce Connect", "Heroku Connect", "Change Data Capture"],
+    "explanation": "Salesforce Connect, Heroku Connect, and Change Data Capture sync data; Data Loader is for imports/exports."
+  },
+  {
+    "topic": "Integration and Data Management",
+    "question": "What does Change Data Capture provide?",
+    "type": "single",
+    "options": ["Real-time data change events", "Bulk data exports", "UI updates", "Permission changes"],
+    "correct": ["Real-time data change events"],
+    "explanation": "Change Data Capture publishes events for data changes in real time."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What controls object access in Salesforce?",
+    "type": "single",
+    "options": ["Profiles", "Roles", "Permission Sets", "Sharing Rules"],
+    "correct": ["Profiles"],
+    "explanation": "Profiles define baseline object-level access for users."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which determine record access? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Org-Wide Defaults", "Role Hierarchy", "Sharing Rules", "Field-Level Security"],
+    "correct": ["Org-Wide Defaults", "Role Hierarchy", "Sharing Rules"],
+    "explanation": "OWD, Role Hierarchy, and Sharing Rules control record access; FLS controls field access."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What does Field-Level Security do?",
+    "type": "single",
+    "options": ["Restricts field access", "Shares records", "Encrypts data", "Runs tests"],
+    "correct": ["Restricts field access"],
+    "explanation": "Field-Level Security limits visibility and editability of fields."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which are Apex test best practices? (Select all that apply)",
+    "type": "multiple",
+    "options": ["75% code coverage", "Test all scenarios", "Use Test.startTest()", "Avoid real data"],
+    "correct": ["75% code coverage", "Test all scenarios", "Use Test.startTest()", "Avoid real data"],
+    "explanation": "Apex tests require 75% coverage, comprehensive scenario testing, Test.startTest() for limits, and mock data."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What does the with sharing keyword do?",
+    "type": "single",
+    "options": ["Enforces sharing rules", "Ignores sharing rules", "Encrypts data", "Runs tests"],
+    "correct": ["Enforces sharing rules"],
+    "explanation": "with sharing ensures Apex respects user sharing rules."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which tools debug Apex tests? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Developer Console", "Debug Logs", "Test Classes", "VS Code"],
+    "correct": ["Developer Console", "Debug Logs", "VS Code"],
+    "explanation": "Developer Console, Debug Logs, and VS Code debug Apex tests; Test Classes define tests."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "What is the purpose of Test.isRunningTest()?",
+    "type": "single",
+    "options": ["Checks if code runs in test context", "Increases coverage", "Logs test results", "Skips governor limits"],
+    "correct": ["Checks if code runs in test context"],
+    "explanation": "Test.isRunningTest() identifies if Apex executes within a test environment."
+  },
+  {
+    "topic": "Security and Testing",
+    "question": "Which security features protect data? (Select all that apply)",
+    "type": "multiple",
+    "options": ["Encryption", "Profiles", "Permission Sets", "Apex Managed Sharing"],
+    "correct": ["Encryption", "Profiles", "Permission Sets", "Apex Managed Sharing"],
+    "explanation": "Encryption, Profiles, Permission Sets, and Apex Managed Sharing safeguard Salesforce data."
+  }
+]
