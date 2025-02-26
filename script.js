@@ -46,6 +46,8 @@ async function startQuiz() {
     const submitBtn = document.getElementById('submit-btn');
     const nextBtn = document.getElementById('next-btn');
     const feedback = document.getElementById('feedback');
+    const scoreContainer = document.getElementById('score-container');
+    const scoreSpan = document.getElementById('score');
 
     try {
         // Show loading message and hide quiz content
@@ -53,6 +55,7 @@ async function startQuiz() {
         questionContainer.style.display = 'none';
         submitBtn.style.display = 'none';
         nextBtn.style.display = 'none';
+        scoreContainer.style.display = 'none';
 
         // Load questions from JSON
         const questions = await loadQuestions();
@@ -66,6 +69,7 @@ async function startQuiz() {
         submitBtn.style.display = 'block';
 
         let currentQuestionIndex = 0;
+        let score = 0; // Initialize score to track correct answers
 
         // Function to load the current question
         function loadQuestion() {
@@ -100,6 +104,11 @@ async function startQuiz() {
                 .map(input => input.value);
             const isCorrect = currentQuestion.isCorrect(selectedOptions);
 
+            // Increment score if the answer is correct
+            if (isCorrect) {
+                score++;
+            }
+
             // Display feedback
             if (isCorrect) {
                 feedback.textContent = "Correct! " + currentQuestion.getFeedback();
@@ -114,11 +123,25 @@ async function startQuiz() {
             nextBtn.style.display = 'block';
         }
 
+        // Function to display the final score
+        function showScore() {
+            questionContainer.style.display = 'none';
+            submitBtn.style.display = 'none';
+            nextBtn.style.display = 'none';
+            feedback.textContent = '';
+            scoreContainer.style.display = 'block';
+            scoreSpan.textContent = `${score} out of ${questions.length}`;
+        }
+
         // Set up event listeners
         submitBtn.addEventListener('click', checkAnswer);
         nextBtn.addEventListener('click', () => {
-            currentQuestionIndex = (currentQuestionIndex + 1) % questions.length; // Loop through questions
-            loadQuestion();
+            if (currentQuestionIndex + 1 < questions.length) {
+                currentQuestionIndex++;
+                loadQuestion();
+            } else {
+                showScore();
+            }
         });
 
         // Load the first question

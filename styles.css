@@ -60,3 +60,10 @@ button:hover {
     margin-top: 20px;
     font-weight: bold;
 }
+
+/* New styling for score display */
+#score-container {
+    text-align: center;
+    font-size: 1.5em;
+    color: #007bff;
+}
