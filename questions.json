@@ -1,0 +1,1302 @@
+[
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the main goal of prompt engineering in Salesforce Agentforce?",
+    "type": "single",
+    "options": [
+      "To reduce server load",
+      "To improve AI-generated responses",
+      "To automate data entry",
+      "To configure user roles"
+    ],
+    "correct": ["To improve AI-generated responses"],
+    "explanation": "Prompt engineering aims to craft prompts that enhance the quality and relevance of AI responses in Agentforce."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which elements should be included in an effective prompt for Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Detailed context",
+      "Ambiguous instructions",
+      "Specific objectives",
+      "Random keywords"
+    ],
+    "correct": ["Detailed context", "Specific objectives"],
+    "explanation": "Effective prompts require detailed context and specific objectives to guide the AI accurately, while ambiguous instructions and random keywords can confuse it."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Why is it beneficial to include examples in a prompt?",
+    "type": "single",
+    "options": [
+      "To increase prompt length",
+      "To clarify the expected output",
+      "To confuse the AI model",
+      "To bypass testing"
+    ],
+    "correct": ["To clarify the expected output"],
+    "explanation": "Examples in a prompt help the AI understand the desired response format and content, improving accuracy."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What happens if a prompt lacks sufficient context in Agentforce?",
+    "type": "single",
+    "options": [
+      "The AI provides more creative responses",
+      "The AI may generate irrelevant or incorrect answers",
+      "The prompt is automatically rejected",
+      "The AI requests additional input"
+    ],
+    "correct": ["The AI may generate irrelevant or incorrect answers"],
+    "explanation": "Without sufficient context, the AI may misinterpret the prompt, leading to irrelevant or incorrect responses."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which practices improve prompt effectiveness in Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Iterative testing",
+      "Using vague language",
+      "Incorporating feedback",
+      "Keeping prompts static"
+    ],
+    "correct": ["Iterative testing", "Incorporating feedback"],
+    "explanation": "Iterative testing and feedback help refine prompts, while vague language and static prompts reduce effectiveness."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What tool in Salesforce is used to design and test prompts for Agentforce?",
+    "type": "single",
+    "options": [
+      "Data Cloud",
+      "Prompt Builder",
+      "Flow Builder",
+      "Einstein Analytics"
+    ],
+    "correct": ["Prompt Builder"],
+    "explanation": "Prompt Builder is the Salesforce tool designed specifically for creating and testing prompts for Agentforce."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "When is a single-turn prompt most appropriate in Agentforce?",
+    "type": "single",
+    "options": [
+      "For ongoing conversations",
+      "For one-time, straightforward queries",
+      "For complex decision-making",
+      "For data synchronization"
+    ],
+    "correct": ["For one-time, straightforward queries"],
+    "explanation": "Single-turn prompts are best for simple, one-off questions that don’t require conversational context."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which of these is a recommended approach for prompt creation? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Using concise language",
+      "Avoiding iterative refinement",
+      "Testing with real data",
+      "Including irrelevant details"
+    ],
+    "correct": ["Using concise language", "Testing with real data"],
+    "explanation": "Concise language and real-data testing improve prompt clarity and performance, unlike irrelevant details or skipping refinement."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What should you do if an Agentforce prompt consistently yields poor results?",
+    "type": "single",
+    "options": [
+      "Increase its complexity",
+      "Review and adjust the prompt",
+      "Ignore the issue",
+      "Switch to a different AI model"
+    ],
+    "correct": ["Review and adjust the prompt"],
+    "explanation": "Reviewing and adjusting the prompt based on results is the best way to improve its effectiveness."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "How does grounding enhance prompt performance in Agentforce?",
+    "type": "single",
+    "options": [
+      "By linking prompts to Salesforce data",
+      "By shortening the prompt",
+      "By removing examples",
+      "By limiting AI access"
+    ],
+    "correct": ["By linking prompts to Salesforce data"],
+    "explanation": "Grounding connects prompts to relevant Salesforce data, improving AI response accuracy and relevance."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which factor is most critical when designing a prompt for Agentforce?",
+    "type": "single",
+    "options": [
+      "Prompt length",
+      "Clarity of intent",
+      "Number of keywords",
+      "Use of technical jargon"
+    ],
+    "correct": ["Clarity of intent"],
+    "explanation": "Clarity of intent ensures the AI understands the prompt’s purpose, making it the most critical factor."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What can cause an AI to misinterpret a prompt in Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Overly complex phrasing",
+      "Lack of context",
+      "Clear instructions",
+      "Ambiguous terms"
+    ],
+    "correct": ["Overly complex phrasing", "Lack of context", "Ambiguous terms"],
+    "explanation": "Complex phrasing, missing context, and ambiguous terms can confuse the AI, while clear instructions aid understanding."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the benefit of testing prompts before deployment?",
+    "type": "single",
+    "options": [
+      "It reduces the need for context",
+      "It ensures consistent AI performance",
+      "It speeds up deployment",
+      "It eliminates feedback"
+    ],
+    "correct": ["It ensures consistent AI performance"],
+    "explanation": "Testing prompts verifies that the AI performs reliably, catching issues before deployment."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which of these should be avoided in prompt engineering? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Vague objectives",
+      "Overloading with details",
+      "Using examples",
+      "Iterative testing"
+    ],
+    "correct": ["Vague objectives", "Overloading with details"],
+    "explanation": "Vague objectives and excessive details can confuse the AI, while examples and testing are beneficial."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "How does Prompt Builder assist in Agentforce?",
+    "type": "single",
+    "options": [
+      "By automating data imports",
+      "By providing a testing interface",
+      "By managing user roles",
+      "By generating reports"
+    ],
+    "correct": ["By providing a testing interface"],
+    "explanation": "Prompt Builder offers an interface to create and test prompts, ensuring they work as intended."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is a multi-turn prompt used for in Agentforce?",
+    "type": "single",
+    "options": [
+      "Single responses",
+      "Complex, ongoing interactions",
+      "Data retrieval only",
+      "User authentication"
+    ],
+    "correct": ["Complex, ongoing interactions"],
+    "explanation": "Multi-turn prompts support conversations where the AI needs to retain context across multiple exchanges."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which of these enhances prompt clarity? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Specific instructions",
+      "Technical jargon",
+      "Concise wording",
+      "Broad questions"
+    ],
+    "correct": ["Specific instructions", "Concise wording"],
+    "explanation": "Specific instructions and concise wording improve clarity, while jargon and broad questions can obscure intent."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the purpose of iterative prompt refinement?",
+    "type": "single",
+    "options": [
+      "To reduce prompt length",
+      "To improve AI response quality over time",
+      "To limit AI access",
+      "To automate deployment"
+    ],
+    "correct": ["To improve AI response quality over time"],
+    "explanation": "Iterative refinement fine-tunes prompts based on feedback, enhancing AI response quality."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "How can you measure a prompt’s success in Agentforce?",
+    "type": "single",
+    "options": [
+      "By its length",
+      "By the accuracy of AI responses",
+      "By the number of keywords",
+      "By deployment speed"
+    ],
+    "correct": ["By the accuracy of AI responses"],
+    "explanation": "A prompt’s success is gauged by how accurately and effectively the AI responds to it."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What should you do if a prompt works inconsistently?",
+    "type": "single",
+    "options": [
+      "Simplify its structure",
+      "Add more keywords",
+      "Ignore the inconsistency",
+      "Increase its complexity"
+    ],
+    "correct": ["Simplify its structure"],
+    "explanation": "Simplifying the structure can address inconsistencies by making the prompt easier for the AI to interpret."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which of these is a key feature of Prompt Builder? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Prompt creation",
+      "Real-time testing",
+      "Data encryption",
+      "Response analysis"
+    ],
+    "correct": ["Prompt creation", "Real-time testing", "Response analysis"],
+    "explanation": "Prompt Builder supports creating, testing, and analyzing prompts, but data encryption is handled elsewhere."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Why is context important in a prompt?",
+    "type": "single",
+    "options": [
+      "It speeds up the AI",
+      "It provides the AI with necessary background",
+      "It reduces prompt length",
+      "It limits AI creativity"
+    ],
+    "correct": ["It provides the AI with necessary background"],
+    "explanation": "Context gives the AI the background needed to generate relevant and accurate responses."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is a potential downside of overly detailed prompts?",
+    "type": "single",
+    "options": [
+      "They confuse the AI",
+      "They simplify responses",
+      "They speed up processing",
+      "They eliminate testing"
+    ],
+    "correct": ["They confuse the AI"],
+    "explanation": "Overly detailed prompts can overwhelm the AI, leading to confusion and poor responses."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which of these is a sign of a poorly designed prompt? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Inconsistent AI responses",
+      "Clear AI outputs",
+      "Frequent off-topic answers",
+      "Accurate predictions"
+    ],
+    "correct": ["Inconsistent AI responses", "Frequent off-topic answers"],
+    "explanation": "Inconsistent or off-topic responses indicate a prompt isn’t effectively guiding the AI."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What role does user feedback play in prompt engineering?",
+    "type": "single",
+    "options": [
+      "It speeds up deployment",
+      "It identifies areas for improvement",
+      "It reduces context",
+      "It automates testing"
+    ],
+    "correct": ["It identifies areas for improvement"],
+    "explanation": "User feedback highlights where prompts can be refined to improve AI performance."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "How can you ensure a prompt aligns with business goals?",
+    "type": "single",
+    "options": [
+      "By making it generic",
+      "By tying it to specific objectives",
+      "By avoiding examples",
+      "By lengthening it"
+    ],
+    "correct": ["By tying it to specific objectives"],
+    "explanation": "Linking prompts to specific business objectives ensures they deliver relevant outcomes."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the Testing Center used for in Agentforce?",
+    "type": "single",
+    "options": [
+      "To deploy prompts",
+      "To evaluate prompt performance",
+      "To manage data flows",
+      "To encrypt responses"
+    ],
+    "correct": ["To evaluate prompt performance"],
+    "explanation": "The Testing Center allows users to assess how well prompts perform before deployment."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Which of these improves prompt reliability? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Consistent testing",
+      "Clear examples",
+      "Random phrasing",
+      "Specific goals"
+    ],
+    "correct": ["Consistent testing", "Clear examples", "Specific goals"],
+    "explanation": "Testing, examples, and specific goals enhance reliability, while random phrasing undermines it."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the first step in creating a prompt for Agentforce?",
+    "type": "single",
+    "options": [
+      "Testing it",
+      "Defining its purpose",
+      "Deploying it",
+      "Adding keywords"
+    ],
+    "correct": ["Defining its purpose"],
+    "explanation": "Defining the prompt’s purpose is the initial step to ensure it meets intended goals."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "Why might a prompt fail to deliver expected results?",
+    "type": "single",
+    "options": [
+      "It’s too specific",
+      "It lacks clear instructions",
+      "It’s well-tested",
+      "It uses examples"
+    ],
+    "correct": ["It lacks clear instructions"],
+    "explanation": "Unclear instructions can lead to misinterpretation, causing the prompt to fail."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is the core purpose of Agentforce in Salesforce?",
+    "type": "single",
+    "options": [
+      "To manage data storage",
+      "To deploy AI agents for automation",
+      "To design user interfaces",
+      "To monitor network traffic"
+    ],
+    "correct": ["To deploy AI agents for automation"],
+    "explanation": "Agentforce focuses on creating and managing AI agents to automate tasks across Salesforce."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "Which of these are features of Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Task automation",
+      "Customer personalization",
+      "Data encryption",
+      "Real-time analytics"
+    ],
+    "correct": ["Task automation", "Customer personalization"],
+    "explanation": "Agentforce automates tasks and personalizes interactions, while encryption and analytics are handled by other Salesforce features."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What powers Agentforce’s decision-making capabilities?",
+    "type": "single",
+    "options": [
+      "Flow Builder",
+      "Atlas Reasoning Engine",
+      "Data Cloud",
+      "Prompt Builder"
+    ],
+    "correct": ["Atlas Reasoning Engine"],
+    "explanation": "The Atlas Reasoning Engine enables Agentforce to reason and make decisions based on data and context."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does Agentforce improve operational efficiency?",
+    "type": "single",
+    "options": [
+      "By reducing data usage",
+      "By automating repetitive tasks",
+      "By limiting user access",
+      "By simplifying prompts"
+    ],
+    "correct": ["By automating repetitive tasks"],
+    "explanation": "Agentforce boosts efficiency by automating repetitive tasks, freeing up human resources."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "Which components are essential for an Agentforce agent? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Prompts",
+      "Action plans",
+      "External APIs",
+      "User roles"
+    ],
+    "correct": ["Prompts", "Action plans"],
+    "explanation": "Prompts and action plans are core to Agentforce agents, while external APIs and user roles are optional or separate."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What distinguishes Agentforce from basic automation tools?",
+    "type": "single",
+    "options": [
+      "Its use of predefined rules",
+      "Its ability to act and reason",
+      "Its focus on data storage",
+      "Its manual configuration"
+    ],
+    "correct": ["Its ability to act and reason"],
+    "explanation": "Agentforce’s ability to reason and perform actions sets it apart from basic, rule-based automation tools."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does Agentforce integrate with Salesforce?",
+    "type": "single",
+    "options": [
+      "Via external software",
+      "Through native Salesforce features",
+      "By replacing existing tools",
+      "With manual data entry"
+    ],
+    "correct": ["Through native Salesforce features"],
+    "explanation": "Agentforce integrates seamlessly with Salesforce’s native tools and data."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is a key advantage of Agentforce agents? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Scalability",
+      "Personalization",
+      "Reduced costs",
+      "Manual oversight"
+    ],
+    "correct": ["Scalability", "Personalization", "Reduced costs"],
+    "explanation": "Agentforce offers scalability, personalization, and cost reduction, while minimizing manual oversight needs."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is required to configure an Agentforce agent?",
+    "type": "single",
+    "options": [
+      "Advanced coding skills",
+      "Prompt and action definitions",
+      "Third-party tools",
+      "A separate license"
+    ],
+    "correct": ["Prompt and action definitions"],
+    "explanation": "Configuring an Agentforce agent requires defining prompts and actions, not coding or external tools."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does Agentforce ensure compliance?",
+    "type": "single",
+    "options": [
+      "By isolating data",
+      "Through Salesforce’s security framework",
+      "By limiting functionality",
+      "With external audits"
+    ],
+    "correct": ["Through Salesforce’s security framework"],
+    "explanation": "Agentforce leverages Salesforce’s built-in security and compliance features."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is the Data Library’s role in Agentforce?",
+    "type": "single",
+    "options": [
+      "To store prompts",
+      "To provide contextual data",
+      "To manage user access",
+      "To generate reports"
+    ],
+    "correct": ["To provide contextual data"],
+    "explanation": "The Data Library supplies Agentforce with contextual data for informed responses."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "Which of these can Agentforce automate? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Customer inquiries",
+      "Lead follow-ups",
+      "Data backups",
+      "Case escalations"
+    ],
+    "correct": ["Customer inquiries", "Lead follow-ups", "Case escalations"],
+    "explanation": "Agentforce automates inquiries, follow-ups, and escalations, but data backups are typically separate."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is a limitation of Agentforce?",
+    "type": "single",
+    "options": [
+      "It requires constant human input",
+      "It can’t handle complex scenarios alone",
+      "It lacks integration",
+      "It’s restricted to Sales Cloud"
+    ],
+    "correct": ["It can’t handle complex scenarios alone"],
+    "explanation": "Agentforce may need human oversight for complex scenarios, but it integrates well and isn’t limited to one cloud."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does the Atlas Reasoning Engine benefit Agentforce?",
+    "type": "single",
+    "options": [
+      "By encrypting data",
+      "By enabling contextual decisions",
+      "By reducing prompt length",
+      "By managing workflows"
+    ],
+    "correct": ["By enabling contextual decisions"],
+    "explanation": "The Atlas Reasoning Engine allows Agentforce to make decisions based on context and data."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What type of tasks can Agentforce perform? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Updating records",
+      "Sending emails",
+      "Analyzing trends",
+      "Scheduling meetings"
+    ],
+    "correct": ["Updating records", "Sending emails", "Scheduling meetings"],
+    "explanation": "Agentforce can update records, send emails, and schedule meetings, while trend analysis is more suited to analytics tools."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is the Testing Center’s primary function?",
+    "type": "single",
+    "options": [
+      "To deploy agents",
+      "To validate prompts and actions",
+      "To monitor performance",
+      "To encrypt data"
+    ],
+    "correct": ["To validate prompts and actions"],
+    "explanation": "The Testing Center ensures prompts and actions work correctly before deployment."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does Agentforce enhance user experience?",
+    "type": "single",
+    "options": [
+      "By reducing response times",
+      "By complicating workflows",
+      "By limiting data access",
+      "By requiring manual input"
+    ],
+    "correct": ["By reducing response times"],
+    "explanation": "Agentforce improves user experience by speeding up responses through automation."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "Which clouds can Agentforce operate in? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Service Cloud",
+      "Sales Cloud",
+      "Marketing Cloud",
+      "Health Cloud"
+    ],
+    "correct": ["Service Cloud", "Sales Cloud"],
+    "explanation": "Agentforce is primarily designed for Service Cloud and Sales Cloud, with broader applications possible."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What governs Agentforce’s actions?",
+    "type": "single",
+    "options": [
+      "User permissions",
+      "Action plans",
+      "External scripts",
+      "Data imports"
+    ],
+    "correct": ["Action plans"],
+    "explanation": "Action plans define the specific tasks and workflows Agentforce executes."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does Agentforce handle external data?",
+    "type": "single",
+    "options": [
+      "It can’t access external data",
+      "Through MuleSoft integration",
+      "Via manual uploads",
+      "With third-party apps only"
+    ],
+    "correct": ["Through MuleSoft integration"],
+    "explanation": "Agentforce integrates external data via MuleSoft, enhancing its capabilities."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is a benefit of Agentforce’s automation? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Reduced errors",
+      "Faster task completion",
+      "Increased manual effort",
+      "Improved accuracy"
+    ],
+    "correct": ["Reduced errors", "Faster task completion", "Improved accuracy"],
+    "explanation": "Automation reduces errors, speeds up tasks, and improves accuracy, not manual effort."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What does Agentforce use to personalize responses?",
+    "type": "single",
+    "options": [
+      "Static templates",
+      "Customer data",
+      "Random inputs",
+      "Predefined rules"
+    ],
+    "correct": ["Customer data"],
+    "explanation": "Agentforce uses customer data to tailor responses to individual needs."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "Why is the Data Library important?",
+    "type": "single",
+    "options": [
+      "It stores agent configurations",
+      "It provides real-time data access",
+      "It manages user permissions",
+      "It generates prompts"
+    ],
+    "correct": ["It provides real-time data access"],
+    "explanation": "The Data Library ensures Agentforce has real-time data for accurate responses."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is a common use case for Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Customer support automation",
+      "Lead nurturing",
+      "Data encryption",
+      "Case management"
+    ],
+    "correct": ["Customer support automation", "Lead nurturing", "Case management"],
+    "explanation": "Agentforce excels in support automation, lead nurturing, and case management, not encryption."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does Agentforce improve scalability?",
+    "type": "single",
+    "options": [
+      "By limiting agents",
+      "By automating repetitive processes",
+      "By requiring manual setup",
+      "By reducing data access"
+    ],
+    "correct": ["By automating repetitive processes"],
+    "explanation": "Automation allows Agentforce to scale efficiently across operations."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What ensures Agentforce’s actions align with business needs?",
+    "type": "single",
+    "options": [
+      "Random prompts",
+      "Configured action plans",
+      "User overrides",
+      "External tools"
+    ],
+    "correct": ["Configured action plans"],
+    "explanation": "Action plans are tailored to align Agentforce’s actions with business goals."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "Which of these enhances Agentforce’s capabilities? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Data Cloud integration",
+      "Prompt optimization",
+      "Manual inputs",
+      "Real-time data"
+    ],
+    "correct": ["Data Cloud integration", "Prompt optimization", "Real-time data"],
+    "explanation": "Integration, optimized prompts, and real-time data boost Agentforce, not manual inputs."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is the role of prompts in Agentforce?",
+    "type": "single",
+    "options": [
+      "To define user roles",
+      "To guide AI behavior",
+      "To encrypt data",
+      "To generate reports"
+    ],
+    "correct": ["To guide AI behavior"],
+    "explanation": "Prompts direct the AI’s responses and actions within Agentforce."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "How does Agentforce reduce operational costs?",
+    "type": "single",
+    "options": [
+      "By automating tasks",
+      "By limiting features",
+      "By requiring more staff",
+      "By simplifying data"
+    ],
+    "correct": ["By automating tasks"],
+    "explanation": "Task automation lowers costs by reducing manual effort."
+  },
+  {
+    "topic": "Agentforce Concepts",
+    "question": "What is a key deployment step for Agentforce?",
+    "type": "single",
+    "options": [
+      "Testing prompts",
+      "Adding users",
+      "Encrypting data",
+      "Limiting access"
+    ],
+    "correct": ["Testing prompts"],
+    "explanation": "Testing prompts ensures Agentforce functions correctly before deployment."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "What role does Data Cloud play in Agentforce?",
+    "type": "single",
+    "options": [
+      "It manages prompts",
+      "It provides unified data",
+      "It deploys agents",
+      "It encrypts responses"
+    ],
+    "correct": ["It provides unified data"],
+    "explanation": "Data Cloud supplies Agentforce with unified, real-time data for better decision-making."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "Which data types can Agentforce access via Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "CRM records",
+      "Unstructured content",
+      "External feeds",
+      "Static templates"
+    ],
+    "correct": ["CRM records", "Unstructured content", "External feeds"],
+    "explanation": "Data Cloud enables access to CRM records, unstructured content, and external feeds, not static templates."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "How does Data Cloud enhance Agentforce’s personalization?",
+    "type": "single",
+    "options": [
+      "By limiting data",
+      "By providing customer insights",
+      "By simplifying prompts",
+      "By reducing actions"
+    ],
+    "correct": ["By providing customer insights"],
+    "explanation": "Data Cloud offers customer insights that Agentforce uses to personalize interactions."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "What is the Vector Database’s function in Data Cloud?",
+    "type": "single",
+    "options": [
+      "To store prompts",
+      "To index unstructured data",
+      "To manage user access",
+      "To deploy agents"
+    ],
+    "correct": ["To index unstructured data"],
+    "explanation": "The Vector Database indexes unstructured data for quick retrieval by Agentforce."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "Which benefits come from Agentforce-Data Cloud integration? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Real-time data access",
+      "Improved decision-making",
+      "Faster deployment",
+      "Enhanced personalization"
+    ],
+    "correct": ["Real-time data access", "Improved decision-making", "Enhanced personalization"],
+    "explanation": "Integration provides real-time data, better decisions, and personalization, though deployment speed depends on setup."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "How does Data Cloud support Agentforce’s actions?",
+    "type": "single",
+    "options": [
+      "By automating prompts",
+      "By supplying actionable data",
+      "By limiting access",
+      "By generating reports"
+    ],
+    "correct": ["By supplying actionable data"],
+    "explanation": "Data Cloud provides the actionable data Agentforce needs to perform tasks."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "What external data can Agentforce use via Data Cloud?",
+    "type": "single",
+    "options": [
+      "Social media only",
+      "MuleSoft-connected sources",
+      "Manual uploads only",
+      "Public websites"
+    ],
+    "correct": ["MuleSoft-connected sources"],
+    "explanation": "Agentforce accesses external data through MuleSoft integrations via Data Cloud."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "Why is real-time data critical for Agentforce?",
+    "type": "single",
+    "options": [
+      "It reduces prompt length",
+      "It enables timely responses",
+      "It limits AI capabilities",
+      "It simplifies deployment"
+    ],
+    "correct": ["It enables timely responses"],
+    "explanation": "Real-time data ensures Agentforce delivers timely and relevant responses."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "Which of these does Data Cloud provide to Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Historical data",
+      "Real-time insights",
+      "Prompt templates",
+      "Customer profiles"
+    ],
+    "correct": ["Historical data", "Real-time insights", "Customer profiles"],
+    "explanation": "Data Cloud supplies historical data, real-time insights, and profiles, not prompt templates."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "How does Data Cloud improve Agentforce’s accuracy?",
+    "type": "single",
+    "options": [
+      "By reducing data volume",
+      "By providing unified data",
+      "By limiting actions",
+      "By automating prompts"
+    ],
+    "correct": ["By providing unified data"],
+    "explanation": "Unified data from Data Cloud enhances the accuracy of Agentforce’s responses and actions."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "What is a key feature of Data Cloud for Agentforce?",
+    "type": "single",
+    "options": [
+      "Prompt creation",
+      "Data unification",
+      "Action deployment",
+      "User management"
+    ],
+    "correct": ["Data unification"],
+    "explanation": "Data unification is a core feature of Data Cloud, enabling Agentforce to leverage comprehensive data."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "How does Agentforce use Data Cloud for decision-making?",
+    "type": "single",
+    "options": [
+      "By accessing real-time and historical data",
+      "By generating random outputs",
+      "By limiting data sources",
+      "By simplifying prompts"
+    ],
+    "correct": ["By accessing real-time and historical data"],
+    "explanation": "Agentforce uses real-time and historical data from Data Cloud to inform its decisions."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "Which of these enhances Agentforce via Data Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Unified customer views",
+      "Real-time analytics",
+      "Manual data entry",
+      "External integrations"
+    ],
+    "correct": ["Unified customer views", "Real-time analytics", "External integrations"],
+    "explanation": "Data Cloud enhances Agentforce with unified views, analytics, and integrations, not manual entry."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "What does the Vector Database enable?",
+    "type": "single",
+    "options": [
+      "Prompt storage",
+      "Fast data retrieval",
+      "User authentication",
+      "Action planning"
+    ],
+    "correct": ["Fast data retrieval"],
+    "explanation": "The Vector Database speeds up data retrieval for Agentforce by indexing unstructured data."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "How does Data Cloud support Agentforce’s scalability?",
+    "type": "single",
+    "options": [
+      "By limiting data",
+      "By providing scalable data access",
+      "By reducing features",
+      "By simplifying prompts"
+    ],
+    "correct": ["By providing scalable data access"],
+    "explanation": "Scalable data access from Data Cloud allows Agentforce to handle increasing workloads."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "What type of insights does Data Cloud offer Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Customer behavior",
+      "Historical trends",
+      "Real-time updates",
+      "Prompt performance"
+    ],
+    "correct": ["Customer behavior", "Historical trends", "Real-time updates"],
+    "explanation": "Data Cloud provides behavior, trends, and updates, while prompt performance is assessed separately."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "Why is Data Cloud integration valuable?",
+    "type": "single",
+    "options": [
+      "It reduces costs",
+      "It enhances AI capabilities",
+      "It limits data access",
+      "It simplifies deployment"
+    ],
+    "correct": ["It enhances AI capabilities"],
+    "explanation": "Integration with Data Cloud boosts Agentforce’s AI capabilities through richer data."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "How does Agentforce leverage Data Cloud for personalization?",
+    "type": "single",
+    "options": [
+      "By using customer data",
+      "By reducing data sources",
+      "By limiting responses",
+      "By automating prompts"
+    ],
+    "correct": ["By using customer data"],
+    "explanation": "Agentforce uses customer data from Data Cloud to deliver personalized responses."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "What is a challenge of Data Cloud integration?",
+    "type": "single",
+    "options": [
+      "Reduced data access",
+      "Complex setup",
+      "Limited features",
+      "Slower responses"
+    ],
+    "correct": ["Complex setup"],
+    "explanation": "Integrating Data Cloud can be complex due to data mapping and configuration needs."
+  },
+  {
+    "topic": "Agentforce and Data Cloud",
+    "question": "Which of these is a result of Data Cloud integration? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Better AI decisions",
+      "Faster data processing",
+      "Improved customer insights",
+      "Reduced automation"
+    ],
+    "correct": ["Better AI decisions", "Faster data processing", "Improved customer insights"],
+    "explanation": "Data Cloud enhances decisions, processing, and insights, not reduces automation."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "How does Agentforce enhance Service Cloud?",
+    "type": "single",
+    "options": [
+      "By automating customer interactions",
+      "By limiting agent access",
+      "By reducing data use",
+      "By simplifying prompts"
+    ],
+    "correct": ["By automating customer interactions"],
+    "explanation": "Agentforce automates interactions in Service Cloud, improving efficiency."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "Which tasks can Agentforce perform in Service Cloud? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Case routing",
+      "Response drafting",
+      "Agent monitoring",
+      "Data encryption"
+    ],
+    "correct": ["Case routing", "Response drafting", "Agent monitoring"],
+    "explanation": "Agentforce handles routing, drafting, and monitoring, while encryption is a separate feature."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "What is a benefit of Agentforce in Service Cloud?",
+    "type": "single",
+    "options": [
+      "Reduced response times",
+      "Increased manual effort",
+      "Limited personalization",
+      "Slower case resolution"
+    ],
+    "correct": ["Reduced response times"],
+    "explanation": "Agentforce speeds up responses by automating tasks in Service Cloud."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "How does Agentforce support agents in Service Cloud?",
+    "type": "single",
+    "options": [
+      "By suggesting solutions",
+      "By limiting data access",
+      "By reducing automation",
+      "By complicating workflows"
+    ],
+    "correct": ["By suggesting solutions"],
+    "explanation": "Agentforce provides solution suggestions to assist agents efficiently."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "Which of these improves Service Cloud with Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Faster case handling",
+      "Personalized responses",
+      "Reduced agent workload",
+      "Manual data entry"
+    ],
+    "correct": ["Faster case handling", "Personalized responses", "Reduced agent workload"],
+    "explanation": "Agentforce speeds up cases, personalizes responses, and reduces workload, not manual entry."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "What role does Data Cloud play in Service Cloud with Agentforce?",
+    "type": "single",
+    "options": [
+      "It provides customer context",
+      "It limits responses",
+      "It reduces automation",
+      "It manages prompts"
+    ],
+    "correct": ["It provides customer context"],
+    "explanation": "Data Cloud supplies customer context to enhance Agentforce’s Service Cloud capabilities."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "How does Agentforce handle escalations in Service Cloud?",
+    "type": "single",
+    "options": [
+      "By automating them",
+      "By requiring manual input",
+      "By ignoring them",
+      "By reducing data"
+    ],
+    "correct": ["By automating them"],
+    "explanation": "Agentforce automates escalations based on predefined rules in Service Cloud."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "What is a key feature of Agentforce in Service Cloud?",
+    "type": "single",
+    "options": [
+      "Real-time transcription",
+      "Data encryption",
+      "Prompt storage",
+      "User management"
+    ],
+    "correct": ["Real-time transcription"],
+    "explanation": "Real-time transcription helps Agentforce assist agents with live interactions."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "Which of these is a Service Cloud-Agentforce benefit? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Improved customer satisfaction",
+      "Faster resolutions",
+      "Increased errors",
+      "Enhanced agent support"
+    ],
+    "correct": ["Improved customer satisfaction", "Faster resolutions", "Enhanced agent support"],
+    "explanation": "Agentforce boosts satisfaction, resolutions, and support, not errors."
+  },
+  {
+    "topic": "Agentforce and Service Cloud",
+    "question": "How does Agentforce reduce agent workload?",
+    "type": "single",
+    "options": [
+      "By automating routine tasks",
+      "By limiting data",
+      "By slowing responses",
+      "By complicating cases"
+    ],
+    "correct": ["By automating routine tasks"],
+    "explanation": "Automating routine tasks frees agents to focus on complex issues."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "What is Agentforce’s role in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "To automate sales processes",
+      "To limit data access",
+      "To reduce personalization",
+      "To manage prompts"
+    ],
+    "correct": ["To automate sales processes"],
+    "explanation": "Agentforce automates sales processes to enhance efficiency in Sales Cloud."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "Which Sales Cloud tasks can Agentforce handle? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Lead scoring",
+      "Follow-up scheduling",
+      "Opportunity insights",
+      "Data encryption"
+    ],
+    "correct": ["Lead scoring", "Follow-up scheduling", "Opportunity insights"],
+    "explanation": "Agentforce manages scoring, scheduling, and insights, not encryption."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "How does Agentforce improve sales productivity?",
+    "type": "single",
+    "options": [
+      "By automating repetitive tasks",
+      "By limiting data",
+      "By reducing insights",
+      "By slowing processes"
+    ],
+    "correct": ["By automating repetitive tasks"],
+    "explanation": "Automation of repetitive tasks boosts sales team productivity."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "What is a benefit of Agentforce in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "Improved lead conversion",
+      "Increased manual effort",
+      "Reduced insights",
+      "Slower sales cycles"
+    ],
+    "correct": ["Improved lead conversion"],
+    "explanation": "Agentforce enhances lead conversion through automation and insights."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "How does Agentforce support opportunity management? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Predicting outcomes",
+      "Automating follow-ups",
+      "Providing insights",
+      "Limiting data"
+    ],
+    "correct": ["Predicting outcomes", "Automating follow-ups", "Providing insights"],
+    "explanation": "Agentforce predicts outcomes, automates follow-ups, and provides insights, not limits data."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "What role does Data Cloud play in Sales Cloud with Agentforce?",
+    "type": "single",
+    "options": [
+      "It provides sales data",
+      "It reduces automation",
+      "It limits insights",
+      "It manages prompts"
+    ],
+    "correct": ["It provides sales data"],
+    "explanation": "Data Cloud supplies sales data to enhance Agentforce’s capabilities in Sales Cloud."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "How does Agentforce enhance lead nurturing?",
+    "type": "single",
+    "options": [
+      "By personalizing follow-ups",
+      "By reducing data",
+      "By slowing responses",
+      "By limiting automation"
+    ],
+    "correct": ["By personalizing follow-ups"],
+    "explanation": "Personalized follow-ups from Agentforce improve lead nurturing effectiveness."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "What is a key Agentforce feature in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "AI-driven insights",
+      "Data encryption",
+      "Prompt storage",
+      "User management"
+    ],
+    "correct": ["AI-driven insights"],
+    "explanation": "AI-driven insights help sales teams make informed decisions."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "Which of these benefits Sales Cloud with Agentforce? (Select all that apply)",
+    "type": "multiple",
+    "options": [
+      "Faster sales cycles",
+      "Better lead management",
+      "Improved forecasting",
+      "Increased errors"
+    ],
+    "correct": ["Faster sales cycles", "Better lead management", "Improved forecasting"],
+    "explanation": "Agentforce speeds up cycles, manages leads, and improves forecasting, not errors."
+  },
+  {
+    "topic": "Agentforce and Sales Cloud",
+    "question": "How does Agentforce reduce sales manual effort?",
+    "type": "single",
+    "options": [
+      "By automating tasks",
+      "By limiting data",
+      "By slowing processes",
+      "By reducing insights"
+    ],
+    "correct": ["By automating tasks"],
+    "explanation": "Task automation reduces manual effort for sales teams."
+  }
+]
