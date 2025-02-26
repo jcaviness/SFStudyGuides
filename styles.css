@@ -22,10 +22,36 @@ h1 {
     color: #333;
 }
 
-#loading {
+/* Test Selection Styles */
+#test-selection {
     text-align: center;
-    color: #007bff;
-    font-weight: bold;
+}
+
+#test-selector {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#start-quiz {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#start-quiz:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 10px;
+}
+
+/* Quiz Container Styles */
+#quiz-container {
+    text-align: left;
 }
 
 #question {
@@ -61,7 +87,6 @@ button:hover {
     font-weight: bold;
 }
 
-/* New styling for score display */
 #score-container {
     text-align: center;
     font-size: 1.5em;

@@ -24,10 +24,15 @@ class Question {
     }
 }
 
-// Function to load questions from the JSON file
-async function loadQuestions() {
+// Global variables
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+
+// Load questions from the selected JSON file
+async function loadQuestions(fileName) {
     try {
-        const response = await fetch('questions.json');
+        const response = await fetch(fileName);
         if (!response.ok) {
             throw new Error('Failed to load questions');
         }
@@ -39,119 +44,111 @@ async function loadQuestions() {
     }
 }
 
-// Main function to start the quiz
-async function startQuiz() {
-    const loadingDiv = document.getElementById('loading');
-    const questionContainer = document.getElementById('question-container');
-    const submitBtn = document.getElementById('submit-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const feedback = document.getElementById('feedback');
-    const scoreContainer = document.getElementById('score-container');
-    const scoreSpan = document.getElementById('score');
-
+// Start the quiz with the selected test
+async function startQuiz(fileName) {
     try {
-        // Show loading message and hide quiz content
-        loadingDiv.style.display = 'block';
-        questionContainer.style.display = 'none';
-        submitBtn.style.display = 'none';
-        nextBtn.style.display = 'none';
-        scoreContainer.style.display = 'none';
-
-        // Load questions from JSON
-        const questions = await loadQuestions();
-        if (questions.length === 0) {
-            throw new Error('No questions found');
-        }
-
-        // Hide loading message and show quiz content
-        loadingDiv.style.display = 'none';
-        questionContainer.style.display = 'block';
-        submitBtn.style.display = 'block';
-
-        let currentQuestionIndex = 0;
-        let score = 0; // Initialize score to track correct answers
-
-        // Function to load the current question
-        function loadQuestion() {
-            const currentQuestion = questions[currentQuestionIndex];
-            document.getElementById('question').textContent = currentQuestion.question;
-            const optionsContainer = document.getElementById('options');
-            optionsContainer.innerHTML = '';
-
-            // Generate options based on question type
-            currentQuestion.options.forEach((option) => {
-                const label = document.createElement('label');
-                label.classList.add('option');
-                const input = document.createElement('input');
-                input.type = currentQuestion.type === 'single' ? 'radio' : 'checkbox';
-                input.name = 'option';
-                input.value = option;
-                label.appendChild(input);
-                label.appendChild(document.createTextNode(option));
-                optionsContainer.appendChild(label);
-            });
-
-            // Reset feedback and button states
-            feedback.textContent = '';
-            submitBtn.style.display = 'block';
-            nextBtn.style.display = 'none';
-        }
-
-        // Function to check the user's answer
-        function checkAnswer() {
-            const currentQuestion = questions[currentQuestionIndex];
-            const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked'))
-                .map(input => input.value);
-            const isCorrect = currentQuestion.isCorrect(selectedOptions);
-
-            // Increment score if the answer is correct
-            if (isCorrect) {
-                score++;
-            }
-
-            // Display feedback
-            if (isCorrect) {
-                feedback.textContent = "Correct! " + currentQuestion.getFeedback();
-                feedback.style.color = 'green';
-            } else {
-                feedback.textContent = "Incorrect. " + currentQuestion.getFeedback();
-                feedback.style.color = 'red';
-            }
-
-            // Toggle button visibility
-            submitBtn.style.display = 'none';
-            nextBtn.style.display = 'block';
-        }
-
-        // Function to display the final score
-        function showScore() {
-            questionContainer.style.display = 'none';
-            submitBtn.style.display = 'none';
-            nextBtn.style.display = 'none';
-            feedback.textContent = '';
-            scoreContainer.style.display = 'block';
-            scoreSpan.textContent = `${score} out of ${questions.length}`;
-        }
-
-        // Set up event listeners
-        submitBtn.addEventListener('click', checkAnswer);
-        nextBtn.addEventListener('click', () => {
-            if (currentQuestionIndex + 1 < questions.length) {
-                currentQuestionIndex++;
-                loadQuestion();
-            } else {
-                showScore();
-            }
-        });
-
-        // Load the first question
+        questions = await loadQuestions(fileName);
+        currentQuestionIndex = 0;
+        score = 0;
+        document.getElementById('score-container').style.display = 'none';
+        document.getElementById('question-container').style.display = 'block';
         loadQuestion();
     } catch (error) {
-        // Handle errors by updating the loading message
-        loadingDiv.textContent = 'Failed to load questions. Please try again.';
-        loadingDiv.style.color = 'red';
+        document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
     }
 }
 
-// Start the quiz when the page loads
-document.addEventListener('DOMContentLoaded', startQuiz);
+// Load the current question
+function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    document.getElementById('question').textContent = currentQuestion.question;
+    const optionsContainer = document.getElementById('options');
+    optionsContainer.innerHTML = '';
+
+    currentQuestion.options.forEach((option) => {
+        const label = document.createElement('label');
+        label.classList.add('option');
+        const input = document.createElement('input');
+        input.type = currentQuestion.type === 'single' ? 'radio' : 'checkbox';
+        input.name = 'option';
+        input.value = option;
+        label.appendChild(input);
+        label.appendChild(document.createTextNode(option));
+        optionsContainer.appendChild(label);
+    });
+
+    document.getElementById('feedback').textContent = '';
+    document.getElementById('submit-btn').style.display = 'block';
+    document.getElementById('next-btn').style.display = 'none';
+}
+
+// Check the user's answer
+function checkAnswer() {
+    const currentQuestion = questions[currentQuestionIndex];
+    const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(input => input.value);
+    const isCorrect = currentQuestion.isCorrect(selectedOptions);
+
+    if (isCorrect) {
+        score++;
+    }
+
+    const feedback = document.getElementById('feedback');
+    if (isCorrect) {
+        feedback.textContent = "Correct! " + currentQuestion.getFeedback();
+        feedback.style.color = 'green';
+    } else {
+        feedback.textContent = "Incorrect. " + currentQuestion.getFeedback();
+        feedback.style.color = 'red';
+    }
+
+    document.getElementById('submit-btn').style.display = 'none';
+    document.getElementById('next-btn').style.display = 'block';
+}
+
+// Display the final score
+function showScore() {
+    document.getElementById('question-container').style.display = 'none';
+    document.getElementById('submit-btn').style.display = 'none';
+    document.getElementById('next-btn').style.display = 'none';
+    document.getElementById('feedback').textContent = '';
+    const scoreContainer = document.getElementById('score-container');
+    scoreContainer.style.display = 'block';
+    document.getElementById('score').textContent = `${score} out of ${questions.length}`;
+}
+
+// Set up event listeners
+document.addEventListener('DOMContentLoaded', () => {
+    const testSelector = document.getElementById('test-selector');
+    const startBtn = document.getElementById('start-quiz');
+    const message = document.getElementById('message');
+    const testSelection = document.getElementById('test-selection');
+    const quizContainer = document.getElementById('quiz-container');
+    const testNameHeading = document.getElementById('test-name');
+    const submitBtn = document.getElementById('submit-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    startBtn.addEventListener('click', () => {
+        const selectedFile = testSelector.value;
+        if (!selectedFile) {
+            message.textContent = "Please select a test.";
+            return;
+        }
+        message.textContent = "";
+        const testName = testSelector.selectedOptions[0].text;
+        testNameHeading.textContent = testName;
+        testSelection.style.display = 'none';
+        quizContainer.style.display = 'block';
+        startQuiz(selectedFile);
+    });
+
+    submitBtn.addEventListener('click', checkAnswer);
+
+    nextBtn.addEventListener('click', () => {
+        if (currentQuestionIndex + 1 < questions.length) {
+            currentQuestionIndex++;
+            loadQuestion();
+        } else {
+            showScore();
+        }
+    });
+});

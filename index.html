@@ -9,18 +9,31 @@
 <body>
     <div class="quiz-container">
         <h1>SalesForce AgentForce Consultant Certification Study Guide</h1>
-        <div id="loading">Loading questions...</div>
-        <div id="question-container" style="display: none;">
-            <h2 id="question"></h2>
-            <div id="options"></div>
+        <!-- Test Selection Screen -->
+        <div id="test-selection">
+            <h2>Select a Test</h2>
+            <select id="test-selector">
+                <option value="">-- Choose a test --</option>
+                <option value="basics.json">AgentForce Basics</option>
+                <option value="advanced.json">Advanced AgentForce</option>
+            </select>
+            <button id="start-quiz">Start Quiz</button>
+            <p id="message" style="color: red;"></p>
         </div>
-        <button id="submit-btn" style="display: none;">Submit Answer</button>
-        <div id="feedback"></div>
-        <button id="next-btn" style="display: none;">Next Question</button>
-        <!-- New score display section -->
-        <div id="score-container" style="display: none;">
-            <h2>Quiz completed!</h2>
-            <p>Your score: <span id="score"></span></p>
+        <!-- Quiz Content -->
+        <div id="quiz-container" style="display: none;">
+            <h2 id="test-name"></h2>
+            <div id="question-container">
+                <h3 id="question"></h3>
+                <div id="options"></div>
+            </div>
+            <button id="submit-btn">Submit Answer</button>
+            <div id="feedback"></div>
+            <button id="next-btn" style="display: none;">Next Question</button>
+            <div id="score-container" style="display: none;">
+                <h3>Quiz completed!</h3>
+                <p>Your score: <span id="score"></span></p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
