@@ -1,18 +1,76 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
     margin: 20px;
 }
 
+.quiz-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Test Selection Styles */
+#test-selection {
+    text-align: center;
+}
+
+#test-selector {
+    padding: 5px;
+    margin-bottom: 10px;
 .option {
     display: block;
     margin: 10px 0;
 }
 
+#start-quiz {
 button {
     margin: 10px 5px;
     padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+#start-quiz:hover {
+    background-color: #0056b3;
+}
+
+#message {
+    margin-top: 10px;
+}
+
+/* Quiz Container Styles */
+#quiz-container {
+    text-align: left;
+}
+
+#question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#options {
+    margin-bottom: 20px;
+}
+
+.option {
+    display: block;
 /* Score Progress Bar Styles */
 #score-progress-container {
     position: relative;
@@ -23,14 +81,23 @@ button {
     margin-bottom: 10px;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
 #score-progress-bar {
     height: 100%;
     width: 0%; /* Starts at 0% */
     background-color: #4caf50; /* Green by default */
     border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
     transition: width 0.3s ease; /* Smooth transition for updates */
 }
 
+button:hover {
+    background-color: #0056b3;
 #passing-score-marker {
     position: absolute;
     top: 0;
@@ -40,7 +107,15 @@ button {
     z-index: 1; /* Ensure it’s above the progress bar */
 }
 
+#feedback {
+    margin-top: 20px;
 #current-score-text {
     margin-bottom: 15px;
     font-weight: bold;
+}
+
+#score-container {
+    text-align: center;
+    font-size: 1.5em;
+    color: #007bff;
 }
