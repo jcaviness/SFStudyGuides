@@ -6,7 +6,6 @@ function shuffleArray(array) {
     }
     return array;
 }
-
 // Define the Question class
 class Question {
     constructor(question, type, options, correct, explanation) {
@@ -17,7 +16,6 @@ class Question {
         this.explanation = explanation;
     }
 
-    // Check if the user's answer is correct
     isCorrect(userAnswer) {
         if (this.type === "single") {
             return userAnswer.length === 1 && userAnswer[0] === this.correct[0];
@@ -27,7 +25,6 @@ class Question {
         return false;
     }
 
-    // Provide feedback for the answer
     getFeedback() {
         return this.explanation;
     }
@@ -39,16 +36,14 @@ const passingScores = {
     "questions/data_cloud_questions.json": 75,
     "questions/platform_developer_1_questions.json": 80,
     "questions/platform_developer_2_questions.json": 85
-    // Add more tests and their actual passing scores as needed
 };
 
 // Global variables
 let testId = '';
 let questions = [];
 let currentQuestionIndex = 0;
-let answers = []; // Array to store user answers for each question
+let answers = [];
 
-// Load questions from the selected JSON file
 async function loadQuestions(fileName) {
     try {
         const response = await fetch(fileName);
@@ -63,11 +58,9 @@ async function loadQuestions(fileName) {
     }
 }
 
-// Start the quiz with the selected test
 async function startQuiz(fileName) {
     try {
         questions = await loadQuestions(fileName);
-        currentQuestionIndex = 0;
         document.getElementById('score-container').style.display = 'none';
         document.getElementById('question-container').style.display = 'block';
 
@@ -80,11 +73,14 @@ async function startQuiz(fileName) {
             } else {
                 localStorage.removeItem(`test_state_${testId}`);
                 answers = new Array(questions.length).fill(null);
+                currentQuestionIndex = 0;
             }
         } else {
             answers = new Array(questions.length).fill(null);
+            currentQuestionIndex = 0;
         }
 
+        updateScoreProgress(); // Initialize score progress
         if (currentQuestionIndex < questions.length) {
             loadQuestion();
         } else {
@@ -95,15 +91,13 @@ async function startQuiz(fileName) {
     }
 }
 
-// Replace the existing loadQuestion function
 function loadQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     document.getElementById('question').textContent = currentQuestion.question;
     const optionsContainer = document.getElementById('options');
     optionsContainer.innerHTML = '';
 
-    const shuffledOptions = shuffleArray([...currentQuestion.options]);
-
+    const shuffledOptions = [...currentQuestion.options].sort(() => Math.random() - 0.5);
     shuffledOptions.forEach((option) => {
         const label = document.createElement('label');
         label.classList.add('option');
@@ -121,11 +115,34 @@ function loadQuestion() {
     document.getElementById('next-btn').style.display = 'none';
 }
 
-// Check the user's answer
+function updateScoreProgress() {
+    const total = questions.length;
+    let correctCount = 0;
+
+    for (let i = 0; i < total; i++) {
+        if (answers[i] && questions[i].isCorrect(answers[i])) {
+            correctCount++;
+        }
+    }
+
+    const scorePercentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
+    const progressBar = document.getElementById('score-progress-bar');
+    progressBar.style.width = `${scorePercentage}%`;
+
+    // Update text display
+    document.getElementById('current-score-text').textContent = `Correct Answers: ${correctCount}/${total} (${scorePercentage}%)`;
+
+    // Position the passing score marker
+    const passingScore = passingScores[testId] || 70; // Default to 70% if not specified
+    const marker = document.getElementById('passing-score-marker');
+    marker.style.left = `${passingScore}%`;
+    marker.title = `Passing Score: ${passingScore}%`; // Tooltip for accessibility
+}
+
 function checkAnswer() {
     const currentQuestion = questions[currentQuestionIndex];
     const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(input => input.value);
-    answers[currentQuestionIndex] = selectedOptions; // Store the user's answer
+    answers[currentQuestionIndex] = selectedOptions;
     const isCorrect = currentQuestion.isCorrect(selectedOptions);
 
     const feedback = document.getElementById('feedback');
@@ -139,9 +156,10 @@ function checkAnswer() {
 
     document.getElementById('submit-btn').style.display = 'none';
     document.getElementById('next-btn').style.display = 'block';
+
+    updateScoreProgress(); // Update score after each answer
 }
 
-// Display the final score
 function showScore() {
     document.getElementById('question-container').style.display = 'none';
     document.getElementById('submit-btn').style.display = 'none';
@@ -150,7 +168,6 @@ function showScore() {
     const scoreContainer = document.getElementById('score-container');
     scoreContainer.style.display = 'block';
 
-    // Calculate score based on stored answers
     let correctCount = 0;
     for (let i = 0; i < questions.length; i++) {
         if (questions[i].isCorrect(answers[i])) {
@@ -160,22 +177,17 @@ function showScore() {
     const scorePercentage = Math.round((correctCount / questions.length) * 100);
     document.getElementById('score').textContent = `${correctCount} out of ${questions.length} (${scorePercentage}%)`;
 
-    // Compare to passing score and display readiness message
     const passingScore = passingScores[testId];
     if (passingScore) {
         const message = scorePercentage >= passingScore
             ? "You're ready to take the certification exam!"
             : "Keep studying to improve your score.";
         document.getElementById('readiness-message').textContent = message;
-    } else {
-        document.getElementById('readiness-message').textContent = '';
     }
 
-    // Clear saved state after completion
     localStorage.removeItem(`test_state_${testId}`);
 }
 
-// Set up event listeners
 document.addEventListener('DOMContentLoaded', () => {
     const testSelector = document.getElementById('test-selector');
     const startBtn = document.getElementById('start-quiz');
@@ -192,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message.textContent = "Please select a test.";
             return;
         }
-        testId = selectedFile; // Set testId for state saving
+        testId = selectedFile;
         message.textContent = "";
         const testName = testSelector.selectedOptions[0].text;
         testNameHeading.textContent = testName;
@@ -205,13 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nextBtn.addEventListener('click', () => {
         currentQuestionIndex++;
-        // Save state with the next question index and current answers
-        const state = {
-            currentQuestionIndex: currentQuestionIndex,
-            answers: answers
-        };
-        localStorage.setItem(`test_state_${testId}`, JSON.stringify(state));
-
         if (currentQuestionIndex < questions.length) {
             loadQuestion();
         } else {
