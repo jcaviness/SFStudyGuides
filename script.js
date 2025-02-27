@@ -28,43 +28,61 @@ class Question {
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+let readinessThreshold = 70; // Default threshold
+
+// Thresholds for each test (stored in script.js, not JSON files)
+const thresholds = {
+    "AgentForce": 70,
+    "Data Cloud": 80,
+    "Platform Developer 1": 75,
+    "Platform Developer 2": 85
+};
+
+// Fisher-Yates shuffle function to randomize arrays
+function shuffleArray(array) {
+    const shuffled = [...array]; // Create a copy to avoid modifying the original
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+}
 
 // Update progress bar and score display
 function updateProgress() {
     const correctCount = score;
     const totalQuestions = questions.length;
-    const percentage = (correctCount / totalQuestions) * 100;
+    const percentage = totalQuestions > 0 ? (correctCount / totalQuestions) * 100 : 0;
+
+    // Update text display (e.g., "Correct Answers: 1/100 (1%)")
     document.getElementById('correct-count').textContent = correctCount;
     document.getElementById('total-questions').textContent = totalQuestions;
-    document.getElementById('score-percentage').textContent = percentage.toFixed(2) + '%';
+    document.getElementById('score-percentage').textContent = percentage.toFixed(0) + '%';
+
+    // Update progress bar
     const progressBar = document.getElementById('progress-bar');
     progressBar.style.width = percentage + '%';
-    const threshold = 70; // Readiness threshold at 70%
-    progressBar.style.backgroundColor = percentage >= threshold ? '#4CAF50' : '#f44336'; // Green if >=70%, red if <70%
+    progressBar.style.backgroundColor = percentage >= readinessThreshold ? '#4CAF50' : '#f44336'; // Green if >= threshold, red otherwise
 }
 
-// Load questions from the selected JSON file with debugging
+// Load questions from the selected JSON file
 async function loadQuestions(fileName) {
     try {
-        console.log('Loading questions from:', fileName);
         const response = await fetch(fileName);
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        if (!response.ok) throw new Error('Failed to load questions');
         const data = await response.json();
-        console.log('Questions loaded:', data);
         return data.map(q => new Question(q.question, q.type, q.options, q.correct, q.explanation));
     } catch (error) {
         console.error('Error loading questions:', error);
-        document.getElementById('message').textContent = 'Failed to load questions. Check console for details.';
         throw error;
     }
 }
 
 // Start the quiz with the selected test
-async function startQuiz(fileName) {
+async function startQuiz(fileName, testName) {
     try {
         questions = await loadQuestions(fileName);
+        readinessThreshold = thresholds[testName] || 70; // Set threshold based on testName, default to 70
         currentQuestionIndex = 0;
         score = 0;
         updateProgress(); // Initialize progress bar
@@ -76,14 +94,17 @@ async function startQuiz(fileName) {
     }
 }
 
-// Load the current question
+// Load the current question with shuffled options
 function loadQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     document.getElementById('question').textContent = currentQuestion.question;
     const optionsContainer = document.getElementById('options');
     optionsContainer.innerHTML = '';
 
-    currentQuestion.options.forEach((option) => {
+    // Shuffle the options for randomization
+    const shuffledOptions = shuffleArray(currentQuestion.options);
+
+    shuffledOptions.forEach((option) => {
         const label = document.createElement('label');
         label.classList.add('option');
         const input = document.createElement('input');
@@ -108,17 +129,12 @@ function checkAnswer() {
 
     if (isCorrect) {
         score++;
-        updateProgress(); // Update progress after score change
     }
+    updateProgress(); // Update progress after each answer
 
     const feedback = document.getElementById('feedback');
-    if (isCorrect) {
-        feedback.textContent = "Correct! " + currentQuestion.getFeedback();
-        feedback.style.color = 'green';
-    } else {
-        feedback.textContent = "Incorrect. " + currentQuestion.getFeedback();
-        feedback.style.color = 'red';
-    }
+    feedback.textContent = isCorrect ? "Correct! " + currentQuestion.getFeedback() : "Incorrect. " + currentQuestion.getFeedback();
+    feedback.style.color = isCorrect ? 'green' : 'red';
 
     document.getElementById('submit-btn').style.display = 'none';
     document.getElementById('next-btn').style.display = 'block';
@@ -148,16 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     startBtn.addEventListener('click', () => {
         const selectedFile = testSelector.value;
+        const testName = testSelector.selectedOptions[0].text; // Get test name from dropdown
         if (!selectedFile) {
             message.textContent = "Please select a test.";
             return;
         }
         message.textContent = "";
-        const testName = testSelector.selectedOptions[0].text;
         testNameHeading.textContent = testName;
         testSelection.style.display = 'none';
         quizContainer.style.display = 'block';
-        startQuiz(selectedFile);
+        startQuiz(selectedFile, testName); // Pass both fileName and testName
     });
 
     submitBtn.addEventListener('click', checkAnswer);
