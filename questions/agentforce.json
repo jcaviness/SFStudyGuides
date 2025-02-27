@@ -1428,6 +1428,136 @@
     ],
     "correct": ["Implementing field-level security"],
     "explanation": "Field-level security ensures that AI agents only have access to and can expose data that users are authorized to see, thereby preventing data leaks."
+  },
+  {
+    "topic": "Advanced Prompt Engineering",
+    "question": "You are designing a prompt for an AI agent that needs to handle customer complaints. Which of the following techniques can help ensure the agent provides empathetic and appropriate responses?",
+    "type": "multiple",
+    "options": [
+      "Using natural language processing (NLP) to analyze sentiment",
+      "Including placeholders for dynamic customer data",
+      "Providing examples of desired responses in the prompt",
+      "All of the above"
+    ],
+    "correct": ["All of the above"],
+    "explanation": "To create effective prompts for handling customer complaints, it's beneficial to use NLP for sentiment analysis, include dynamic customer data for personalization, and provide examples to guide the AI's response style."
+  },
+  {
+    "topic": "Data Management for AI Agents",
+    "question": "Which SalesForce feature allows AI agents to access real-time customer data from multiple sources?",
+    "type": "single",
+    "options": [
+      "Data Cloud",
+      "Lightning Connect",
+      "External Objects",
+      "Custom Metadata Types"
+    ],
+    "correct": ["Data Cloud"],
+    "explanation": "Data Cloud provides a unified data layer that integrates data from various sources, enabling AI agents to access real-time customer information for more accurate and relevant responses."
+  },
+  {
+    "topic": "AI Agent Deployment and Management",
+    "question": "To handle a large number of concurrent customer interactions, which configuration option in AgentForce can help improve the performance of AI agents?",
+    "type": "single",
+    "options": [
+      "Increasing the number of AI agent replicas",
+      "Enabling real-time data synchronization",
+      "Using a more powerful AI model",
+      "Implementing a queueing system for requests"
+    ],
+    "correct": ["Using a more powerful AI model"],
+    "explanation": "Using a more powerful AI model that can process requests faster is a direct way to handle high traffic efficiently."
+  },
+  {
+    "topic": "Custom AI Model Development",
+    "question": "You need to integrate a custom AI model into AgentForce. Which of the following steps is necessary for this integration?",
+    "type": "multiple",
+    "options": [
+      "Deploying the model to SalesForce's AI Platform",
+      "Creating a custom Apex class to interface with the model",
+      "Using the Einstein Platform's model deployment feature",
+      "Both A and C"
+    ],
+    "correct": ["Both A and C"],
+    "explanation": "To integrate a custom AI model, you first need to deploy it to SalesForce's AI Platform, and then use the Einstein Platform's features to integrate it with AgentForce."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "To ensure that AI agents only access data that users are authorized to see, which SalesForce feature should be utilized?",
+    "type": "multiple",
+    "options": [
+      "Field-level security",
+      "Sharing rules",
+      "Permission sets",
+      "All of the above"
+    ],
+    "correct": ["All of the above"],
+    "explanation": "SalesForce's security features, including field-level security, sharing rules, and permission sets, work together to control data access, ensuring AI agents respect user permissions."
+  },
+  {
+    "topic": "Prompt Engineering Techniques",
+    "question": "Which of the following is a best practice for creating effective prompts in AgentForce?",
+    "type": "single",
+    "options": [
+      "Keeping prompts as short and concise as possible",
+      "Including specific instructions and examples",
+      "Avoiding the use of variables or dynamic data",
+      "Using only standard SalesForce terminology"
+    ],
+    "correct": ["Including specific instructions and examples"],
+    "explanation": "Effective prompts should be clear, specific, and include examples to help the AI understand the expected behavior."
+  },
+  {
+    "topic": "Data Access Configuration",
+    "question": "To ensure that AI agents have access to the latest customer data, which SalesForce feature should be utilized?",
+    "type": "single",
+    "options": [
+      "Data Cloud with real-time synchronization",
+      "External data sources via connectors",
+      "Custom Apex code to fetch data",
+      "Scheduled data imports"
+    ],
+    "correct": ["Data Cloud with real-time synchronization"],
+    "explanation": "Data Cloud provides real-time data synchronization, ensuring that AI agents always have access to the most up-to-date customer information."
+  },
+  {
+    "topic": "Performance Monitoring and Optimization",
+    "question": "You notice that your AI agent is providing inaccurate responses to customer queries. Which of the following steps should you take first to diagnose the issue?",
+    "type": "single",
+    "options": [
+      "Review the agent's prompt and adjust it if necessary",
+      "Check the data sources for accuracy and completeness",
+      "Analyze the agent's performance logs for errors",
+      "Retrain the AI model with new data"
+    ],
+    "correct": ["Analyze the agent's performance logs for errors"],
+    "explanation": "When an AI agent provides inaccurate responses, the first step should be to analyze its performance logs to identify any errors or patterns."
+  },
+  {
+    "topic": "Custom AI Model Integration",
+    "question": "Which of the following is the correct sequence for integrating a custom AI model into AgentForce?",
+    "type": "single",
+    "options": [
+      "Deploy the model to the Einstein Platform, then configure AgentForce to use it",
+      "Configure AgentForce first, then deploy the model to the Einstein Platform",
+      "Develop the model within AgentForce without deploying to the Einstein Platform",
+      "Use Apex to directly integrate the model without the Einstein Platform"
+    ],
+    "correct": ["Deploy the model to the Einstein Platform, then configure AgentForce to use it"],
+    "explanation": "The correct sequence is to first deploy the custom AI model to SalesForce's Einstein Platform and then configure AgentForce to utilize that model."
+  },
+  {
+    "topic": "Security Best Practices",
+    "question": "To prevent data leaks through AI agent responses, which security measure is most effective?",
+    "type": "single",
+    "options": [
+      "Implementing field-level security",
+      "Using permission sets to control access",
+      "Encrypting data in transit and at rest",
+      "Regularly auditing AI agent interactions"
+    ],
+    "correct": ["Implementing field-level security"],
+    "explanation": "Field-level security ensures that AI agents only have access to and can expose data that users are authorized to see, thereby preventing data leaks."
   }
 
 ]
