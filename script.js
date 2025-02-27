@@ -26,10 +26,10 @@ class Question {
 
 // Configuration for passing scores (percentage out of 100)
 const passingScores = {
-    "questions/agentforce.json": 70,
-    "questions/data_cloud_questions.json": 75,
-    "questions/platform_developer_1_questions.json": 80,
-    "questions/platform_developer_2_questions.json": 85
+    "questions/agentforce.json": 73,
+    "questions/data_cloud_questions.json": 62,
+    "questions/platform_developer_1_questions.json": 68,
+    "questions/platform_developer_2_questions.json": 70
 };
 
 // Global variables
