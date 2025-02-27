@@ -60,12 +60,18 @@ h1 {
 }
 
 #options {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stacks options vertically */
+    gap: 15px; /* Adds space between options */
+    margin: 10px 0;
 }
-
 .option {
-    display: block;
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center; /* Aligns radio button and text nicely */
+    padding: 5px;
+}
+.option input {
+    margin-right: 10px; /* Space between radio button and text */
 }
 
 button {
