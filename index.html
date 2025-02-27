@@ -25,11 +25,6 @@
         <!-- Quiz Content -->
         <div id="quiz-container" style="display: none;">
             <h2 id="test-name"></h2>
-            <div id="score-progress-container">
-                <div id="score-progress-bar"></div>
-                <div id="passing-score-marker"></div>
-            </div>
-            <p id="current-score-text"></p>
             <div id="question-container">
                 <h3 id="question"></h3>
                 <div id="options"></div>
@@ -40,6 +35,7 @@
             <div id="score-container" style="display: none;">
                 <h3>Quiz completed!</h3>
                 <p>Your score: <span id="score"></span></p>
+                <p id="readiness-message"></p> <!-- Added for readiness feedback -->
             </div>
         </div>
     </div>

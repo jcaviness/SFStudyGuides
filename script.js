@@ -24,19 +24,27 @@ class Question {
     }
 }
 
-// Configuration for passing scores (percentage out of 100)
-const passingScores = {
-    "questions/agentforce.json": 73,
-    "questions/data_cloud_questions.json": 62,
-    "questions/platform_developer_1_questions.json": 68,
-    "questions/platform_developer_2_questions.json": 70
-};
-
 // Global variables
-let testId = '';
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+let selectedTestName = ''; // To store the current test name
+
+// Map test names to readiness thresholds
+const readinessThresholds = {
+    'AgentForce': 73,           // 73%
+    'Data Cloud': 62,          // 62%
+    'Platform Developer 1': 68, // 68%
+    'Platform Developer 2': 70  // 70%
+};
+
+// Map test names to CSS classes
+const testClasses = {
+    'AgentForce': 'agentforce',
+    'Data Cloud': 'data-cloud',
+    'Platform Developer 1': 'platform-dev-1',
+    'Platform Developer 2': 'platform-dev-2'
+};
 
 // Load questions from the selected JSON file
 async function loadQuestions(fileName) {
@@ -54,17 +62,24 @@ async function loadQuestions(fileName) {
 }
 
 // Start the quiz with the selected test
-async function startQuiz(fileName) {
+async function startQuiz(fileName, testName) {
     try {
-        testId = fileName;
         questions = await loadQuestions(fileName);
         currentQuestionIndex = 0;
         score = 0;
-
+        selectedTestName = testName; // Store the selected test name
         document.getElementById('score-container').style.display = 'none';
         document.getElementById('question-container').style.display = 'block';
-        
-        updateScoreProgress(); // Initialize the progress bar
+
+        // Apply test-specific class to quiz-container
+        const quizContainer = document.getElementById('quiz-container');
+        const allTestClasses = Object.values(testClasses);
+        allTestClasses.forEach(cls => quizContainer.classList.remove(cls)); // Remove previous classes
+        const testClass = testClasses[testName];
+        if (testClass) {
+            quizContainer.classList.add(testClass);
+        }
+
         loadQuestion();
     } catch (error) {
         document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
@@ -75,19 +90,16 @@ async function startQuiz(fileName) {
 function loadQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     document.getElementById('question').textContent = currentQuestion.question;
-    
     const optionsContainer = document.getElementById('options');
     optionsContainer.innerHTML = '';
 
     currentQuestion.options.forEach((option) => {
         const label = document.createElement('label');
         label.classList.add('option');
-        
         const input = document.createElement('input');
         input.type = currentQuestion.type === 'single' ? 'radio' : 'checkbox';
         input.name = 'option';
         input.value = option;
-        
         label.appendChild(input);
         label.appendChild(document.createTextNode(option));
         optionsContainer.appendChild(label);
@@ -98,41 +110,15 @@ function loadQuestion() {
     document.getElementById('next-btn').style.display = 'none';
 }
 
-function updateScoreProgress() {
-    const totalQuestions = 100;
-    const correctAnswers = score; // Assuming score is the number of correct answers
-    const progressPercent = (correctAnswers / totalQuestions) * 100;
-    document.getElementById('score-progress-bar').style.width = `${progressPercent}%`;
-
-    // Assuming passingScore is defined globally or passed to this function
-    const passingScore = passingScores[testId] || 70;
-    const marker = document.getElementById('passing-score-marker');
-    marker.style.left = `${passingScore}%`;
-
-    // Update the label position
-    const labelWrapper = document.getElementById('passing-score-label-wrapper');
-    labelWrapper.style.left = `${passingScore}%`;
-
-    // Center the label
-    labelWrapper.style.transform = 'translate(-50%, 0)';
-}
-
 // Check the user's answer
 function checkAnswer() {
-    const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(input => input.value);
-    if (selectedOptions.length === 0) {
-        document.getElementById('feedback').textContent = 'Please select at least one option.';
-        document.getElementById('feedback').style.color = 'orange';
-        return;
-    }
-
     const currentQuestion = questions[currentQuestionIndex];
+    const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(input => input.value);
     const isCorrect = currentQuestion.isCorrect(selectedOptions);
 
     if (isCorrect) {
         score++;
     }
-    updateScoreProgress(); // Update progress bar after answering
 
     const feedback = document.getElementById('feedback');
     if (isCorrect) {
@@ -147,16 +133,28 @@ function checkAnswer() {
     document.getElementById('next-btn').style.display = 'block';
 }
 
-// Display the final score
+// Display the final score with readiness threshold
 function showScore() {
     document.getElementById('question-container').style.display = 'none';
     document.getElementById('submit-btn').style.display = 'none';
     document.getElementById('next-btn').style.display = 'none';
     document.getElementById('feedback').textContent = '';
-    
     const scoreContainer = document.getElementById('score-container');
     scoreContainer.style.display = 'block';
-    document.getElementById('score').textContent = `${score} out of ${questions.length}`;
+    const totalQuestions = questions.length;
+    const percentage = (score / totalQuestions) * 100;
+    document.getElementById('score').textContent = `${score} out of ${totalQuestions} (${percentage.toFixed(2)}%)`;
+
+    // Check readiness threshold
+    const threshold = readinessThresholds[selectedTestName] || 70; // Default to 70% if not found
+    const readinessMessage = document.getElementById('readiness-message');
+    if (percentage >= threshold) {
+        readinessMessage.textContent = 'You have met the readiness threshold!';
+        readinessMessage.style.color = 'green';
+    } else {
+        readinessMessage.textContent = `You need ${(threshold - percentage).toFixed(2)}% more to meet the readiness threshold.`;
+        readinessMessage.style.color = 'red';
+    }
 }
 
 // Set up event listeners
@@ -181,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         testNameHeading.textContent = testName;
         testSelection.style.display = 'none';
         quizContainer.style.display = 'block';
-        startQuiz(selectedFile);
+        startQuiz(selectedFile, testName); // Pass testName to startQuiz
     });
 
     submitBtn.addEventListener('click', checkAnswer);
