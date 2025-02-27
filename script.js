@@ -98,17 +98,23 @@ function loadQuestion() {
     document.getElementById('next-btn').style.display = 'none';
 }
 
-// Update the score progress bar
 function updateScoreProgress() {
-    const total = questions.length;
-    const scorePercentage = Math.round((score / total) * 100);
-    
-    document.getElementById('score-progress-bar').style.width = `${scorePercentage}%`;
-    document.getElementById('current-score-text').textContent = `Score: ${score}/${total} (${scorePercentage}%)`;
+    const totalQuestions = 100;
+    const correctAnswers = score; // Assuming score is the number of correct answers
+    const progressPercent = (correctAnswers / totalQuestions) * 100;
+    document.getElementById('score-progress-bar').style.width = `${progressPercent}%`;
 
-    // Set passing score marker
+    // Assuming passingScore is defined globally or passed to this function
     const passingScore = passingScores[testId] || 70;
-    document.getElementById('passing-score-marker').style.left = `${passingScore}%`;
+    const marker = document.getElementById('passing-score-marker');
+    marker.style.left = `${passingScore}%`;
+
+    // Update the label position
+    const labelWrapper = document.getElementById('passing-score-label-wrapper');
+    labelWrapper.style.left = `${passingScore}%`;
+
+    // Center the label
+    labelWrapper.style.transform = 'translate(-50%, 0)';
 }
 
 // Check the user's answer
