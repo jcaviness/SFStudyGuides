@@ -6,7 +6,6 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    margin: 20px;
 }
 
 .quiz-container {
@@ -31,14 +30,9 @@ h1 {
 #test-selector {
     padding: 5px;
     margin-bottom: 10px;
-.option {
-    display: block;
-    margin: 10px 0;
 }
 
 #start-quiz {
-button {
-    margin: 10px 5px;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -71,7 +65,35 @@ button {
 
 .option {
     display: block;
-/* Score Progress Bar Styles */
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#score-container {
+    text-align: center;
+    font-size: 1.5em;
+    color: #007bff;
+}
+
+/* Score Progress Styles */
 #score-progress-container {
     position: relative;
     width: 100%;
@@ -81,41 +103,25 @@ button {
     margin-bottom: 10px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
 #score-progress-bar {
     height: 100%;
-    width: 0%; /* Starts at 0% */
-    background-color: #4caf50; /* Green by default */
+    width: 0%;
+    background-color: #4caf50;
     border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: width 0.3s ease; /* Smooth transition for updates */
+    transition: width 0.3s ease-in-out;
 }
 
-button:hover {
-    background-color: #0056b3;
 #passing-score-marker {
     position: absolute;
     top: 0;
     height: 100%;
     width: 2px;
-    background-color: #000000; /* Black marker */
-    z-index: 1; /* Ensure it’s above the progress bar */
+    background-color: #000000;
+    z-index: 1;
 }
 
-#feedback {
-    margin-top: 20px;
 #current-score-text {
     margin-bottom: 15px;
     font-weight: bold;
-}
-
-#score-container {
     text-align: center;
-    font-size: 1.5em;
-    color: #007bff;
 }

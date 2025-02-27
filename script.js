@@ -1,11 +1,3 @@
-// Add at the top of script.js
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
 // Define the Question class
 class Question {
     constructor(question, type, options, correct, explanation) {
@@ -16,6 +8,7 @@ class Question {
         this.explanation = explanation;
     }
 
+    // Check if the user's answer is correct
     isCorrect(userAnswer) {
         if (this.type === "single") {
             return userAnswer.length === 1 && userAnswer[0] === this.correct[0];
@@ -25,6 +18,7 @@ class Question {
         return false;
     }
 
+    // Provide feedback for the answer
     getFeedback() {
         return this.explanation;
     }
@@ -42,8 +36,9 @@ const passingScores = {
 let testId = '';
 let questions = [];
 let currentQuestionIndex = 0;
-let answers = [];
+let score = 0;
 
+// Load questions from the selected JSON file
 async function loadQuestions(fileName) {
     try {
         const response = await fetch(fileName);
@@ -58,53 +53,41 @@ async function loadQuestions(fileName) {
     }
 }
 
+// Start the quiz with the selected test
 async function startQuiz(fileName) {
     try {
+        testId = fileName;
         questions = await loadQuestions(fileName);
+        currentQuestionIndex = 0;
+        score = 0;
+
         document.getElementById('score-container').style.display = 'none';
         document.getElementById('question-container').style.display = 'block';
-
-        const savedState = localStorage.getItem(`test_state_${testId}`);
-        if (savedState) {
-            if (confirm('Resume from your last session?')) {
-                const state = JSON.parse(savedState);
-                currentQuestionIndex = state.currentQuestionIndex;
-                answers = state.answers;
-            } else {
-                localStorage.removeItem(`test_state_${testId}`);
-                answers = new Array(questions.length).fill(null);
-                currentQuestionIndex = 0;
-            }
-        } else {
-            answers = new Array(questions.length).fill(null);
-            currentQuestionIndex = 0;
-        }
-
-        updateScoreProgress(); // Initialize score progress
-        if (currentQuestionIndex < questions.length) {
-            loadQuestion();
-        } else {
-            showScore();
-        }
+        
+        updateScoreProgress(); // Initialize the progress bar
+        loadQuestion();
     } catch (error) {
         document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
     }
 }
 
+// Load the current question
 function loadQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     document.getElementById('question').textContent = currentQuestion.question;
+    
     const optionsContainer = document.getElementById('options');
     optionsContainer.innerHTML = '';
 
-    const shuffledOptions = [...currentQuestion.options].sort(() => Math.random() - 0.5);
-    shuffledOptions.forEach((option) => {
+    currentQuestion.options.forEach((option) => {
         const label = document.createElement('label');
         label.classList.add('option');
+        
         const input = document.createElement('input');
         input.type = currentQuestion.type === 'single' ? 'radio' : 'checkbox';
         input.name = 'option';
         input.value = option;
+        
         label.appendChild(input);
         label.appendChild(document.createTextNode(option));
         optionsContainer.appendChild(label);
@@ -115,35 +98,35 @@ function loadQuestion() {
     document.getElementById('next-btn').style.display = 'none';
 }
 
+// Update the score progress bar
 function updateScoreProgress() {
     const total = questions.length;
-    let correctCount = 0;
+    const scorePercentage = Math.round((score / total) * 100);
+    
+    document.getElementById('score-progress-bar').style.width = `${scorePercentage}%`;
+    document.getElementById('current-score-text').textContent = `Score: ${score}/${total} (${scorePercentage}%)`;
 
-    for (let i = 0; i < total; i++) {
-        if (answers[i] && questions[i].isCorrect(answers[i])) {
-            correctCount++;
-        }
-    }
-
-    const scorePercentage = total > 0 ? Math.round((correctCount / total) * 100) : 0;
-    const progressBar = document.getElementById('score-progress-bar');
-    progressBar.style.width = `${scorePercentage}%`;
-
-    // Update text display
-    document.getElementById('current-score-text').textContent = `Correct Answers: ${correctCount}/${total} (${scorePercentage}%)`;
-
-    // Position the passing score marker
-    const passingScore = passingScores[testId] || 70; // Default to 70% if not specified
-    const marker = document.getElementById('passing-score-marker');
-    marker.style.left = `${passingScore}%`;
-    marker.title = `Passing Score: ${passingScore}%`; // Tooltip for accessibility
+    // Set passing score marker
+    const passingScore = passingScores[testId] || 70;
+    document.getElementById('passing-score-marker').style.left = `${passingScore}%`;
 }
 
+// Check the user's answer
 function checkAnswer() {
-    const currentQuestion = questions[currentQuestionIndex];
     const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(input => input.value);
-    answers[currentQuestionIndex] = selectedOptions;
+    if (selectedOptions.length === 0) {
+        document.getElementById('feedback').textContent = 'Please select at least one option.';
+        document.getElementById('feedback').style.color = 'orange';
+        return;
+    }
+
+    const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = currentQuestion.isCorrect(selectedOptions);
+
+    if (isCorrect) {
+        score++;
+    }
+    updateScoreProgress(); // Update progress bar after answering
 
     const feedback = document.getElementById('feedback');
     if (isCorrect) {
@@ -156,38 +139,21 @@ function checkAnswer() {
 
     document.getElementById('submit-btn').style.display = 'none';
     document.getElementById('next-btn').style.display = 'block';
-
-    updateScoreProgress(); // Update score after each answer
 }
 
+// Display the final score
 function showScore() {
     document.getElementById('question-container').style.display = 'none';
     document.getElementById('submit-btn').style.display = 'none';
     document.getElementById('next-btn').style.display = 'none';
     document.getElementById('feedback').textContent = '';
+    
     const scoreContainer = document.getElementById('score-container');
     scoreContainer.style.display = 'block';
-
-    let correctCount = 0;
-    for (let i = 0; i < questions.length; i++) {
-        if (questions[i].isCorrect(answers[i])) {
-            correctCount++;
-        }
-    }
-    const scorePercentage = Math.round((correctCount / questions.length) * 100);
-    document.getElementById('score').textContent = `${correctCount} out of ${questions.length} (${scorePercentage}%)`;
-
-    const passingScore = passingScores[testId];
-    if (passingScore) {
-        const message = scorePercentage >= passingScore
-            ? "You're ready to take the certification exam!"
-            : "Keep studying to improve your score.";
-        document.getElementById('readiness-message').textContent = message;
-    }
-
-    localStorage.removeItem(`test_state_${testId}`);
+    document.getElementById('score').textContent = `${score} out of ${questions.length}`;
 }
 
+// Set up event listeners
 document.addEventListener('DOMContentLoaded', () => {
     const testSelector = document.getElementById('test-selector');
     const startBtn = document.getElementById('start-quiz');
@@ -204,7 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
             message.textContent = "Please select a test.";
             return;
         }
-        testId = selectedFile;
         message.textContent = "";
         const testName = testSelector.selectedOptions[0].text;
         testNameHeading.textContent = testName;
@@ -216,8 +181,8 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.addEventListener('click', checkAnswer);
 
     nextBtn.addEventListener('click', () => {
-        currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
+        if (currentQuestionIndex + 1 < questions.length) {
+            currentQuestionIndex++;
             loadQuestion();
         } else {
             showScore();
