@@ -25,6 +25,10 @@
         <!-- Quiz Content -->
         <div id="quiz-container" style="display: none;">
             <h2 id="test-name"></h2>
+            <p>Correct Answers: <span id="correct-count">0</span>/<span id="total-questions">0</span> (<span id="score-percentage">0%</span>)</p>
+            <div id="progress-bar-container">
+                <div id="progress-bar"></div>
+            </div>
             <div id="question-container">
                 <h3 id="question"></h3>
                 <div id="options"></div>
@@ -35,7 +39,6 @@
             <div id="score-container" style="display: none;">
                 <h3>Quiz completed!</h3>
                 <p>Your score: <span id="score"></span></p>
-                <p id="readiness-message"></p> <!-- Added for readiness feedback -->
             </div>
         </div>
     </div>

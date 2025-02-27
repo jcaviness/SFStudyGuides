@@ -28,58 +28,48 @@ class Question {
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let selectedTestName = ''; // To store the current test name
 
-// Map test names to readiness thresholds
-const readinessThresholds = {
-    'AgentForce': 73,           // 73%
-    'Data Cloud': 62,          // 62%
-    'Platform Developer 1': 68, // 68%
-    'Platform Developer 2': 70  // 70%
-};
+// Update progress bar and score display
+function updateProgress() {
+    const correctCount = score;
+    const totalQuestions = questions.length;
+    const percentage = (correctCount / totalQuestions) * 100;
+    document.getElementById('correct-count').textContent = correctCount;
+    document.getElementById('total-questions').textContent = totalQuestions;
+    document.getElementById('score-percentage').textContent = percentage.toFixed(2) + '%';
+    const progressBar = document.getElementById('progress-bar');
+    progressBar.style.width = percentage + '%';
+    const threshold = 70; // Readiness threshold at 70%
+    progressBar.style.backgroundColor = percentage >= threshold ? '#4CAF50' : '#f44336'; // Green if >=70%, red if <70%
+}
 
-// Map test names to CSS classes
-const testClasses = {
-    'AgentForce': 'agentforce',
-    'Data Cloud': 'data-cloud',
-    'Platform Developer 1': 'platform-dev-1',
-    'Platform Developer 2': 'platform-dev-2'
-};
-
-// Load questions from the selected JSON file
+// Load questions from the selected JSON file with debugging
 async function loadQuestions(fileName) {
     try {
+        console.log('Loading questions from:', fileName);
         const response = await fetch(fileName);
         if (!response.ok) {
-            throw new Error('Failed to load questions');
+            throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
+        console.log('Questions loaded:', data);
         return data.map(q => new Question(q.question, q.type, q.options, q.correct, q.explanation));
     } catch (error) {
         console.error('Error loading questions:', error);
+        document.getElementById('message').textContent = 'Failed to load questions. Check console for details.';
         throw error;
     }
 }
 
 // Start the quiz with the selected test
-async function startQuiz(fileName, testName) {
+async function startQuiz(fileName) {
     try {
         questions = await loadQuestions(fileName);
         currentQuestionIndex = 0;
         score = 0;
-        selectedTestName = testName; // Store the selected test name
+        updateProgress(); // Initialize progress bar
         document.getElementById('score-container').style.display = 'none';
         document.getElementById('question-container').style.display = 'block';
-
-        // Apply test-specific class to quiz-container
-        const quizContainer = document.getElementById('quiz-container');
-        const allTestClasses = Object.values(testClasses);
-        allTestClasses.forEach(cls => quizContainer.classList.remove(cls)); // Remove previous classes
-        const testClass = testClasses[testName];
-        if (testClass) {
-            quizContainer.classList.add(testClass);
-        }
-
         loadQuestion();
     } catch (error) {
         document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
@@ -118,6 +108,7 @@ function checkAnswer() {
 
     if (isCorrect) {
         score++;
+        updateProgress(); // Update progress after score change
     }
 
     const feedback = document.getElementById('feedback');
@@ -133,7 +124,7 @@ function checkAnswer() {
     document.getElementById('next-btn').style.display = 'block';
 }
 
-// Display the final score with readiness threshold
+// Display the final score
 function showScore() {
     document.getElementById('question-container').style.display = 'none';
     document.getElementById('submit-btn').style.display = 'none';
@@ -141,20 +132,7 @@ function showScore() {
     document.getElementById('feedback').textContent = '';
     const scoreContainer = document.getElementById('score-container');
     scoreContainer.style.display = 'block';
-    const totalQuestions = questions.length;
-    const percentage = (score / totalQuestions) * 100;
-    document.getElementById('score').textContent = `${score} out of ${totalQuestions} (${percentage.toFixed(2)}%)`;
-
-    // Check readiness threshold
-    const threshold = readinessThresholds[selectedTestName] || 70; // Default to 70% if not found
-    const readinessMessage = document.getElementById('readiness-message');
-    if (percentage >= threshold) {
-        readinessMessage.textContent = 'You have met the readiness threshold!';
-        readinessMessage.style.color = 'green';
-    } else {
-        readinessMessage.textContent = `You need ${(threshold - percentage).toFixed(2)}% more to meet the readiness threshold.`;
-        readinessMessage.style.color = 'red';
-    }
+    document.getElementById('score').textContent = `${score} out of ${questions.length}`;
 }
 
 // Set up event listeners
@@ -179,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         testNameHeading.textContent = testName;
         testSelection.style.display = 'none';
         quizContainer.style.display = 'block';
-        startQuiz(selectedFile, testName); // Pass testName to startQuiz
+        startQuiz(selectedFile);
     });
 
     submitBtn.addEventListener('click', checkAnswer);
