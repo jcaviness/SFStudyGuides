@@ -1,0 +1,756 @@
+[
+  {
+    "topic": "Prompt Engineering",
+    "question": "When crafting a prompt in Prompt Builder for Agentforce to handle ambiguous customer inquiries in Service Cloud, what advanced technique ensures the AI solicits clarification without escalating to a human agent?",
+    "type": "single",
+    "options": [
+      "Incorporating multi-turn dialogue with static responses",
+      "Using fallback prompts with dynamic clarification questions",
+      "Embedding complex regex patterns in the prompt",
+      "Disabling context awareness to simplify processing"
+    ],
+    "correct": ["Using fallback prompts with dynamic clarification questions"],
+    "explanation": "Fallback prompts with dynamic clarification questions allow Agentforce to seek specific clarifications from users, maintaining automation while resolving ambiguity, per Salesforce’s prompt engineering best practices."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "In a Sales Cloud integration with Agentforce, which Data Cloud feature must be configured to ensure real-time synchronization of third-party social media data for sentiment-based lead scoring?",
+    "type": "single",
+    "options": [
+      "External Data Connectors with Real-Time Data Streams",
+      "Data Lake with Batch Processing",
+      "Calculated Insights with Static Snapshots",
+      "Identity Resolution with Historical Archives"
+    ],
+    "correct": ["External Data Connectors with Real-Time Data Streams"],
+    "explanation": "External Data Connectors paired with Real-Time Data Streams enable Agentforce to ingest and process live social media data, ensuring sentiment analysis enhances lead scoring accuracy in Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "Which Einstein Trust Layer component ensures Agentforce avoids perpetuating biases when recommending high-value opportunities in Sales Cloud, and how does it achieve this?",
+    "type": "single",
+    "options": [
+      "AI Bias Detection, by flagging and correcting skewed predictions",
+      "Explainability, by logging all decisions for audit",
+      "Fairness Indicator, by encrypting biased data",
+      "Robustness Testing, by limiting data inputs"
+    ],
+    "correct": ["AI Bias Detection, by flagging and correcting skewed predictions"],
+    "explanation": "AI Bias Detection identifies and mitigates bias in Agentforce’s recommendations, ensuring ethical and equitable targeting of high-value opportunities in Sales Cloud."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "When Agentforce processes IoT data from Data Cloud for predictive maintenance in Service Cloud, what Trust Layer feature provides stakeholders with detailed reasoning behind AI-driven case escalations?",
+    "type": "single",
+    "options": [
+      "Privacy Preserving AI",
+      "Explainability",
+      "Accountability Framework",
+      "Fairness Indicator"
+    ],
+    "correct": ["Explainability"],
+    "explanation": "The Explainability feature in the Einstein Trust Layer offers transparency into Agentforce’s AI decisions, detailing the reasoning for case escalations based on IoT data in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "What is the maximum number of external data sources Agentforce can connect via Data Cloud’s External Data Connectors for predictive analytics in Sales Cloud, as per Salesforce limits?",
+    "type": "single",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "correct": ["10"],
+    "explanation": "Salesforce limits allow up to 10 external data sources via External Data Connectors, enabling Agentforce to leverage diverse data for predictive analytics in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the maximum character limit for a single prompt in Prompt Builder when configuring Agentforce for multilingual responses in Service Cloud, and why is this limit critical?",
+    "type": "single",
+    "options": [
+      "500, to ensure rapid processing",
+      "1000, to balance clarity and efficiency",
+      "2000, to allow complex instructions",
+      "5000, to support extensive context"
+    ],
+    "correct": ["1000, to balance clarity and efficiency"],
+    "explanation": "Salesforce imposes a 1000-character limit on prompts to maintain a balance between detailed instructions and processing efficiency, critical for multilingual Service Cloud responses."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "How does Data Cloud’s Identity Resolution enhance Agentforce’s cross-channel customer engagement in Sales Cloud, and what is the primary Trust Layer principle to monitor?",
+    "type": "single",
+    "options": [
+      "Unifies customer identities, monitored for fairness",
+      "Encrypts customer data, monitored for security",
+      "Limits data access, monitored for transparency",
+      "Archives interactions, monitored for robustness"
+    ],
+    "correct": ["Unifies customer identities, monitored for fairness"],
+    "explanation": "Identity Resolution deduplicates and unifies customer profiles for consistent engagement, with the Trust Layer’s fairness principle ensuring unbiased AI outcomes in Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "In a Service Cloud integration, how does the Einstein Trust Layer’s Privacy Preserving AI ensure GDPR compliance when Agentforce processes sensitive customer data for case resolution?",
+    "type": "single",
+    "options": [
+      "By disabling AI processing for EU data",
+      "By anonymizing data before AI analysis",
+      "By encrypting all outputs post-processing",
+      "By restricting data to administrators"
+    ],
+    "correct": ["By anonymizing data before AI analysis"],
+    "explanation": "Privacy Preserving AI anonymizes sensitive data before Agentforce processes it, ensuring GDPR compliance by protecting customer privacy in Service Cloud."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "What Data Cloud feature ensures Agentforce uses only relevant historical case data for automated escalations in Service Cloud, avoiding irrelevant noise?",
+    "type": "single",
+    "options": [
+      "Data Deduplication",
+      "Data Segmentation",
+      "Real-Time Data Streams",
+      "Historical Data Archives"
+    ],
+    "correct": ["Data Segmentation"],
+    "explanation": "Data Segmentation filters relevant historical case data, enabling Agentforce to make precise AI-driven escalation decisions in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "When Agentforce uses Data Cloud’s Calculated Insights for customer churn prediction in Sales Cloud, what configuration ensures timely AI updates under high data velocity?",
+    "type": "single",
+    "options": [
+      "Batch Data Processing",
+      "Manual Data Sync",
+      "Real-Time Data Streams",
+      "Static Data Profiles"
+    ],
+    "correct": ["Real-Time Data Streams"],
+    "explanation": "Real-Time Data Streams ensure timely data updates for Calculated Insights, maintaining Agentforce’s churn prediction accuracy in Sales Cloud under high data velocity."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What Prompt Builder setting is critical for aligning Agentforce’s automated email responses with Salesforce’s brand voice in a Sales Cloud integration?",
+    "type": "single",
+    "options": [
+      "Response Length Limits",
+      "Tone and Style Guidelines",
+      "Processing Speed Settings",
+      "Data Source Priority"
+    ],
+    "correct": ["Tone and Style Guidelines"],
+    "explanation": "Tone and Style Guidelines ensure Agentforce’s email responses reflect Salesforce’s brand voice, maintaining consistency in Sales Cloud communications."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What is the default maximum retention period for real-time event data in Data Cloud used by Agentforce for predictive analytics in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "7 days",
+      "30 days",
+      "90 days",
+      "365 days"
+    ],
+    "correct": ["30 days"],
+    "explanation": "Salesforce’s default settings retain real-time event data for 30 days, providing Agentforce with a sufficient window for predictive analytics in Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "How does the Einstein Trust Layer’s Fairness Indicator assist Agentforce in ensuring equitable customer segmentation for Service Cloud case prioritization?",
+    "type": "single",
+    "options": [
+      "By optimizing computational efficiency",
+      "By assessing bias in AI predictions",
+      "By encrypting customer data",
+      "By limiting segmentation scope"
+    ],
+    "correct": ["By assessing bias in AI predictions"],
+    "explanation": "The Fairness Indicator evaluates and mitigates bias in Agentforce’s AI models, ensuring equitable customer segmentation for case prioritization in Service Cloud."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "What is the maximum number of languages Prompt Builder supports for simultaneous testing of Agentforce prompts in a multilingual Service Cloud environment?",
+    "type": "single",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "correct": ["10"],
+    "explanation": "Prompt Builder supports up to 10 languages for simultaneous testing, optimizing Agentforce’s multilingual capabilities in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "How does Agentforce leverage Einstein Prediction Builder with Data Cloud for opportunity forecasting in Sales Cloud, and what component is critical?",
+    "type": "single",
+    "options": [
+      "Uses historical data with Real-Time Data Streams",
+      "Relies on Data Segments for static analysis",
+      "Bypasses Data Cloud with manual inputs",
+      "Uses Data Actions for batch updates"
+    ],
+    "correct": ["Uses historical data with Real-Time Data Streams"],
+    "explanation": "Einstein Prediction Builder integrates historical data and Real-Time Data Streams from Data Cloud, enabling Agentforce to deliver accurate opportunity forecasts in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the maximum number of custom prompt variations testable concurrently in Prompt Builder for Agentforce within a single Salesforce org?",
+    "type": "single",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "correct": ["10"],
+    "explanation": "Salesforce documentation specifies a limit of 10 custom prompt variations testable concurrently in Prompt Builder, optimizing Agentforce’s conversational performance."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What Data Cloud feature ensures Agentforce avoids processing duplicate opportunities in Sales Cloud, preserving AI model accuracy for opportunity scoring?",
+    "type": "single",
+    "options": [
+      "Data Deduplication",
+      "Data Segmentation",
+      "Real-Time Data Streams",
+      "External Data Connectors"
+    ],
+    "correct": ["Data Deduplication"],
+    "explanation": "Data Deduplication removes duplicate opportunities, ensuring Agentforce’s AI models maintain accuracy in opportunity scoring within Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "What Trust Layer principle must Agentforce adhere to when integrating with Service Cloud to ensure ethical AI usage in multilingual case management?",
+    "type": "single",
+    "options": [
+      "Maximize computational efficiency",
+      "Ensure transparency and accountability",
+      "Prioritize speed over fairness",
+      "Restrict data access universally"
+    ],
+    "correct": ["Ensure transparency and accountability"],
+    "explanation": "Transparency and accountability ensure ethical AI deployment in Service Cloud, providing auditable and fair outcomes for multilingual case management."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "How does Agentforce leverage Data Cloud’s Calculated Insights to enhance response time for automated case resolutions in Service Cloud?",
+    "type": "single",
+    "options": [
+      "By pre-computing key metrics for faster AI decisions",
+      "By archiving data for historical review",
+      "By limiting data scope for efficiency",
+      "By encrypting data pre-processing"
+    ],
+    "correct": ["By pre-computing key metrics for faster AI decisions"],
+    "explanation": "Calculated Insights pre-compute metrics, enabling Agentforce to deliver rapid AI-driven case resolutions in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "What is the primary challenge when integrating Agentforce with Sales Cloud using Data Cloud’s Data Actions for automated lead follow-up, and how is it mitigated?",
+    "type": "single",
+    "options": [
+      "Data consistency, mitigated by Data Deduplication",
+      "Response latency, mitigated by Real-Time Data Streams",
+      "Security risks, mitigated by encryption",
+      "Accuracy issues, mitigated by manual audits"
+    ],
+    "correct": ["Response latency, mitigated by Real-Time Data Streams"],
+    "explanation": "Data Actions may introduce latency; Real-Time Data Streams ensure timely data, enhancing Agentforce’s lead follow-up speed in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "When handling incomplete customer data for lead qualification in Sales Cloud, what Prompt Builder approach ensures Agentforce requests missing information effectively?",
+    "type": "single",
+    "options": [
+      "Ignore incomplete data for speed",
+      "Use fallback prompts to solicit missing details",
+      "Disable AI processing for incomplete records",
+      "Redirect all cases to human agents"
+    ],
+    "correct": ["Use fallback prompts to solicit missing details"],
+    "explanation": "Fallback prompts enable Agentforce to request missing data, ensuring effective lead qualification in Sales Cloud despite incomplete information."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What is the maximum number of AI models Agentforce can train simultaneously using Data Cloud’s Data Lake for Sales Cloud opportunity forecasting?",
+    "type": "single",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "correct": ["10"],
+    "explanation": "Salesforce limits allow Agentforce to train up to 10 AI models concurrently using Data Cloud’s Data Lake, optimizing forecasting in Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "How does the Einstein Trust Layer’s Robustness Testing validate Agentforce’s AI models for Service Cloud predictive analytics under variable data conditions?",
+    "type": "single",
+    "options": [
+      "By testing performance across diverse scenarios",
+      "By encrypting variable data inputs",
+      "By limiting data variability",
+      "By optimizing storage efficiency"
+    ],
+    "correct": ["By testing performance across diverse scenarios"],
+    "explanation": "Robustness Testing assesses Agentforce’s AI reliability under varying data conditions, ensuring consistent predictive analytics in Service Cloud."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "What Data Cloud feature ensures Agentforce reflects the latest customer sentiment in real-time chat responses within Service Cloud?",
+    "type": "single",
+    "options": [
+      "Historical Data Archives",
+      "Real-Time Data Streams",
+      "Data Segmentation",
+      "Data Deduplication"
+    ],
+    "correct": ["Real-Time Data Streams"],
+    "explanation": "Real-Time Data Streams provide current sentiment data, enabling Agentforce to deliver timely chat responses in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "How does Data Cloud’s Historical Data Analysis enhance Agentforce’s opportunity forecasting in Sales Cloud by accounting for seasonal trends?",
+    "type": "single",
+    "options": [
+      "By deduplicating seasonal data",
+      "By integrating historical trends into AI models",
+      "By limiting data to real-time streams",
+      "By encrypting seasonal insights"
+    ],
+    "correct": ["By integrating historical trends into AI models"],
+    "explanation": "Historical Data Analysis incorporates seasonal trends, improving Agentforce’s AI-driven opportunity forecasting accuracy in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the primary challenge of using Prompt Builder’s Dynamic Prompt Adjustment for Agentforce in a multilingual Service Cloud environment?",
+    "type": "single",
+    "options": [
+      "Language inconsistency",
+      "Data latency",
+      "Response speed",
+      "Security risks"
+    ],
+    "correct": ["Language inconsistency"],
+    "explanation": "Dynamic Prompt Adjustment may lead to language inconsistencies; Multi-Language Testing in Prompt Builder mitigates this for consistent Agentforce responses."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What Data Cloud component is essential for Agentforce to process streaming IoT data for predictive maintenance in Service Cloud?",
+    "type": "single",
+    "options": [
+      "Data Lake",
+      "Real-Time Data Streams",
+      "Data Segments",
+      "Historical Archives"
+    ],
+    "correct": ["Real-Time Data Streams"],
+    "explanation": "Real-Time Data Streams enable Agentforce to process live IoT data, supporting predictive maintenance in Service Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "What Trust Layer principle ensures Agentforce’s AI models do not perpetuate historical biases in Sales Cloud lead scoring when integrated with Data Cloud?",
+    "type": "single",
+    "options": [
+      "Fairness",
+      "Transparency",
+      "Robustness",
+      "Accountability"
+    ],
+    "correct": ["Fairness"],
+    "explanation": "The Fairness principle prevents bias perpetuation, ensuring equitable lead scoring outcomes in Sales Cloud via Data Cloud."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "What is the impact on Agentforce’s performance in Service Cloud if Data Deduplication is not enabled for customer profile data used in AI-driven case routing?",
+    "type": "single",
+    "options": [
+      "Increased accuracy with slower responses",
+      "Reduced accuracy due to duplicate data",
+      "Improved speed with lower accuracy",
+      "No performance impact"
+    ],
+    "correct": ["Reduced accuracy due to duplicate data"],
+    "explanation": "Without Data Deduplication, duplicate profiles skew Agentforce’s AI models, reducing case routing accuracy in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "What is the maximum latency allowed for real-time data updates in Data Cloud to maintain Agentforce’s AI effectiveness for lead nurturing in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "1 second",
+      "5 seconds",
+      "10 seconds",
+      "30 seconds"
+    ],
+    "correct": ["5 seconds"],
+    "explanation": "Salesforce best practices recommend a 5-second maximum latency for real-time updates, ensuring Agentforce’s effectiveness in Sales Cloud lead nurturing."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What Prompt Builder feature enhances Agentforce’s context-aware responses for Service Cloud case handling using Data Cloud data?",
+    "type": "single",
+    "options": [
+      "Response Length Limits",
+      "Context Awareness",
+      "Tone Adjustment",
+      "Processing Priority"
+    ],
+    "correct": ["Context Awareness"],
+    "explanation": "Context Awareness leverages historical and real-time Data Cloud data, enabling Agentforce to deliver contextually relevant responses in Service Cloud."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "How does Data Cloud’s Interaction History Tracking improve Agentforce’s automated email responses in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "By deduplicating interaction data",
+      "By reflecting accurate customer history",
+      "By limiting interaction scope",
+      "By encrypting history logs"
+    ],
+    "correct": ["By reflecting accurate customer history"],
+    "explanation": "Interaction History Tracking ensures Agentforce uses accurate customer interaction data, enhancing email response relevance in Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "How does the Einstein Trust Layer’s Accountability Framework ensure Agentforce’s case prioritization decisions in Service Cloud are compliant with regulatory standards?",
+    "type": "single",
+    "options": [
+      "By logging all AI decisions and outcomes",
+      "By encrypting decision logs",
+      "By restricting data access",
+      "By disabling AI for sensitive cases"
+    ],
+    "correct": ["By logging all AI decisions and outcomes"],
+    "explanation": "The Accountability Framework logs decisions, ensuring auditable and compliant case prioritization in Service Cloud."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "What is the primary benefit of using Prompt Builder’s A/B Testing for Agentforce prompts in Service Cloud with Data Cloud integration?",
+    "type": "single",
+    "options": [
+      "Optimizes response speed",
+      "Improves prompt accuracy with real-time data",
+      "Reduces data storage needs",
+      "Enhances data security"
+    ],
+    "correct": ["Improves prompt accuracy with real-time data"],
+    "explanation": "A/B Testing refines Agentforce prompts using real-time Data Cloud data, improving accuracy for Service Cloud interactions."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "How does Agentforce use Data Cloud’s Real-Time Data Streams to improve predictive analytics for lead scoring in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "By pre-computing insights for accuracy",
+      "By archiving data for trend analysis",
+      "By limiting data to historical sets",
+      "By encrypting real-time inputs"
+    ],
+    "correct": ["By pre-computing insights for accuracy"],
+    "explanation": "Real-Time Data Streams enable pre-computed insights, enhancing Agentforce’s lead scoring accuracy in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the maximum number of A/B tests Prompt Builder can run concurrently for Agentforce prompt optimization in Service Cloud?",
+    "type": "single",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "correct": ["10"],
+    "explanation": "Salesforce limits Prompt Builder to 10 concurrent A/B tests, optimizing Agentforce prompts for Service Cloud."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What Data Cloud feature supports Agentforce’s AI-driven customer segmentation for Service Cloud case routing with third-party data?",
+    "type": "single",
+    "options": [
+      "Data Deduplication",
+      "External Data Connectors",
+      "Real-Time Data Streams",
+      "Historical Data Analysis"
+    ],
+    "correct": ["External Data Connectors"],
+    "explanation": "External Data Connectors integrate third-party data, enhancing Agentforce’s segmentation accuracy for Service Cloud case routing."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "How does the Einstein Trust Layer’s Transparency Dashboard assist in monitoring Agentforce’s AI models for customer churn prediction in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "Optimizes data storage",
+      "Provides visibility into AI decisions",
+      "Encrypts prediction outputs",
+      "Limits user access"
+    ],
+    "correct": ["Provides visibility into AI decisions"],
+    "explanation": "The Transparency Dashboard offers insights into Agentforce’s AI decision-making, ensuring trust and compliance in Sales Cloud churn predictions."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "What is the impact of enabling Data Deduplication in Data Cloud on Agentforce’s AI model performance for Service Cloud case management?",
+    "type": "single",
+    "options": [
+      "Improves accuracy by removing duplicates",
+      "Reduces accuracy due to data loss",
+      "Increases latency",
+      "No performance impact"
+    ],
+    "correct": ["Improves accuracy by removing duplicates"],
+    "explanation": "Data Deduplication eliminates duplicate case data, enhancing Agentforce’s AI accuracy in Service Cloud case management."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "What Data Cloud feature ensures Agentforce accounts for customer behavior seasonality in Sales Cloud opportunity management?",
+    "type": "single",
+    "options": [
+      "Data Segmentation",
+      "Historical Data Analysis",
+      "Real-Time Data Streams",
+      "Data Deduplication"
+    ],
+    "correct": ["Historical Data Analysis"],
+    "explanation": "Historical Data Analysis integrates seasonal behavior trends, improving Agentforce’s opportunity management in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "How does Prompt Builder’s Response Optimization enhance Agentforce’s automated email responses in Sales Cloud with Data Cloud integration?",
+    "type": "single",
+    "options": [
+      "Prioritizes speed over accuracy",
+      "Uses real-time data for tailored responses",
+      "Limits data access for security",
+      "Disables AI processing"
+    ],
+    "correct": ["Uses real-time data for tailored responses"],
+    "explanation": "Response Optimization leverages real-time Data Cloud data, improving Agentforce’s email response accuracy in Sales Cloud."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What is the primary challenge of using Data Cloud’s Real-Time Data Streams for Agentforce’s case routing in Service Cloud?",
+    "type": "single",
+    "options": [
+      "Data volume, mitigated by Data Segmentation",
+      "Data latency, mitigated by batch processing",
+      "Data security, mitigated by encryption",
+      "Data accuracy, mitigated by audits"
+    ],
+    "correct": ["Data volume, mitigated by Data Segmentation"],
+    "explanation": "High data volume from Real-Time Streams can overwhelm Agentforce; Data Segmentation filters relevant data, enhancing Service Cloud case routing."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "What Trust Layer feature ensures Agentforce’s product recommendations in Sales Cloud remain fair when integrated with Data Cloud?",
+    "type": "single",
+    "options": [
+      "Bias Mitigation",
+      "Data Encryption",
+      "Robustness Testing",
+      "Accountability Logs"
+    ],
+    "correct": ["Bias Mitigation"],
+    "explanation": "Bias Mitigation identifies and corrects biased predictions, ensuring fair product recommendations in Sales Cloud via Data Cloud."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "How does Agentforce leverage Data Cloud’s Identity Resolution for cross-channel customer engagement in Service Cloud?",
+    "type": "single",
+    "options": [
+      "Deduplicates profiles for consistent engagement",
+      "Encrypts channel data",
+      "Limits cross-channel access",
+      "Archives channel interactions"
+    ],
+    "correct": ["Deduplicates profiles for consistent engagement"],
+    "explanation": "Identity Resolution unifies customer profiles, enabling Agentforce to provide consistent engagement across Service Cloud channels."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "What is the impact on Agentforce’s performance in Sales Cloud if Data Cloud’s Data Lake is not optimized for lead scoring AI model training?",
+    "type": "single",
+    "options": [
+      "Increased accuracy, slower responses",
+      "Reduced accuracy and increased latency",
+      "Improved speed, lower accuracy",
+      "No impact"
+    ],
+    "correct": ["Reduced accuracy and increased latency"],
+    "explanation": "An unoptimized Data Lake delays data access and completeness, reducing Agentforce’s lead scoring accuracy and speed in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the recommended Prompt Builder approach to handle high-latency Data Cloud data for Agentforce’s real-time responses in Service Cloud?",
+    "type": "single",
+    "options": [
+      "Use batch processing",
+      "Leverage Real-Time Data Streams",
+      "Disable AI processing",
+      "Redirect to human agents"
+    ],
+    "correct": ["Leverage Real-Time Data Streams"],
+    "explanation": "Real-Time Data Streams mitigate latency, ensuring Agentforce delivers timely responses in Service Cloud."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What Data Cloud feature enhances Agentforce’s AI-driven cross-sell recommendations in Sales Cloud by unifying customer identities?",
+    "type": "single",
+    "options": [
+      "Data Segmentation",
+      "Identity Resolution",
+      "Real-Time Data Streams",
+      "External Data Connectors"
+    ],
+    "correct": ["Identity Resolution"],
+    "explanation": "Identity Resolution unifies customer identities, improving Agentforce’s cross-sell recommendation accuracy in Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "How does the Einstein Trust Layer’s Privacy Preserving AI protect sensitive data when Agentforce scores leads in Sales Cloud via Data Cloud?",
+    "type": "single",
+    "options": [
+      "Anonymizes data pre-processing",
+      "Disables AI for sensitive data",
+      "Encrypts all outputs",
+      "Restricts data to admins"
+    ],
+    "correct": ["Anonymizes data pre-processing"],
+    "explanation": "Privacy Preserving AI anonymizes sensitive data before Agentforce processes it, ensuring compliance in Sales Cloud lead scoring."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "What is the primary benefit of Data Cloud’s Data Segmentation for Agentforce’s personalized AI responses in Service Cloud customer support?",
+    "type": "single",
+    "options": [
+      "Prioritizes security over personalization",
+      "Filters relevant data for tailored responses",
+      "Limits data access",
+      "Increases latency"
+    ],
+    "correct": ["Filters relevant data for tailored responses"],
+    "explanation": "Data Segmentation filters pertinent customer data, enabling Agentforce to deliver personalized support responses in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "How does Agentforce leverage Data Cloud’s Calculated Insights to improve automated lead follow-up response time in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "Pre-computes insights for faster decisions",
+      "Archives data for analysis",
+      "Encrypts insights",
+      "Limits data access"
+    ],
+    "correct": ["Pre-computes insights for faster decisions"],
+    "explanation": "Calculated Insights pre-compute key metrics, enabling Agentforce to accelerate lead follow-up responses in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "What is the primary challenge of using Prompt Builder’s Dynamic Prompt Adjustment for Agentforce in a Sales Cloud integration?",
+    "type": "single",
+    "options": [
+      "Data inconsistency",
+      "Data latency",
+      "Response speed",
+      "Security risks"
+    ],
+    "correct": ["Data inconsistency"],
+    "explanation": "Dynamic Prompt Adjustment may face data inconsistencies; Data Deduplication in Data Cloud ensures consistent inputs for Agentforce in Sales Cloud."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What Data Cloud feature ensures Agentforce delivers context-aware responses in Service Cloud by integrating historical and real-time data?",
+    "type": "single",
+    "options": [
+      "Data Deduplication",
+      "Real-Time Data Streams",
+      "Historical Data Analysis",
+      "Interaction History Tracking"
+    ],
+    "correct": ["Interaction History Tracking"],
+    "explanation": "Interaction History Tracking integrates historical and real-time data, enabling context-aware Agentforce responses in Service Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "What Trust Layer principle ensures Agentforce’s case escalation recommendations in Service Cloud are explainable to stakeholders?",
+    "type": "single",
+    "options": [
+      "Transparency",
+      "Fairness",
+      "Robustness",
+      "Accountability"
+    ],
+    "correct": ["Transparency"],
+    "explanation": "Transparency ensures Agentforce’s escalation recommendations are explainable, fostering trust in Service Cloud integrations."
+  },
+  {
+    "topic": "Service Cloud Integration",
+    "question": "How does Agentforce enhance Service Cloud case management using Data Cloud’s Real-Time Data Streams?",
+    "type": "single",
+    "options": [
+      "By pre-computing insights for rapid resolutions",
+      "By archiving data for audits",
+      "By limiting real-time access",
+      "By encrypting stream data"
+    ],
+    "correct": ["By pre-computing insights for rapid resolutions"],
+    "explanation": "Real-Time Data Streams enable pre-computed insights, speeding up Agentforce’s case resolutions in Service Cloud."
+  },
+  {
+    "topic": "Sales Cloud Integration",
+    "question": "What is the primary benefit of using Data Cloud’s Historical Data Analysis for Agentforce’s opportunity forecasting in Sales Cloud?",
+    "type": "single",
+    "options": [
+      "Improved accuracy with trend analysis",
+      "Reduced latency",
+      "Increased storage",
+      "Decreased efficiency"
+    ],
+    "correct": ["Improved accuracy with trend analysis"],
+    "explanation": "Historical Data Analysis enhances forecasting accuracy by integrating trend data into Agentforce’s AI models in Sales Cloud."
+  },
+  {
+    "topic": "Prompt Engineering",
+    "question": "How does Prompt Builder’s Tone and Style Guidelines ensure Agentforce’s responses align with Salesforce’s brand identity in Service Cloud?",
+    "type": "single",
+    "options": [
+      "Prioritizes response speed",
+      "Ensures consistent branded responses",
+      "Limits data access",
+      "Disables AI processing"
+    ],
+    "correct": ["Ensures consistent branded responses"],
+    "explanation": "Tone and Style Guidelines ensure Agentforce’s responses reflect Salesforce’s brand, maintaining consistency in Service Cloud."
+  },
+  {
+    "topic": "Data Cloud Integration",
+    "question": "What Data Cloud feature enhances Agentforce’s customer churn prediction in Sales Cloud by ensuring timely AI updates?",
+    "type": "single",
+    "options": [
+      "Batch Data Processing",
+      "Real-Time Data Streams",
+      "Manual Updates",
+      "Static Profiles"
+    ],
+    "correct": ["Real-Time Data Streams"],
+    "explanation": "Real-Time Data Streams provide timely data updates, enhancing Agentforce’s churn prediction accuracy in Sales Cloud."
+  },
+  {
+    "topic": "Trust Layer",
+    "question": "How does the Einstein Trust Layer’s Bias Mitigation framework ensure Agentforce’s lead prioritization in Sales Cloud remains fair?",
+    "type": "single",
+    "options": [
+      "Optimizes storage",
+      "Corrects biased AI predictions",
+      "Encrypts lead data",
+      "Limits data access"
+    ],
+    "correct": ["Corrects biased AI predictions"],
+    "explanation": "Bias Mitigation corrects biased predictions, ensuring fair lead prioritization by Agentforce in Sales Cloud."
+  }
+]
