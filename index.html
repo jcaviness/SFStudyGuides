@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salesforce Certifications Study Guide</title>
+    <title>Salesforce Certification Practice</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="quiz-container">
-        <h1>SalesForce Certifications Study Guide</h1>
-        <!-- Test Selection Screen -->
-        <div id="test-selection">
-            <h2>Select a Test</h2>
-            <select id="test-selector">
-                <option value="">-- Choose a test --</option>
-                <option value="questions/agentforce.json">AgentForce</option>
-                <option value="questions/data_cloud_questions.json">Data Cloud</option>
-                <option value="questions/platform_developer_1_questions.json">Platform Developer 1</option>
-                <option value="questions/platform_developer_2_questions.json">Platform Developer 2</option>
-            </select>
-            <button id="start-quiz">Start Quiz</button>
-            <p id="message" style="color: red;"></p>
+    <div id="test-selection">
+        <h1>Salesforce Certification Practice</h1>
+        <p id="message"></p>
+        <select id="test-selector">
+            <option value="">Select a test</option>
+            <option value="questions/agentforce.json">Agentforce</option>
+            <option value="questions/data_cloud_questions.json">Data Cloud</option>
+            <option value="questions/platform_developer_1_questions.json">Platform Developer I</option>
+            <option value="questions/platform_developer_2_questions.json">Platform Developer II</option>
+        </select>
+        <button id="start-quiz">Start Quiz</button>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <h2 id="test-name"></h2>
+        <!-- Live Score Progress Bar -->
+        <div id="score-progress-container">
+            <div id="score-progress-bar"></div>
+            <div id="passing-score-marker"></div>
         </div>
-        <!-- Quiz Content -->
-        <div id="quiz-container" style="display: none;">
-            <h2 id="test-name"></h2>
-            <div id="question-container">
-                <h3 id="question"></h3>
-                <div id="options"></div>
-            </div>
-            <button id="submit-btn">Submit Answer</button>
-            <div id="feedback"></div>
-            <button id="next-btn" style="display: none;">Next Question</button>
-            <div id="score-container" style="display: none;">
-                <h3>Quiz completed!</h3>
-                <p>Your score: <span id="score"></span></p>
-                <p id="readiness-message"></p> <!-- Added for readiness message -->
-            </div>
+        <p id="current-score-text"></p>
+        <!-- Question Content -->
+        <div id="question-container">
+            <h3 id="question"></h3>
+            <div id="options"></div>
+        </div>
+        <button id="submit-btn">Submit Answer</button>
+        <div id="feedback"></div>
+        <button id="next-btn" style="display: none;">Next Question</button>
+        <div id="score-container" style="display: none;">
+            <h3>Quiz completed!</h3>
+            <p>Your score: <span id="score"></span></p>
+            <p id="readiness-message"></p>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
