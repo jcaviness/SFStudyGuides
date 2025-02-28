@@ -1,7 +1,6 @@
 [
     {
-      "id": 1,
-      "question": "A developer needs to implement an asynchronous process to be executed when a Case record is updated. The process needs to run with system permissions and must handle bulk updates efficiently. Which two features should the developer consider?",
+            "question": "A developer needs to implement an asynchronous process to be executed when a Case record is updated. The process needs to run with system permissions and must handle bulk updates efficiently. Which two features should the developer consider?",
       "options": [
         "Trigger and @future method",
         "Platform Event and trigger",
@@ -13,7 +12,7 @@
       "explanation": "Comprehensive test coverage requires testing both positive scenarios (where the code should succeed) and negative scenarios (where it should fail or handle exceptions). Each test should include specific assertions that verify the expected behavior. This approach ensures the code works correctly under various conditions and maintains its integrity when modified."
     },
     {
-      "id": 41,
+      
       "question": "A developer needs to implement a solution that allows administrators to create custom validation rules without writing code. Which approach should be used?",
       "options": [
         "Create an Apex class with dynamic SOQL",
@@ -26,7 +25,7 @@
       "explanation": "Custom Metadata Types are ideal for creating configurable validation rules that administrators can manage without code changes. By storing validation criteria in Custom Metadata records, the Apex code can dynamically apply these rules at runtime, allowing for admin-configurable validation logic."
     },
     {
-      "id": 42,
+      
       "question": "A developer is implementing a complex data model with multiple related objects. Which statement about junction objects is true?",
       "options": [
         "A junction object must have two master-detail relationships",
@@ -39,7 +38,7 @@
       "explanation": "A junction object in Salesforce is used to build a many-to-many relationship between two objects. It must have two master-detail relationships, one to each of the objects it connects. This allows for the creation of many-to-many relationships while maintaining referential integrity."
     },
     {
-      "id": 43,
+      
       "question": "A developer needs to implement a solution that executes a sequence of operations, where each operation might succeed or fail independently. Which pattern should be implemented?",
       "options": [
         "Chain of Responsibility Pattern",
@@ -52,7 +51,7 @@
       "explanation": "The Saga Pattern is designed for managing sequences of operations where each step might succeed or fail independently. It includes compensating transactions to handle failures at any point in the sequence. This pattern is ideal for complex processes that need to maintain consistency across multiple operations."
     },
     {
-      "id": 44,
+      
       "question": "A developer needs to implement a custom UI for a complex form that includes conditional logic and dynamic field validation. Which approach should be used?",
       "options": [
         "Use Standard Lightning Record Pages with Dynamic Forms",
@@ -65,7 +64,7 @@
       "explanation": "For complex forms with conditional logic and dynamic field validation, a Visualforce Page with a Custom Controller provides the most flexibility. This approach allows for custom rendering, complex validation logic, and dynamic UI components that respond to user input and data conditions."
     },
     {
-      "id": 45,
+      
       "question": "A developer needs to implement a solution that performs a calculation on all Opportunity records that meet specific criteria. The calculation needs to run on a regular schedule. Which approach should be used?",
       "options": [
         "Create a Scheduled Apex class",
@@ -78,7 +77,7 @@
       "explanation": "A Scheduled Apex class is ideal for running regular calculations on records that meet specific criteria. By implementing the Schedulable interface, the class can be scheduled to run at specific intervals, ensuring the calculations are performed regularly without manual intervention."
     },
     {
-      "id": 46,
+      
       "question": "A developer needs to design a data model for a recruitment application where each candidate can apply for multiple positions, and each position can have multiple applicants. Which data model approach should be used?",
       "options": [
         "Create a lookup relationship from Candidate to Position",
@@ -91,7 +90,7 @@
       "explanation": "For a many-to-many relationship like candidates applying for multiple positions and positions having multiple applicants, a junction object with master-detail relationships to both the Candidate and Position objects is the appropriate data model. This approach properly represents the many-to-many relationship while maintaining data integrity."
     },
     {
-      "id": 47,
+      
       "question": "A developer is implementing a Lightning Web Component that needs to expose a method to be called from a parent component. How should this method be defined?",
       "options": [
         "Use the @track decorator on the method",
@@ -104,7 +103,7 @@
       "explanation": "The @api decorator is used to expose properties and methods of a Lightning Web Component to other components. When applied to a method, it makes that method callable from parent components, allowing for component composition and communication from parent to child."
     },
     {
-      "id": 48,
+      
       "question": "A developer needs to create a Lightning Web Component that requires different behavior based on the user's profile. Which approach should be used?",
       "options": [
         "Use a custom permission set for each profile",
@@ -117,7 +116,7 @@
       "explanation": "To implement profile-based behavior in a Lightning Web Component, the developer should use an Apex controller that checks the current user's profile (User.Profile) and returns appropriate data or flags to the component. This allows the component to render differently or behave differently based on the user's profile."
     },
     {
-      "id": 49,
+      
       "question": "A developer needs to implement a solution that processes records in chunks to avoid hitting governor limits. Which feature should be used?",
       "options": [
         "Schedulable Interface",
@@ -130,7 +129,7 @@
       "explanation": "The Batchable Interface (Database.Batchable) is specifically designed for processing records in chunks or batches. It automatically handles chunking the data and provides methods (start, execute, finish) that work with these chunks, making it ideal for processing large volumes of data while avoiding governor limits."
     },
     {
-      "id": 50,
+      
       "question": "A developer needs to implement a solution that makes callouts to an external system based on changes to Salesforce records. Which limitation must be addressed in the design?",
       "options": [
         "Callouts cannot be made from triggers directly",
@@ -143,7 +142,7 @@
       "explanation": "When designing solutions that involve callouts based on record changes, it's important to remember that callouts cannot be made directly from triggers. This is because triggers run in the same transaction context, and Salesforce prevents callouts during the same transaction to avoid long-running transactions. Instead, asynchronous Apex (like @future, Queueable, or Batch) must be used to make the callouts."
     },
     {
-      "id": 51,
+      
       "question": "A developer needs to implement custom search functionality that searches across multiple text fields and returns results sorted by relevance. Which approach should be used?",
       "options": [
         "Use multiple SOQL queries with LIKE operators",
@@ -156,7 +155,7 @@
       "explanation": "SOSL (Salesforce Object Search Language) is optimized for text searches across multiple fields and objects. With the RETURNING clause, it can specify which objects and fields to search and return results sorted by relevance. This makes it ideal for implementing custom search functionality that needs to search multiple text fields."
     },
     {
-      "id": 52,
+      
       "question": "A developer needs to implement a solution that processes large volumes of data through multiple steps, with the ability to restart processing from the last successful step if a failure occurs. Which pattern should be implemented?",
       "options": [
         "Checkpoint Pattern",
@@ -169,7 +168,7 @@
       "explanation": "The Checkpoint Pattern involves saving the state of processing at regular intervals (checkpoints) so that if a failure occurs, processing can be resumed from the last successful checkpoint rather than starting from the beginning. This pattern is particularly useful for large data volume processing that involves multiple steps and may encounter failures."
     },
     {
-      "id": 53,
+      
       "question": "A developer is designing a solution that requires secure storage of sensitive API keys and credentials that will be used in Apex code. Which approach provides the highest level of security?",
       "options": [
         "Store the credentials in a Static Resource",
@@ -182,7 +181,7 @@
       "explanation": "Named Credentials provide a secure way to store and manage authentication details for callouts to external systems. They support various authentication protocols and securely store credentials, which are then automatically used when making callouts. This approach prevents credentials from being exposed in code and provides superior security for API keys and credentials."
     },
     {
-      "id": 54,
+      
       "question": "A developer needs to create a solution that allows admins to define complex approval processes with multiple levels of approval based on various criteria. Which approach should be used?",
       "options": [
         "Use standard Approval Processes with entry criteria",
@@ -195,7 +194,7 @@
       "explanation": "Standard Approval Processes in Salesforce are designed for exactly this scenario. They support multiple approval levels, complex entry criteria, and various routing options, all configurable by administrators without code. This declarative approach is the most appropriate for defining complex approval processes with multiple levels."
     },
     {
-      "id": 55,
+      
       "question": "A developer needs to implement a solution that retrieves data from an external system and transforms it into a format compatible with Salesforce objects. Which tool should be used?",
       "options": [
         "Data Loader",
@@ -208,7 +207,7 @@
       "explanation": "For complex integration scenarios requiring data retrieval from external systems and transformation before loading into Salesforce, a Custom Apex Integration provides the most flexibility. This approach allows for custom callouts, complex data manipulation, and precise control over how the external data maps to Salesforce objects."
     },
     {
-      "id": 56,
+      
       "question": "A developer needs to implement a solution that allows filtering and sorting of data in a Lightning Web Component. Which approach should be used?",
       "options": [
         "Use the lightning-datatable component with sortable columns",
@@ -221,7 +220,7 @@
       "explanation": "The lightning-datatable component is specifically designed for displaying data in a tabular format with built-in support for filtering and sorting. By configuring columns as sortable, users can click column headers to sort data, and the component handles the sorting logic automatically, providing a responsive and interactive user experience."
     },
     {
-      "id": 57,
+      
       "question": "A developer needs to implement a solution where changes to an object in Salesforce automatically trigger updates to related objects across multiple Salesforce orgs. Which feature should be used?",
       "options": [
         "Outbound Message with Workflow",
@@ -234,7 +233,7 @@
       "explanation": "Platform Events with a publish-subscribe model are ideal for integrating multiple Salesforce orgs. When changes occur in one org, a Platform Event can be published, and subscriber code in other orgs can listen for these events and perform corresponding updates. This approach provides near real-time synchronization across multiple orgs."
     },
     {
-      "id": 58,
+      
       "question": "A developer needs to implement a solution that allows users to upload and process large CSV files with millions of records. Which approach should be used?",
       "options": [
         "Use the standard Data Import Wizard",
@@ -247,7 +246,7 @@
       "explanation": "For processing very large files with millions of records, a custom solution using the Bulk API is the most appropriate. The Bulk API is designed specifically for processing large data volumes efficiently, handling chunking, parallelization, and governor limits automatically. A custom solution can provide the necessary UI for file upload and status monitoring."
     },
     {
-      "id": 59,
+      
       "question": "A developer needs to create an Apex method that can be called from a Flow. How should this method be defined?",
       "options": [
         "Use the @AuraEnabled annotation",
@@ -260,7 +259,7 @@
       "explanation": "To expose an Apex method for use in Flows, the @InvocableMethod annotation must be used. This annotation makes the method callable from Flow and Process Builder, allowing for complex logic to be encapsulated in Apex and then invoked from declarative tools."
     },
     {
-      "id": 60,
+      
       "question": "A developer needs to implement a solution where updates to a custom object trigger complex processing that may take several minutes to complete. Which approach should be used?",
       "options": [
         "Use a trigger with @future methods",
@@ -273,7 +272,7 @@
       "explanation": "Queueable Apex is ideal for long-running operations triggered by record updates. Unlike @future methods, Queueable Apex supports complex types, can be chained, and provides more control over execution. It runs asynchronously, allowing the triggering transaction to complete quickly while the complex processing continues in a separate context."
     },
     {
-      "id": 61,
+      
       "question": "A developer is designing a Lightning Web Component that needs to track the state of multiple variables and update the UI when any of them change. Which mechanism should be used?",
       "options": [
         "Use public properties with getters and setters",
@@ -286,7 +285,7 @@
       "explanation": "The @track decorator in Lightning Web Components is used to track changes to a property's value. When a tracked property changes, the component automatically rerenders to reflect those changes in the UI. This makes it ideal for tracking the state of multiple variables that affect the component's UI."
     },
     {
-      "id": 62,
+      
       "question": "A developer needs to implement a solution that validates data against complex business rules before saving. Which two approaches provide the most flexibility?",
       "options": [
         "Use validation rules with formula expressions",
@@ -299,7 +298,7 @@
       "explanation": "For complex business rule validation, Apex triggers provide the most flexibility, allowing for custom logic, cross-object validation, and dynamic rules. Similarly, custom Visualforce pages with controller validation provide client-side and server-side validation capabilities with full control over the validation logic and user experience. Both approaches offer maximum flexibility for implementing complex business rules."
     },
     {
-      "id": 63,
+      
       "question": "A developer needs to implement a solution that records detailed information about changes to specific fields on opportunities. Which approach requires the least custom development?",
       "options": [
         "Create an Apex trigger to track field history",
@@ -312,7 +311,7 @@
       "explanation": "Field Audit Trail is a built-in feature that extends Field History Tracking by allowing for longer retention of field history data and tracking of more fields. It requires minimal setup and no custom development, making it the approach that requires the least custom development effort for recording detailed field change information."
     },
     {
-      "id": 64,
+      
       "question": "A developer is building a Lightning Web Component that requires complex data manipulation before displaying it to users. Where should this data manipulation logic be implemented?",
       "options": [
         "In the component's JavaScript controller",
@@ -325,7 +324,7 @@
       "explanation": "Complex data manipulation is best implemented in an Apex controller class. Apex has access to the full Salesforce data model, powerful data manipulation capabilities, and can handle larger data volumes than client-side JavaScript. The processed data can then be passed to the Lightning Web Component for display."
     },
     {
-      "id": 65,
+      
       "question": "A developer needs to implement a solution that executes a process after a user submits a form, but the process may take several minutes to complete. Which approach provides the best user experience?",
       "options": [
         "Use a synchronous Apex method and display a loading spinner",
@@ -338,7 +337,7 @@
       "explanation": "For long-running processes triggered by user actions, a queueable job with status notifications provides the best user experience. The form submission can quickly queue the job and return control to the user with an acknowledgment. Status notifications (via platform events, polling, or completion notifications) keep the user informed about progress without requiring them to wait for completion."
     },
     {
-      "id": 66,
+      
       "question": "A developer needs to implement a solution that aggregates data from multiple objects for reporting purposes. Which approach requires the least custom code?",
       "options": [
         "Create a custom object with Apex triggers for aggregation",
@@ -351,7 +350,7 @@
       "explanation": "Custom Report Types with joined objects allow for creating reports that aggregate data across related objects without requiring custom code. This declarative approach enables administrators to define relationships between objects and specify which fields should be available for reporting, making it the approach that requires the least custom code."
     },
     {
-      "id": 67,
+      
       "question": "A developer needs to implement a solution that automatically calculates commissions for sales representatives based on opportunity amounts and product mix. Which feature should be used?",
       "options": [
         "Roll-up Summary Fields",
@@ -364,7 +363,7 @@
       "explanation": "Commission calculations based on opportunity amounts and product mix typically involve complex business logic that considers multiple factors. Apex Triggers provide the necessary flexibility and computational capabilities to implement such complex calculations, especially when they involve the product mix, which may require querying related product records and applying varying commission rates."
     },
     {
-      "id": 68,
+      
       "question": "A developer needs to implement a solution where users can search for records across multiple objects with complex filtering criteria. Which approach should be used?",
       "options": [
         "Use standard Search functionality with Sidebar Search",
@@ -377,7 +376,7 @@
       "explanation": "For complex search functionality with custom filtering across multiple objects, a Lightning Web Component with custom search logic provides the most flexibility. This approach allows for implementing a tailored user interface and leveraging both SOQL and SOSL in the backend to create a powerful search experience that meets specific requirements."
     },
     {
-      "id": 69,
+      
       "question": "A developer needs to implement a solution that requires tracking field values at the time an opportunity is closed. Which approach should be used?",
       "options": [
         "Use Field History Tracking",
@@ -390,7 +389,7 @@
       "explanation": "For tracking field values at specific points in a record's lifecycle (like when an opportunity is closed), creating a snapshot object with an Apex trigger is the most appropriate solution. This approach allows for capturing and storing the exact state of the record at the moment the specified condition occurs, providing a reliable historical record for future reference."
     },
     {
-      "id": 70,
+      
       "question": "A developer is building a Lightning Web Component that needs to retrieve data based on the current user's context. Which mechanism should be used to get the current user's information?",
       "options": [
         "Use the $User global variable in the component markup",
@@ -403,7 +402,7 @@
       "explanation": "To retrieve the current user's context in a Lightning Web Component, the UserInfo class in an Apex controller should be used. This provides access to important user information like Id, ProfileId, and other attributes that may be needed for data retrieval or access control, while maintaining security by handling sensitive operations on the server."
     },
     {
-      "id": 71,
+      
       "question": "A developer needs to implement a solution that converts lead records into accounts, contacts, and opportunities with custom mapping logic. Which approach should be used?",
       "options": [
         "Use standard lead conversion with custom lead settings",
@@ -416,7 +415,7 @@
       "explanation": "The LeadConvert Apex class (specifically, the Database.LeadConvert class) is designed for implementing custom lead conversion logic. It provides methods for specifying custom field mappings, controlling which objects are created, and handling the conversion process programmatically, making it the appropriate choice for custom lead conversion requirements."
     },
     {
-      "id": 72,
+      
       "question": "A developer needs to implement a solution that monitors changes to specific fields on Account records and sends notifications to interested users. Which feature should be used?",
       "options": [
         "Workflow Email Alerts",
@@ -429,7 +428,7 @@
       "explanation": "The Streaming API with PushTopics is designed for real-time monitoring of record changes. By defining a PushTopic that specifies the fields to monitor on Account records, interested users can subscribe to receive notifications when those fields change, providing a real-time notification system without requiring constant polling."
     },
     {
-      "id": 73,
+      
       "question": "A developer needs to implement a solution that performs complex calculations on large data sets with optimal performance. Which approach should be used?",
       "options": [
         "Use formula fields with advanced functions",
@@ -442,7 +441,7 @@
       "explanation": "For complex calculations on large data sets, a scheduled batch job provides optimal performance by processing data in manageable chunks. This approach avoids governor limits, can run during off-peak hours to minimize impact on users, and can be optimized for specific data processing patterns, making it ideal for resource-intensive calculations on large data volumes."
     },
     {
-      "id": 74,
+      
       "question": "A developer needs to implement a solution that enforces a specific sequence of steps in a business process. Which feature should be used?",
       "options": [
         "Path component",
@@ -455,7 +454,7 @@
       "explanation": "The Path component is specifically designed for guiding users through a sequence of steps in a business process. It provides a visual representation of the process, highlights the current stage, and can include guidance for each step. Combined with validation rules or automation, it can enforce that users follow the defined sequence."
     },
     {
-      "id": 75,
+      
       "question": "A developer needs to create a data model for a system where multiple teams can collaborate on an account, with each team having different access levels to account information. Which feature should be used?",
       "options": [
         "Record Types",
@@ -468,7 +467,7 @@
       "explanation": "Account Teams are designed specifically for scenarios where multiple users need different levels of access to account records. They allow defining custom roles for team members and specifying access levels (Read, Edit, Delete) for each team member, supporting collaborative work while maintaining appropriate access controls."
     },
     {
-      "id": 76,
+      
       "question": "A developer needs to implement a solution that synchronizes product information between Salesforce and an external e-commerce system. The synchronization should happen automatically whenever a product is updated in either system. Which approach should be used?",
       "options": [
         "Use Batch Apex with a scheduled job",
@@ -481,7 +480,7 @@
       "explanation": "For bidirectional synchronization between Salesforce and an external system, a middleware solution using APIs is the most robust approach. The middleware can listen for changes in both systems, transform data as needed, and ensure that updates are properly synchronized in both directions, with conflict resolution and error handling capabilities."
     },
     {
-      "id": 77,
+      
       "question": "A developer needs to implement a solution where users can select multiple records in a list view and perform a custom action on them. Which feature should be used?",
       "options": [
         "Custom List Button",
@@ -494,7 +493,7 @@
       "explanation": "For implementing custom actions on multiple records selected in a list view, a Lightning Web Component with the List View API is the most flexible approach. This combination allows for capturing the selected record IDs, implementing custom processing logic, and providing feedback to users, all within a modern and responsive user interface."
     },
     {
-      "id": 78,
+      
       "question": "A developer needs to perform DML operations on multiple sObjects of different types in a single transaction. Which approach should be used?",
       "options": [
         "Use individual DML statements for each sObject type",
@@ -507,7 +506,7 @@
       "explanation": "For performing DML operations on multiple sObjects of different types in a single transaction, individual DML statements for each sObject type must be used. Unlike some other database systems, Salesforce DML operations (insert, update, delete, upsert) can only work with sObjects of the same type in a single operation. Multiple DML statements can still be part of the same transaction."
     },
     {
-      "id": 79,
+      
       "question": "A developer needs to implement a solution where certain fields on a custom object should only be editable by users with a specific permission. Which approach should be used?",
       "options": [
         "Use field-level security with profiles",
@@ -520,7 +519,7 @@
       "explanation": "To control field editability based on custom permissions, a validation rule using the $Permission global variable is the most direct approach. The rule can check if the user has a specific custom permission and prevent edits to certain fields if they don't, without requiring custom code or complex configurations."
     },
     {
-      "id": 80,
+      
       "question": "A developer needs to implement a solution that uses an external service for credit card processing with robust error handling. Which pattern should be implemented?",
       "options": [
         "Circuit Breaker Pattern",
@@ -533,8 +532,7 @@
       "explanation": "The Circuit Breaker Pattern is ideal for integrations with external services like credit card processing. It monitors for failures and, when a failure threshold is reached, 'trips' the circuit to prevent continuous failed requests. This pattern provides robust error handling, prevents resource exhaustion during outages, and allows for graceful degradation of functionality."
     },
     {
-      "id": 2,
-      "question": "A developer needs to build a complex app with multiple UI components that need to communicate with each other. Which design pattern should be implemented?",
+            "question": "A developer needs to build a complex app with multiple UI components that need to communicate with each other. Which design pattern should be implemented?",
       "options": [
         "Singleton Pattern",
         "Factory Pattern",
@@ -546,8 +544,7 @@
       "explanation": "The Observer Pattern is ideal when multiple components need to communicate with each other. In Lightning components, this is typically implemented using the Lightning Message Service or component events. This pattern allows components to subscribe to and react to events without being tightly coupled."
     },
     {
-      "id": 3,
-      "question": "A developer needs to implement a solution that processes records in batches of 200 and maintains state between batches. Which implementation would meet these requirements?",
+            "question": "A developer needs to implement a solution that processes records in batches of 200 and maintains state between batches. Which implementation would meet these requirements?",
       "options": [
         "Use a global variable in a Batch Apex class",
         "Use a static variable in a Batch Apex class",
@@ -559,8 +556,7 @@
       "explanation": "The Database.Stateful interface allows instance variables to maintain their values between batch executions. This allows the Batch Apex to maintain state between batches. The batch size can be set to 200 using the scope parameter in the Database.executeBatch method."
     },
     {
-      "id": 4,
-      "question": "A developer needs to test an Apex class that makes callouts to an external system. Which approach should be used to mock the callouts in the test class?",
+            "question": "A developer needs to test an Apex class that makes callouts to an external system. Which approach should be used to mock the callouts in the test class?",
       "options": [
         "Use Test.setMock(HttpCalloutMock.class, new MockHttpResponseGenerator())",
         "Use Test.setMock(WebServiceMock.class, new MockWebService())",
@@ -572,8 +568,7 @@
       "explanation": "For HTTP callouts, Test.setMock(HttpCalloutMock.class, new MockImplementation()) should be used. For SOAP web service callouts, Test.setMock(WebServiceMock.class, new MockImplementation()) should be used. Both approaches allow testing callouts without actually making calls to external systems."
     },
     {
-      "id": 5,
-      "question": "A developer needs to implement a solution that creates tasks related to Accounts when certain criteria are met. The solution must be maintainable by system administrators without code changes. Which implementation should be used?",
+            "question": "A developer needs to implement a solution that creates tasks related to Accounts when certain criteria are met. The solution must be maintainable by system administrators without code changes. Which implementation should be used?",
       "options": [
         "Apex trigger on Account object",
         "Process Builder with Flow",
@@ -585,8 +580,7 @@
       "explanation": "Process Builder with Flow allows system administrators to create, manage, and maintain business processes without writing code. This declarative approach can detect when criteria are met on the Account object and create related tasks, all without requiring code modifications by a developer."
     },
     {
-      "id": 6,
-      "question": "A developer is building a custom Lightning web component that needs to display data from multiple related objects. Which approach provides the most efficient way to retrieve this data?",
+            "question": "A developer is building a custom Lightning web component that needs to display data from multiple related objects. Which approach provides the most efficient way to retrieve this data?",
       "options": [
         "Use multiple @wire methods to retrieve data from each object",
         "Use a single Apex method with SOQL that includes relationship queries",
@@ -598,8 +592,7 @@
       "explanation": "Using a single Apex method with SOQL and relationship queries (using the parent-child or child-parent relationship syntax) is the most efficient approach. This minimizes the number of server roundtrips and allows for optimized querying of related data in a single transaction."
     },
     {
-      "id": 7,
-      "question": "A developer is creating a batch job that needs to process millions of records. The job is hitting governor limits. Which two techniques should be used to optimize the batch job?",
+            "question": "A developer is creating a batch job that needs to process millions of records. The job is hitting governor limits. Which two techniques should be used to optimize the batch job?",
       "options": [
         "Set the batch size to the maximum of 2000 records",
         "Set the batch size to a smaller number like 100 or 200 records",
@@ -611,8 +604,7 @@
       "explanation": "When processing large volumes of data, using a smaller batch size (through the scope parameter of Database.executeBatch) helps avoid hitting governor limits by processing fewer records per transaction. Additionally, explicitly setting the batch size allows for better control over resource consumption and can help prevent hitting limits."
     },
     {
-      "id": 8,
-      "question": "Which two statements are true about Apex managed sharing?",
+            "question": "Which two statements are true about Apex managed sharing?",
       "options": [
         "It allows developers to share records with specific users programmatically",
         "It requires the organization-wide default to be set to Private",
@@ -624,8 +616,7 @@
       "explanation": "Apex managed sharing allows developers to programmatically share records with specific users or groups using Apex. These sharing rules persist even when the record owner changes, unlike owner-based sharing which is automatically recalculated. Apex managed sharing does not require specific organization-wide defaults, though it's most useful in restrictive sharing models."
     },
     {
-      "id": 9,
-      "question": "A developer needs to implement a solution where an Apex class can be used for both synchronous and asynchronous processing. Which pattern should be implemented?",
+            "question": "A developer needs to implement a solution where an Apex class can be used for both synchronous and asynchronous processing. Which pattern should be implemented?",
       "options": [
         "Create separate methods for synchronous and asynchronous processing",
         "Implement the Queueable interface and check if the context is synchronous",
@@ -637,7 +628,7 @@
       "explanation": "A factory pattern is ideal for this scenario. The factory class would evaluate the context and return either a synchronous or asynchronous implementation. This provides a clean separation of concerns and allows the calling code to be unaware of which implementation is being used."
     },
     {
-      "id": 10,
+      
       "question": "A developer is creating a Lightning Web Component that needs to be widely reusable across the organization. Which dependency injection approach should be used to enhance reusability?",
       "options": [
         "Use a static resource to store configuration values",
@@ -650,7 +641,7 @@
       "explanation": "Using @api properties (public properties) allows the component to accept values from parent components, making it highly configurable and reusable. This approach aligns with dependency injection principles, where dependencies are provided from outside rather than created within the component."
     },
     {
-      "id": 11,
+      
       "question": "A developer is writing a test class for an Apex trigger on the Account object. The trigger relies on a custom setting for configuration. How should the developer ensure that the test has access to the required custom setting?",
       "options": [
         "Use @isTest(SeeAllData=true) annotation",
@@ -663,7 +654,7 @@
       "explanation": "Custom settings should be created in the test setup method. This approach ensures that the test has the necessary configuration data without relying on existing data in the org, which is a best practice for test isolation and predictability."
     },
     {
-      "id": 12,
+      
       "question": "A developer needs to implement a solution that processes records in near real-time when changes occur to an external system. Which integration pattern should be used?",
       "options": [
         "Remote Process Invocation—Request and Reply",
@@ -676,7 +667,7 @@
       "explanation": "The Remote Process Invocation—Fire and Forget pattern is appropriate when an external system needs to trigger processing in Salesforce without waiting for a response. This pattern supports near real-time processing of records when external changes occur, typically implemented using Platform Events or Apex REST endpoints."
     },
     {
-      "id": 13,
+      
       "question": "A developer needs to distribute processing of large data volumes across multiple processing units. Which feature would be most appropriate to use?",
       "options": [
         "Batch Apex with multiple batches",
@@ -689,7 +680,7 @@
       "explanation": "Batch Apex is designed to handle large data volumes by breaking processing into manageable chunks. By setting an appropriate batch size and leveraging multiple batches, the processing can be distributed efficiently across multiple processing units while respecting governor limits."
     },
     {
-      "id": 14,
+      
       "question": "A developer needs to implement a solution that securely stores sensitive customer data within Salesforce. Which approach provides the highest level of security for this data?",
       "options": [
         "Use field-level security and store the data in encrypted custom fields",
@@ -702,7 +693,7 @@
       "explanation": "Shield Platform Encryption provides the highest level of security by encrypting data at rest while preserving application functionality. It encrypts data stored in the database, search indexes, and file attachments, making it the most comprehensive solution for protecting sensitive customer data within Salesforce."
     },
     {
-      "id": 15,
+      
       "question": "A developer is creating a custom search functionality that needs to search for records across multiple objects based on specific criteria. Which approach would be most efficient?",
       "options": [
         "Use multiple SOQL queries with dynamic binding",
@@ -715,7 +706,7 @@
       "explanation": "SOSL (Salesforce Object Search Language) is specifically designed for text-based searches across multiple objects simultaneously. Using Search.query() with a well-constructed SOSL query is the most efficient approach for implementing custom search functionality that spans multiple objects."
     },
     {
-      "id": 16,
+      
       "question": "A developer needs to implement a solution that requires access to deleted records in the Recycle Bin. Which API should be used?",
       "options": [
         "SOAP API",
@@ -728,7 +719,7 @@
       "explanation": "The SOAP API provides the queryAll() call that can be used to access deleted records that are in the Recycle Bin. This feature is not available in the REST API or other APIs, making SOAP API the appropriate choice for this requirement."
     },
     {
-      "id": 17,
+      
       "question": "A developer is implementing complex transaction logic that needs to handle errors gracefully and provide detailed information to the user about which operations failed. Which approach should be used?",
       "options": [
         "Use Database methods with the allOrNone parameter set to false",
@@ -741,7 +732,7 @@
       "explanation": "Database methods (like Database.insert(), Database.update(), etc.) with the allOrNone parameter set to false allow partial success of operations. This approach provides detailed error information for failed records while allowing successful records to be processed, which supports complex transaction logic with graceful error handling."
     },
     {
-      "id": 18,
+      
       "question": "A developer needs to implement a solution where changes to records in Salesforce automatically update related records in an external system. Which two features can be used to implement this solution?",
       "options": [
         "Outbound Message with Workflow",
@@ -754,7 +745,7 @@
       "explanation": "Outbound Messages with Workflow can send SOAP messages to external endpoints when records change. Change Data Capture publishes change events that external systems can subscribe to. Both features provide mechanisms for automatically updating external systems when Salesforce records change, without requiring custom Apex code."
     },
     {
-      "id": 19,
+      
       "question": "A developer is designing a solution that needs to process records asynchronously and in a specific order. Which feature should be used?",
       "options": [
         "Batch Apex with Database.Stateful",
@@ -767,7 +758,7 @@
       "explanation": "Queueable Apex allows for chaining, where one job can enqueue another job after it completes. This provides a way to process records asynchronously in a specific order, as each job in the chain will only execute after the previous job has completed."
     },
     {
-      "id": 20,
+      
       "question": "A developer needs to create a solution that stores configuration data accessible across multiple apps but doesn't require code changes when the data changes. Which feature should be used?",
       "options": [
         "Custom Settings",
@@ -780,7 +771,7 @@
       "explanation": "Custom Metadata Types are ideal for storing configuration data that needs to be accessible across multiple apps. Unlike Custom Settings, Custom Metadata Types can be included in packages and deployed between environments, making them more suitable for configuration that should be environment-agnostic. They also don't require code changes when the data changes."
     },
     {
-      "id": 21,
+      
       "question": "A developer needs to implement custom UI components that can be reused across multiple pages and applications. Which feature would be most appropriate?",
       "options": [
         "Visualforce Components",
@@ -793,7 +784,7 @@
       "explanation": "Lightning Web Components (LWC) is Salesforce's modern UI framework that allows developers to build efficient, reusable UI components using web standards. LWCs offer better performance, smaller payloads, and easier interoperability with other web technologies compared to Visualforce or Aura Components."
     },
     {
-      "id": 22,
+      
       "question": "A developer needs to implement a solution that requires validating data against an external system before saving a record. Which approach provides the most real-time validation?",
       "options": [
         "Use a validation rule with a custom formula",
@@ -806,7 +797,7 @@
       "explanation": "A callout from an Apex trigger (specifically, from a future method or queueable class called by the trigger) allows for real-time validation against an external system before saving a record. While @future methods are asynchronous, a properly implemented callout from a trigger can provide synchronous validation when needed."
     },
     {
-      "id": 23,
+      
       "question": "A developer needs to implement a solution that handles high-volume data imports with complex processing requirements. Which implementation should be used?",
       "options": [
         "Data Loader with Workflow Rules",
@@ -819,7 +810,7 @@
       "explanation": "The Bulk API is specifically designed for processing large data volumes efficiently. Combined with Batch Apex for custom processing logic, this approach provides the best solution for high-volume data imports with complex processing requirements. The Bulk API automatically handles chunking, parallelization, and governor limit considerations."
     },
     {
-      "id": 24,
+      
       "question": "A developer needs to implement a solution to handle integration with an unreliable external system that occasionally fails to process requests. Which pattern should be implemented?",
       "options": [
         "Circuit Breaker Pattern",
@@ -832,7 +823,7 @@
       "explanation": "The Retry Pattern is appropriate when dealing with an unreliable external system. This pattern involves automatically retrying a failed operation with an incremental back-off strategy to give the external system time to recover, which increases the chance of successful integration despite occasional failures."
     },
     {
-      "id": 25,
+      
       "question": "A developer needs to create a solution where data from multiple sources is combined and transformed before being presented to users. Which approach should be used?",
       "options": [
         "Use SOQL aggregate functions",
@@ -845,7 +836,7 @@
       "explanation": "For complex data integration scenarios involving multiple sources, transformation, and consolidation, a custom ETL (Extract, Transform, Load) solution using Batch Apex is appropriate. This approach provides the flexibility to handle various data sources, apply complex transformations, and load the processed data for user presentation."
     },
     {
-      "id": 26,
+      
       "question": "A developer needs to implement a solution to monitor changes to specific fields on Contact records and maintain a history of changes. Which approach requires the least custom development?",
       "options": [
         "Create an Apex trigger to track field changes",
@@ -858,7 +849,7 @@
       "explanation": "Field History Tracking is a built-in feature that allows tracking changes to specific fields on standard and custom objects. It requires minimal setup (enabling tracking and selecting fields) and no custom development, making it the approach that requires the least custom development effort."
     },
     {
-      "id": 27,
+      
       "question": "A developer needs to implement a solution where an action in one Lightning web component affects multiple other components on the same page. Which communication mechanism should be used?",
       "options": [
         "Use @api decorated properties",
@@ -871,7 +862,7 @@
       "explanation": "Lightning Message Service (LMS) is designed to facilitate communication between components on the same page, regardless of the framework (Aura, LWC, or Visualforce). It provides a publish-subscribe model that allows multiple components to react to events without being directly coupled to each other."
     },
     {
-      "id": 28,
+      
       "question": "A developer needs to implement a data model for a new application that handles customer support cases. Which relationship type should be used between Case and Customer objects?",
       "options": [
         "Master-Detail relationship",
@@ -884,7 +875,7 @@
       "explanation": "A Lookup relationship is appropriate between Case and Customer objects because a Case is typically related to a Customer, but the Case can exist independently of the Customer record (for example, anonymous cases). This provides the flexibility needed for a customer support application while maintaining referential integrity."
     },
     {
-      "id": 29,
+      
       "question": "A developer needs to implement role-based access control for a custom application. Which approach provides the most flexible security model?",
       "options": [
         "Use field-level security and page layouts",
@@ -897,7 +888,7 @@
       "explanation": "Custom permissions combined with permission sets provide a highly flexible approach to role-based access control. Custom permissions can be checked in code, components, and formulas to control feature access, while permission sets allow for modular assignment of these permissions to users, supporting complex role hierarchies without requiring profile duplication."
     },
     {
-      "id": 30,
+      
       "question": "A developer needs to implement a solution that requires processing large amounts of data across multiple related objects with complex business logic. Which feature would be most appropriate?",
       "options": [
         "Flow with subflows",
@@ -910,7 +901,7 @@
       "explanation": "Batch Apex with Database.Stateful is well-suited for processing large volumes of data across multiple objects. The batching mechanism handles chunking to avoid governor limits, while Database.Stateful allows maintaining state across batches for implementing complex business logic and tracking cross-batch metrics."
     },
     {
-      "id": 31,
+      
       "question": "A developer needs to implement a solution where changes to certain fields on an Account trigger processing in an external system, but only during business hours. Which approach should be used?",
       "options": [
         "Implement a scheduled Apex job",
@@ -923,7 +914,7 @@
       "explanation": "Process Builder with scheduled actions allows for field change detection and scheduling actions to occur only during specified hours. This approach supports the requirement to trigger external system processing based on field changes but only during business hours, without requiring complex custom time-based logic."
     },
     {
-      "id": 32,
+      
       "question": "A developer needs to implement a custom approval process that requires dynamic routing based on record attributes and related object data. Which approach should be used?",
       "options": [
         "Use standard approval processes with entry criteria",
@@ -936,7 +927,7 @@
       "explanation": "For complex approval scenarios requiring dynamic routing based on record attributes and related data, custom approval logic in Apex triggers provides the most flexibility. This approach allows for implementing sophisticated business rules that may not be possible with standard approval processes or declarative tools."
     },
     {
-      "id": 33,
+      
       "question": "A developer has implemented a Lightning web component that needs to securely store sensitive information on the client side for the duration of a user's session. Which approach should be used?",
       "options": [
         "Store the data in a Lightning component attribute",
@@ -949,7 +940,7 @@
       "explanation": "Component attributes in Lightning Web Components are stored in memory and are isolated to the component's scope, making them appropriate for storing sensitive information for the duration of a user's session without persisting it to storage. This approach keeps the data secure while maintaining it for the needed timeframe."
     },
     {
-      "id": 34,
+      
       "question": "A developer needs to implement a solution to prevent duplicate Person Account records based on email address. Which approach should be used?",
       "options": [
         "Create a unique field constraint on the email field",
@@ -962,7 +953,7 @@
       "explanation": "Duplicate rules with matching rules provide a flexible and declarative approach to prevent duplicate records. For Person Accounts, a matching rule can be configured to identify potential duplicates based on email address, and the duplicate rule can be set to block the creation of duplicate records or alert users about potential duplicates."
     },
     {
-      "id": 35,
+      
       "question": "A developer needs to create a solution that displays data from an external system in a Lightning component. The data needs to be refreshed automatically every 5 minutes. Which approach should be used?",
       "options": [
         "Use the refreshApex method with a timer",
@@ -975,7 +966,7 @@
       "explanation": "For automatic refreshing of data from an external system at regular intervals (such as every 5 minutes), implementing a polling mechanism using JavaScript's setInterval function is appropriate. This approach allows the component to periodically request fresh data from the external system without requiring user interaction."
     },
     {
-      "id": 36,
+      
       "question": "A developer needs to implement a custom search interface that returns results as the user types, without requiring a full page refresh. Which technology combination should be used?",
       "options": [
         "Lightning Web Components with @wire service",
@@ -988,7 +979,7 @@
       "explanation": "Lightning Web Components with the @wire service provides a reactive data-fetching mechanism that can be triggered as the user types. This combination supports building a responsive search interface that updates results without page refreshes, with the @wire service handling the data fetching and component re-rendering."
     },
     {
-      "id": 37,
+      
       "question": "A developer needs to implement a solution that processes records in parallel with maximum performance. Which limitation must be considered?",
       "options": [
         "Parallel Apex executions are limited to 5 concurrent requests per organization",
@@ -1001,7 +992,7 @@
       "explanation": "When implementing parallel processing with Batch Apex, developers must consider that there's a limit of 5 concurrent batch jobs running simultaneously per organization. This limit affects the design of solutions that require high parallelism and maximum performance."
     },
     {
-      "id": 38,
+      
       "question": "A developer needs to implement a solution that requires deploying changes to multiple environments with different configurations. Which approach should be used?",
       "options": [
         "Use Change Sets with deployment connections",
@@ -1014,7 +1005,7 @@
       "explanation": "For complex deployments across multiple environments with different configurations, a CI/CD (Continuous Integration/Continuous Deployment) pipeline using the Metadata API provides the most robust solution. This approach allows for automated, version-controlled deployments with environment-specific configurations managed through variables or configuration files."
     },
     {
-      "id": 39,
+      
       "question": "A developer needs to implement a solution where a custom button on a Lightning record page performs complex operations involving multiple objects. Which approach should be used?",
       "options": [
         "Lightning Action with JavaScript controller",
