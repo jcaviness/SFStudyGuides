@@ -2,11 +2,11 @@
 class Question {
     constructor(question, type, options, correct, explanation, topic) {
         this.question = question;
-        this.type = type;
+        this.type = type || "single"; // Default to single if not specified
         this.options = options;
-        this.correct = correct;
-        this.explanation = explanation;
-        this.topic = topic;
+        this.correct = Array.isArray(correct) ? correct : [correct];
+        this.explanation = explanation || "";
+        this.topic = topic || "";
     }
 
     // Check if the user's answer is correct
@@ -44,13 +44,11 @@ let questionHistory = JSON.parse(localStorage.getItem('questionHistory') || '[]'
 
 // Thresholds for each test (stored in script.js, not JSON files)
 const thresholds = {
-    "Salesforce Certified AI Associate": 65,
-    "Salesforce Certified AI Specialist": 73,
+    "Certified AI Specialist": 65,
     "Data Cloud Consultant": 62,
-    "Data Cloud Consultant Additional Questions": 62,
-    "Platform Developer 1": 68,
+    "Platform Developer 1": 68, 
     "Platform Developer 2": 70,
-    "Salesforce Certified Experience Cloud Consultant": 65
+    "Salesforce Administrator": 65
 };
 
 // Fisher-Yates shuffle function to randomize arrays
@@ -88,28 +86,42 @@ async function loadQuestions(fileName) {
         
         if (!response.ok) {
             console.error('Failed to load questions, status:', response.status);
-            throw new Error('Failed to load questions');
+            throw new Error(`Failed to load questions: ${response.status} ${response.statusText}`);
         }
         
         const data = await response.json();
-        console.log('Loaded data:', data.slice(0, 2)); // Log first 2 items for debugging
+        console.log(`Loaded ${data.length} questions from file`);
         
         // Handle different JSON formats
-        return data.map(q => {
-            // Determine the correct answer field based on the JSON structure
-            const correct = q.correct || q.correctAnswer || [q.answer];
+        const questions = data.map(q => {
+            // Extract correct answer(s) based on different JSON structures
+            let correct;
+            if (q.correct !== undefined) {
+                correct = q.correct;
+            } else if (q.correctAnswer !== undefined) {
+                correct = q.correctAnswer;
+            } else if (q.answer !== undefined) {
+                correct = q.answer;
+            } else {
+                console.warn('No correct answer found for question:', q.question);
+                correct = [];
+            }
             
             return new Question(
                 q.question, 
                 q.type || "single", 
                 q.options, 
-                Array.isArray(correct) ? correct : [correct], 
+                correct, 
                 q.explanation,
                 q.topic
             );
         });
+        
+        console.log(`Successfully processed ${questions.length} questions`);
+        return questions;
     } catch (error) {
         console.error('Error loading questions:', error);
+        document.getElementById('message').textContent = `Failed to load questions: ${error.message}`;
         throw error;
     }
 }
@@ -197,7 +209,7 @@ async function startQuiz(fileName, testName) {
         loadQuestion();
     } catch (error) {
         console.error('Error starting quiz:', error);
-        document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
+        document.getElementById('message').textContent = `Failed to load questions: ${error.message}`;
     }
 }
 
@@ -271,6 +283,12 @@ function loadQuestion() {
 function checkAnswer() {
     const currentQuestion = questions[currentQuestionIndex];
     const selectedOptions = Array.from(document.querySelectorAll('input[name="option"]:checked')).map(input => input.value);
+    
+    if (selectedOptions.length === 0) {
+        alert("Please select an answer");
+        return;
+    }
+    
     const isCorrect = currentQuestion.isCorrect(selectedOptions);
 
     if (isCorrect) {
