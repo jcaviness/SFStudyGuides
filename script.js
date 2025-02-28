@@ -1,3 +1,21 @@
+// Global variables
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let readinessThreshold = 65; // Default threshold if none is specified
+let allQuestions = []; // Store all questions
+let filteredQuestions = []; // Store filtered questions
+let answeredQuestions = []; // Store user answers for review
+let bookmarkedQuestions = new Set(); // Store bookmarked questions
+let timer = null;
+let timeRemaining = 0;
+let timerEnabled = false;
+let darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+let topicFilter = 'all';
+let studyMode = false;
+let questionHistory = JSON.parse(localStorage.getItem('questionHistory') || '[]'); // Track question history
+let certificationThresholds = {}; // Will store all thresholds loaded from the JSON file
+
 // Define the Question class
 class Question {
     constructor(question, type, options, correct, explanation, topic) {
@@ -27,32 +45,51 @@ class Question {
     }
 }
 
-// Global variables
-let questions = [];
-let currentQuestionIndex = 0;
-let score = 0;
-let readinessThreshold = 70; // Default threshold
-let allQuestions = []; // Store all questions
-let filteredQuestions = []; // Store filtered questions
-let answeredQuestions = []; // Store user answers for review
-let bookmarkedQuestions = new Set(); // Store bookmarked questions
-let timer = null;
-let timeRemaining = 0;
-let timerEnabled = false;
-let darkModeEnabled = localStorage.getItem('darkMode') === 'true';
-let topicFilter = 'all';
-let studyMode = false;
-let questionHistory = JSON.parse(localStorage.getItem('questionHistory') || '[]'); // Track question history
+// Load certification thresholds from the JSON file
+async function loadCertificationThresholds() {
+    try {
+        console.log('Loading certification thresholds...');
+        const response = await fetch('./certification-thresholds.json');
+        
+        if (!response.ok) {
+            console.error('Failed to load thresholds, status:', response.status);
+            throw new Error(`Failed to load thresholds: ${response.status} ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        console.log('Successfully loaded thresholds data');
+        
+        if (data.thresholds) {
+            certificationThresholds = data.thresholds;
+            console.log(`Loaded thresholds for ${Object.keys(certificationThresholds).length} certifications`);
+        } else {
+            console.warn('Thresholds data not found in expected format');
+        }
+    } catch (error) {
+        console.error('Error loading certification thresholds:', error);
+        // Use default thresholds as fallback
+    }
+}
 
-// Thresholds for each test (stored in script.js, not JSON files)
-const thresholds = {
-    "Certified AI Specialist": 65,
-    "Data Cloud Consultant": 62,
-    "Platform Developer 1": 68, 
-    "Platform Developer 2": 70,
-    "Salesforce Administrator": 65,
-    "Experience Cloud Consultant": 67
-};
+// Find threshold for a specific certification
+function getThresholdForCertification(certificationName) {
+    // Try to match the exact certification name
+    if (certificationThresholds[certificationName]) {
+        return certificationThresholds[certificationName];
+    }
+    
+    // Try to match by doing a partial search
+    for (const [cert, threshold] of Object.entries(certificationThresholds)) {
+        if (certificationName.includes(cert) || cert.includes(certificationName)) {
+            console.log(`Found matching threshold for ${certificationName} using partial match with ${cert}`);
+            return threshold;
+        }
+    }
+    
+    // If no match found, return default threshold
+    console.log(`No threshold found for ${certificationName}, using default: ${readinessThreshold}`);
+    return readinessThreshold;
+}
 
 // Fisher-Yates shuffle function to randomize arrays
 function shuffleArray(array) {
@@ -264,7 +301,9 @@ async function startQuiz(fileName, testName) {
         
         document.getElementById('message').textContent = '';
         
-        readinessThreshold = thresholds[testName] || 70; // Set threshold based on testName, default to 70
+        // Look up the threshold for this certification
+        readinessThreshold = getThresholdForCertification(testName);
+        console.log(`Using readiness threshold of ${readinessThreshold}% for ${testName}`);
         
         // Get all unique topics
         const topics = getTopics(allQuestions);
@@ -732,8 +771,11 @@ function toggleTimer() {
 }
 
 // Initialize the app
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     console.log('DOM loaded, initializing app');
+    
+    // Load certification thresholds first
+    await loadCertificationThresholds();
     
     // Load saved bookmarks
     loadBookmarkedQuestions();
