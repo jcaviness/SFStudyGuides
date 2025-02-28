@@ -1,0 +1,730 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "A sales representative needs to track information about potential customers who are not yet ready to buy. Which standard object should be used to track this information?",
+      "options": [
+        "Account",
+        "Contact",
+        "Lead",
+        "Opportunity"
+      ],
+      "answer": "Lead",
+      "explanation": "Leads are used to track potential customers who are not yet qualified to buy. Once qualified, leads can be converted to accounts, contacts, and opportunities."
+    },
+    {
+      "id": 2,
+      "question": "Which feature should an administrator use to prevent sales representatives from moving an opportunity to the closed-won stage without completing required fields?",
+      "options": [
+        "Path",
+        "Validation Rule",
+        "Approval Process",
+        "Required Field"
+      ],
+      "answer": "Validation Rule",
+      "explanation": "Validation rules check that data entered by users meets specific criteria before they can save the record. In this case, a validation rule can prevent saving an opportunity as closed-won if required fields aren't completed."
+    },
+    {
+      "id": 3,
+      "question": "A sales manager needs a visual representation of the sales pipeline by stage. Which report format should an administrator recommend?",
+      "options": [
+        "Summary Report",
+        "Matrix Report",
+        "Joined Report",
+        "Funnel Chart"
+      ],
+      "answer": "Funnel Chart",
+      "explanation": "A funnel chart is ideal for visualizing data through progressive stages, making it perfect for displaying the sales pipeline by stage."
+    },
+    {
+      "id": 4,
+      "question": "An administrator needs to build a report to show closed opportunities grouped by account with opportunity products as columns. Which report type should be used?",
+      "options": [
+        "Tabular",
+        "Summary",
+        "Matrix",
+        "Joined"
+      ],
+      "answer": "Matrix",
+      "explanation": "Matrix reports allow you to group records both by row and by column, making them ideal for showing opportunities grouped by account with products as columns."
+    },
+    {
+      "id": 5,
+      "question": "A company wants to track which marketing campaigns generate the most sales. Which standard field on the Opportunity object should be used?",
+      "options": [
+        "Lead Source",
+        "Campaign",
+        "Primary Campaign Source",
+        "Marketing Source"
+      ],
+      "answer": "Primary Campaign Source",
+      "explanation": "The Primary Campaign Source field on opportunities allows you to track which campaign is credited with generating the opportunity."
+    },
+    {
+      "id": 6,
+      "question": "Which two actions can an administrator perform using the Data Loader but cannot perform using the Data Import Wizard? (Choose 2)",
+      "options": [
+        "Import more than 50,000 records",
+        "Schedule automatic data imports",
+        "Import leads",
+        "Import accounts and contacts",
+        "Import custom objects"
+      ],
+      "answer": ["Import more than 50,000 records", "Schedule automatic data imports"],
+      "explanation": "The Data Loader can import unlimited records and can be scheduled for automatic imports, while the Data Import Wizard is limited to 50,000 records and cannot be scheduled."
+    },
+    {
+      "id": 7,
+      "question": "An administrator needs to create a custom report type that includes accounts and their opportunities, even if an account has no opportunities. Which option should be selected for the account-to-opportunity relationship?",
+      "options": [
+        "Each 'A' record must have at least one related 'B' record",
+        "Each 'A' record may or may not have related 'B' records",
+        "'A' records must have related 'B' records",
+        "'A' records may have related 'B' records"
+      ],
+      "answer": "Each 'A' record may or may not have related 'B' records",
+      "explanation": "To include accounts that don't have opportunities, you must select 'Each 'A' record may or may not have related 'B' records', where A is Account and B is Opportunity."
+    },
+    {
+      "id": 8,
+      "question": "A company has three record types for cases: Support, Billing, and Product. What should an administrator create to ensure that different fields are displayed for each record type?",
+      "options": [
+        "Field Sets",
+        "Different Case Page Layouts",
+        "Different Case Lightning Pages",
+        "Field Dependencies"
+      ],
+      "answer": "Different Case Page Layouts",
+      "explanation": "Different page layouts should be created for each record type to display different fields. These page layouts can then be assigned to the appropriate record types."
+    },
+    {
+      "id": 9,
+      "question": "Which security feature should an administrator implement to restrict users from viewing specific fields on an object that they otherwise have access to?",
+      "options": [
+        "Sharing Rules",
+        "Role Hierarchy",
+        "Field-Level Security",
+        "Profile Permissions"
+      ],
+      "answer": "Field-Level Security",
+      "explanation": "Field-Level Security controls which fields users can see and edit on objects they have access to, allowing an administrator to restrict visibility of specific fields."
+    },
+    {
+      "id": 10,
+      "question": "An administrator needs to create a workflow rule that sends an email alert when an opportunity is closed-won. Which two criteria must be met for the workflow to execute? (Choose 2)",
+      "options": [
+        "The rule criteria must evaluate to True",
+        "Workflow rules must be active for the Opportunity object",
+        "The user must have permission to receive workflow email alerts",
+        "The record must be created or edited",
+        "The approval process must be completed"
+      ],
+      "answer": ["The rule criteria must evaluate to True", "The record must be created or edited"],
+      "explanation": "For a workflow rule to fire, the record must be created or edited to trigger the rule evaluation, and the rule criteria (in this case, stage equals 'closed-won') must evaluate to True."
+    },
+    {
+      "id": 11,
+      "question": "A sales team needs to quickly see which accounts are within their territory. Which feature should an administrator use to associate territories with accounts?",
+      "options": [
+        "Enterprise Territory Management",
+        "Account Teams",
+        "Account Hierarchy",
+        "Sharing Rules"
+      ],
+      "answer": "Enterprise Territory Management",
+      "explanation": "Enterprise Territory Management is used to create and maintain account territories, allowing sales teams to easily identify which accounts are in their assigned territories."
+    },
+    {
+      "id": 12,
+      "question": "An administrator needs to capture additional information when a case is escalated. Which automation tool should be used to prompt users for this information?",
+      "options": [
+        "Approval Process",
+        "Flow",
+        "Workflow Rule",
+        "Process Builder"
+      ],
+      "answer": "Flow",
+      "explanation": "Flow can create a screen-based interface to prompt users for additional information when a case is escalated, collecting the required data in a user-friendly way."
+    },
+    {
+      "id": 13,
+      "question": "A company wants to track different pricing models for its products. Which standard feature should an administrator use?",
+      "options": [
+        "Price Books",
+        "Product Schedules",
+        "Asset Management",
+        "Order Products"
+      ],
+      "answer": "Price Books",
+      "explanation": "Price Books allow you to create different sets of prices for products, enabling tracking of different pricing models for the same products."
+    },
+    {
+      "id": 14,
+      "question": "Which field type should an administrator use to create a custom field that restricts entry to only valid telephone numbers?",
+      "options": [
+        "Text",
+        "Number",
+        "Phone",
+        "Formula"
+      ],
+      "answer": "Phone",
+      "explanation": "The Phone field type is designed specifically for telephone numbers and includes appropriate validation and formatting."
+    },
+    {
+      "id": 15,
+      "question": "An administrator needs to create dashboards that display differently based on who is viewing them. Which feature should be used?",
+      "options": [
+        "Dynamic Dashboards",
+        "Filtered Dashboards",
+        "Joined Reports",
+        "Custom Report Types"
+      ],
+      "answer": "Dynamic Dashboards",
+      "explanation": "Dynamic Dashboards display data based on the viewer's security settings, showing each user only the data they have access to."
+    },
+    {
+      "id": 16,
+      "question": "A company wants to reduce duplicate records in Salesforce. Which two features should an administrator implement? (Choose 2)",
+      "options": [
+        "Duplicate Rules",
+        "Validation Rules",
+        "Matching Rules",
+        "Assignment Rules",
+        "Escalation Rules"
+      ],
+      "answer": ["Duplicate Rules", "Matching Rules"],
+      "explanation": "Duplicate Rules work with Matching Rules to identify potential duplicate records. Matching Rules define how records are compared, while Duplicate Rules determine what happens when duplicates are detected."
+    },
+    {
+      "id": 17,
+      "question": "An administrator needs to ensure that when a contact is created, an associated task is automatically created for follow-up. Which automation tool should be used?",
+      "options": [
+        "Workflow Rule",
+        "Process Builder",
+        "Flow Builder",
+        "Apex Trigger"
+      ],
+      "answer": "Process Builder",
+      "explanation": "Process Builder can create related records like tasks when a contact is created, making it the appropriate tool for this automation requirement."
+    },
+    {
+      "id": 18,
+      "question": "Which two actions can an administrator take to improve report performance? (Choose 2)",
+      "options": [
+        "Use report builder instead of report wizard",
+        "Filter reports to return fewer rows",
+        "Schedule reports to run during off-peak hours",
+        "Add more fields to report columns",
+        "Create more summary formulas"
+      ],
+      "answer": ["Filter reports to return fewer rows", "Schedule reports to run during off-peak hours"],
+      "explanation": "To improve report performance, filtering reports to return fewer rows reduces processing time, and scheduling reports to run during off-peak hours reduces system load during business hours."
+    },
+    {
+      "id": 19,
+      "question": "A company wants to track different types of accounts (customer, partner, prospect) and display different page layouts accordingly. Which feature should an administrator use?",
+      "options": [
+        "Field Sets",
+        "Record Types",
+        "Page Layouts",
+        "Custom Fields"
+      ],
+      "answer": "Record Types",
+      "explanation": "Record Types allow you to categorize records and display different page layouts based on the record type, making them ideal for showing different layouts for different account types."
+    },
+    {
+      "id": 20,
+      "question": "An organization has five custom profiles. An administrator needs to grant access to a new custom object to all five profiles. What is the most efficient way to accomplish this?",
+      "options": [
+        "Create a permission set and assign it to users with the five profiles",
+        "Clone each profile, add the permissions, and reassign users",
+        "Modify each profile individually to add the permissions",
+        "Create a public group containing the five profiles"
+      ],
+      "answer": "Create a permission set and assign it to users with the five profiles",
+      "explanation": "Permission sets are the most efficient way to grant access to objects across multiple profiles, as they can be created once and assigned to users regardless of their profile."
+    },
+    {
+      "id": 21,
+      "question": "An administrator needs to track products installed at a customer site. Which standard object should be used?",
+      "options": [
+        "Product",
+        "Asset",
+        "Installation",
+        "Contract"
+      ],
+      "answer": "Asset",
+      "explanation": "The Asset object is designed to track products purchased by customers and installed at their sites, making it the appropriate standard object for this requirement."
+    },
+    {
+      "id": 22,
+      "question": "A support manager wants to automatically assign cases to support agents based on product expertise. Which feature should an administrator implement?",
+      "options": [
+        "Assignment Rules",
+        "Auto-Response Rules",
+        "Escalation Rules",
+        "Sharing Rules"
+      ],
+      "answer": "Assignment Rules",
+      "explanation": "Case Assignment Rules can automatically route cases to appropriate support agents based on criteria such as product expertise."
+    },
+    {
+      "id": 23,
+      "question": "An administrator needs to configure the system to automatically send an email to a customer when their case is closed. Which feature should be used?",
+      "options": [
+        "Workflow Rule",
+        "Auto-Response Rule",
+        "Assignment Rule",
+        "Email Alert"
+      ],
+      "answer": "Workflow Rule",
+      "explanation": "A Workflow Rule with an Email Alert action can be configured to automatically send an email to the case contact when the case status changes to closed."
+    },
+    {
+      "id": 24,
+      "question": "A manager needs a report showing opportunities grouped by account with the ability to drill down to opportunity line items. Which report type should an administrator recommend?",
+      "options": [
+        "Opportunities with Products",
+        "Accounts with Opportunities",
+        "Opportunities with Contact Roles",
+        "Opportunity Trends"
+      ],
+      "answer": "Opportunities with Products",
+      "explanation": "The Opportunities with Products report type includes the Opportunity, Account, and Opportunity Line Item objects, allowing for grouping by account and drilling down to line items."
+    },
+    {
+      "id": 25,
+      "question": "Which two options can an administrator select when editing a picklist field? (Choose 2)",
+      "options": [
+        "Restrict picklist to values in the value set",
+        "Display values alphabetically",
+        "Add dependent field values",
+        "Set field-level security",
+        "Add a default value"
+      ],
+      "answer": ["Restrict picklist to values in the value set", "Add a default value"],
+      "explanation": "When editing a picklist field, an administrator can restrict the picklist to only allow values from the defined set and can set a default value for the field."
+    },
+    {
+      "id": 26,
+      "question": "An administrator needs to provide a training document for new users that outlines the fields on the Lead object. Which feature should be used to generate this documentation?",
+      "options": [
+        "Schema Builder",
+        "Setup Audit Trail",
+        "Field Dependency Matrix",
+        "Object Manager"
+      ],
+      "answer": "Object Manager",
+      "explanation": "Object Manager allows you to view all fields on an object and export field metadata, which can be used to create training documentation about the Lead object fields."
+    },
+    {
+      "id": 27,
+      "question": "A support team wants to automatically populate the Case Owner field based on the Case Type. Which feature should an administrator use?",
+      "options": [
+        "Default Field Value",
+        "Assignment Rule",
+        "Workflow Field Update",
+        "Validation Rule"
+      ],
+      "answer": "Assignment Rule",
+      "explanation": "Case Assignment Rules can be configured to automatically assign the Case Owner based on criteria such as Case Type."
+    },
+    {
+      "id": 28,
+      "question": "An administrator needs to ensure that all email messages sent to support@company.com create cases in Salesforce. Which feature should be implemented?",
+      "options": [
+        "Email-to-Case",
+        "Web-to-Case",
+        "Email Services",
+        "Email Templates"
+      ],
+      "answer": "Email-to-Case",
+      "explanation": "Email-to-Case is designed to automatically create cases from incoming emails sent to a designated email address, such as support@company.com."
+    },
+    {
+      "id": 29,
+      "question": "A user needs to see all records related to an account on a single page. Which feature should an administrator recommend?",
+      "options": [
+        "Related Lists",
+        "Joined Reports",
+        "List Views",
+        "Custom Links"
+      ],
+      "answer": "Related Lists",
+      "explanation": "Related Lists on the account page layout display all records related to the account, such as contacts, opportunities, and cases, on a single page."
+    },
+    {
+      "id": 30,
+      "question": "An administrator needs to add a field to the service resource object that automatically calculates the service resource's average rating based on ratings from multiple service appointments. Which field type should be used?",
+      "options": [
+        "Roll-Up Summary",
+        "Formula",
+        "Cross-Object Formula",
+        "Number"
+      ],
+      "answer": "Formula",
+      "explanation": "A Formula field can calculate the average rating based on ratings from related service appointments."
+    },
+    {
+      "id": 31,
+      "question": "Which statement about the Permission Set License is true?",
+      "options": [
+        "It is included in all Salesforce editions",
+        "It grants permissions directly to individual users",
+        "It allows additional permissions to be added to existing licenses",
+        "It replaces the need for user licenses"
+      ],
+      "answer": "It allows additional permissions to be added to existing licenses",
+      "explanation": "Permission Set Licenses allow you to add permissions beyond what the user's base license includes, essentially adding functionality to existing licenses."
+    },
+    {
+      "id": 32,
+      "question": "A sales representative needs to see the top five opportunities with the highest amount on their homepage. Which component should an administrator add to the Lightning Home page?",
+      "options": [
+        "Report Chart",
+        "List View",
+        "Rich Text",
+        "Dashboard"
+      ],
+      "answer": "Report Chart",
+      "explanation": "A Report Chart component can display the top five opportunities by amount on the Lightning Home page."
+    },
+    {
+      "id": 33,
+      "question": "An administrator needs to restrict a field on the account from being visible to a specific profile. Where should this be configured?",
+      "options": [
+        "Field-Level Security",
+        "Sharing Settings",
+        "Record Types",
+        "Page Layout Assignment"
+      ],
+      "answer": "Field-Level Security",
+      "explanation": "Field-Level Security controls which fields users can see and edit based on their profile or permission sets, allowing an administrator to restrict specific field visibility."
+    },
+    {
+      "id": 34,
+      "question": "An administrator wants to track which marketing campaigns influence opportunity revenue. Which feature should be enabled?",
+      "options": [
+        "Campaign Influence",
+        "Campaign Hierarchy",
+        "Opportunity Contact Roles",
+        "Campaign Member Status"
+      ],
+      "answer": "Campaign Influence",
+      "explanation": "Campaign Influence allows you to track which campaigns contribute to opportunity revenue and by how much, making it the right feature for this requirement."
+    },
+    {
+      "id": 35,
+      "question": "A company wants to create a Knowledge Base for their customer-facing portal. Which feature should an administrator implement?",
+      "options": [
+        "Salesforce Knowledge",
+        "Chatter Questions",
+        "Content Library",
+        "Ideas"
+      ],
+      "answer": "Salesforce Knowledge",
+      "explanation": "Salesforce Knowledge is a knowledge base system designed for creating, sharing, and managing articles that can be exposed in customer-facing portals."
+    },
+    {
+      "id": 36,
+      "question": "What occurs when an administrator deletes a custom field?",
+      "options": [
+        "The field is deleted and permanently removed from the database",
+        "The field is hidden but still exists in reports",
+        "The field and its data are deleted but can be restored from the Recycle Bin for 15 days",
+        "The field is removed from page layouts but still exists in the database"
+      ],
+      "answer": "The field and its data are deleted but can be restored from the Recycle Bin for 15 days",
+      "explanation": "When a custom field is deleted, both the field and its data are sent to the Recycle Bin, where they can be restored for up to 15 days."
+    },
+    {
+      "id": 37,
+      "question": "A company wants to send an email notification to the account owner when a related opportunity is closed-won. Which feature should the administrator use?",
+      "options": [
+        "Process Builder",
+        "Workflow Rule",
+        "Assignment Rule",
+        "Validation Rule"
+      ],
+      "answer": "Process Builder",
+      "explanation": "Process Builder can monitor changes to the opportunity stage and send email notifications to related users like the account owner when certain criteria are met."
+    },
+    {
+      "id": 38,
+      "question": "An administrator wants to automatically convert web visitor information into leads in Salesforce. Which feature should be implemented?",
+      "options": [
+        "Web-to-Lead",
+        "Web-to-Case",
+        "Email-to-Lead",
+        "Lead Import Wizard"
+      ],
+      "answer": "Web-to-Lead",
+      "explanation": "Web-to-Lead allows you to create HTML forms that capture visitor information on your website and automatically convert it into leads in Salesforce."
+    },
+    {
+      "id": 39,
+      "question": "A company uses a custom field on opportunities to track which competitor they're bidding against. What type of field should an administrator create to allow multiple competitors to be selected?",
+      "options": [
+        "Multi-Select Picklist",
+        "Lookup Relationship",
+        "Text Area",
+        "Picklist"
+      ],
+      "answer": "Multi-Select Picklist",
+      "explanation": "A Multi-Select Picklist field allows users to select multiple values from a predefined list, making it ideal for tracking multiple competitors on an opportunity."
+    },
+    {
+      "id": 40,
+      "question": "Which three features can be used to control record access for users? (Choose 3)",
+      "options": [
+        "Organization-Wide Defaults",
+        "Role Hierarchy",
+        "Sharing Rules",
+        "App Manager",
+        "Field-Level Security"
+      ],
+      "answer": ["Organization-Wide Defaults", "Role Hierarchy", "Sharing Rules"],
+      "explanation": "Organization-Wide Defaults, Role Hierarchy, and Sharing Rules work together to control which records users can access, while Field-Level Security controls field access and App Manager controls app visibility."
+    },
+    {
+      "id": 41,
+      "question": "A sales manager needs a report showing the number of opportunities at each stage with amount totals. Which report format should an administrator recommend?",
+      "options": [
+        "Tabular",
+        "Summary",
+        "Matrix",
+        "Joined"
+      ],
+      "answer": "Summary",
+      "explanation": "A Summary report can group opportunities by stage and show count and sum totals, making it the appropriate format for this requirement."
+    },
+    {
+      "id": 42,
+      "question": "An administrator needs to create a field on the Contact object that shows the Account's website. Which type of field should be created?",
+      "options": [
+        "Formula",
+        "Cross-Object Formula",
+        "Roll-Up Summary",
+        "Lookup"
+      ],
+      "answer": "Formula",
+      "explanation": "A Formula field with a cross-object reference (Account.Website) can display the website from the related account on the contact record."
+    },
+    {
+      "id": 43,
+      "question": "A company wants to create a custom object to track office locations. Which relationship type should be established between the Office Location object and the User object?",
+      "options": [
+        "Master-Detail Relationship",
+        "Lookup Relationship",
+        "Many-to-Many Relationship",
+        "External Lookup"
+      ],
+      "answer": "Lookup Relationship",
+      "explanation": "A Lookup Relationship is appropriate when relating users to office locations, as it allows for optional linking between records without enforcing cascading deletions."
+    },
+    {
+      "id": 44,
+      "question": "An administrator needs to display a chart showing case resolution time trends on the support manager's dashboard. Which report format should be used?",
+      "options": [
+        "Tabular with Summary Formula",
+        "Matrix with Groupings",
+        "Summary with Chart",
+        "Joined with Custom Summary Formula"
+      ],
+      "answer": "Summary with Chart",
+      "explanation": "A Summary report with a chart can display trends in case resolution time, making it the appropriate format for this dashboard component."
+    },
+    {
+      "id": 45,
+      "question": "Which feature allows an administrator to customize the fields and related lists that appear on record pages for different groups of users?",
+      "options": [
+        "Dynamic Forms",
+        "Record Types",
+        "Page Layouts",
+        "Lightning Pages"
+      ],
+      "answer": "Page Layouts",
+      "explanation": "Page Layouts control which fields and related lists appear on record pages and can be assigned to different profiles, allowing customization for different user groups."
+    },
+    {
+      "id": 46,
+      "question": "A sales manager wants to send an automatic email to their team when an opportunity exceeding $100,000 is created. Which feature should an administrator use?",
+      "options": [
+        "Workflow Rule",
+        "Process Builder",
+        "Flow Builder",
+        "Approval Process"
+      ],
+      "answer": "Workflow Rule",
+      "explanation": "A Workflow Rule with an email alert action can be used to automatically send an email when an opportunity meeting specific criteria (over $100,000) is created."
+    },
+    {
+      "id": 47,
+      "question": "What should an administrator use to make specific fields required only for opportunities with a type of 'New Business'?",
+      "options": [
+        "Required Field Setting",
+        "Validation Rule",
+        "Field Dependency",
+        "Page Layout"
+      ],
+      "answer": "Validation Rule",
+      "explanation": "A Validation Rule can make fields conditionally required based on criteria such as the opportunity type being 'New Business'."
+    },
+    {
+      "id": 48,
+      "question": "A company wants to track customer satisfaction scores for each service appointment. Which field type should an administrator create on the Service Appointment object?",
+      "options": [
+        "Percent",
+        "Number",
+        "Text",
+        "Summary"
+      ],
+      "answer": "Number",
+      "explanation": "A Number field with appropriate decimal places can store customer satisfaction scores, allowing for proper calculation and reporting."
+    },
+    {
+      "id": 49,
+      "question": "A company wants to allow sales reps to monitor their own forecast categories without seeing other reps' forecasts. Which feature should an administrator enable?",
+      "options": [
+        "Opportunity Sharing",
+        "Collaborative Forecasts",
+        "Forecast Hierarchy",
+        "Custom Forecast View"
+      ],
+      "answer": "Collaborative Forecasts",
+      "explanation": "Collaborative Forecasts allows sales reps to see their own forecasts while restricting visibility of others' forecasts based on role hierarchy and sharing settings."
+    },
+    {
+      "id": 50,
+      "question": "A sales rep wants to manage their to-do list in Salesforce. Which approach should an administrator recommend?",
+      "options": [
+        "Create Tasks to track activities",
+        "Create Events on the calendar",
+        "Create Chatter posts with due dates",
+        "Create Notes with action items"
+      ],
+      "answer": "Create Tasks to track activities",
+      "explanation": "Tasks are designed for tracking to-do items in Salesforce, as they include fields for status, priority, due date, and reminders."
+    },
+    {
+      "id": 51,
+      "question": "An administrator wants to avoid having duplicate contacts created when importing data. Which feature should be enabled?",
+      "options": [
+        "Duplicate Management",
+        "Validation Rules",
+        "Import Matching Rules",
+        "Unique Fields"
+      ],
+      "answer": "Duplicate Management",
+      "explanation": "Duplicate Management, consisting of duplicate and matching rules, helps identify and prevent duplicate records during the import process."
+    },
+    {
+      "id": 52,
+      "question": "A company wants to use Salesforce to generate quotes for opportunities. Which standard feature should an administrator enable?",
+      "options": [
+        "Quote Templates",
+        "Opportunity Products",
+        "Order Management",
+        "Price Books"
+      ],
+      "answer": "Quote Templates",
+      "explanation": "Quote Templates are used to generate standardized quotes from opportunity data, enabling sales reps to create professional quotes directly in Salesforce."
+    },
+    {
+      "id": 53,
+      "question": "An administrator needs to ensure that the account record page displays a visual component showing the sum of all closed-won opportunities. Which Lightning component should be used?",
+      "options": [
+        "Related List Single",
+        "Report Chart",
+        "Rich Text",
+        "Metrics"
+      ],
+      "answer": "Report Chart",
+      "explanation": "A Report Chart component can display a summary of closed-won opportunities for the account, providing a visual representation of the total amount."
+    },
+    {
+      "id": 54,
+      "question": "A company wants to automatically assign territory based on the account's postal code. Which feature should an administrator use?",
+      "options": [
+        "Enterprise Territory Management",
+        "Account Assignment Rules",
+        "Lead Assignment Rules",
+        "Sharing Rules"
+      ],
+      "answer": "Enterprise Territory Management",
+      "explanation": "Enterprise Territory Management allows for the automatic assignment of territories based on account criteria such as postal code."
+    },
+    {
+      "id": 55,
+      "question": "A company wants to track additional information about their opportunities based on the stage. The information needed varies by stage. Which feature should an administrator implement?",
+      "options": [
+        "Lightning Record Pages",
+        "Dependent Picklists",
+        "Sales Processes",
+        "Path"
+      ],
+      "answer": "Path",
+      "explanation": "Path allows administrators to define key fields that should be completed at each stage of a process, displaying different guidance and fields based on the opportunity stage."
+    },
+    {
+      "id": 56,
+      "question": "An administrator needs to create a record-triggered automation to update multiple object records when an account's rating changes. Which tool should be used?",
+      "options": [
+        "Flow Builder",
+        "Workflow Rules",
+        "Process Builder",
+        "Approval Process"
+      ],
+      "answer": "Flow Builder",
+      "explanation": "Flow Builder can create record-triggered flows that update records across multiple objects when a field like Account Rating changes."
+    },
+    {
+      "id": 57,
+      "question": "A company wants to track the relationship between their contacts. Which standard feature should an administrator use?",
+      "options": [
+        "Contact Roles",
+        "Account Teams",
+        "Contact Hierarchy",
+        "Contact Relationships"
+      ],
+      "answer": "Contact Relationships",
+      "explanation": "Contact Relationships (or Contact-to-Contact Relationships) allow for tracking how contacts are related to each other, such as spouse, colleague, or manager."
+    },
+    {
+      "id": 58,
+      "question": "An administrator needs to prevent sales users from deleting closed-won opportunities. How should this be configured?",
+      "options": [
+        "Adjust Profile Permissions",
+        "Create Validation Rule",
+        "Set Organization-Wide Defaults",
+        "Enable Field History Tracking"
+      ],
+      "answer": "Adjust Profile Permissions",
+      "explanation": "Profile permissions control which actions users can perform on objects, including the ability to delete records. Removing the 'Delete' permission for Opportunities on the Sales User profile would prevent them from deleting any opportunities, including closed-won ones."
+    },
+    {
+      "id": 59,
+      "question": "A support manager needs to ensure that cases are automatically escalated if they remain unresolved for 24 hours. Which feature should an administrator use?",
+      "options": [
+        "Assignment Rules",
+        "Escalation Rules",
+        "Auto-Response Rules",
+        "Workflow Rules"
+      ],
+      "answer": "Escalation Rules",
+      "explanation": "Escalation Rules automate the escalation of cases based on criteria such as age, ensuring cases that remain unresolved for specific periods are escalated appropriately."
+    },
+    {
+      "id": 60,
+      "question": "Which two objects in Salesforce have standard sharing rules? (Choose 2)",
+      "options": [
+        "Account",
+        "Contact",
+        "Case",
+        "Product",
+        "Task"
+      ],
+      "answer": ["Account", "Case"],
+      "explanation": "Accounts and Cases have standard sharing rules available out-of-the-box, allowing administrators to share records based on record owner or criteria."
+    },
+    
