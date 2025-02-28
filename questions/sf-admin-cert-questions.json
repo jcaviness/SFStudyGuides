@@ -1,5 +1,4 @@
-{
-  "questions": [
+[
     {
       "id": 1,
       "question": "A sales representative needs to track information about potential customers who are not yet ready to buy. Which standard object should be used to track this information?",

@@ -1,7 +1,4 @@
-{
-  "certificationName": "Salesforce Platform Developer 2",
-  "description": "Practice questions for Salesforce Platform Developer 2 certification exam",
-  "questions": [
+[
     {
       "id": 1,
       "question": "A developer needs to implement an asynchronous process to be executed when a Case record is updated. The process needs to run with system permissions and must handle bulk updates efficiently. Which two features should the developer consider?",
