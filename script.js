@@ -1,12 +1,12 @@
 // Define the Question class
 class Question {
-    constructor(data) {
-        this.question = data.question || data.question_text;
-        this.type = data.type || 'single';
-        this.options = data.options || data.option;
-        this.correct = data.correct || [data.answer];
-        this.explanation = data.explanation || data.explanation_text;
-        this.topic = data.topic || 'General';
+    constructor(question, type, options, correct, explanation, topic) {
+        this.question = question;
+        this.type = type;
+        this.options = options;
+        this.correct = correct;
+        this.explanation = explanation;
+        this.topic = topic;
     }
 
     // Check if the user's answer is correct
@@ -53,56 +53,15 @@ const thresholds = {
     "Salesforce Certified Experience Cloud Consultant": 65
 };
 
-// Predefined list of options for admin-style tests
-const adminTestOptionTypes = ["id", "option", "options", "answer", "correctAnswer", "question_text", "explanation_text"];
-
-// Fisher-Yates shuffle function
+// Fisher-Yates shuffle function to randomize arrays
 function shuffleArray(array) {
-    const shuffled = [...array];
+    const shuffled = [...array]; // Create a copy to avoid modifying the original
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     return shuffled;
 }
-
-// Adaptive loading function to handle different question formats
-async function loadQuestions(fileName) {
-    try {
-        const response = await fetch(fileName);
-        if (!response.ok) throw new Error('Failed to load questions');
-        
-        let data = await response.json();
-        
-        // Detect question format
-        let processedQuestions = [];
-        if (Array.isArray(data)) {
-            if (data[0].hasOwnProperty('id') && adminTestOptionTypes.some(prop => data[0].hasOwnProperty(prop))) {
-                // Handle admin-style test format
-                processedQuestions = data.map(q => new Question({
-                    question: q.question || q['question_text'],
-                    type: q.type || (q.correctAnswer instanceof Array ? 'multiple' : 'single'),
-                    options: q.options || q.option || [],
-                    correct: q.correct || q.correctAnswer || q.answer || [],
-                    explanation: q.explanation || q['explanation_text'] || ''
-                }));
-            } else {
-                // Default format
-                processedQuestions = data.map(q => new Question(q));
-            }
-        }
-        
-        // Shuffle questions
-        return shuffleArray(processedQuestions);
-    } catch (error) {
-        console.error('Error loading questions:', error);
-        document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
-        throw error;
-    }
-}
-
-// Rest of the script remains the same as the previous script-grok.js
-// (Includes all the existing functions like updateProgress, startQuiz, loadQuestion, etc.)
 
 // Update progress bar and score display
 function updateProgress() {
@@ -124,17 +83,31 @@ function updateProgress() {
 // Load questions from the selected JSON file
 async function loadQuestions(fileName) {
     try {
+        console.log('Loading questions from:', fileName);
         const response = await fetch(fileName);
-        if (!response.ok) throw new Error('Failed to load questions');
+        
+        if (!response.ok) {
+            console.error('Failed to load questions, status:', response.status);
+            throw new Error('Failed to load questions');
+        }
+        
         const data = await response.json();
-        return data.map(q => new Question(
-            q.question, 
-            q.type || "single", 
-            q.options, 
-            q.correct || [q.correctAnswer], 
-            q.explanation,
-            q.topic
-        ));
+        console.log('Loaded data:', data.slice(0, 2)); // Log first 2 items for debugging
+        
+        // Handle different JSON formats
+        return data.map(q => {
+            // Determine the correct answer field based on the JSON structure
+            const correct = q.correct || q.correctAnswer || [q.answer];
+            
+            return new Question(
+                q.question, 
+                q.type || "single", 
+                q.options, 
+                Array.isArray(correct) ? correct : [correct], 
+                q.explanation,
+                q.topic
+            );
+        });
     } catch (error) {
         console.error('Error loading questions:', error);
         throw error;
@@ -176,8 +149,20 @@ function populateTopicFilter(topics) {
 // Start the quiz with the selected test
 async function startQuiz(fileName, testName) {
     try {
+        document.getElementById('message').textContent = 'Loading questions...';
+        
         // Reset state
         allQuestions = await loadQuestions(fileName);
+        
+        console.log(`Loaded ${allQuestions.length} questions for ${testName}`);
+        
+        if (allQuestions.length === 0) {
+            document.getElementById('message').textContent = 'No questions found in the selected file.';
+            return;
+        }
+        
+        document.getElementById('message').textContent = '';
+        
         readinessThreshold = thresholds[testName] || 70; // Set threshold based on testName, default to 70
         
         // Get all unique topics
@@ -211,6 +196,7 @@ async function startQuiz(fileName, testName) {
         
         loadQuestion();
     } catch (error) {
+        console.error('Error starting quiz:', error);
         document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
     }
 }
@@ -640,6 +626,8 @@ function toggleTimer() {
 
 // Initialize the app
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM loaded, initializing app');
+    
     // Load saved bookmarks
     loadBookmarkedQuestions();
     
@@ -669,6 +657,7 @@ document.addEventListener('DOMContentLoaded', () => {
             message.textContent = "Please select a test.";
             return;
         }
+        console.log('Starting quiz with file:', selectedFile, 'and test name:', testName);
         message.textContent = "";
         testNameHeading.textContent = testName;
         testSelection.style.display = 'none';
@@ -727,4 +716,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('dark-mode-icon').classList.remove('fa-moon');
         document.getElementById('dark-mode-icon').classList.add('fa-sun');
     }
+    
+    console.log('App initialization complete');
 });
