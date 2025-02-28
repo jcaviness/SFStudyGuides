@@ -1,0 +1,1259 @@
+[
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "Which Experience Cloud license type would be most appropriate for a company that needs to provide a secure portal for thousands of customers, with access to cases, knowledge articles, and custom objects, but does not need access to CRM data?",
+    "type": "single",
+    "options": [
+      "Customer Community",
+      "Customer Community Plus",
+      "Partner Community",
+      "External Apps"
+    ],
+    "correct": ["Customer Community"],
+    "explanation": "Customer Community licenses are designed for providing customer service experiences to large numbers of external users who need access to cases, knowledge articles, and basic custom objects but don't need access to CRM data, accounts, or opportunities. Customer Community Plus includes CRM data access and is more expensive, while Partner Community is designed for partner relationships with sales functionality."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "A global manufacturing company needs to build an Experience Cloud site for their worldwide distributor network. The distributors need to manage their own leads, opportunities, and have visibility into their account data. What are the TWO most important considerations when designing this solution?",
+    "type": "multiple",
+    "options": [
+      "Implementing partner account hierarchies for territory management",
+      "Setting up single sign-on with the distributors' internal systems",
+      "Creating a responsive design that works on mobile devices",
+      "Configuring account sharing rules to ensure distributors only see their own data",
+      "Using Experience Builder rather than Visualforce for the design"
+    ],
+    "correct": ["Implementing partner account hierarchies for territory management", "Configuring account sharing rules to ensure distributors only see their own data"],
+    "explanation": "For a distributor experience, implementing partner account hierarchies for territory management is critical to properly organize the distributors and their territories. Additionally, configuring proper sharing rules is essential to ensure that distributors only see their own data and not information from other distributors or regions. While the other options are potentially valuable, they aren't as fundamentally important to the core business requirements as these two considerations."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "When implementing a Customer Community, which feature is NOT available without purchasing and configuring an add-on product?",
+    "type": "single",
+    "options": [
+      "Knowledge Articles",
+      "Service Cloud Case Management",
+      "Customized Branding",
+      "Einstein Analytics Dashboards"
+    ],
+    "correct": ["Einstein Analytics Dashboards"],
+    "explanation": "Einstein Analytics Dashboards require the purchase of an add-on license (Einstein Analytics Growth or Einstein Analytics Plus) to use within Experience Cloud. Knowledge Articles, Service Cloud Case Management, and Customized Branding are all available in standard Customer Community implementations without additional products."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "What is the difference between Experience Cloud's External Apps license and Customer Community license?",
+    "type": "single",
+    "options": [
+      "External Apps requires a different authentication method than Customer Community",
+      "External Apps provides programmatic API access only, with no UI access",
+      "External Apps provides access to more custom objects than Customer Community",
+      "External Apps is a fixed price regardless of user count, while Customer Community is per-user pricing"
+    ],
+    "correct": ["External Apps is a fixed price regardless of user count, while Customer Community is per-user pricing"],
+    "explanation": "The key distinction between External Apps and Customer Community licenses is their pricing model. External Apps uses a fixed price model based on login volume rather than counting individual users, making it suitable for high-volume, low-frequency usage patterns. Customer Community uses traditional per-user pricing. This makes External Apps ideal for scenarios with many occasional users, while Customer Community is better for smaller numbers of users who log in frequently."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "A customer wants to implement a self-service community where users can log in using their existing social media accounts. Which TWO configurations are needed to implement this requirement?",
+    "type": "multiple",
+    "options": [
+      "Enable Social Sign-on in the Auth Provider setup",
+      "Configure an Authentication Provider for each social network",
+      "Enable the Social Personas feature in Setup",
+      "Purchase additional Social Sign-on licenses",
+      "Configure the Social Sign-on component in Experience Builder"
+    ],
+    "correct": ["Configure an Authentication Provider for each social network", "Enable Social Sign-on in the Auth Provider setup"],
+    "explanation": "To implement social sign-on for an Experience Cloud site, you must configure an Authentication Provider for each social network you want to support (like Facebook, Google, etc.) and enable Social Sign-on in the Authentication Provider setup. There are no additional Social Sign-on licenses required, and Social Personas is a different feature. The login components in Experience Builder will automatically display the configured authentication options."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A consultant is implementing a Partner Community and needs to ensure that partners from competing companies cannot see each other's data. Which approach provides the MOST secure and maintainable solution?",
+    "type": "single",
+    "options": [
+      "Create a separate Experience Cloud site for each partner company",
+      "Use account-based sharing rules and partner accounts",
+      "Implement manual sharing through Apex triggers",
+      "Create separate permission sets for each partner company"
+    ],
+    "correct": ["Use account-based sharing rules and partner accounts"],
+    "explanation": "The most secure and maintainable approach for partner data isolation is using account-based sharing rules in conjunction with partner accounts. This leverages Salesforce's native security model where partners are associated with partner accounts, and sharing rules ensure they only see records related to their account. Creating separate sites would be excessive and hard to maintain, manual sharing through Apex is too custom, and permission sets control feature access, not record visibility."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "Which statement is true regarding guest user access in Experience Cloud sites after the security updates released in 2020?",
+    "type": "single",
+    "options": [
+      "Guest users can still be given modify all data permission in certain scenarios",
+      "Salesforce automatically creates sharing rules for records created by guest users",
+      "Organization-wide defaults can be set to Public Read/Write for guest user access",
+      "Guest users can be added to public groups to grant them record access"
+    ],
+    "correct": ["Salesforce automatically creates sharing rules for records created by guest users"],
+    "explanation": "As part of the 2020 security updates for guest users, Salesforce automatically creates sharing rules for records created by guest users to ensure that guest users can see records they create, even though the organization-wide defaults are enforced as private. Guest users can no longer be added to public groups, cannot be given modify all data permissions under any circumstances, and organization-wide defaults for guest users must be set to private."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A multinational corporation needs to enforce strict data residency requirements for their Experience Cloud site. Users in different countries must have their data stored in specific geographic regions to comply with local regulations. Which approach should a consultant recommend?",
+    "type": "single",
+    "options": [
+      "Use field-level security to restrict certain fields based on user location",
+      "Implement a multi-org strategy with separate Experience Cloud sites per region",
+      "Create record types for each region and filter access using sharing rules",
+      "Use Salesforce Shield with encryption policies based on user geography"
+    ],
+    "correct": ["Implement a multi-org strategy with separate Experience Cloud sites per region"],
+    "explanation": "For strict data residency requirements where data must physically reside in specific geographic regions, a multi-org strategy is necessary. This allows the organization to have separate Salesforce instances in different geographic regions (such as EU, APAC, NA) with their own Experience Cloud sites. Field-level security, record types, and Salesforce Shield don't control where data is physically stored, which is the key requirement for true data residency compliance."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "Which statement accurately describes the sharing model for Experience Cloud users with Customer Community Plus licenses?",
+    "type": "single",
+    "options": [
+      "They follow the same organization-wide defaults as internal users",
+      "They automatically have view access to all data in the organization",
+      "They operate in a special sharing mode that restricts access to the Experience Cloud site",
+      "They have role-based sharing that works with the internal role hierarchy"
+    ],
+    "correct": ["They have role-based sharing that works with the internal role hierarchy"],
+    "explanation": "Customer Community Plus users are mapped to roles in the Salesforce role hierarchy, making them participate in role-based sharing. This is distinct from regular Customer Community users who don't have roles. This role-based access allows Customer Community Plus users to access records owned by or shared with other users in their same account, similar to how internal users share data, but organized in a partner or customer account hierarchy that plugs into the bottom of the internal role hierarchy."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "When implementing an Experience Cloud solution with complex security requirements, which THREE options can be combined to create a comprehensive security model?",
+    "type": "multiple",
+    "options": [
+      "Sharing Sets",
+      "Share Groups",
+      "Sharing Rules",
+      "Manual Sharing",
+      "Community Group Sharing",
+      "External Data Integration"
+    ],
+    "correct": ["Sharing Sets", "Sharing Rules", "Manual Sharing"],
+    "explanation": "A comprehensive security model for Experience Cloud can combine: 1) Sharing Sets, which allow sharing records with community users based on their user profile or account; 2) Sharing Rules, which share records based on record owner or criteria; and 3) Manual Sharing, which allows ad-hoc sharing of specific records. 'Share Groups' and 'Community Group Sharing' are not standard Salesforce features, and External Data Integration relates to connecting to external systems, not security configuration."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A company wants to implement IP restrictions for their Experience Cloud site to add an extra layer of security. What is the correct approach to implement this requirement?",
+    "type": "single",
+    "options": [
+      "Create a Login Flow and use the IP address validation component",
+      "Configure a Network Access policy in Auth. Provider Settings",
+      "Use Trusted IP Ranges in Profile settings",
+      "Create a custom Visualforce login page with IP validation"
+    ],
+    "correct": ["Use Trusted IP Ranges in Profile settings"],
+    "explanation": "The correct approach to implement IP restrictions for Experience Cloud users is to use Trusted IP Ranges in Profile settings. This allows administrators to define specific IP ranges from which users with that profile can access the Experience Cloud site. If a user attempts to log in from an IP address outside these trusted ranges, they'll be challenged with additional verification like an email security code."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "During the setup of a high-volume customer portal, a consultant needs to ensure optimal performance. Which THREE configuration options will have the most impact on the performance of the Experience Cloud site?",
+    "type": "multiple",
+    "options": [
+      "Using custom objects instead of standard objects when possible",
+      "Implementing a content delivery network (CDN) for site assets",
+      "Limiting the number of components on each page",
+      "Using the default theme instead of a custom theme",
+      "Enabling caching for frequently accessed pages",
+      "Setting up more than one Experience Cloud site"
+    ],
+    "correct": ["Implementing a content delivery network (CDN) for site assets", "Limiting the number of components on each page", "Enabling caching for frequently accessed pages"],
+    "explanation": "For optimal performance in a high-volume Experience Cloud site, the most impactful configurations are: 1) Implementing a CDN for site assets, which accelerates delivery of static content; 2) Limiting the number of components on each page to reduce load time and server processing; and 3) Enabling caching for frequently accessed pages, which reduces database queries and server processing. Using custom vs. standard objects doesn't significantly impact performance, the default theme isn't necessarily faster than a well-designed custom theme, and creating multiple sites could actually increase complexity without improving performance."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "When setting up a new Experience Cloud site using the Build Your Own (Aura) template, which statement is TRUE regarding template switching after initial creation?",
+    "type": "single",
+    "options": [
+      "You can switch to any other template at any time without restrictions",
+      "You can only switch to the Customer Service (Salesforce Tabs + Visualforce) template",
+      "You cannot switch templates after creation without recreating the site",
+      "You can only switch between Lightning-based templates like Customer Account Portal"
+    ],
+    "correct": ["You can only switch between Lightning-based templates like Customer Account Portal"],
+    "explanation": "After creating an Experience Cloud site with the Build Your Own (Aura) template, you can only switch to other Lightning-based templates such as Customer Account Portal, Partner Central, or Customer Service. You cannot switch to Salesforce Tabs + Visualforce template once you've chosen a Lightning-based template. Similarly, sites created with the Salesforce Tabs + Visualforce template cannot be converted to Lightning-based templates."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A consultant is setting up a new Experience Cloud site and must determine which objects to expose. The organization has a large data model with over 200 custom objects. What approach should be used to determine which objects to make available in the site?",
+    "type": "single",
+    "options": [
+      "Make all objects available since Experience Cloud users will be restricted by profiles and permission sets",
+      "Only expose standard objects since custom objects require special licensing",
+      "Analyze user stories and journey maps to identify which objects support required functionality",
+      "Create a new set of simplified objects specifically for the Experience Cloud site"
+    ],
+    "correct": ["Analyze user stories and journey maps to identify which objects support required functionality"],
+    "explanation": "The best approach is to analyze user stories and journey maps to identify which objects are truly needed to support the required functionality in the Experience Cloud site. This user-centric approach ensures that only necessary objects are exposed, which simplifies the user experience, reduces maintenance overhead, and minimizes potential security concerns. Exposing all objects creates unnecessary complexity and potential security risks, while arbitrarily limiting to standard objects or creating duplicate objects are inefficient approaches."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "In a new Experience Cloud implementation, users report that they are receiving unwanted notification emails about every activity in the site. What is the MOST efficient way to address this issue?",
+    "type": "single",
+    "options": [
+      "Disable all Chatter features in the Experience Cloud site",
+      "Create a trigger to prevent email notifications from being sent",
+      "Configure email notification settings in Experience Workspaces",
+      "Instruct each user to update their individual email settings"
+    ],
+    "correct": ["Configure email notification settings in Experience Workspaces"],
+    "explanation": "The most efficient way to address unwanted email notifications is to configure email notification settings in Experience Workspaces under the Administration workspace. This central location allows administrators to control default email frequencies for the entire site. Disabling all Chatter features would remove valuable collaboration capabilities, creating a trigger would be an unnecessary custom solution, and instructing each user to update their settings would be inefficient and difficult to maintain."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A company needs to set up an Experience Cloud site that serves customers across Western Europe. The site must support English, French, German, Spanish, and Italian languages with users able to select their preferred language. Which TWO approaches are needed to implement this requirement?",
+    "type": "multiple",
+    "options": [
+      "Create a separate Experience Cloud site for each language",
+      "Enable Translation Workbench and add all required languages",
+      "Create language-specific custom labels for all interface text",
+      "Configure the multi-language selector component on all site pages",
+      "Create record types for each language to filter content appropriately"
+    ],
+    "correct": ["Enable Translation Workbench and add all required languages", "Configure the multi-language selector component on all site pages"],
+    "explanation": "To implement a multi-language Experience Cloud site, you need to: 1) Enable Translation Workbench and add all required languages, which allows for translating custom labels, site content, and component properties; and 2) Configure the multi-language selector component on the site pages so users can switch between languages. Creating separate sites for each language would be inefficient and hard to maintain, language-specific record types aren't designed for interface language control, and creating custom labels is only part of the solution and would be done through Translation Workbench."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A retail company needs to test major updates to their customer community but doesn't want to disrupt the production environment. Which environment setup would be MOST appropriate for thorough testing before deployment?",
+    "type": "single",
+    "options": [
+      "Create a new sandbox Experience Cloud site within the production org",
+      "Build a separate test Experience Cloud site in production with limited access",
+      "Set up a Full Copy sandbox with a replicated Experience Cloud site",
+      "Use a Developer Pro sandbox with manually created test data"
+    ],
+    "correct": ["Set up a Full Copy sandbox with a replicated Experience Cloud site"],
+    "explanation": "A Full Copy sandbox provides a complete replica of the production environment, including all data, which makes it the most appropriate for thorough testing of major updates to an Experience Cloud site. This allows testing with realistic data volumes and configurations without any risk to the production environment. A sandbox within production isn't possible, a separate test site in production risks disruption, and a Developer Pro sandbox wouldn't include all the data needed for comprehensive testing."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A company wants to implement a custom domain for their Experience Cloud site to match their branding. Which TWO statements are true regarding custom domains?",
+    "type": "multiple",
+    "options": [
+      "A single custom domain can be used for multiple Experience Cloud sites",
+      "Custom domains require purchasing an additional Digital Experiences license",
+      "Custom domains require setting up a CNAME record with your DNS provider",
+      "Once set up, a custom domain cannot be changed without creating a new Experience Cloud site",
+      "Custom domains can only use HTTPS if you purchase and upload an SSL certificate"
+    ],
+    "correct": ["A single custom domain can be used for multiple Experience Cloud sites", "Custom domains require setting up a CNAME record with your DNS provider"],
+    "explanation": "Regarding custom domains for Experience Cloud sites: 1) A single custom domain can host multiple Experience Cloud sites through URL prefixes; and 2) Setting up a custom domain requires creating a CNAME record with your DNS provider to point to the Salesforce servers. Custom domains do not require additional licensing, they can be changed after setup without recreating the site, and Salesforce automatically provides SSL certificates for custom domains through Let's Encrypt (you don't need to purchase and upload your own SSL certificate)."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A consultant is recommending an Experience Cloud template for a telecommunications company that needs to create a support portal for customers to manage their accounts, view bills, and access customer service. Which template would be MOST appropriate?",
+    "type": "single",
+    "options": [
+      "Build Your Own (LWR)",
+      "Partner Central",
+      "Customer Account Portal",
+      "Help Center"
+    ],
+    "correct": ["Customer Account Portal"],
+    "explanation": "The Customer Account Portal template is specifically designed for scenarios where customers need to manage their accounts, access account-related information (like bills), and get customer support. It includes pre-built components for account management, support cases, and knowledge articles, making it the most appropriate choice for a telecommunications customer support portal. Partner Central is for partner relationship management, Help Center is primarily for knowledge-based self-service, and Build Your Own would require significant customization."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "Which statement accurately describes the difference between the Customer Service (Salesforce Tabs + Visualforce) template and the Customer Service (Lightning Experience) template?",
+    "type": "single",
+    "options": [
+      "The Visualforce template supports more features than the Lightning template",
+      "The Lightning template uses Experience Builder while the Visualforce template uses Site.com Studio",
+      "The Visualforce template provides better mobile responsiveness than the Lightning template",
+      "The Lightning template requires more licensing than the Visualforce template"
+    ],
+    "correct": ["The Lightning template uses Experience Builder while the Visualforce template uses Site.com Studio"],
+    "explanation": "The key difference is that the Customer Service (Lightning Experience) template uses Experience Builder for customization and site management, providing a modern drag-and-drop interface to build and customize pages. In contrast, the Customer Service (Salesforce Tabs + Visualforce) template uses Site.com Studio (formerly Community Builder) with a different customization paradigm based on Visualforce pages and limited visual editing. The Lightning template actually has more features and better mobile responsiveness, and licensing requirements are the same for both templates."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A developer working on an Experience Cloud site needs to create a custom theme layout. Which THREE elements are required in a valid theme layout component?",
+    "type": "multiple",
+    "options": [
+      "A CSS class selector that uses the siteId global variable",
+      "The {!body} expression to indicate where page content will appear",
+      "A meta tag with the content type specified",
+      "At least one empty <div> for dynamic content",
+      "The forceChatter:availableForAllPageTypes interface",
+      "A lightning:navigation reference"
+    ],
+    "correct": ["The {!body} expression to indicate where page content will appear", "A meta tag with the content type specified", "A CSS class selector that uses the siteId global variable"],
+    "explanation": "A valid theme layout component requires: 1) The {!body} expression to indicate where the page content will appear within the theme; 2) A meta tag with the content type specified (typically HTML); and 3) A CSS class selector that uses the siteId global variable to ensure styles are scoped to the specific Experience Cloud site. The other options are not required elements for a valid theme layout component."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "An organization is creating an Experience Cloud site and wants to ensure consistent branding with their corporate website. Which approach provides the MOST flexibility for applying comprehensive branding while minimizing maintenance?",
+    "type": "single",
+    "options": [
+      "Apply CSS override rules through the Theme panel in Experience Builder",
+      "Create a custom theme using the Theming API and CSS variables",
+      "Use individual component styling options for each component on every page",
+      "Override the SLDS styles using inline CSS in custom components"
+    ],
+    "correct": ["Create a custom theme using the Theming API and CSS variables"],
+    "explanation": "Creating a custom theme using the Theming API and CSS variables provides the most flexibility while minimizing maintenance. This approach allows defining global CSS variables for colors, fonts, spacing, etc., that can be applied consistently across the entire site. When branding needs to change, only the CSS variables need to be updated, rather than modifying multiple components individually. CSS overrides in the Theme panel are limited in scope, styling components individually creates maintenance challenges, and overriding SLDS with inline CSS is not maintainable."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A consultant is customizing a Customer Account Portal template and wants to make significant layout changes to the default home page. What is the BEST approach to customize this page while maintaining future upgradability?",
+    "type": "single",
+    "options": [
+      "Edit the default home page template directly",
+      "Create a new custom page variation of the home page",
+      "Use CSS overrides to reshape the default home page layout",
+      "Replace the home page with a Visualforce page"
+    ],
+    "correct": ["Create a new custom page variation of the home page"],
+    "explanation": "The best approach is to create a new custom page variation of the home page. This preserves the original template page while allowing significant customization of the layout for your specific needs. If Salesforce updates the base template in the future, your customizations won't be overwritten. Editing the default template directly means you'll lose changes during upgrades, CSS overrides have limitations for major layout changes, and replacing with Visualforce wouldn't leverage the benefits of Lightning Experience."
+  },
+  {
+    "topic": "Content Management",
+    "question": "A healthcare provider needs to manage sensitive content for patient education in their Experience Cloud site. They need to ensure only authenticated users with appropriate access levels can view specific content based on their medical conditions. Which feature should be the PRIMARY recommendation for this requirement?",
+    "type": "single",
+    "options": [
+      "CMS Workspaces with personalization",
+      "CMS Connect with custom integration",
+      "Knowledge articles with data categories",
+      "Chatter with private groups"
+    ],
+    "correct": ["CMS Workspaces with personalization"],
+    "explanation": "CMS Workspaces with personalization is the primary recommendation for managing sensitive, personalized content in Experience Cloud. It allows for creating different content collections, assigning granular access permissions, and using CMS personalization rules to dynamically display content based on user attributes or audience criteria. This would enable showing specific medical condition information only to patients with those conditions. Knowledge articles are less flexible for personalization, CMS Connect is for external CMS integration, and Chatter groups aren't designed for structured content management."
+  },
+  {
+    "topic": "Content Management",
+    "question": "An organization using Experience Cloud needs to display the same content across their corporate website (built on an external CMS) and their customer portal. They want to manage the content in a single location. Which approach would be MOST efficient?",
+    "type": "single",
+    "options": [
+      "Export content from the external CMS and import it into Salesforce CMS regularly",
+      "Rebuild all content in Salesforce CMS and export it to the external CMS",
+      "Use Salesforce CMS Connect to display content from the external CMS in Experience Cloud",
+      "Create a middleware solution that syncs content between both systems"
+    ],
+    "correct": ["Use Salesforce CMS Connect to display content from the external CMS in Experience Cloud"],
+    "explanation": "Salesforce CMS Connect is the most efficient approach as it allows the Experience Cloud site to directly display and use content from the external CMS where it's already being managed. This creates a single source of truth (the external CMS) while allowing the content to appear in both places without duplicative content management. Regular imports/exports would create maintenance overhead, rebuilding in Salesforce CMS would duplicate effort, and a middleware solution would be unnecessarily complex."
+  },
+  {
+    "topic": "Content Management",
+    "question": "Which THREE types of content can be managed in Salesforce CMS?",
+    "type": "multiple",
+    "options": [
+      "News articles",
+      "Workflow rules",
+      "Image documents",
+      "Custom code snippets",
+      "Document templates",
+      "Video files"
+    ],
+    "correct": ["News articles", "Image documents", "Document templates"],
+    "explanation": "Salesforce CMS can manage these types of content: 1) News articles, which are text-based content with rich formatting; 2) Image documents, which include photos and graphics; and 3) Document templates, which are structured content types with predefined fields. Workflow rules are automation configurations not content, custom code snippets are typically managed in static resources or Lightning components, and video files are not directly supported in Salesforce CMS (though links to external video hosting can be included)."
+  },
+  {
+    "topic": "Content Management",
+    "question": "A retail company wants to implement a robust knowledge base in their Experience Cloud site for customer self-service. They need to categorize articles by product line, topic, and user expertise level. What is the correct implementation approach?",
+    "type": "single",
+    "options": [
+      "Create Chatter topics and tag knowledge articles",
+      "Implement data categories with a three-level category group hierarchy",
+      "Use record types to categorize knowledge articles",
+      "Create custom fields on the Knowledge object for each category type"
+    ],
+    "correct": ["Implement data categories with a three-level category group hierarchy"],
+    "explanation": "For categorizing knowledge articles in multiple dimensions (product line, topic, and expertise level), implementing data categories with a hierarchical structure is the correct approach. Data categories are specifically designed for organizing knowledge articles and can be used for both display and access control. Create three category groups (one for each dimension) with appropriate hierarchies within each. Chatter topics lack the structure needed, record types wouldn't allow for multiple dimensions of categorization, and custom fields would limit flexibility and filtering capabilities."
+  },
+  {
+    "topic": "Content Management",
+    "question": "An organization wants to give their marketing team the ability to create and publish content to the Experience Cloud site without involving IT. The marketers are familiar with standard content management interfaces but not with Salesforce. Which feature should be implemented?",
+    "type": "single",
+    "options": [
+      "Salesforce CMS with contributor access",
+      "Visualforce pages with inline editing",
+      "Knowledge with approval processes",
+      "Experience Builder with delegated administration"
+    ],
+    "correct": ["Salesforce CMS with contributor access"],
+    "explanation": "Salesforce CMS with contributor access is designed for exactly this scenario, providing a user-friendly content management interface for non-technical users like marketers to create and publish content to Experience Cloud sites without involving IT. It offers familiar content creation tools, workflow capabilities, and doesn't require Salesforce technical knowledge. Visualforce would require development skills, Knowledge is specialized for knowledge articles, and Experience Builder access would give too much control over site structure and could lead to unintended changes."
+  },
+  {
+    "topic": "Content Management",
+    "question": "A consulting firm is implementing an Experience Cloud site with multilingual requirements. They need to ensure that content creators can efficiently manage content in six different languages while maintaining version control. Which approach is MOST effective?",
+    "type": "single",
+    "options": [
+      "Create separate CMS workspaces for each language",
+      "Use Translation Workbench with a single CMS workspace",
+      "Implement a naming convention with language codes in CMS content items",
+      "Create custom multilanguage fields on CMS content types"
+    ],
+    "correct": ["Use Translation Workbench with a single CMS workspace"],
+    "explanation": "Using Translation Workbench with a single CMS workspace is the most effective approach for multilingual content management in Experience Cloud. This allows content creators to manage content in a primary language, while using Translation Workbench to create and maintain translations in the additional languages. It provides proper version control and ensures content consistency across languages. Separate workspaces would fragment content management, naming conventions would be error-prone, and custom fields would create maintenance challenges."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A financial services company wants to personalize their Experience Cloud site to show different content to customers based on their account type (bronze, silver, gold, platinum). Which approach would provide the MOST comprehensive personalization capabilities?",
+    "type": "single",
+    "options": [
+      "Create audience targeting rules based on user account field values",
+      "Set up different page variations with audience criteria",
+      "Build separate Experience Cloud sites for each account type",
+      "Use custom Lightning components with personalized rendering"
+    ],
+    "correct": ["Create audience targeting rules based on user account field values"],
+    "explanation": "Creating audience targeting rules based on user account field values (like account type) provides the most comprehensive personalization capabilities. This approach allows personalizing any component on any page based on the user's account type, without duplicating pages or sites. Different page variations would require maintaining multiple versions of each page, separate sites would greatly increase maintenance overhead, and custom components would require development for what can be achieved declaratively."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "An organization wants to implement audience targeting in their Experience Cloud site based on user behavior such as pages visited and actions taken. Which additional Salesforce product is required to implement this requirement?",
+    "type": "single",
+    "options": [
+      "Marketing Cloud",
+      "Salesforce CDP",
+      "Interaction Studio",
+      "Pardot"
+    ],
+    "correct": ["Interaction Studio"],
+    "explanation": "Interaction Studio (formerly Evergage) is required for implementing behavioral-based audience targeting in Experience Cloud. It tracks user interactions, pages visited, and actions taken on the site, then uses this information to create behavior-based audience segments for personalization. Marketing Cloud, Salesforce CDP, and Pardot don't provide the real-time behavioral tracking and audience targeting capabilities needed for this specific requirement within Experience Cloud."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A consultant needs to create a highly customized Experience Cloud site with specialized functionality not available in standard components. Which THREE approaches are valid for extending the platform with custom functionality?",
+    "type": "multiple",
+    "options": [
+      "Creating Lightning Web Components",
+      "Adding HTML directly to the Experience Builder editor",
+      "Building AppExchange packages",
+      "Developing Aura Components",
+      "Modifying Salesforce standard components",
+      "Writing direct SQL queries to the database"
+    ],
+    "correct": ["Creating Lightning Web Components", "Developing Aura Components", "Building AppExchange packages"],
+    "explanation": "Valid approaches for extending Experience Cloud with custom functionality include: 1) Creating Lightning Web Components, which is the modern framework for building custom components; 2) Developing Aura Components, which is still supported for custom functionality; and 3) Building AppExchange packages, which can contain custom components and other customizations for distribution. Adding HTML directly to Experience Builder isn't supported, modifying standard components isn't possible, and direct SQL queries to the database aren't allowed in the Salesforce platform."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A manufacturer is implementing an Experience Cloud site for their dealers and needs to create a specialized quoting tool specific to their industry. The quoting process requires complex calculations and integration with product configurators. What is the MOST appropriate implementation approach?",
+    "type": "single",
+    "options": [
+      "Configure CPQ (Configure Price Quote) with Experience Cloud",
+      "Use standard Opportunity Products with custom Lightning components",
+      "Create a Flow embedded in Experience Builder pages",
+      "Develop a Visualforce solution with custom Apex controllers"
+    ],
+    "correct": ["Configure CPQ (Configure Price Quote) with Experience Cloud"],
+    "explanation": "For a specialized dealer quoting tool with complex calculations and product configuration, Salesforce CPQ integrated with Experience Cloud is the most appropriate solution. CPQ is specifically designed for complex quoting scenarios with advanced product configurations, pricing rules, approval workflows, and document generation. While the other options could potentially work, they would require significant custom development to recreate functionality already available in CPQ, making them less efficient and maintainable choices."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A consultant is implementing recommendations in an Experience Cloud site to suggest relevant articles to customers based on their case history and profile. Which feature should be used to implement this functionality?",
+    "type": "single",
+    "options": [
+      "Einstein Article Recommendations",
+      "Related Articles component",
+      "CMS Personalization Rules",
+      "Custom Apex recommendation engine"
+    ],
+    "correct": ["Einstein Article Recommendations"],
+    "explanation": "Einstein Article Recommendations is the appropriate feature for suggesting relevant articles based on case history and user profile. It uses AI to analyze case context, user behavior, and article metadata to serve personalized article recommendations that are likely to be helpful. The Related Articles component only shows statically related articles, CMS Personalization Rules lack the AI capabilities for this use case, and a custom Apex engine would require significant development to achieve what Einstein offers out-of-the-box."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A consultant needs to extend the Experience Cloud registration form to collect additional information during the user self-registration process. Which approach should be used?",
+    "type": "single",
+    "options": [
+      "Modify the Self-Registration component in Experience Builder",
+      "Create a custom Visualforce registration page",
+      "Use the Registration Page Assign action in Flow",
+      "Add custom fields to the User object and update the registration handler"
+    ],
+    "correct": ["Add custom fields to the User object and update the registration handler"],
+    "explanation": "To extend the self-registration form with additional information, you should add custom fields to the User object and update the registration handler to process these fields. This approach allows for collecting and saving additional information during registration while maintaining the security and functionality of the standard registration process. The Self-Registration component can't be modified to add fields, a custom Visualforce page would require recreating all registration functionality, and the Registration Page Assign action is for assigning existing registration pages, not customizing them."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A global manufacturing company is implementing an Experience Cloud site for their distributor network. They need to display different navigation menus to distributors based on their geographic region and product certifications. Which TWO features should be used together to implement this requirement?",
+    "type": "multiple",
+    "options": [
+      "Navigation Menu component with audience targeting",
+      "Custom Lightning Web Component with region-specific menus",
+      "Multiple navigation menus with page variations",
+      "Role-based page access with permission sets",
+      "CMS navigation with personalization rules"
+    ],
+    "correct": ["Navigation Menu component with audience targeting", "Multiple navigation menus with page variations"],
+    "explanation": "To display different navigation menus based on geographic region and product certifications, the solution should use: 1) Navigation Menu component with audience targeting, which allows defining audience criteria based on user fields like region and certifications; and 2) Multiple navigation menus with page variations, which allows creating different menu structures for different audiences. This combination provides the flexibility to show region-specific navigation items while maintaining a consistent overall site structure. The other options would either be unnecessarily complex or insufficient for the requirement."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "An organization wants to customize the login experience for their Experience Cloud site to match their brand and collect additional information during login. Which approach offers the MOST flexibility for custom login experiences?",
+    "type": "single",
+    "options": [
+      "Modify the OOTB Login component in Experience Builder",
+      "Set up a custom Login Flow with the Login Flow wizard",
+      "Create a Community Page Variation for the login page",
+      "Develop a custom Visualforce login page"
+    ],
+    "correct": ["Develop a custom Visualforce login page"],
+    "explanation": "Developing a custom Visualforce login page offers the most flexibility for customizing the login experience. It allows for complete control over the HTML, CSS, and functionality, including collecting additional information, implementing complex validation, or integrating with external systems. The standard Login component in Experience Builder has limited customization options, Login Flows run after authentication (not during login), and Page Variations don't provide the level of customization needed for complex login requirements."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A manufacturing company is implementing an Experience Cloud site for their partner network. Partners need to be able to register warranty claims for products they've sold. What is the MOST efficient way to implement this functionality?",
+    "type": "single",
+    "options": [
+      "Create a custom object for warranty claims with a Lightning Record Form",
+      "Use Cases with a custom record type and case page layout",
+      "Implement a Flow embedded in a Lightning Web Component",
+      "Build a custom Visualforce page with an Apex controller"
+    ],
+    "correct": ["Use Cases with a custom record type and case page layout"],
+    "explanation": "Using Cases with a custom record type and case page layout is the most efficient approach for handling warranty claims. Cases already include built-in functionality for tracking, assignment, and process management that aligns well with warranty claim requirements. Creating a dedicated record type and page layout for warranty claims allows customizing the fields and layout specifically for this purpose while leveraging all the standard case management features. This is more efficient than building custom objects or pages from scratch."
+  },
+  {
+    "topic": "Customization and Personalization",
+    "question": "A global organization needs to implement a solution where Experience Cloud users can only see knowledge articles relevant to their geographic region. Which approach should be used?",
+    "type": "single",
+    "options": [
+      "Create separate Experience Cloud sites for each region",
+      "Use article translation with language settings",
+      "Implement custom Apex controllers for article queries",
+      "Configure data category visibility with user profiles"
+    ],
+    "correct": ["Configure data category visibility with user profiles"],
+    "explanation": "Configuring data category visibility with user profiles is the appropriate solution for restricting knowledge article visibility by region. Create data categories for each geographic region, assign articles to the appropriate regional categories, and then set data category visibility on profiles to ensure users only see articles categorized for their region. This approach uses Salesforce's built-in content filtering capabilities without requiring custom code or duplicate content management."
+  },
+  {
+    "topic": "Integration",
+    "question": "A retail company wants to implement a customer-facing Experience Cloud site that displays real-time inventory information from their ERP system. Which integration pattern would be MOST appropriate for this scenario?",
+    "type": "single",
+    "options": [
+      "Batch synchronization with a nightly ETL process",
+      "Remote Process Invocation with synchronous REST API calls",
+      "Data Virtualization using External Objects",
+      "Publish-Subscribe model with Platform Events"
+    ],
+    "correct": ["Data Virtualization using External Objects"],
+    "explanation": "Data Virtualization using External Objects is the most appropriate integration pattern for displaying real-time inventory information from an ERP system. This pattern allows the Experience Cloud site to display data that resides in the external ERP system without copying it to Salesforce, ensuring that inventory information is always up-to-date. Batch synchronization wouldn't provide real-time data, synchronous API calls for every page load would create performance issues, and Platform Events are more suited for event-driven architectures than continuous data access."
+  },
+  {
+    "topic": "Integration",
+    "question": "A pharmaceutical company needs to integrate their Experience Cloud site with a legacy document management system that contains regulatory documentation. Which TWO approaches would be valid for this integration?",
+    "type": "multiple",
+    "options": [
+      "Use Lightning Connect with OData",
+      "Build a Canvas App integration",
+      "Create a Connected App with OAuth",
+      "Implement a direct SQL connection",
+      "Use CMS Connect with the document system's API"
+    ],
+    "correct": ["Build a Canvas App integration", "Create a Connected App with OAuth"],
+    "explanation": "Valid approaches for integrating with a legacy document management system include: 1) Building a Canvas App integration, which allows embedding the document system's UI directly within Salesforce; and 2) Creating a Connected App with OAuth, which establishes secure authentication for API calls between Salesforce and the document system. Lightning Connect requires OData support which legacy systems often lack, direct SQL connections aren't supported in Salesforce, and CMS Connect is specifically for content management systems, not document management systems."
+  },
+  {
+    "topic": "Integration",
+    "question": "An organization wants to allow Experience Cloud users to log in using their corporate credentials. The organization uses Microsoft Active Directory for employee authentication. Which integration approach should be recommended?",
+    "type": "single",
+    "options": [
+      "Set up SAML Single Sign-On with Active Directory Federation Services",
+      "Implement a custom Apex authentication provider",
+      "Use the standard OpenID Connect protocol",
+      "Create a custom Visualforce login page with AD authentication"
+    ],
+    "correct": ["Set up SAML Single Sign-On with Active Directory Federation Services"],
+    "explanation": "Setting up SAML Single Sign-On (SSO) with Active Directory Federation Services (ADFS) is the recommended approach for integrating Microsoft Active Directory authentication with Experience Cloud. This is a standard enterprise integration pattern for enabling users to log in with their corporate credentials. ADFS extends Active Directory to provide SAML-based identity federation, which Salesforce supports natively. This approach is more secure and maintainable than custom solutions."
+  },
+  {
+    "topic": "Integration",
+    "question": "A healthcare provider wants to integrate their patient portal (built on Experience Cloud) with their electronic health record (EHR) system to display patient appointment information. Which integration consideration is MOST critical for this scenario?",
+    "type": "single",
+    "options": [
+      "Performance optimization for large data volumes",
+      "Multilingual support for diverse patient populations",
+      "Healthcare compliance and data security (HIPAA)",
+      "Mobile optimization for appointment notifications"
+    ],
+    "correct": ["Healthcare compliance and data security (HIPAA)"],
+    "explanation": "Healthcare compliance and data security (HIPAA) is the most critical consideration for integrating a patient portal with an EHR system. Healthcare organizations must ensure that Protected Health Information (PHI) is properly secured during transmission and storage, access controls are properly implemented, and all integration points comply with HIPAA regulations. While the other considerations are important, compliance and security are paramount in healthcare integrations due to strict regulatory requirements and potential legal liabilities."
+  },
+  {
+    "topic": "Integration",
+    "question": "An e-commerce company wants to integrate their Experience Cloud site with their payment processing system. Which security practice is MOST important when implementing this integration?",
+    "type": "single",
+    "options": [
+      "Using Named Credentials to store authentication details",
+      "Implementing IP restrictions on the payment processor API",
+      "Storing payment information in encrypted custom objects",
+      "Running daily security scans on the integration code"
+    ],
+    "correct": ["Using Named Credentials to store authentication details"],
+    "explanation": "Using Named Credentials to store authentication details is the most important security practice when integrating with a payment processing system. Named Credentials securely store endpoint URLs and authentication credentials, keeping sensitive authentication information out of code and configuration. This prevents credential exposure in logs, debug statements, or code repositories. While the other practices are valuable, secure credential management is fundamental to payment integration security."
+  },
+  {
+    "topic": "Integration",
+    "question": "A global manufacturing company wants to implement a file sharing solution in their partner portal that integrates with their existing enterprise document management system. Which integration approach would be MOST appropriate?",
+    "type": "single",
+    "options": [
+      "Use Files Connect to integrate with the external document system",
+      "Build a custom Lightning Web Component using the document system's API",
+      "Synchronize documents to Salesforce Files using middleware",
+      "Implement an iFrame solution displaying the document system"
+    ],
+    "correct": ["Use Files Connect to integrate with the external document system"],
+    "explanation": "Files Connect is the most appropriate solution for integrating an Experience Cloud site with an external enterprise document management system. It's specifically designed for this purpose, allowing users to browse, search, and access files from external systems directly within the Salesforce interface without copying the files to Salesforce. This maintains a single source of truth for documents while providing a seamless experience. Custom components would require significant development, synchronization creates duplicate data, and iFrames provide poor user experience."
+  },
+  {
+    "topic": "Integration",
+    "question": "A consultant is implementing an Experience Cloud site that needs to display interactive maps showing customer locations pulled from the organization's Salesforce data. Which approach requires the LEAST custom development?",
+    "type": "single",
+    "options": [
+      "Create a custom Lightning Web Component using the Google Maps API",
+      "Use the standard Maps component from the Component Library",
+      "Implement AppExchange mapping components like MapAnything",
+      "Build a Visualforce page with JavaScript mapping libraries"
+    ],
+    "correct": ["Implement AppExchange mapping components like MapAnything"],
+    "explanation": "Using AppExchange mapping components like MapAnything requires the least custom development for implementing interactive maps in Experience Cloud. These pre-built solutions provide comprehensive mapping functionality specifically designed to work with Salesforce data and can be configured without extensive custom code. The standard Maps component is for Salesforce native maps (not interactive location maps), while custom Lightning or Visualforce solutions would require significant development effort."
+  },
+  {
+    "topic": "Integration",
+    "question": "An organization wants to embed their Tableau dashboards within their Experience Cloud site for partners to access analytical information. What is the BEST approach to implement this requirement?",
+    "type": "single",
+    "options": [
+      "Use Lightning Out to display the dashboards",
+      "Create a Canvas App integration for Tableau",
+      "Implement the Tableau Lightning Web Component",
+      "Use a standard HTML component with Tableau's embed code"
+    ],
+    "correct": ["Implement the Tableau Lightning Web Component"],
+    "explanation": "The Tableau Lightning Web Component is the best approach for embedding Tableau dashboards in Experience Cloud. Since Salesforce acquired Tableau, they've developed a native Lightning Web Component specifically for embedding Tableau visualizations in Salesforce, including Experience Cloud sites. This component provides seamless integration with proper authentication handling and responsive design. The other options either require more custom work or don't provide the same level of integration as the purpose-built component."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "A retail company wants to implement robust analytics for their customer community to track user engagement with knowledge articles, case deflection rates, and overall site usage. Which solution should be recommended?",
+    "type": "single",
+    "options": [
+      "Standard Community Management dashboards",
+      "Custom report types with standard Community objects",
+      "Einstein Analytics for Communities license and templates",
+      "Google Analytics integration with Community pages"
+    ],
+    "correct": ["Einstein Analytics for Communities license and templates"],
+    "explanation": "Einstein Analytics for Communities (now called Tableau CRM for Communities) provides the most robust analytics solution for tracking comprehensive community metrics including article engagement, case deflection, and site usage. It includes pre-built dashboards specifically designed for Experience Cloud analytics and allows for deeper customization and more sophisticated analysis than standard dashboards. Standard dashboards provide limited metrics, custom report types wouldn't easily combine all these data points, and Google Analytics lacks integration with Salesforce data and case metrics."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "Which THREE metrics are available in the standard Experience Cloud Management Analytics dashboard without additional configuration?",
+    "type": "multiple",
+    "options": [
+      "New Member Registration Trend",
+      "Lead Conversion Rate",
+      "Top Community Members by Reputation",
+      "Revenue Generated from Community Users",
+      "Member Login Frequency",
+      "Case Resolution Time for Community Cases"
+    ],
+    "correct": ["New Member Registration Trend", "Top Community Members by Reputation", "Member Login Frequency"],
+    "explanation": "The standard Experience Cloud Management Analytics dashboard includes these metrics without additional configuration: 1) New Member Registration Trend, which shows how many new members are joining over time; 2) Top Community Members by Reputation, which highlights the most active/valued contributors based on the reputation system; and 3) Member Login Frequency, which shows how often members are logging in. Lead Conversion Rate, Revenue Generated, and Case Resolution Time are not included in the standard dashboards and would require additional configuration or Einstein Analytics."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "A consultant needs to provide executives with metrics about how many customer service cases are being deflected by their Experience Cloud site's knowledge base and self-service features. What is the MOST accurate way to measure this?",
+    "type": "single",
+    "options": [
+      "Count page views on knowledge articles and self-service pages",
+      "Survey customers about whether they found answers without creating a case",
+      "Compare case volume before and after launching the site",
+      "Implement Case Deflection Tracking on knowledge articles and search pages"
+    ],
+    "correct": ["Implement Case Deflection Tracking on knowledge articles and search pages"],
+    "explanation": "Case Deflection Tracking is the most accurate way to measure knowledge article effectiveness for case deflection. This feature specifically tracks when users view knowledge articles during the case creation process and either abandon case creation or confirm that their question was answered. It provides direct measurement of deflection rather than inferences from page views or surveys. Case volume comparison is too broad as it can be affected by many factors beyond self-service effectiveness."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "An organization wants to track which content is most effective at answering customer questions in their Experience Cloud site. Which reporting approach provides the MOST actionable insights?",
+    "type": "single",
+    "options": [
+      "Track Knowledge Article View Count with standard reports",
+      "Use Einstein Analytics with the Content Analysis Dashboard",
+      "Set up Google Analytics tracking on community pages",
+      "Implement a feedback system with Lightning components"
+    ],
+    "correct": ["Use Einstein Analytics with the Content Analysis Dashboard"],
+    "explanation": "Einstein Analytics (Tableau CRM) with the Content Analysis Dashboard provides the most actionable insights for content effectiveness. It goes beyond simple view counts to analyze patterns of user engagement, correlate content views with case resolution, measure search relevance, and identify knowledge gaps. This comprehensive analysis helps pinpoint which content is truly effective at answering questions versus content that is merely viewed frequently but may not resolve customer issues."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "A consultant is implementing a partner portal and needs to give partner managers the ability to track their team's performance. Partners should only see data relevant to their own company. What is the MOST secure and maintainable approach?",
+    "type": "single",
+    "options": [
+      "Create individual dashboard folders shared with each partner",
+      "Build Visualforce pages with controller-based filtering",
+      "Use role hierarchy and sharing rules with partner analytics",
+      "Implement separate Experience Cloud sites for each partner"
+    ],
+    "correct": ["Use role hierarchy and sharing rules with partner analytics"],
+    "explanation": "Using role hierarchy and sharing rules with partner analytics is the most secure and maintainable approach. This leverages Salesforce's native security model to automatically filter dashboard data based on what records the partner manager has access to. Partner managers will only see data for their own company without requiring custom development or manual sharing configurations. Individual dashboard folders would require ongoing maintenance, custom Visualforce would be development-intensive, and separate sites would be excessive and inefficient."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "A healthcare provider wants to understand how patients are using their Experience Cloud portal and which features are most valuable. Due to HIPAA compliance concerns, they cannot use external analytics tools. Which approach should they implement?",
+    "type": "single",
+    "options": [
+      "Standard Experience Cloud Dashboards with Login Metrics",
+      "Salesforce Event Monitoring with Transaction Security",
+      "Custom Lightning Components with analytics tracking",
+      "Einstein Analytics with Healthcare Accelerator"
+    ],
+    "correct": ["Einstein Analytics with Healthcare Accelerator"],
+    "explanation": "Einstein Analytics with the Healthcare Accelerator is the appropriate solution for this scenario. It provides comprehensive portal usage analytics while keeping all data within the Salesforce platform, addressing HIPAA compliance concerns about data leaving the system. The Healthcare Accelerator includes pre-built dashboards designed specifically for patient portal analytics. Standard dashboards provide limited insights, Event Monitoring is more focused on security than user behavior, and custom components would require significant development."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "An organization wants to identify Experience Cloud users who have stopped engaging with the site so they can run re-engagement campaigns. Which metric would be MOST effective to track for this purpose?",
+    "type": "single",
+    "options": [
+      "Login frequency over time",
+      "Average page views per visit",
+      "Time spent on site per month",
+      "Number of contributions per user"
+    ],
+    "correct": ["Login frequency over time"],
+    "explanation": "Login frequency over time is the most effective metric for identifying disengaged users. By tracking how often users log in and identifying declining patterns or extended absences, the organization can precisely target users who have reduced their engagement before they completely abandon the platform. The other metrics would be less reliable indicators of disengagement since they require the user to at least log in, and they could be skewed by different usage patterns."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "A financial services company needs to provide personalized dashboards for their high-net-worth clients in their Experience Cloud site. Each client should only see their own investment performance. Which feature should be implemented?",
+    "type": "single",
+    "options": [
+      "Standard Salesforce dashboards shared to the Experience Cloud site",
+      "Custom Lightning Web Components with filtered reports",
+      "Dynamic Dashboards with 'View As Logged-In User' option",
+      "Embedded Tableau visualizations with row-level security"
+    ],
+    "correct": ["Dynamic Dashboards with 'View As Logged-In User' option"],
+    "explanation": "Dynamic Dashboards with the 'View As Logged-In User' option is the appropriate solution for providing personalized dashboard views to external users. This feature allows the same dashboard to display different data to different users based on their login and security settings, ensuring each client only sees their own investment data. This is more efficient than creating individual dashboards per client and provides better security than custom components that might bypass sharing rules."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "Which permission is required for Experience Cloud users to access reports and dashboards shared with them?",
+    "type": "single",
+    "options": [
+      "View All Data",
+      "Run Reports",
+      "Manage Analytics",
+      "Create and Customize Reports"
+    ],
+    "correct": ["Run Reports"],
+    "explanation": "The 'Run Reports' permission is required for Experience Cloud users to access reports and dashboards shared with them. This permission allows users to view and execute reports but not create or modify them. 'View All Data' is too broad and rarely given to external users, 'Manage Analytics' includes administrative permissions not appropriate for external users, and 'Create and Customize Reports' includes more capabilities than needed just for viewing shared reports."
+  },
+  {
+    "topic": "Analytics and Reporting",
+    "question": "A consultant is configuring an Experience Cloud site and wants to use Google Analytics for advanced web analytics tracking. Which steps are necessary to implement this integration? (Select THREE)",
+    "type": "multiple",
+    "options": [
+      "Add the Google Analytics tracking code to the site's Head Markup",
+      "Create a Connected App for Google Analytics API integration",
+      "Enable Google Analytics in Digital Experiences Settings",
+      "Configure page types and groups in Google Analytics",
+      "Create a Google Account with Analytics property and tracking ID",
+      "Install the Google Analytics package from AppExchange"
+    ],
+    "correct": ["Add the Google Analytics tracking code to the site's Head Markup", "Enable Google Analytics in Digital Experiences Settings", "Create a Google Account with Analytics property and tracking ID"],
+    "explanation": "To implement Google Analytics tracking for an Experience Cloud site, you need to: 1) Create a Google Account with Analytics property and tracking ID, which sets up your analytics instance; 2) Enable Google Analytics in Digital Experiences Settings, which activates the integration; and 3) Add the Google Analytics tracking code to the site's Head Markup, which implements the actual tracking. A Connected App isn't required for basic tracking, configuring page types is done within Google Analytics itself after implementation, and there's no official Google Analytics package on AppExchange needed for this integration."
+  },
+  {
+    "topic": "Administration",
+    "question": "An organization is reviewing their Experience Cloud site after a year in production and has identified several inactive user accounts. What is the BEST approach for managing these accounts?",
+    "type": "single",
+    "options": [
+      "Delete all inactive accounts to reduce license costs",
+      "Implement a login-based expiration policy",
+      "Freeze inactive users after 6 months of inactivity",
+      "Create a workflow to automatically disable inactive accounts"
+    ],
+    "correct": ["Implement a login-based expiration policy"],
+    "explanation": "Implementing a login-based expiration policy is the best approach for managing inactive accounts in Experience Cloud. This native feature allows administrators to set a policy that automatically expires (deactivates) users who haven't logged in for a specified period, freeing up licenses while preserving user data and allowing for easy reactivation if needed. Deleting accounts would permanently remove user data and settings, freezing isn't a standard Salesforce feature, and workflows can't natively track login activity."
+  },
+  {
+    "topic": "Administration",
+    "question": "A consultant is helping an organization set up moderation in their Experience Cloud site. Which THREE types of content can be flagged by users for moderation?",
+    "type": "multiple",
+    "options": [
+      "Posts and comments",
+      "Knowledge articles",
+      "Private messages",
+      "Custom object records",
+      "Files and attachments",
+      "Lightning components"
+    ],
+    "correct": ["Posts and comments", "Files and attachments", "Private messages"],
+    "explanation": "In Experience Cloud, the content types that can be flagged by users for moderation are: 1) Posts and comments in feeds; 2) Files and attachments shared in the community; and 3) Private messages sent through Chatter. Knowledge articles and custom object records don't have built-in flagging capabilities, and Lightning components are code elements, not content that can be flagged."
+  },
+  {
+    "topic": "Administration",
+    "question": "An administrator needs to ensure that all new members of an Experience Cloud site receive proper onboarding. Which feature should be implemented to automatically guide new users through key areas of the site?",
+    "type": "single",
+    "options": [
+      "Welcome Emails with site documentation",
+      "In-App Guidance with prompts and walkthroughs",
+      "Training Videos embedded in the home page",
+      "Chatter Groups with onboarding content"
+    ],
+    "correct": ["In-App Guidance with prompts and walkthroughs"],
+    "explanation": "In-App Guidance with prompts and walkthroughs is the most effective feature for automatically guiding new users through key areas of an Experience Cloud site. This feature allows creating step-by-step walkthroughs that appear directly within the site interface, highlighting important features and teaching users how to accomplish common tasks. Welcome emails can be easily overlooked, videos require users to invest time upfront, and Chatter Groups require active participation rather than providing guidance in the context of the actual site features."
+  },
+  {
+    "topic": "Administration",
+    "question": "A global organization with an Experience Cloud site needs to comply with various data privacy regulations. Which feature should be configured to ensure compliance with requirements for user data management?",
+    "type": "single",
+    "options": [
+      "Field-Level Security",
+      "Self-Registration with custom fields",
+      "Customer Data Request Management",
+      "Object-Level Security"
+    ],
+    "correct": ["Customer Data Request Management"],
+    "explanation": "Customer Data Request Management should be configured to comply with data privacy regulations in Experience Cloud. This feature provides tools to handle data subject requests (like access, portability, and deletion requests) required by regulations such as GDPR and CCPA. It includes capabilities to verify user identity, collect and package personal data, and permanently delete user data in compliance with privacy laws. The other options address security configuration but not the specific requirements for processing data privacy requests."
+  },
+  {
+    "topic": "Administration",
+    "question": "An administrator needs to track which Experience Cloud site pages are generating the most views and which are rarely accessed. Where can this information be found?",
+    "type": "single",
+    "options": [
+      "Usage-based Entitlements section in Setup",
+      "Site Analytics in Experience Workspaces",
+      "Page Optimization Analyzer in Experience Builder",
+      "Community Usage report in standard reports"
+    ],
+    "correct": ["Site Analytics in Experience Workspaces"],
+    "explanation": "Site Analytics in Experience Workspaces provides metrics on page views and usage, showing which pages are most frequently accessed and which are rarely visited. This information is available in the 'Page Views' and 'Page Views by User Type' dashboards. Usage-based Entitlements tracks feature usage not page views, Page Optimization Analyzer (which doesn't exist) would focus on performance not usage, and there's no standard Community Usage report that shows page-level metrics."
+  },
+  {
+    "topic": "Administration",
+    "question": "A large organization implemented an Experience Cloud site six months ago and is now experiencing performance issues during peak usage times. Which THREE actions should be recommended to improve performance?",
+    "type": "multiple",
+    "options": [
+      "Enable caching for Lightning components",
+      "Add more custom objects to store site data",
+      "Optimize SOQL queries in custom components",
+      "Add more fields to page layouts",
+      "Reduce the number of components per page",
+      "Increase the session timeout value"
+    ],
+    "correct": ["Enable caching for Lightning components", "Optimize SOQL queries in custom components", "Reduce the number of components per page"],
+    "explanation": "To improve Experience Cloud site performance, these actions should be recommended: 1) Enable caching for Lightning components, which reduces server round-trips by storing component data locally; 2) Optimize SOQL queries in custom components to retrieve only necessary data efficiently; and 3) Reduce the number of components per page to decrease load times and processing requirements. Adding custom objects or fields would increase data complexity and potentially worsen performance, and increasing session timeout doesn't address performance issues."
+  },
+  {
+    "topic": "Administration",
+    "question": "An administrator needs to enable Experience Cloud users to create and manage their own groups for collaboration. Which feature must be enabled?",
+    "type": "single",
+    "options": [
+      "User-Created Topics",
+      "Self-Service Group Administration",
+      "Public Group Management",
+      "Chatter Groups"
+    ],
+    "correct": ["Chatter Groups"],
+    "explanation": "Chatter Groups must be enabled to allow Experience Cloud users to create and manage their own collaborative groups. When enabled, users can create groups, add members, share content, and collaborate within these spaces. User-Created Topics is for content organization not group collaboration, Self-Service Group Administration isn't a standard feature name, and Public Group Management refers to administrator-controlled security groups, not user-created collaboration spaces."
+  },
+  {
+    "topic": "Administration",
+    "question": "An administrator needs to implement a process where new Experience Cloud users must be approved before gaining access to the site. Which feature should be used?",
+    "type": "single",
+    "options": [
+      "Login Flow with approval steps",
+      "Community Moderation for new members",
+      "Member Approval Workflows",
+      "Registration Handler with approval logic"
+    ],
+    "correct": ["Member Approval Workflows"],
+    "explanation": "Member Approval Workflows should be used to implement an approval process for new Experience Cloud users. This feature allows administrators to review and approve membership requests before users gain access to the community. When enabled, new registrations go into a pending status until approved by a designated approver. Login Flows run after successful authentication, Moderation is for content not user approval, and Registration Handlers process registration data but don't have native approval capabilities."
+  },
+  {
+    "topic": "Administration",
+    "question": "A customer service manager needs to monitor how quickly service agents are responding to customer questions posted in their Experience Cloud site. Which feature should be configured?",
+    "type": "single",
+    "options": [
+      "Service Level Agreements for Chatter posts",
+      "First Response Time tracking in Service Analytics",
+      "Escalation Rules for community engagement",
+      "Chatter Case Wrap-Up process"
+    ],
+    "correct": ["First Response Time tracking in Service Analytics"],
+    "explanation": "First Response Time tracking in Service Analytics should be configured to monitor agent response times to customer questions in the community. This feature tracks and reports on how quickly service agents respond to customer inquiries, providing metrics and trends that help measure service performance. SLAs for Chatter posts don't exist as a standard feature, Escalation Rules are for case management not response monitoring, and Chatter Case Wrap-Up is not a standard feature."
+  },
+  {
+    "topic": "Administration",
+    "question": "An administrator wants to create a recommendation strategy to suggest relevant groups to Experience Cloud members based on their interests and behavior. Which feature should be used?",
+    "type": "single",
+    "options": [
+      "Einstein Next Best Action",
+      "Einstein Activity Capture",
+      "Audience Targeting Rules",
+      "Einstein Recommendation Builder"
+    ],
+    "correct": ["Einstein Recommendation Builder"],
+    "explanation": "Einstein Recommendation Builder should be used to create personalized group recommendations for Experience Cloud members. This feature analyzes user interests, activity, and behavior to suggest relevant groups they might want to join. Next Best Action is for suggesting specific actions not groups, Activity Capture is for logging emails and events, and Audience Targeting Rules control content visibility but don't provide recommendations."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "What is a key limitation of the External Apps license type compared to Customer Community Plus licenses?",
+    "type": "single",
+    "options": [
+      "External Apps licenses don't support access to custom objects",
+      "External Apps users cannot use Chatter collaboration features",
+      "External Apps licenses don't allow access to reports and dashboards",
+      "External Apps users cannot be assigned roles in the Salesforce role hierarchy"
+    ],
+    "correct": ["External Apps users cannot be assigned roles in the Salesforce role hierarchy"],
+    "explanation": "A key limitation of External Apps licenses compared to Customer Community Plus licenses is that External Apps users cannot be assigned roles in the Salesforce role hierarchy. This means they cannot participate in role-based sharing, which may limit certain data access scenarios. External Apps licenses do support custom objects (up to 110), can use Chatter features, and can access reports and dashboards (though they have different analytics capabilities than Community Plus licenses)."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "Which statement is true regarding guest user record access in Experience Cloud sites?",
+    "type": "single",
+    "options": [
+      "Guest users can be assigned permission sets to access specific records",
+      "Guest users automatically have read access to all public records",
+      "Guest user access is determined by explicit sharing rules only",
+      "Guest users have the same access as authenticated community users"
+    ],
+    "correct": ["Guest user access is determined by explicit sharing rules only"],
+    "explanation": "After the Guest User Security Policy updates, guest user access is determined by explicit sharing rules only. Guest users can no longer access records via organization-wide defaults (which are enforced as private for guest users), ownership, or public groups. The only way to grant guest users access to specific records is through explicit sharing rules created specifically for the guest user profile. Guest users cannot be assigned permission sets that grant record access, do not automatically have read access to public records, and have significantly more restricted access than authenticated users."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "A consultant is designing an Experience Cloud implementation. Which statement represents a limitation regarding Salesforce licenses and Experience Cloud users?",
+    "type": "single",
+    "options": [
+      "Experience Cloud licenses cannot access the internal Salesforce org",
+      "Experience Cloud users cannot own Salesforce records",
+      "Internal users with Salesforce licenses cannot access Experience Cloud sites",
+      "Experience Cloud users cannot be members of multiple sites"
+    ],
+    "correct": ["Experience Cloud licenses cannot access the internal Salesforce org"],
+    "explanation": "Experience Cloud licenses cannot access the internal Salesforce org - this is a fundamental limitation and security boundary. Experience Cloud licenses only provide access to Experience Cloud sites, not to the internal Salesforce organization or standard Salesforce interfaces. Experience Cloud users can own records, internal users with Salesforce licenses can access Experience Cloud sites (with the proper permissions), and Experience Cloud users can be members of multiple sites within the same organization."
+  },
+  {
+    "topic": "Experience Cloud Fundamentals",
+    "question": "Which statement accurately describes the relationship between Digital Experiences and Experience Cloud?",
+    "type": "single",
+    "options": [
+      "Digital Experiences is the newer version that replaces Experience Cloud",
+      "Experience Cloud is the product name, while Digital Experiences is the feature set in Setup",
+      "Digital Experiences is for external users, while Experience Cloud is for partners",
+      "Experience Cloud is the Lightning version of Digital Experiences"
+    ],
+    "correct": ["Experience Cloud is the product name, while Digital Experiences is the feature set in Setup"],
+    "explanation": "Experience Cloud is the product name and brand, while Digital Experiences is the name of the feature set in Salesforce Setup where you configure and manage Experience Cloud sites. This is similar to how Sales Cloud is the product name, but you work with specific features like Opportunities and Leads in Setup. The terms are sometimes used interchangeably, but they are not separate products or versions with different capabilities."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A company is implementing an Experience Cloud site where customers need access to their own cases, but partners need access to cases for all customers they manage. Which feature should be used to implement this requirement?",
+    "type": "single",
+    "options": [
+      "Organisation-Wide Defaults with Sharing Rules",
+      "Account Teams with Partner Access",
+      "Sharing Sets based on Contact and User records",
+      "Manual Sharing with Apex Trigger automation"
+    ],
+    "correct": ["Sharing Sets based on Contact and User records"],
+    "explanation": "Sharing Sets are the appropriate feature for this complex sharing requirement in Experience Cloud. They allow sharing records (like cases) with users based on their relationship to a particular object. You can create one sharing set for customers to see only their own cases (based on Contact-to-User relationship) and another for partners to see cases for all customers they manage (based on the Account relationship). This provides the flexibility needed without requiring custom code development."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A consultant is configuring security for an Experience Cloud site and needs to ensure that different user types have appropriate access levels. Which THREE access control mechanisms can be combined for Experience Cloud security?",
+    "type": "multiple",
+    "options": [
+      "Profiles and Permission Sets",
+      "Digital Experience Settings",
+      "Network Access Rules",
+      "Sharing Rules and Sharing Sets",
+      "Domain Trust Relationships",
+      "File Access Levels"
+    ],
+    "correct": ["Profiles and Permission Sets", "Sharing Rules and Sharing Sets", "File Access Levels"],
+    "explanation": "When configuring Experience Cloud security, these access control mechanisms can be combined: 1) Profiles and Permission Sets, which control feature and object access; 2) Sharing Rules and Sharing Sets, which control record-level access; and 3) File Access Levels, which control who can access files shared in the community. 'Digital Experience Settings' is too general and not a specific access control mechanism, 'Network Access Rules' isn't a standard Salesforce feature name, and 'Domain Trust Relationships' isn't a standard access control mechanism for Experience Cloud."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A consultant is implementing a Customer Community and needs to configure sharing so that customers can only see cases that are associated with their account or contact record. What is the MOST efficient way to configure this?",
+    "type": "single",
+    "options": [
+      "Set organization-wide defaults for Case to Private and create sharing rules",
+      "Create a role hierarchy for community users that restricts visibility",
+      "Configure a sharing set based on the contact lookup field on the case",
+      "Implement a custom Apex sharing solution with case triggers"
+    ],
+    "correct": ["Configure a sharing set based on the contact lookup field on the case"],
+    "explanation": "The most efficient way to configure case sharing for Customer Community users is to set up a sharing set based on the contact lookup field on the case. Sharing sets are specifically designed for this purpose in communities with Customer Community licenses (which don't have roles). This allows the system to automatically share cases with community users when the case is associated with their contact or account record. Sharing rules would be too broad, Customer Community users don't use the role hierarchy, and a custom Apex solution would be unnecessarily complex for this standard requirement."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A company is implementing a Partner Community and needs to ensure that partner users from different companies cannot see each other's opportunities, even if they're selling to the same customer account. What is the correct configuration approach?",
+    "type": "single",
+    "options": [
+      "Set opportunity organization-wide default to Private and use manual sharing",
+      "Create separate partner roles for each partner company in the role hierarchy",
+      "Use opportunity teams with different partner users",
+      "Implement record types with field-level security"
+    ],
+    "correct": ["Create separate partner roles for each partner company in the role hierarchy"],
+    "explanation": "The correct approach is to create separate partner roles for each partner company in the role hierarchy. In Partner Communities, each partner company should have its own role hierarchy branch beneath the account owner in the main Salesforce role hierarchy. This ensures that partners can only see opportunities owned by users in their own company's role hierarchy, even if they're selling to the same account. Organization-wide defaults alone won't differentiate between partner companies, opportunity teams wouldn't control base sharing, and record types don't control record visibility."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A consultant is implementing an Experience Cloud solution where users should be able to securely open tickets that contain sensitive personal information. Which security feature should be implemented to protect the data in transit?",
+    "type": "single",
+    "options": [
+      "Field-level encryption",
+      "HIPAA compliance mode",
+      "Transit Layer Security (TLS)",
+      "Two-factor authentication"
+    ],
+    "correct": ["Transit Layer Security (TLS)"],
+    "explanation": "Transit Layer Security (TLS) should be implemented to protect data in transit between the user's browser and Salesforce. TLS encrypts all communications, ensuring that sensitive personal information submitted through tickets cannot be intercepted or read by unauthorized parties while traveling over the internet. Field-level encryption protects data at rest not in transit, HIPAA compliance mode isn't a specific Salesforce feature, and two-factor authentication verifies user identity but doesn't secure data transmission."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "An organization is configuring authentication for an Experience Cloud site and wants to ensure strong security while maintaining a good user experience. Which authentication method provides the strongest security while still being user-friendly?",
+    "type": "single",
+    "options": [
+      "Username and password with IP restrictions",
+      "SAML single sign-on with the company's identity provider",
+      "Social sign-on with additional verification",
+      "Device activation with email confirmation"
+    ],
+    "correct": ["SAML single sign-on with the company's identity provider"],
+    "explanation": "SAML single sign-on with the company's identity provider offers the strongest security while maintaining a good user experience. It leverages the company's existing identity infrastructure (like Okta, Azure AD, etc.) which typically includes enterprise security measures such as strong password policies, MFA enforcement, and centralized access control. Users benefit from a seamless experience without having to remember a separate password for the Experience Cloud site. The other options provide either less security or a more cumbersome user experience."
+  },
+  {
+    "topic": "Security and Access Control",
+    "question": "A consultant is implementing an Experience Cloud site for a financial services company. Customer data security is paramount, and the company is concerned about potential data leakage. Which feature should be recommended to prevent users from extracting large amounts of data?",
+    "type": "single",
+    "options": [
+      "Enable Debug Mode Security",
+      "Implement Transaction Security Policies",
+      "Configure Cross-Site Scripting Protection",
+      "Set up IP Login Range Enforcement"
+    ],
+    "correct": ["Implement Transaction Security Policies"],
+    "explanation": "Transaction Security Policies should be recommended to prevent potential data extraction. These policies can monitor and control user behaviors like excessive report exports or bulk data downloads in real-time, automatically blocking activities that could indicate data exfiltration attempts. For example, a policy could be created to block a user who attempts to export more than a certain number of records within a specified timeframe. Debug Mode Security isn't focused on data extraction, Cross-Site Scripting Protection prevents injection attacks, and IP Login Ranges only restrict where users can log in from."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A consultant is implementing an Experience Cloud site and needs to ensure proper URL structure for SEO optimization. Which configuration should be implemented?",
+    "type": "single",
+    "options": [
+      "Set up URL redirects from the old domain",
+      "Configure SEO Page Properties for key pages",
+      "Enable Search Engine Optimization Settings in Digital Experiences",
+      "Implement static front-door URLs and page-specific URLs"
+    ],
+    "correct": ["Implement static front-door URLs and page-specific URLs"],
+    "explanation": "Implementing static front-door URLs and page-specific URLs is the correct configuration for SEO-friendly URL structure in Experience Cloud. This involves configuring URL settings to create clean, readable, and persistent URLs for your pages instead of using parameters or session IDs. Static URLs are more search engine friendly and provide better SEO value. URL redirects are for transition from existing sites, SEO Page Properties affect metadata not URL structure, and while enabling SEO Settings is important, it doesn't specifically address URL structure."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A company wants to implement a guided onboarding experience for new members of their Experience Cloud site. Which feature should be used to create step-by-step walkthroughs of key features?",
+    "type": "single",
+    "options": [
+      "In-App Guidance with Prompts",
+      "Chatter Welcome Posts",
+      "Email Journey Builder",
+      "Lightning Web Components"
+    ],
+    "correct": ["In-App Guidance with Prompts"],
+    "explanation": "In-App Guidance with Prompts should be used to create step-by-step walkthroughs for new community members. This feature allows administrators to build interactive walkthroughs that guide users through specific processes or features within the Experience Cloud interface. Prompts appear directly on the page, highlighting elements and providing instructional text, which is ideal for onboarding. Chatter Welcome Posts are static and not interactive, Email Journey Builder is for email campaigns not in-app guidance, and LWCs would require custom development for what's available out-of-the-box with In-App Guidance."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A company is planning to implement an Experience Cloud site with thousands of users distributed globally. Which TWO deployment considerations are most important for ensuring optimal performance?",
+    "type": "multiple",
+    "options": [
+      "Configure a Content Delivery Network (CDN)",
+      "Implement a custom domain",
+      "Set up multiple regional Experience Cloud sites",
+      "Use Lightning Web Components instead of Aura",
+      "Configure browser caching settings"
+    ],
+    "correct": ["Configure a Content Delivery Network (CDN)", "Configure browser caching settings"],
+    "explanation": "For optimal performance of a globally distributed Experience Cloud site, the most important considerations are: 1) Configuring a Content Delivery Network (CDN), which caches static resources closer to users in different geographic regions, reducing load times; and 2) Configuring browser caching settings, which reduces the need to reload assets on repeat visits. A custom domain doesn't necessarily improve performance, multiple regional sites would create management complexity, and the component framework choice has less impact on global performance than delivery optimization."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A consultant is planning the rollout strategy for a new Experience Cloud site that will replace an existing customer portal. Which approach is recommended for the transition?",
+    "type": "single",
+    "options": [
+      "Immediate cutover with email notification to all users",
+      "Phased rollout to user segments with feedback collection",
+      "Parallel operation with opt-in to the new site",
+      "Sandbox preview followed by full production launch"
+    ],
+    "correct": ["Phased rollout to user segments with feedback collection"],
+    "explanation": "A phased rollout to user segments with feedback collection is the recommended approach for transitioning to a new Experience Cloud site. This approach minimizes risk by initially deploying to a smaller subset of users, collecting feedback, making adjustments, and then gradually expanding to additional user segments. This allows for identifying and addressing issues before they impact the entire user base. An immediate cutover risks widespread disruption if problems occur, parallel operation creates maintenance challenges, and a sandbox preview doesn't provide real-world usage patterns."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A global organization needs to implement a unified Experience Cloud strategy that serves customers, partners, and employees, each with different needs and access requirements. Which approach should be recommended?",
+    "type": "single",
+    "options": [
+      "Create a single Experience Cloud site with different user licenses",
+      "Implement separate Experience Cloud sites for each audience",
+      "Deploy multiple Experience Clouds in different Salesforce orgs",
+      "Build a hybrid solution with one site for external users and one for employees"
+    ],
+    "correct": ["Implement separate Experience Cloud sites for each audience"],
+    "explanation": "Implementing separate Experience Cloud sites for each audience (customers, partners, and employees) is the recommended approach. This allows each site to be optimized for its specific audience's needs, with appropriate branding, navigation, content, and functionality. It also provides better security isolation and license management, as different audience types require different license types with varying capabilities and costs. A single site would require significant compromises, multiple orgs would create unnecessary complexity, and a hybrid approach wouldn't address the distinctions between customer and partner needs."
+  },
+  {
+    "topic": "Setup and Configuration",
+    "question": "A company is setting up an Experience Cloud site where users need to be able to reset their passwords without contacting support. What configuration is needed to enable this functionality?",
+    "type": "single",
+    "options": [
+      "Create a custom Lightning Component for password reset",
+      "Enable 'Self Registration' in Experience Management Settings",
+      "Configure 'Forgot Password' settings and email templates",
+      "Set up a Knowledge Article with password reset instructions"
+    ],
+    "correct": ["Configure 'Forgot Password' settings and email templates"],
+    "explanation": "To enable self-service password reset in an Experience Cloud site, you need to configure 'Forgot Password' settings and the associated email templates. This includes enabling the forgot password functionality, specifying the forgotten password page, and customizing the email template that users receive with reset instructions. Self Registration is for new account creation not password reset, a custom component isn't necessary for this standard functionality, and a Knowledge Article would only provide instructions but not the actual reset functionality."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A consultant is implementing a Customer Account Portal template and needs to create a custom Lightning Page to display detailed customer account information. What is the correct process for creating and displaying this page?",
+    "type": "single",
+    "options": [
+      "Create an Account Detail Visualforce page and embed it in Experience Builder",
+      "Create a custom Lightning Web Component and add it to a new page in Experience Builder",
+      "Use the standard Account Detail page and customize it with components in Experience Builder",
+      "Create a Global Action that displays account information in a pop-up modal"
+    ],
+    "correct": ["Create a custom Lightning Web Component and add it to a new page in Experience Builder"],
+    "explanation": "The correct process is to create a custom Lightning Web Component (LWC) that displays the detailed account information, then create a new page in Experience Builder and add the component to that page. This approach provides the most flexibility for displaying custom account information while maintaining the Lightning Experience look and feel. Using Visualforce would create inconsistent styling, the standard Account Detail page may not support all the customizations needed, and a Global Action wouldn't provide a full-page experience for detailed information."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A company wants their Experience Cloud site to match their corporate branding exactly. Which THREE branding elements can be customized in Experience Builder without custom code?",
+    "type": "multiple",
+    "options": [
+      "Header and footer design",
+      "Color scheme",
+      "Animation effects",
+      "Typography",
+      "Component shadows and borders",
+      "Login page layout"
+    ],
+    "correct": ["Header and footer design", "Color scheme", "Typography"],
+    "explanation": "In Experience Builder, these branding elements can be customized without custom code: 1) Header and footer design, including logo, navigation, and layout; 2) Color scheme, allowing changes to primary, secondary, and background colors; and 3) Typography, including font family, size, and weight for different text elements. Animation effects require custom CSS, component shadows/borders need custom CSS beyond basic theme settings, and login page layout often requires Visualforce customization for significant changes beyond basic branding."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A consultant is implementing an Experience Cloud site and needs to create a custom theme layout that includes the company's proprietary header and footer design. What is the correct approach for developing this custom theme layout?",
+    "type": "single",
+    "options": [
+      "Modify the CSS in Theme Settings in Experience Builder",
+      "Create a ThemeLayout Lightning Component with header and footer markup",
+      "Use the Theme API with Visualforce Overrides",
+      "Import a third-party WordPress theme"
+    ],
+    "correct": ["Create a ThemeLayout Lightning Component with header and footer markup"],
+    "explanation": "The correct approach for creating a custom theme layout with proprietary header and footer design is to create a ThemeLayout Lightning Component. This component should include the HTML markup, CSS, and JavaScript needed for the custom header and footer, with the {!body} expression to indicate where page content should appear. Once developed, this component can be selected as a theme layout in Experience Builder. CSS modifications in Theme Settings only allow limited styling changes, the Theme API with Visualforce isn't the current approach, and WordPress themes can't be imported into Experience Cloud."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A consultant needs to implement a multilingual Experience Cloud site using the Customer Service template. The site needs to support six languages with language-specific navigation. What is the correct approach for this requirement?",
+    "type": "single",
+    "options": [
+      "Create separate Experience Cloud sites for each language",
+      "Use Translation Workbench and language-specific navigation menus",
+      "Implement a custom Language Switcher Lightning Web Component",
+      "Configure Site Variations for each language"
+    ],
+    "correct": ["Use Translation Workbench and language-specific navigation menus"],
+    "explanation": "The correct approach is to use Translation Workbench to enable and manage multilingual content, combined with language-specific navigation menus in Experience Builder. Translation Workbench allows for translating labels, components, and content into multiple languages, while Experience Builder's navigation menu component allows creating separate navigation menus for each language. When a user selects a language, they'll see both translated content and the appropriate navigation structure for that language. Creating separate sites would multiply maintenance effort, a custom Language Switcher alone wouldn't address navigation differences, and Site Variations are for page variations not language versions."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A company wants to implement a prebuilt theme from the AppExchange for their Experience Cloud site. What is an important consideration when selecting and implementing a third-party theme?",
+    "type": "single",
+    "options": [
+      "Third-party themes can only be used with the Salesforce Tabs + Visualforce template",
+      "AppExchange themes may require manual updates when Salesforce releases new Experience Cloud features",
+      "Custom themes cannot be modified after installation from AppExchange",
+      "Third-party themes automatically disable standard navigation components"
+    ],
+    "correct": ["AppExchange themes may require manual updates when Salesforce releases new Experience Cloud features"],
+    "explanation": "An important consideration when implementing a third-party theme from AppExchange is that these themes may require manual updates when Salesforce releases new Experience Cloud features. Unlike standard Salesforce components that are automatically updated, third-party themes may need to be updated by the provider or manually adjusted to remain compatible with new Experience Cloud functionality. Third-party themes can be used with Lightning templates not just Visualforce, can typically be modified after installation, and don't automatically disable standard components."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A consultant is implementing an Experience Cloud site for a retail company that wants to showcase product information in a visually appealing way. The client needs grid layouts with custom card designs for products. Which approach provides the most flexibility with the least custom development?",
+    "type": "single",
+    "options": [
+      "Use the standard Tile Menu component with custom images",
+      "Create custom Lightning Web Components for each product category",
+      "Implement a CMS Collection with custom Content Layouts",
+      "Use a third-party grid system embedded in an HTML Editor component"
+    ],
+    "correct": ["Implement a CMS Collection with custom Content Layouts"],
+    "explanation": "Implementing a CMS Collection with custom Content Layouts provides the most flexibility with the least custom development for showcasing products in a grid layout. This approach allows storing product information in Salesforce CMS, creating custom layouts for how each product card appears, and using the CMS Collection component to display them in various grid configurations. CMS Collection layouts can be created declaratively while offering significant design flexibility. Tile Menu is too limited for rich product display, custom LWCs would require more development, and third-party grid systems in HTML would be difficult to maintain."
+  },
+  {
+    "topic": "Templates and Themes",
+    "question": "A company is implementing an Experience Cloud site and wants to apply different themes based on the user's profile, showing a premium theme to high-value customers. Which approach should be used?",
+    "type": "single",
+    "options": [
+      "Create multiple sites with different themes for each customer segment",
+      "Use audience targeting with theme variables",
+      "Implement page variations with different Theme Layout components",
+      "Create a Lightning Web Component that dynamically applies CSS"
+    ],
+    "correct": ["Implement page variations with different Theme Layout components"],
+    "explanation": "To apply different themes based on user profile, the appropriate approach is to implement page variations with different Theme Layout components. Page variations can be assigned to specific audiences (like high-value customers), and each variation can use a different theme layout component, effectively creating theme variations for different user segments. Multiple sites would be excessive just for theme differences, audience targeting with theme variables has limited capability for comprehensive theme changes, and a custom LWC would require unnecessary development for what can be accomplished with standard functionality."
+  },
+  {
+    "topic": "Content Management",
+    "question": "A company wants to display product information from their enterprise product information management (PIM) system in their Experience Cloud site. The PIM system is updated frequently and is the system of record for product data. Which integration approach is MOST appropriate?",
+    "type": "single",
+    "options": [
+      "Implement a batch synchronization process that replicates product data to custom objects",
+      "Use Salesforce Connect with OData to create external objects from the PIM system",
+      "Create a custom API integration that retrieves product data in real-time",
+      "Implement CMS Connect to display product information from the PIM system's API"
+    ],
+    "correct": ["Use Salesforce Connect with OData to create external objects from the PIM system"],
+    "explanation": "Salesforce Connect with OData is the most appropriate approach for integrating frequently updated PIM data. It creates external objects that map to the PIM system data, allowing the Experience Cloud site to display product information in real-time without copying or synchronizing data. This ensures the information is always current and maintains the PIM as the single source of truth. Batch synchronization would result in outdated information, custom API integration would require significant development, and CMS Connect is for content management systems, not product information management systems."
+  },
+  {
+    "topic": "Content Management",
+    "question": "A healthcare provider wants to implement a Knowledge Base in their patient portal built on Experience Cloud. They need to restrict certain categories of articles to be visible only to patients with specific health conditions. Which feature should be used to implement this requirement?",
+    "type": "single",
+    "options": [
+      "Article Type Access Control",
+      "Profile-based Article Access",
+      "Data Category Security",
+      "Knowledge Article Sharing Rules"
+    ],
+    "correct": ["Data Category Security"],
+    "explanation": "Data Category Security is the appropriate feature for restricting knowledge article visibility based on patient health conditions. By implementing data categories for different health conditions and configuring data category visibility settings by profile or permission set, the healthcare provider can ensure patients only see articles relevant to their specific health conditions. Article Type Access Control only restricts by article type not content, Profile-based Article Access is too broad, and Knowledge Article Sharing Rules don't exist as a standard feature."
+  },
+  {
+    "topic": "Content Management",
+    "question": "An organization needs to empower their marketing team to manage digital content for their Experience Cloud site without IT involvement. Which feature should they implement?",
+    "type": "single",
+    "options": [
+      "Salesforce CMS with content management permissions",
+      "Static Resources with Experience Builder access",
+      "Rich Content Editor with shared templates",
+      "Knowledge Management with marketing user licenses"
+    ],
+    "correct": ["Salesforce CMS with content management permissions"],
+    "explanation": "Salesforce CMS with appropriate content management permissions is the ideal solution for empowering marketing teams to manage digital content independently. It provides a user-friendly interface for creating, organizing, and publishing various content types like images, articles, and documents to Experience Cloud sites. It's specifically designed for business users like marketers who need to manage content without technical skills or IT involvement. Static Resources require developer involvement, Rich Content Editor is a component not a content management system, and Knowledge Management is specialized for knowledge articles not general digital content."
+  },
+  {
+    "topic": "Content Management",
+    "question": "A financial services company wants to implement a document library in their partner portal that allows for complex document categorization and granular access controls. Which approach would best meet these requirements?",
+    "type": "single",
+    "options": [
+      "Use the standard Files component with folder structures",
+      "Implement Salesforce Libraries with content delivery

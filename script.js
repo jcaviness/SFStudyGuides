@@ -29,7 +29,7 @@ class Question {
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let readinessThreshold = 70; // Default threshold
+let readinessThreshold = 65; // Default threshold
 let allQuestions = []; // Store all questions
 let filteredQuestions = []; // Store filtered questions
 let answeredQuestions = []; // Store user answers for review
@@ -44,12 +44,13 @@ let questionHistory = JSON.parse(localStorage.getItem('questionHistory') || '[]'
 
 // Thresholds for each test (stored in script.js, not JSON files)
 const thresholds = {
-    "Salesforce Certified AI Associate": 70,
-    "Salesforce Certified AI Associate Additional Questions": 70,
-    "Data Cloud Consultant": 75,
-    "Data Cloud Consultant Additional Questions": 75,
+    "Salesforce Certified AI Associate": 65,
+    "Salesforce Certified AI Specialist": 73,
+    "Data Cloud Consultant": 62,
+    "Data Cloud Consultant Additional Questions": 62,
     "Platform Developer 1": 68,
-    "Platform Developer 2": 73
+    "Platform Developer 2": 70,
+    "Salesforce Certified Experience Cloud Consultant": 65
 };
 
 // Fisher-Yates shuffle function to randomize arrays
