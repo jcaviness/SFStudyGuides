@@ -1017,4 +1017,5 @@
       "correctAnswer": ["Lightning Web Component with imperative Apex"],
       "explanation": "A Lightning Web Component with imperative Apex provides the flexibility needed for implementing complex operations across multiple objects. The component can include a button that, when clicked, calls an Apex method imperatively (on-demand) to perform the required operations with full access to the server-side capabilities."
     }
+]
     
