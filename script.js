@@ -14,7 +14,9 @@ class Question {
         if (this.type === "single") {
             return userAnswer.length === 1 && userAnswer[0] === this.correct[0];
         } else if (this.type === "multiple") {
-            return userAnswer.sort().join() === this.correct.sort().join();
+            // For multiple choice, all correct options must be selected and nothing else
+            if (userAnswer.length !== this.correct.length) return false;
+            return userAnswer.sort().join(',') === this.correct.sort().join(',');
         }
         return false;
     }
@@ -48,7 +50,8 @@ const thresholds = {
     "Data Cloud Consultant": 62,
     "Platform Developer 1": 68, 
     "Platform Developer 2": 70,
-    "Salesforce Administrator": 65
+    "Salesforce Administrator": 65,
+    "Experience Cloud Consultant": 67
 };
 
 // Fisher-Yates shuffle function to randomize arrays
@@ -78,6 +81,77 @@ function updateProgress() {
     progressBar.style.backgroundColor = percentage >= readinessThreshold ? '#4CAF50' : '#f44336'; // Green if >= threshold, red otherwise
 }
 
+// Robust function to parse different JSON question formats
+function processQuestion(q) {
+    // Defensive approach - ensure we have at least the basic structure
+    if (!q || typeof q !== 'object') {
+        console.warn('Invalid question object:', q);
+        return null;
+    }
+
+    // Try to extract question text from various possible fields
+    const questionText = q.question || q.questionText || q.text || q.title || "Question text missing";
+    
+    // Extract options - handle different possible formats
+    let options = [];
+    if (Array.isArray(q.options)) {
+        options = q.options;
+    } else if (q.choices && Array.isArray(q.choices)) {
+        options = q.choices;
+    } else if (q.answers && Array.isArray(q.answers)) {
+        // Some formats might have an array of answer objects with text/value properties
+        options = q.answers.map(a => a.text || a.value || a);
+    }
+
+    // Determine the question type (single/multiple)
+    let type = q.type || "single";
+    // Some formats use different terminology
+    if (q.questionType === "multiselect" || q.isMultipleChoice === true) {
+        type = "multiple";
+    }
+
+    // Extract correct answer(s) from various possible fields
+    let correct = [];
+    if (q.correct !== undefined) {
+        correct = q.correct;
+    } else if (q.correctAnswer !== undefined) {
+        correct = q.correctAnswer;
+    } else if (q.answer !== undefined) {
+        correct = q.answer;
+    } else if (q.correctAnswers !== undefined) {
+        correct = q.correctAnswers;
+    } else if (q.answers && Array.isArray(q.answers)) {
+        // Some formats mark the correct answers within the answers array
+        correct = q.answers
+            .filter(a => a.isCorrect || a.correct)
+            .map(a => a.text || a.value || a);
+    }
+
+    // Extract explanation
+    const explanation = q.explanation || q.feedback || q.rationale || q.correctExplanation || "";
+
+    // Extract topic
+    const topic = q.topic || q.category || q.subject || "";
+
+    // Ensure correct is always an array for consistency
+    if (!Array.isArray(correct)) {
+        correct = [correct];
+    }
+
+    // Filter out any null or undefined values from correct array
+    correct = correct.filter(c => c !== null && c !== undefined);
+
+    // Create and return the question object
+    return new Question(
+        questionText,
+        type,
+        options,
+        correct,
+        explanation,
+        topic
+    );
+}
+
 // Load questions from the selected JSON file
 async function loadQuestions(fileName) {
     try {
@@ -89,35 +163,50 @@ async function loadQuestions(fileName) {
             throw new Error(`Failed to load questions: ${response.status} ${response.statusText}`);
         }
         
-        const data = await response.json();
-        console.log(`Loaded ${data.length} questions from file`);
+        let data = await response.json();
+        console.log('Successfully loaded data from', fileName);
         
-        // Handle different JSON formats
-        const questions = data.map(q => {
-            // Extract correct answer(s) based on different JSON structures
-            let correct;
-            if (q.correct !== undefined) {
-                correct = q.correct;
-            } else if (q.correctAnswer !== undefined) {
-                correct = q.correctAnswer;
-            } else if (q.answer !== undefined) {
-                correct = q.answer;
+        // Handle special case for Salesforce admin format, which has questions nested in an array with ids
+        if (fileName.includes('sf-admin-cert-questions.json')) {
+            console.log('Detected Salesforce admin format');
+        }
+        
+        // Handle potential wrapper structures - sometimes questions are nested in a data property
+        if (data.questions && Array.isArray(data.questions)) {
+            data = data.questions;
+        } else if (data.data && Array.isArray(data.data)) {
+            data = data.data;
+        } else if (!Array.isArray(data)) {
+            // If it's not an array or doesn't have a standard questions/data array property,
+            // try to convert it to an array of the property values
+            const possibleDataArrays = Object.values(data).filter(val => Array.isArray(val));
+            if (possibleDataArrays.length > 0) {
+                // Use the longest array we can find as our data source
+                data = possibleDataArrays.reduce((a, b) => a.length > b.length ? a : b);
             } else {
-                console.warn('No correct answer found for question:', q.question);
-                correct = [];
+                // If we can't find an array, try to make an array of the values
+                console.warn('Could not find an array of questions, attempting to convert object to array');
+                data = Object.values(data);
             }
-            
-            return new Question(
-                q.question, 
-                q.type || "single", 
-                q.options, 
-                correct, 
-                q.explanation,
-                q.topic
-            );
-        });
+        }
         
-        console.log(`Successfully processed ${questions.length} questions`);
+        console.log(`Processing ${data.length} questions`);
+        
+        // Process each question using our robust processing function
+        const questions = data.map(q => processQuestion(q)).filter(q => q !== null);
+        
+        // Verify we have valid questions
+        if (questions.length === 0) {
+            throw new Error('No valid questions found in the file');
+        }
+        
+        // Verify that each question has options
+        const invalidQuestions = questions.filter(q => !q.options || q.options.length === 0);
+        if (invalidQuestions.length > 0) {
+            console.warn(`${invalidQuestions.length} questions have no options:`, invalidQuestions);
+        }
+        
+        console.log(`Successfully processed ${questions.length} valid questions`);
         return questions;
     } catch (error) {
         console.error('Error loading questions:', error);
