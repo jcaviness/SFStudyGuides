@@ -1,12 +1,12 @@
 // Define the Question class
 class Question {
-    constructor(question, type, options, correct, explanation, topic) {
-        this.question = question;
-        this.type = type;
-        this.options = options;
-        this.correct = correct;
-        this.explanation = explanation;
-        this.topic = topic;
+    constructor(data) {
+        this.question = data.question || data.question_text;
+        this.type = data.type || 'single';
+        this.options = data.options || data.option;
+        this.correct = data.correct || [data.answer];
+        this.explanation = data.explanation || data.explanation_text;
+        this.topic = data.topic || 'General';
     }
 
     // Check if the user's answer is correct
@@ -29,7 +29,7 @@ class Question {
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let readinessThreshold = 65; // Default threshold
+let readinessThreshold = 70; // Default threshold
 let allQuestions = []; // Store all questions
 let filteredQuestions = []; // Store filtered questions
 let answeredQuestions = []; // Store user answers for review
@@ -53,15 +53,56 @@ const thresholds = {
     "Salesforce Certified Experience Cloud Consultant": 65
 };
 
-// Fisher-Yates shuffle function to randomize arrays
+// Predefined list of options for admin-style tests
+const adminTestOptionTypes = ["id", "option", "options", "answer", "correctAnswer", "question_text", "explanation_text"];
+
+// Fisher-Yates shuffle function
 function shuffleArray(array) {
-    const shuffled = [...array]; // Create a copy to avoid modifying the original
+    const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
     }
     return shuffled;
 }
+
+// Adaptive loading function to handle different question formats
+async function loadQuestions(fileName) {
+    try {
+        const response = await fetch(fileName);
+        if (!response.ok) throw new Error('Failed to load questions');
+        
+        let data = await response.json();
+        
+        // Detect question format
+        let processedQuestions = [];
+        if (Array.isArray(data)) {
+            if (data[0].hasOwnProperty('id') && adminTestOptionTypes.some(prop => data[0].hasOwnProperty(prop))) {
+                // Handle admin-style test format
+                processedQuestions = data.map(q => new Question({
+                    question: q.question || q['question_text'],
+                    type: q.type || (q.correctAnswer instanceof Array ? 'multiple' : 'single'),
+                    options: q.options || q.option || [],
+                    correct: q.correct || q.correctAnswer || q.answer || [],
+                    explanation: q.explanation || q['explanation_text'] || ''
+                }));
+            } else {
+                // Default format
+                processedQuestions = data.map(q => new Question(q));
+            }
+        }
+        
+        // Shuffle questions
+        return shuffleArray(processedQuestions);
+    } catch (error) {
+        console.error('Error loading questions:', error);
+        document.getElementById('message').textContent = 'Failed to load questions. Please try again.';
+        throw error;
+    }
+}
+
+// Rest of the script remains the same as the previous script-grok.js
+// (Includes all the existing functions like updateProgress, startQuiz, loadQuestion, etc.)
 
 // Update progress bar and score display
 function updateProgress() {
